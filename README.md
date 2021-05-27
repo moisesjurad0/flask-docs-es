@@ -1,16 +1,16 @@
 # Traducción al Español de la documentación de Flask
 
-## Contributing Guide
+## Guía de contribución
 
 
-### Installation
+### Instalación
 
 - Haz clic en el botón "Fork" para bifurcar este repositorio en GitHub.
 - Clona tu repositorio localmente (sustituye `{usuario}` por tu nombre de usuario):
 
 ```
 $ git clone https://github.com/{usuario}/flask-docs-es
-$ cd flask-docs-<UPDATE THIS>
+$ cd flask-docs-es
 $ git remote add upstream https://github.com/Jalkhov/flask-docs-es
 ```
 
@@ -39,7 +39,7 @@ Para Windows:
 ```
 
 
-### Self-Assignment
+### Autoasignación
 
 - Abre tu repositorio fork en GitHub.
 - Haz clic en el botón "Fetch upstream" para actualizar tu fork.
@@ -52,7 +52,7 @@ traducir en el siguiente formato:
 - [ ] ejemplo @tu_usuario Tu nombre
 ```
 
-You can link the username to your GitHub profile:
+Puedes vincular el nombre de usuario a tu perfil de GitHub:
 
 ```
 - [ ] ejemplo [@tu_usuario](https://github.com/tu_usuario) Tu nombre
