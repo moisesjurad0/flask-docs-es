@@ -153,10 +153,10 @@ si no terminas la traducción en diez días.
 ### docs/
 
 - [x] advanced_foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] appcontext
-- [ ] async-await
-- [ ] becomingbig
-- [ ] blueprints
+- [x] appcontext [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] async-await [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] becomingbig [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] blueprints [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] changes
 - [ ] cli
 - [ ] config
@@ -169,33 +169,33 @@ si no terminas la traducción en diez días.
 - [x] foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] htmlfaq
 - [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] installation [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] installation [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] logging
 - [x] quickstart [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] reqcontext
-- [ ] security
-- [ ] server
-- [ ] shell
-- [ ] signals
-- [ ] templating
-- [ ] testing
-- [ ] views
+- [x] reqcontext [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] security [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] server [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] shell [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] signals [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templating [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] testing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] views [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ### docs/tutorial/
 
-- [ ] blog
-- [ ] database
-- [ ] deploy
-- [ ] factory
-- [ ] index
-- [ ] install
-- [ ] layout
-- [ ] next
-- [ ] static
-- [ ] templates
-- [ ] tests
-- [ ] views
+- [x] blog  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] database  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] deploy  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] factory  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] index  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] install  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] layout  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] next  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] static  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templates  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] tests  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] views  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ### docs/deploying/
@@ -241,15 +241,15 @@ si no terminas la traducción en diez días.
 
 ## docs/api
 
-- [x] L0~L1000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L1000~L1500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L1500~L2000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L2000~L2500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L2500~L3000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L3000~L3500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L3500~L4000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L4000~L4500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L4500~L5000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L5000~L5500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L5500~L6000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] L6000~L6500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [ ] L0~L1000
+- [ ] L1000~L1500
+- [ ] L1500~L2000
+- [ ] L2000~L2500
+- [ ] L2500~L3000
+- [ ] L3000~L3500
+- [ ] L3500~L4000
+- [ ] L4000~L4500
+- [ ] L4500~L5000
+- [ ] L5000~L5500
+- [ ] L5500~L6000
+- [ ] L6000~L6500
