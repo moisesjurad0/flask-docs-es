@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/flask-es/badge/?version=main)](https://flask-es.readthedocs.io/?badge=main)
+
 # Traducción al Español de la documentación de Flask
 
 ## Guía de contribución
@@ -128,7 +130,7 @@ Para Windows:
 > .\make.bat html
 ```
 
-Abra `{project_location}/docs/_build/html/index.html` en su navegador para ver los documentos.
+Abra `{ruta_del_proyecto}/docs/_build/html/index.html` en su navegador para ver los documentos.
 
 - Si todo funciona como se espera, lleve los cambios a GitHub:
 
@@ -150,7 +152,7 @@ si no terminas la traducción en diez días.
 
 ### docs/
 
-- [ ] advanced_foreword (reserved)
+- [x] advanced_foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] appcontext
 - [ ] async-await
 - [ ] becomingbig
@@ -164,12 +166,12 @@ si no terminas la traducción en diez días.
 - [ ] errorhandling
 - [ ] extensiondev
 - [ ] extensions
-- [ ] foreword (reserved)
+- [x] foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] htmlfaq
-- [ ] index (reserved)
-- [ ] installation (reserved)
+- [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [ ] installation [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] logging
-- [ ] quickstart (reserved)
+- [x] quickstart [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] reqcontext
 - [ ] security
 - [ ] server
@@ -180,7 +182,7 @@ si no terminas la traducción en diez días.
 - [ ] views
 
 
-### docs/tutorial/ (reserved)
+### docs/tutorial/
 
 - [ ] blog
 - [ ] database
@@ -239,15 +241,15 @@ si no terminas la traducción en diez días.
 
 ## docs/api
 
-- [ ] L0~L1000
-- [ ] L1000~L1500
-- [ ] L1500~L2000
-- [ ] L2000~L2500
-- [ ] L2500~L3000
-- [ ] L3000~L3500
-- [ ] L3500~L4000
-- [ ] L4000~L4500
-- [ ] L4500~L5000
-- [ ] L5000~L5500
-- [ ] L5500~L6000
-- [ ] L6000~L6500
+- [x] L0~L1000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L1000~L1500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L1500~L2000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L2000~L2500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L2500~L3000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L3000~L3500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L3500~L4000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L4000~L4500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L4500~L5000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L5000~L5500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L5500~L6000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L6000~L6500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
