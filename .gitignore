@@ -1,3 +1,5 @@
+*.mo
+
 .DS_Store
 .env
 .flaskenv
