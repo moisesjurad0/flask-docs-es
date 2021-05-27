@@ -1,0 +1,2590 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es_LA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/appdispatch.rst:2
+msgid "Application Dispatching"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:4
+msgid ""
+"Application dispatching is the process of combining multiple Flask "
+"applications on the WSGI level.  You can combine not only Flask "
+"applications but any WSGI application.  This would allow you to run a "
+"Django and a Flask application in the same interpreter side by side if "
+"you want.  The usefulness of this depends on how the applications work "
+"internally."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:11
+msgid ""
+"The fundamental difference from :doc:`packages` is that in this case you "
+"are running the same or different Flask applications that are entirely "
+"isolated from each other. They run different configurations and are "
+"dispatched on the WSGI level."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:18
+msgid "Working with this Document"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:20
+msgid ""
+"Each of the techniques and examples below results in an ``application`` "
+"object that can be run with any WSGI server. For production, see "
+":doc:`/deploying/index`. For development, Werkzeug provides a server "
+"through :func:`werkzeug.serving.run_simple`::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:28
+msgid ""
+"Note that :func:`run_simple <werkzeug.serving.run_simple>` is not "
+"intended for use in production.  Use a production WSGI server. See "
+":doc:`/deploying/index`."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:31
+msgid ""
+"In order to use the interactive debugger, debugging must be enabled both "
+"on the application and the simple server. Here is the \"hello world\" "
+"example with debugging and :func:`run_simple "
+"<werkzeug.serving.run_simple>`::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:51
+msgid "Combining Applications"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:53
+msgid ""
+"If you have entirely separated applications and you want them to work "
+"next to each other in the same Python interpreter process you can take "
+"advantage of the :class:`werkzeug.wsgi.DispatcherMiddleware`.  The idea "
+"here is that each Flask application is a valid WSGI application and they "
+"are combined by the dispatcher middleware into a larger one that is "
+"dispatched based on prefix."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:60
+msgid ""
+"For example you could have your main application run on ``/`` and your "
+"backend interface on ``/backend``::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:73
+msgid "Dispatch by Subdomain"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:75
+msgid ""
+"Sometimes you might want to use multiple instances of the same "
+"application with different configurations.  Assuming the application is "
+"created inside a function and you can call that function to instantiate "
+"it, that is really easy to implement.  In order to develop your "
+"application to support creating new instances in functions have a look at"
+" the :doc:`appfactories` pattern."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:82
+msgid ""
+"A very common example would be creating applications per subdomain.  For "
+"instance you configure your webserver to dispatch all requests for all "
+"subdomains to your application and you then use the subdomain information"
+" to create user-specific instances.  Once you have your server set up to "
+"listen on all subdomains you can use a very simple WSGI application to do"
+" the dynamic application creation."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:89
+msgid ""
+"The perfect level for abstraction in that regard is the WSGI layer.  You "
+"write your own WSGI application that looks at the request that comes and "
+"delegates it to your Flask application.  If that application does not "
+"exist yet, it is dynamically created and remembered::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:120
+msgid "This dispatcher can then be used like this::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:142
+msgid "Dispatch by Path"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:144
+msgid ""
+"Dispatching by a path on the URL is very similar.  Instead of looking at "
+"the ``Host`` header to figure out the subdomain one simply looks at the "
+"request path up to the first slash::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:176
+msgid ""
+"The big difference between this and the subdomain one is that this one "
+"falls back to another application if the creator function returns "
+"``None``::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:2
+msgid "Application Factories"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:4
+msgid ""
+"If you are already using packages and blueprints for your application "
+"(:doc:`/blueprints`) there are a couple of really nice ways to further "
+"improve the experience.  A common pattern is creating the application "
+"object when the blueprint is imported.  But if you move the creation of "
+"this object into a function, you can then create multiple instances of "
+"this app later."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:10
+msgid "So why would you want to do this?"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:12
+msgid ""
+"Testing.  You can have instances of the application with different "
+"settings to test every case."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:14
+msgid ""
+"Multiple instances.  Imagine you want to run different versions of the "
+"same application.  Of course you could have multiple instances with "
+"different configs set up in your webserver, but if you use factories, you"
+" can have multiple instances of the same application running in the same "
+"application process which can be handy."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:20
+msgid "So how would you then actually implement that?"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:23
+msgid "Basic Factories"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:25
+msgid "The idea is to set up the application in a function.  Like this::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:41
+msgid ""
+"The downside is that you cannot use the application object in the "
+"blueprints at import time.  You can however use it from within a request."
+"  How do you get access to the application with the config?  Use "
+":data:`~flask.current_app`::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:53
+msgid "Here we look up the name of a template in the config."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:56
+msgid "Factories & Extensions"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:58
+msgid ""
+"It's preferable to create your extensions and app factories so that the "
+"extension object does not initially get bound to the application."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:61
+msgid ""
+"Using `Flask-SQLAlchemy <https://flask-"
+"sqlalchemy.palletsprojects.com/>`_, as an example, you should not do "
+"something along those lines::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:70
+msgid "But, rather, in model.py (or equivalent)::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:74
+msgid "and in your application.py (or equivalent)::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:83
+msgid ""
+"Using this design pattern, no application-specific state is stored on the"
+" extension object, so one extension object can be used for multiple apps."
+" For more information about the design of extensions refer to "
+":doc:`/extensiondev`."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:88
+msgid "Using Applications"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:90
+msgid "To run such an application, you can use the :command:`flask` command:"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
+#: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
+msgid "Bash"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:127
+#: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
+msgid "CMD"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:134
+#: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
+msgid "Powershell"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:115
+msgid ""
+"Flask will automatically detect the factory (``create_app`` or "
+"``make_app``) in ``myapp``. You can also pass arguments to the factory "
+"like this:"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:141
+msgid ""
+"Then the ``create_app`` factory in ``myapp`` is called with the string "
+"``'dev'`` as the argument. See :doc:`/cli` for more detail."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:145
+msgid "Factory Improvements"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:147
+msgid ""
+"The factory function above is not very clever, but you can improve it. "
+"The following changes are straightforward to implement:"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:150
+msgid ""
+"Make it possible to pass in configuration values for unit tests so that "
+"you don't have to create config files on the filesystem."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:152
+msgid ""
+"Call a function from a blueprint when the application is setting up so "
+"that you have a place to modify attributes of the application (like "
+"hooking in before/after request handlers etc.)"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:155
+msgid ""
+"Add in WSGI middlewares when the application is being created if "
+"necessary."
+msgstr ""
+
+#: ../../patterns/caching.rst:2
+msgid "Caching"
+msgstr ""
+
+#: ../../patterns/caching.rst:4
+msgid ""
+"When your application runs slow, throw some caches in.  Well, at least "
+"it's the easiest way to speed up things.  What does a cache do?  Say you "
+"have a function that takes some time to complete but the results would "
+"still be good enough if they were 5 minutes old.  So then the idea is "
+"that you actually put the result of that calculation into a cache for "
+"some time."
+msgstr ""
+
+#: ../../patterns/caching.rst:11
+msgid ""
+"Flask itself does not provide caching for you, but `Flask-Caching`_, an "
+"extension for Flask does. Flask-Caching supports various backends, and it"
+" is even possible to develop your own caching backend."
+msgstr ""
+
+#: ../../patterns/celery.rst:2
+msgid "Celery Background Tasks"
+msgstr ""
+
+#: ../../patterns/celery.rst:4
+msgid ""
+"If your application has a long running task, such as processing some "
+"uploaded data or sending email, you don't want to wait for it to finish "
+"during a request. Instead, use a task queue to send the necessary data to"
+" another process that will run the task in the background while the "
+"request returns immediately."
+msgstr ""
+
+#: ../../patterns/celery.rst:10
+msgid ""
+"Celery is a powerful task queue that can be used for simple background "
+"tasks as well as complex multi-stage programs and schedules. This guide "
+"will show you how to configure Celery using Flask, but assumes you've "
+"already read the `First Steps with Celery "
+"<https://celery.readthedocs.io/en/latest/getting-started/first-steps-"
+"with-celery.html>`_ guide in the Celery documentation."
+msgstr ""
+
+#: ../../patterns/celery.rst:17
+msgid "Install"
+msgstr ""
+
+#: ../../patterns/celery.rst:19
+msgid "Celery is a separate Python package. Install it from PyPI using pip::"
+msgstr ""
+
+#: ../../patterns/celery.rst:24
+msgid "Configure"
+msgstr ""
+
+#: ../../patterns/celery.rst:26
+msgid ""
+"The first thing you need is a Celery instance, this is called the celery "
+"application.  It serves the same purpose as the :class:`~flask.Flask` "
+"object in Flask, just for Celery.  Since this instance is used as the "
+"entry-point for everything you want to do in Celery, like creating tasks "
+"and managing workers, it must be possible for other modules to import it."
+msgstr ""
+
+#: ../../patterns/celery.rst:32
+msgid ""
+"For instance you can place this in a ``tasks`` module.  While you can use"
+" Celery without any reconfiguration with Flask, it becomes a bit nicer by"
+" subclassing tasks and adding support for Flask's application contexts "
+"and hooking it up with the Flask configuration."
+msgstr ""
+
+#: ../../patterns/celery.rst:37
+msgid "This is all that is necessary to properly integrate Celery with Flask::"
+msgstr ""
+
+#: ../../patterns/celery.rst:57
+msgid ""
+"The function creates a new Celery object, configures it with the broker "
+"from the application config, updates the rest of the Celery config from "
+"the Flask config and then creates a subclass of the task that wraps the "
+"task execution in an application context."
+msgstr ""
+
+#: ../../patterns/celery.rst:63
+msgid "An example task"
+msgstr ""
+
+#: ../../patterns/celery.rst:65
+msgid ""
+"Let's write a task that adds two numbers together and returns the result."
+" We configure Celery's broker and backend to use Redis, create a "
+"``celery`` application using the factor from above, and then use it to "
+"define the task. ::"
+msgstr ""
+
+#: ../../patterns/celery.rst:82
+msgid "This task can now be called in the background::"
+msgstr ""
+
+#: ../../patterns/celery.rst:88
+msgid "Run a worker"
+msgstr ""
+
+#: ../../patterns/celery.rst:90
+msgid ""
+"If you jumped in and already executed the above code you will be "
+"disappointed to learn that ``.wait()`` will never actually return. That's"
+" because you also need to run a Celery worker to receive and execute the "
+"task. ::"
+msgstr ""
+
+#: ../../patterns/celery.rst:97
+msgid ""
+"The ``your_application`` string has to point to your application's "
+"package or module that creates the ``celery`` object."
+msgstr ""
+
+#: ../../patterns/celery.rst:100
+msgid ""
+"Now that the worker is running, ``wait`` will return the result once the "
+"task is finished."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:2
+msgid "Deferred Request Callbacks"
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:4
+msgid ""
+"One of the design principles of Flask is that response objects are "
+"created and passed down a chain of potential callbacks that can modify "
+"them or replace them. When the request handling starts, there is no "
+"response object yet. It is created as necessary either by a view function"
+" or by some other component in the system."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:10
+msgid ""
+"What happens if you want to modify the response at a point where the "
+"response does not exist yet?  A common example for that would be a "
+":meth:`~flask.Flask.before_request` callback that wants to set a cookie "
+"on the response object."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:15
+msgid ""
+"One way is to avoid the situation. Very often that is possible. For "
+"instance you can try to move that logic into a "
+":meth:`~flask.Flask.after_request` callback instead. However, sometimes "
+"moving code there makes it more complicated or awkward to reason about."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:20
+msgid ""
+"As an alternative, you can use :func:`~flask.after_this_request` to "
+"register callbacks that will execute after only the current request. This"
+" way you can defer code execution from anywhere in the application, based"
+" on the current request."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:25
+msgid ""
+"At any time during a request, we can register a function to be called at "
+"the end of the request. For example you can remember the current language"
+" of the user in a cookie in a :meth:`~flask.Flask.before_request` "
+"callback::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:2
+msgid "Deploying with Setuptools"
+msgstr ""
+
+#: ../../patterns/distribute.rst:4
+msgid ""
+"`Setuptools`_, is an extension library that is commonly used to "
+"distribute Python libraries and extensions. It extends distutils, a basic"
+" module installation system shipped with Python to also support various "
+"more complex constructs that make larger applications easier to "
+"distribute:"
+msgstr ""
+
+#: ../../patterns/distribute.rst:9
+msgid ""
+"**support for dependencies**: a library or application can declare a list"
+" of other libraries it depends on which will be installed automatically "
+"for you."
+msgstr ""
+
+#: ../../patterns/distribute.rst:12
+msgid ""
+"**package registry**: setuptools registers your package with your Python "
+"installation.  This makes it possible to query information provided by "
+"one package from another package.  The best known feature of this system "
+"is the entry point support which allows one package to declare an \"entry"
+" point\" that another package can hook into to extend the other package."
+msgstr ""
+
+#: ../../patterns/distribute.rst:18
+msgid ""
+"**installation manager**: :command:`pip` can install other libraries for "
+"you."
+msgstr ""
+
+#: ../../patterns/distribute.rst:20
+msgid ""
+"Flask itself, and all the libraries you can find on PyPI are distributed "
+"with either setuptools or distutils."
+msgstr ""
+
+#: ../../patterns/distribute.rst:23
+msgid ""
+"In this case we assume your application is called "
+":file:`yourapplication.py` and you are not using a module, but a package."
+" If you have not yet converted your application into a package, head over"
+" to :doc:`packages` to see how this can be done."
+msgstr ""
+
+#: ../../patterns/distribute.rst:28
+msgid ""
+"A working deployment with setuptools is the first step into more complex "
+"and more automated deployment scenarios.  If you want to fully automate "
+"the process, also read the :doc:`fabric` chapter."
+msgstr ""
+
+#: ../../patterns/distribute.rst:33
+msgid "Basic Setup Script"
+msgstr ""
+
+#: ../../patterns/distribute.rst:35
+msgid ""
+"Because you have Flask installed, you have setuptools available on your "
+"system. Flask already depends upon setuptools."
+msgstr ""
+
+#: ../../patterns/distribute.rst:38
+msgid "Standard disclaimer applies: :ref:`use a virtualenv <install-create-env>`."
+msgstr ""
+
+#: ../../patterns/distribute.rst:41
+msgid ""
+"Your setup code always goes into a file named :file:`setup.py` next to "
+"your application.  The name of the file is only convention, but because "
+"everybody will look for a file with that name, you better not change it."
+msgstr ""
+
+#: ../../patterns/distribute.rst:45
+msgid "A basic :file:`setup.py` file for a Flask application looks like this::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:59
+msgid ""
+"Please keep in mind that you have to list subpackages explicitly.  If you"
+" want setuptools to lookup the packages for you automatically, you can "
+"use the ``find_packages`` function::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:70
+msgid ""
+"Most parameters to the ``setup`` function should be self explanatory, "
+"``include_package_data`` and ``zip_safe`` might not be. "
+"``include_package_data`` tells setuptools to look for a "
+":file:`MANIFEST.in` file and install all the entries that match as "
+"package data.  We will use this to distribute the static files and "
+"templates along with the Python module (see :ref:`distributing-"
+"resources`).  The ``zip_safe`` flag can be used to force or prevent zip "
+"Archive creation.  In general you probably don't want your packages to be"
+" installed as zip files because some tools do not support them and they "
+"make debugging a lot harder."
+msgstr ""
+
+#: ../../patterns/distribute.rst:82
+msgid "Tagging Builds"
+msgstr ""
+
+#: ../../patterns/distribute.rst:84
+msgid ""
+"It is useful to distinguish between release and development builds. Add a"
+" :file:`setup.cfg` file to configure these options. ::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:94
+msgid ""
+"Running ``python setup.py sdist`` will create a development package with "
+"\".dev\" and the current date appended: "
+"``flaskr-1.0.dev20160314.tar.gz``. Running ``python setup.py release "
+"sdist`` will create a release package with only the version: "
+"``flaskr-1.0.tar.gz``."
+msgstr ""
+
+#: ../../patterns/distribute.rst:103
+msgid "Distributing Resources"
+msgstr ""
+
+#: ../../patterns/distribute.rst:105
+msgid ""
+"If you try to install the package you just created, you will notice that "
+"folders like :file:`static` or :file:`templates` are not installed for "
+"you.  The reason for this is that setuptools does not know which files to"
+" add for you.  What you should do, is to create a :file:`MANIFEST.in` "
+"file next to your :file:`setup.py` file.  This file lists all the files "
+"that should be added to your tarball::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:115
+msgid ""
+"Don't forget that even if you enlist them in your :file:`MANIFEST.in` "
+"file, they won't be installed for you unless you set the "
+"`include_package_data` parameter of the ``setup`` function to ``True``!"
+msgstr ""
+
+#: ../../patterns/distribute.rst:121
+msgid "Declaring Dependencies"
+msgstr ""
+
+#: ../../patterns/distribute.rst:123
+msgid ""
+"Dependencies are declared in the ``install_requires`` parameter as a "
+"list. Each item in that list is the name of a package that should be "
+"pulled from PyPI on installation.  By default it will always use the most"
+" recent version, but you can also provide minimum and maximum version "
+"requirements.  Here some examples::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:135
+msgid ""
+"As mentioned earlier, dependencies are pulled from PyPI.  What if you "
+"want to depend on a package that cannot be found on PyPI and won't be "
+"because it is an internal package you don't want to share with anyone? "
+"Just do it as if there was a PyPI entry and provide a list of alternative"
+" locations where setuptools should look for tarballs::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:143
+msgid ""
+"Make sure that page has a directory listing and the links on the page are"
+" pointing to the actual tarballs with their correct filenames as this is "
+"how setuptools will find the files.  If you have an internal company "
+"server that contains the packages, provide the URL to that server."
+msgstr ""
+
+#: ../../patterns/distribute.rst:150
+msgid "Installing / Developing"
+msgstr ""
+
+#: ../../patterns/distribute.rst:152
+msgid ""
+"To install your application (ideally into a virtualenv) just run the "
+":file:`setup.py` script with the ``install`` parameter.  It will install "
+"your application into the virtualenv's site-packages folder and also "
+"download and install all dependencies::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:159
+msgid ""
+"If you are developing on the package and also want the requirements to be"
+" installed, you can use the ``develop`` command instead::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:164
+msgid ""
+"This has the advantage of just installing a link to the site-packages "
+"folder instead of copying the data over.  You can then continue to work "
+"on the code without having to run ``install`` again after each change."
+msgstr ""
+
+#: ../../patterns/fabric.rst:2
+msgid "Deploying with Fabric"
+msgstr ""
+
+#: ../../patterns/fabric.rst:4
+msgid ""
+"`Fabric`_ is a tool for Python similar to Makefiles but with the ability "
+"to execute commands on a remote server.  In combination with a properly "
+"set up Python package (:doc:`packages`) and a good concept for "
+"configurations (:doc:`/config`) it is very easy to deploy Flask "
+"applications to external servers."
+msgstr ""
+
+#: ../../patterns/fabric.rst:10
+msgid ""
+"Before we get started, here a quick checklist of things we have to ensure"
+" upfront:"
+msgstr ""
+
+#: ../../patterns/fabric.rst:13
+msgid ""
+"Fabric 1.0 has to be installed locally.  This tutorial assumes the latest"
+" version of Fabric."
+msgstr ""
+
+#: ../../patterns/fabric.rst:15
+msgid ""
+"The application already has to be a package and requires a working "
+":file:`setup.py` file (:doc:`distribute`)."
+msgstr ""
+
+#: ../../patterns/fabric.rst:17
+msgid ""
+"In the following example we are using `mod_wsgi` for the remote servers."
+"  You can of course use your own favourite server there, but for this "
+"example we chose Apache + `mod_wsgi` because it's very easy to setup and "
+"has a simple way to reload applications without root access."
+msgstr ""
+
+#: ../../patterns/fabric.rst:24
+msgid "Creating the first Fabfile"
+msgstr ""
+
+#: ../../patterns/fabric.rst:26
+msgid ""
+"A fabfile is what controls what Fabric executes.  It is named "
+":file:`fabfile.py` and executed by the `fab` command.  All the functions "
+"defined in that file will show up as `fab` subcommands.  They are "
+"executed on one or more hosts.  These hosts can be defined either in the "
+"fabfile or on the command line.  In this case we will add them to the "
+"fabfile."
+msgstr ""
+
+#: ../../patterns/fabric.rst:32
+msgid ""
+"This is a basic first example that has the ability to upload the current "
+"source code to the server and install it into a pre-existing virtual "
+"environment::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:65
+msgid "Running Fabfiles"
+msgstr ""
+
+#: ../../patterns/fabric.rst:67
+msgid ""
+"Now how do you execute that fabfile?  You use the `fab` command.  To "
+"deploy the current version of the code on the remote server you would use"
+" this command::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:73
+msgid ""
+"However this requires that our server already has the "
+":file:`/var/www/yourapplication` folder created and "
+":file:`/var/www/yourapplication/env` to be a virtual environment.  "
+"Furthermore are we not creating the configuration or ``.wsgi`` file on "
+"the server.  So how do we bootstrap a new server into our infrastructure?"
+msgstr ""
+
+#: ../../patterns/fabric.rst:79
+msgid ""
+"This now depends on the number of servers we want to set up.  If we just "
+"have one application server (which the majority of applications will "
+"have), creating a command in the fabfile for this is overkill.  But "
+"obviously you can do that.  In that case you would probably call it "
+"`setup` or `bootstrap` and then pass the servername explicitly on the "
+"command line::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:88
+msgid "To setup a new server you would roughly do these steps:"
+msgstr ""
+
+#: ../../patterns/fabric.rst:90
+msgid "Create the directory structure in :file:`/var/www`::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:96
+msgid ""
+"Upload a new :file:`application.wsgi` file to the server and the "
+"configuration file for the application (eg: :file:`application.cfg`)"
+msgstr ""
+
+#: ../../patterns/fabric.rst:99
+msgid ""
+"Create a new Apache config for ``yourapplication`` and activate it. Make "
+"sure to activate watching for changes of the ``.wsgi`` file so that we "
+"can automatically reload the application by touching it. See "
+":doc:`/deploying/mod_wsgi`."
+msgstr ""
+
+#: ../../patterns/fabric.rst:104
+msgid ""
+"So now the question is, where do the :file:`application.wsgi` and "
+":file:`application.cfg` files come from?"
+msgstr ""
+
+#: ../../patterns/fabric.rst:108
+msgid "The WSGI File"
+msgstr ""
+
+#: ../../patterns/fabric.rst:110
+msgid ""
+"The WSGI file has to import the application and also to set an "
+"environment variable so that the application knows where to look for the "
+"config.  This is a short example that does exactly that::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:118
+msgid ""
+"The application itself then has to initialize itself like this to look "
+"for the config at that environment variable::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:125
+msgid ""
+"This approach is explained in detail in the :doc:`/config` section of the"
+" documentation."
+msgstr ""
+
+#: ../../patterns/fabric.rst:129
+msgid "The Configuration File"
+msgstr ""
+
+#: ../../patterns/fabric.rst:131
+msgid ""
+"Now as mentioned above, the application will find the correct "
+"configuration file by looking up the ``YOURAPPLICATION_CONFIG`` "
+"environment variable.  So we have to put the configuration in a place "
+"where the application will able to find it.  Configuration files have the"
+" unfriendly quality of being different on all computers, so you do not "
+"version them usually."
+msgstr ""
+
+#: ../../patterns/fabric.rst:138
+msgid ""
+"A popular approach is to store configuration files for different servers "
+"in a separate version control repository and check them out on all "
+"servers.  Then symlink the file that is active for the server into the "
+"location where it's expected (eg: :file:`/var/www/yourapplication`)."
+msgstr ""
+
+#: ../../patterns/fabric.rst:143
+msgid ""
+"Either way, in our case here we only expect one or two servers and we can"
+" upload them ahead of time by hand."
+msgstr ""
+
+#: ../../patterns/fabric.rst:148
+msgid "First Deployment"
+msgstr ""
+
+#: ../../patterns/fabric.rst:150
+msgid ""
+"Now we can do our first deployment.  We have set up the servers so that "
+"they have their virtual environments and activated apache configs.  Now "
+"we can pack up the application and deploy it::"
+msgstr ""
+
+#: ../../patterns/fabric.rst:156
+msgid ""
+"Fabric will now connect to all servers and run the commands as written "
+"down in the fabfile.  First it will execute pack so that we have our "
+"tarball ready and then it will execute deploy and upload the source code "
+"to all servers and install it there.  Thanks to the :file:`setup.py` file"
+" we will automatically pull in the required libraries into our virtual "
+"environment."
+msgstr ""
+
+#: ../../patterns/fabric.rst:164
+msgid "Next Steps"
+msgstr ""
+
+#: ../../patterns/fabric.rst:166
+msgid ""
+"From that point onwards there is so much that can be done to make "
+"deployment actually fun:"
+msgstr ""
+
+#: ../../patterns/fabric.rst:169
+msgid ""
+"Create a `bootstrap` command that initializes new servers.  It could "
+"initialize a new virtual environment, setup apache appropriately etc."
+msgstr ""
+
+#: ../../patterns/fabric.rst:171
+msgid ""
+"Put configuration files into a separate version control repository and "
+"symlink the active configs into place."
+msgstr ""
+
+#: ../../patterns/fabric.rst:173
+msgid ""
+"You could also put your application code into a repository and check out "
+"the latest version on the server and then install.  That way you can also"
+" easily go back to older versions."
+msgstr ""
+
+#: ../../patterns/fabric.rst:176
+msgid ""
+"hook in testing functionality so that you can deploy to an external "
+"server and run the test suite."
+msgstr ""
+
+#: ../../patterns/fabric.rst:179
+msgid ""
+"Working with Fabric is fun and you will notice that it's quite magical to"
+" type ``fab deploy`` and see your application being deployed "
+"automatically to one or more remote servers."
+msgstr ""
+
+#: ../../patterns/favicon.rst:2
+msgid "Adding a favicon"
+msgstr ""
+
+#: ../../patterns/favicon.rst:4
+msgid ""
+"A \"favicon\" is an icon used by browsers for tabs and bookmarks. This "
+"helps to distinguish your website and to give it a unique brand."
+msgstr ""
+
+#: ../../patterns/favicon.rst:7
+msgid ""
+"A common question is how to add a favicon to a Flask application. First, "
+"of course, you need an icon. It should be 16 × 16 pixels and in the ICO "
+"file format. This is not a requirement but a de-facto standard supported "
+"by all relevant browsers. Put the icon in your static directory as "
+":file:`favicon.ico`."
+msgstr ""
+
+#: ../../patterns/favicon.rst:13
+msgid ""
+"Now, to get browsers to find your icon, the correct way is to add a link "
+"tag in your HTML. So, for example:"
+msgstr ""
+
+#: ../../patterns/favicon.rst:20
+msgid ""
+"That's all you need for most browsers, however some really old ones do "
+"not support this standard. The old de-facto standard is to serve this "
+"file, with this name, at the website root. If your application is not "
+"mounted at the root path of the domain you either need to configure the "
+"web server to serve the icon at the root or if you can't do that you're "
+"out of luck. If however your application is the root you can simply route"
+" a redirect::"
+msgstr ""
+
+#: ../../patterns/favicon.rst:30
+msgid ""
+"If you want to save the extra redirect request you can also write a view "
+"using :func:`~flask.send_from_directory`::"
+msgstr ""
+
+#: ../../patterns/favicon.rst:41
+msgid ""
+"We can leave out the explicit mimetype and it will be guessed, but we may"
+" as well specify it to avoid the extra guessing, as it will always be the"
+" same."
+msgstr ""
+
+#: ../../patterns/favicon.rst:45
+msgid ""
+"The above will serve the icon via your application and if possible it's "
+"better to configure your dedicated web server to serve it; refer to the "
+"web server's documentation."
+msgstr ""
+
+#: ../../patterns/favicon.rst:50
+msgid "See also"
+msgstr ""
+
+#: ../../patterns/favicon.rst:52
+msgid ""
+"The `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ article on "
+"Wikipedia"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:2
+msgid "Uploading Files"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:4
+msgid ""
+"Ah yes, the good old problem of file uploads.  The basic idea of file "
+"uploads is actually quite simple.  It basically works like this:"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:7
+msgid ""
+"A ``<form>`` tag is marked with ``enctype=multipart/form-data`` and an "
+"``<input type=file>`` is placed in that form."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:9
+msgid ""
+"The application accesses the file from the :attr:`~flask.request.files` "
+"dictionary on the request object."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:11
+msgid ""
+"use the :meth:`~werkzeug.datastructures.FileStorage.save` method of the "
+"file to save the file permanently somewhere on the filesystem."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:15
+msgid "A Gentle Introduction"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:17
+msgid ""
+"Let's start with a very basic application that uploads a file to a "
+"specific upload folder and displays a file to the user.  Let's look at "
+"the bootstrapping code for our application::"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:31
+msgid ""
+"So first we need a couple of imports.  Most should be straightforward, "
+"the :func:`werkzeug.secure_filename` is explained a little bit later.  "
+"The ``UPLOAD_FOLDER`` is where we will store the uploaded files and the "
+"``ALLOWED_EXTENSIONS`` is the set of allowed file extensions."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:36
+msgid ""
+"Why do we limit the extensions that are allowed?  You probably don't want"
+" your users to be able to upload everything there if the server is "
+"directly sending out the data to the client.  That way you can make sure "
+"that users are not able to upload HTML files that would cause XSS "
+"problems (see :ref:`security-xss`).  Also make sure to disallow ``.php`` "
+"files if the server executes them, but who has PHP installed on their "
+"server, right?  :)"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:43
+msgid ""
+"Next the functions that check if an extension is valid and that uploads "
+"the file and redirects the user to the URL for the uploaded file::"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:77
+msgid ""
+"So what does that :func:`~werkzeug.utils.secure_filename` function "
+"actually do? Now the problem is that there is that principle called "
+"\"never trust user input\".  This is also true for the filename of an "
+"uploaded file.  All submitted form data can be forged, and filenames can "
+"be dangerous.  For the moment just remember: always use that function to "
+"secure a filename before storing it directly on the filesystem."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:84
+msgid "Information for the Pros"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:86
+msgid ""
+"So you're interested in what that :func:`~werkzeug.utils.secure_filename`"
+" function does and what the problem is if you're not using it?  So just "
+"imagine someone would send the following information as `filename` to "
+"your application::"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:93
+msgid ""
+"Assuming the number of ``../`` is correct and you would join this with "
+"the ``UPLOAD_FOLDER`` the user might have the ability to modify a file on"
+" the server's filesystem he or she should not modify.  This does require "
+"some knowledge about how the application looks like, but trust me, "
+"hackers are patient :)"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:99
+msgid "Now let's look how that function works:"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:104
+msgid ""
+"We want to be able to serve the uploaded files so they can be downloaded "
+"by users. We'll define a ``download_file`` view to serve files in the "
+"upload folder by name. ``url_for(\"download_file\", name=name)`` "
+"generates download URLs."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:117
+msgid ""
+"If you're using middleware or the HTTP server to serve files, you can "
+"register the ``download_file`` endpoint as ``build_only`` so ``url_for`` "
+"will work without a view function."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:129
+msgid "Improving Uploads"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:133
+msgid ""
+"So how exactly does Flask handle uploads?  Well it will store them in the"
+" webserver's memory if the files are reasonably small, otherwise in a "
+"temporary location (as returned by :func:`tempfile.gettempdir`).  But how"
+" do you specify the maximum file size after which an upload is aborted?  "
+"By default Flask will happily accept file uploads with an unlimited "
+"amount of memory, but you can limit that by setting the "
+"``MAX_CONTENT_LENGTH`` config key::"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:146
+msgid ""
+"The code above will limit the maximum allowed payload to 16 megabytes. If"
+" a larger file is transmitted, Flask will raise a "
+":exc:`~werkzeug.exceptions.RequestEntityTooLarge` exception."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:150
+msgid "Connection Reset Issue"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:152
+msgid ""
+"When using the local development server, you may get a connection reset "
+"error instead of a 413 response. You will get the correct status response"
+" when running the app with a production WSGI server."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:156
+msgid ""
+"This feature was added in Flask 0.6 but can be achieved in older versions"
+" as well by subclassing the request object.  For more information on that"
+" consult the Werkzeug documentation on file handling."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:162
+msgid "Upload Progress Bars"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:164
+msgid ""
+"A while ago many developers had the idea to read the incoming file in "
+"small chunks and store the upload progress in the database to be able to "
+"poll the progress with JavaScript from the client. The client asks the "
+"server every 5 seconds how much it has transmitted, but this is something"
+" it should already know."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:171
+msgid "An Easier Solution"
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:173
+msgid ""
+"Now there are better solutions that work faster and are more reliable. "
+"There are JavaScript libraries like jQuery_ that have form plugins to "
+"ease the construction of progress bar."
+msgstr ""
+
+#: ../../patterns/fileuploads.rst:177
+msgid ""
+"Because the common pattern for file uploads exists almost unchanged in "
+"all applications dealing with uploads, there is also a Flask extension "
+"called `Flask-Uploads`_ that implements a full fledged upload mechanism "
+"that allows controlling which file extensions are allowed to be uploaded."
+msgstr ""
+
+#: ../../patterns/flashing.rst:2
+msgid "Message Flashing"
+msgstr ""
+
+#: ../../patterns/flashing.rst:4
+msgid ""
+"Good applications and user interfaces are all about feedback.  If the "
+"user does not get enough feedback they will probably end up hating the "
+"application.  Flask provides a really simple way to give feedback to a "
+"user with the flashing system.  The flashing system basically makes it "
+"possible to record a message at the end of a request and access it next "
+"request and only next request.  This is usually combined with a layout "
+"template that does this. Note that browsers and sometimes web servers "
+"enforce a limit on cookie sizes. This means that flashing messages that "
+"are too large for session cookies causes message flashing to fail "
+"silently."
+msgstr ""
+
+#: ../../patterns/flashing.rst:15
+msgid "Simple Flashing"
+msgstr ""
+
+#: ../../patterns/flashing.rst:17
+msgid "So here is a full example::"
+msgstr ""
+
+#: ../../patterns/flashing.rst:41
+msgid "And here is the :file:`layout.html` template which does the magic:"
+msgstr ""
+
+#: ../../patterns/flashing.rst:58
+msgid ""
+"Here is the :file:`index.html` template which inherits from "
+":file:`layout.html`:"
+msgstr ""
+
+#: ../../patterns/flashing.rst:68
+msgid ""
+"And here is the :file:`login.html` template which also inherits from "
+":file:`layout.html`:"
+msgstr ""
+
+#: ../../patterns/flashing.rst:92
+msgid "Flashing With Categories"
+msgstr ""
+
+#: ../../patterns/flashing.rst:96
+msgid ""
+"It is also possible to provide categories when flashing a message.  The "
+"default category if nothing is provided is ``'message'``.  Alternative "
+"categories can be used to give the user better feedback.  For example "
+"error messages could be displayed with a red background."
+msgstr ""
+
+#: ../../patterns/flashing.rst:101
+msgid ""
+"To flash a message with a different category, just use the second "
+"argument to the :func:`~flask.flash` function::"
+msgstr ""
+
+#: ../../patterns/flashing.rst:106
+msgid ""
+"Inside the template you then have to tell the "
+":func:`~flask.get_flashed_messages` function to also return the "
+"categories.  The loop looks slightly different in that situation then:"
+msgstr ""
+
+#: ../../patterns/flashing.rst:122
+msgid ""
+"This is just one example of how to render these flashed messages.  One "
+"might also use the category to add a prefix such as "
+"``<strong>Error:</strong>`` to the message."
+msgstr ""
+
+#: ../../patterns/flashing.rst:127
+msgid "Filtering Flash Messages"
+msgstr ""
+
+#: ../../patterns/flashing.rst:131
+msgid ""
+"Optionally you can pass a list of categories which filters the results of"
+" :func:`~flask.get_flashed_messages`.  This is useful if you wish to "
+"render each category in a separate block."
+msgstr ""
+
+#: ../../patterns/index.rst:2
+msgid "Patterns for Flask"
+msgstr ""
+
+#: ../../patterns/index.rst:4
+msgid ""
+"Certain features and interactions are common enough that you will find "
+"them in most web applications. For example, many applications use a "
+"relational database and user authentication. They will open a database "
+"connection at the beginning of the request and get the information for "
+"the logged in user. At the end of the request, the database connection is"
+" closed."
+msgstr ""
+
+#: ../../patterns/index.rst:11
+msgid ""
+"These types of patterns may be a bit outside the scope of Flask itself, "
+"but Flask makes it easy to implement them. Some common patterns are "
+"collected in the following pages."
+msgstr ""
+
+#: ../../patterns/jquery.rst:2
+msgid "AJAX with jQuery"
+msgstr ""
+
+#: ../../patterns/jquery.rst:4
+msgid ""
+"`jQuery`_ is a small JavaScript library commonly used to simplify working"
+" with the DOM and JavaScript in general.  It is the perfect tool to make "
+"web applications more dynamic by exchanging JSON between server and "
+"client."
+msgstr ""
+
+#: ../../patterns/jquery.rst:9
+msgid ""
+"JSON itself is a very lightweight transport format, very similar to how "
+"Python primitives (numbers, strings, dicts and lists) look like which is "
+"widely supported and very easy to parse.  It became popular a few years "
+"ago and quickly replaced XML as transport format in web applications."
+msgstr ""
+
+#: ../../patterns/jquery.rst:17
+msgid "Loading jQuery"
+msgstr ""
+
+#: ../../patterns/jquery.rst:19
+msgid ""
+"In order to use jQuery, you have to download it first and place it in the"
+" static folder of your application and then ensure it's loaded.  Ideally "
+"you have a layout template that is used for all pages where you just have"
+" to add a script statement to the bottom of your ``<body>`` to load "
+"jQuery:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:29
+msgid ""
+"Another method is using Google's `AJAX Libraries API "
+"<https://developers.google.com/speed/libraries/>`_ to load jQuery:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:38
+msgid ""
+"In this case you have to put jQuery into your static folder as a "
+"fallback, but it will first try to load it directly from Google. This has"
+" the advantage that your website will probably load faster for users if "
+"they went to at least one other website before using the same jQuery "
+"version from Google because it will already be in the browser cache."
+msgstr ""
+
+#: ../../patterns/jquery.rst:45
+msgid "Where is My Site?"
+msgstr ""
+
+#: ../../patterns/jquery.rst:47
+msgid ""
+"Do you know where your application is?  If you are developing the answer "
+"is quite simple: it's on localhost port something and directly on the "
+"root of that server.  But what if you later decide to move your "
+"application to a different location?  For example to "
+"``http://example.com/myapp``?  On the server side this never was a "
+"problem because we were using the handy :func:`~flask.url_for` function "
+"that could answer that question for us, but if we are using jQuery we "
+"should not hardcode the path to the application but make that dynamic, so"
+" how can we do that?"
+msgstr ""
+
+#: ../../patterns/jquery.rst:56
+msgid ""
+"A simple method would be to add a script tag to our page that sets a "
+"global variable to the prefix to the root of the application.  Something "
+"like this:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:68
+msgid "JSON View Functions"
+msgstr ""
+
+#: ../../patterns/jquery.rst:70
+msgid ""
+"Now let's create a server side function that accepts two URL arguments of"
+" numbers which should be added together and then sent back to the "
+"application in a JSON object.  This is a really ridiculous example and is"
+" something you usually would do on the client side alone, but a simple "
+"example that shows how you would use jQuery and Flask nonetheless::"
+msgstr ""
+
+#: ../../patterns/jquery.rst:89
+msgid ""
+"As you can see I also added an `index` method here that renders a "
+"template.  This template will load jQuery as above and have a little form"
+" where we can add two numbers and a link to trigger the function on the "
+"server side."
+msgstr ""
+
+#: ../../patterns/jquery.rst:94
+msgid ""
+"Note that we are using the :meth:`~werkzeug.datastructures.MultiDict.get`"
+" method here which will never fail.  If the key is missing a default "
+"value (here ``0``) is returned.  Furthermore it can convert values to a "
+"specific type (like in our case `int`).  This is especially handy for "
+"code that is triggered by a script (APIs, JavaScript etc.) because you "
+"don't need special error reporting in that case."
+msgstr ""
+
+#: ../../patterns/jquery.rst:102
+msgid "The HTML"
+msgstr ""
+
+#: ../../patterns/jquery.rst:104
+msgid ""
+"Your index.html template either has to extend a :file:`layout.html` "
+"template with jQuery loaded and the `$SCRIPT_ROOT` variable set, or do "
+"that on the top. Here's the HTML code needed for our little application "
+"(:file:`index.html`). Notice that we also drop the script directly into "
+"the HTML here.  It is usually a better idea to have that in a separate "
+"script file:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:131
+msgid ""
+"I won't go into detail here about how jQuery works, just a very quick "
+"explanation of the little bit of code above:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:134
+msgid ""
+"``$(function() { ... })`` specifies code that should run once the browser"
+" is done loading the basic parts of the page."
+msgstr ""
+
+#: ../../patterns/jquery.rst:136
+msgid "``$('selector')`` selects an element and lets you operate on it."
+msgstr ""
+
+#: ../../patterns/jquery.rst:137
+msgid ""
+"``element.bind('event', func)`` specifies a function that should run when"
+" the user clicked on the element.  If that function returns `false`, the "
+"default behavior will not kick in (in this case, navigate to the `#` "
+"URL)."
+msgstr ""
+
+#: ../../patterns/jquery.rst:141
+msgid ""
+"``$.getJSON(url, data, func)`` sends a ``GET`` request to `url` and will "
+"send the contents of the `data` object as query parameters.  Once the "
+"data arrived, it will call the given function with the return value as "
+"argument.  Note that we can use the `$SCRIPT_ROOT` variable here that we "
+"set earlier."
+msgstr ""
+
+#: ../../patterns/jquery.rst:147
+msgid ""
+"Check out the :gh:`example source <examples/javascript>` for a full "
+"application demonstrating the code on this page, as well as the same "
+"thing using ``XMLHttpRequest`` and ``fetch``."
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:2
+msgid "Lazily Loading Views"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:4
+msgid ""
+"Flask is usually used with the decorators.  Decorators are simple and you"
+" have the URL right next to the function that is called for that specific"
+" URL.  However there is a downside to this approach: it means all your "
+"code that uses decorators has to be imported upfront or Flask will never "
+"actually find your function."
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:10
+msgid ""
+"This can be a problem if your application has to import quick.  It might "
+"have to do that on systems like Google's App Engine or other systems.  So"
+" if you suddenly notice that your application outgrows this approach you "
+"can fall back to a centralized URL mapping."
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:15
+msgid ""
+"The system that enables having a central URL map is the "
+":meth:`~flask.Flask.add_url_rule` function.  Instead of using decorators,"
+" you have a file that sets up the application with all URLs."
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:20
+msgid "Converting to Centralized URL Map"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:22
+msgid "Imagine the current application looks somewhat like this::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:35
+msgid ""
+"Then, with the centralized approach you would have one file with the "
+"views (:file:`views.py`) but without any decorator::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:44
+msgid ""
+"And then a file that sets up an application which maps the functions to "
+"URLs::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:54
+msgid "Loading Late"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:56
+msgid ""
+"So far we only split up the views and the routing, but the module is "
+"still loaded upfront.  The trick is to actually load the view function as"
+" needed. This can be accomplished with a helper class that behaves just "
+"like a function but internally imports the real function on first use::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:76
+msgid ""
+"What's important here is is that `__module__` and `__name__` are properly"
+" set.  This is used by Flask internally to figure out how to name the URL"
+" rules in case you don't provide a name for the rule yourself."
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:80
+msgid "Then you can define your central place to combine the views like this::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:90
+msgid ""
+"You can further optimize this in terms of amount of keystrokes needed to "
+"write this by having a function that calls into "
+":meth:`~flask.Flask.add_url_rule` by prefixing a string with the project "
+"name and a dot, and by wrapping `view_func` in a `LazyView` as needed.  "
+"::"
+msgstr ""
+
+#: ../../patterns/lazyloading.rst:107
+msgid ""
+"One thing to keep in mind is that before and after request handlers have "
+"to be in a file that is imported upfront to work properly on the first "
+"request.  The same goes for any kind of remaining decorator."
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:2
+msgid "Adding HTTP Method Overrides"
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:4
+msgid ""
+"Some HTTP proxies do not support arbitrary HTTP methods or newer HTTP "
+"methods (such as PATCH). In that case it's possible to \"proxy\" HTTP "
+"methods through another HTTP method in total violation of the protocol."
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:8
+msgid ""
+"The way this works is by letting the client do an HTTP POST request and "
+"set the ``X-HTTP-Method-Override`` header. Then the method is replaced "
+"with the header value before being passed to Flask."
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:12
+msgid "This can be accomplished with an HTTP middleware::"
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:37
+msgid "To use this with Flask, wrap the app object with the middleware::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:2
+msgid "MongoDB with MongoEngine"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:4
+msgid ""
+"Using a document database like MongoDB is a common alternative to "
+"relational SQL databases. This pattern shows how to use `MongoEngine`_, a"
+" document mapper library, to integrate with MongoDB."
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:8
+msgid "A running MongoDB server and `Flask-MongoEngine`_ are required. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:17
+msgid "Configuration"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:19
+msgid ""
+"Basic setup can be done by defining ``MONGODB_SETTINGS`` on "
+"``app.config`` and creating a ``MongoEngine`` instance. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:33
+msgid "Mapping Documents"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:35
+msgid ""
+"To declare a model that represents a Mongo document, create a class that "
+"inherits from ``Document`` and declare each of the fields. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:47
+msgid ""
+"If the document has nested fields, use ``EmbeddedDocument`` to defined "
+"the fields of the embedded document and ``EmbeddedDocumentField`` to "
+"declare it on the parent document. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:62
+msgid "Creating Data"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:64
+msgid ""
+"Instantiate your document class with keyword arguments for the fields. "
+"You can also assign values to the field attributes after instantiation. "
+"Then call ``doc.save()``. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:78
+msgid "Queries"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:80
+msgid ""
+"Use the class ``objects`` attribute to make queries. A keyword argument "
+"looks for an equal value on the field. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:85
+msgid ""
+"Query operators may be used by concatenating them with the field name "
+"using a double-underscore. ``objects``, and queries returned by calling "
+"it, are iterable. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:96
+msgid "Documentation"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:98
+msgid ""
+"There are many more ways to define and query documents with MongoEngine. "
+"For more information, check out the `official documentation "
+"<MongoEngine_>`_."
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:102
+msgid ""
+"Flask-MongoEngine adds helpful utilities on top of MongoEngine. Check out"
+" their `documentation <Flask-MongoEngine_>`_ as well."
+msgstr ""
+
+#: ../../patterns/packages.rst:2
+msgid "Large Applications as Packages"
+msgstr ""
+
+#: ../../patterns/packages.rst:4
+msgid "Imagine a simple flask application structure that looks like this::"
+msgstr ""
+
+#: ../../patterns/packages.rst:16
+msgid ""
+"While this is fine for small applications, for larger applications it's a"
+" good idea to use a package instead of a module. The "
+":doc:`/tutorial/index` is structured to use the package pattern, see the "
+":gh:`example code <examples/tutorial>`."
+msgstr ""
+
+#: ../../patterns/packages.rst:22
+msgid "Simple Packages"
+msgstr ""
+
+#: ../../patterns/packages.rst:24
+msgid ""
+"To convert that into a larger one, just create a new folder "
+":file:`yourapplication` inside the existing one and move everything below"
+" it. Then rename :file:`yourapplication.py` to :file:`__init__.py`.  "
+"(Make sure to delete all ``.pyc`` files first, otherwise things would "
+"most likely break)"
+msgstr ""
+
+#: ../../patterns/packages.rst:29 ../../patterns/packages.rst:139
+msgid "You should then end up with something like that::"
+msgstr ""
+
+#: ../../patterns/packages.rst:42
+msgid ""
+"But how do you run your application now?  The naive ``python "
+"yourapplication/__init__.py`` will not work.  Let's just say that Python "
+"does not want modules in packages to be the startup file.  But that is "
+"not a big problem, just add a new file called :file:`setup.py` next to "
+"the inner :file:`yourapplication` folder with the following contents::"
+msgstr ""
+
+#: ../../patterns/packages.rst:59
+msgid ""
+"In order to run the application you need to export an environment "
+"variable that tells Flask where to find the application instance:"
+msgstr ""
+
+#: ../../patterns/packages.rst:82
+msgid ""
+"If you are outside of the project directory make sure to provide the "
+"exact path to your application directory. Similarly you can turn on the "
+"development features like this:"
+msgstr ""
+
+#: ../../patterns/packages.rst:106
+msgid ""
+"In order to install and run the application you need to issue the "
+"following commands::"
+msgstr ""
+
+#: ../../patterns/packages.rst:112
+msgid ""
+"What did we gain from this?  Now we can restructure the application a bit"
+" into multiple modules.  The only thing you have to remember is the "
+"following quick checklist:"
+msgstr ""
+
+#: ../../patterns/packages.rst:116
+msgid ""
+"the `Flask` application object creation has to be in the "
+":file:`__init__.py` file.  That way each module can import it safely and "
+"the `__name__` variable will resolve to the correct package."
+msgstr ""
+
+#: ../../patterns/packages.rst:119
+msgid ""
+"all the view functions (the ones with a :meth:`~flask.Flask.route` "
+"decorator on top) have to be imported in the :file:`__init__.py` file. "
+"Not the object itself, but the module it is in. Import the view module "
+"**after the application object is created**."
+msgstr ""
+
+#: ../../patterns/packages.rst:124
+msgid "Here's an example :file:`__init__.py`::"
+msgstr ""
+
+#: ../../patterns/packages.rst:131
+msgid "And this is what :file:`views.py` would look like::"
+msgstr ""
+
+#: ../../patterns/packages.rst:154
+msgid "Circular Imports"
+msgstr ""
+
+#: ../../patterns/packages.rst:156
+msgid ""
+"Every Python programmer hates them, and yet we just added some: circular "
+"imports (That's when two modules depend on each other.  In this case "
+":file:`views.py` depends on :file:`__init__.py`).  Be advised that this "
+"is a bad idea in general but here it is actually fine.  The reason for "
+"this is that we are not actually using the views in :file:`__init__.py` "
+"and just ensuring the module is imported and we are doing that at the "
+"bottom of the file."
+msgstr ""
+
+#: ../../patterns/packages.rst:164
+msgid ""
+"There are still some problems with that approach but if you want to use "
+"decorators there is no way around that.  Check out the "
+":doc:`/becomingbig` section for some inspiration how to deal with that."
+msgstr ""
+
+#: ../../patterns/packages.rst:170
+msgid "Working with Blueprints"
+msgstr ""
+
+#: ../../patterns/packages.rst:172
+msgid ""
+"If you have larger applications it's recommended to divide them into "
+"smaller groups where each group is implemented with the help of a "
+"blueprint.  For a gentle introduction into this topic refer to the "
+":doc:`/blueprints` chapter of the documentation."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:2
+msgid "Request Content Checksums"
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:4
+msgid ""
+"Various pieces of code can consume the request data and preprocess it. "
+"For instance JSON data ends up on the request object already read and "
+"processed, form data ends up there as well but goes through a different "
+"code path.  This seems inconvenient when you want to calculate the "
+"checksum of the incoming request data.  This is necessary sometimes for "
+"some APIs."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:11
+msgid ""
+"Fortunately this is however very simple to change by wrapping the input "
+"stream."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:14
+msgid ""
+"The following example calculates the SHA1 checksum of the incoming data "
+"as it gets read and stores it in the WSGI environment::"
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:41
+msgid ""
+"To use this, all you need to do is to hook the calculating stream in "
+"before the request starts consuming data.  (Eg: be careful accessing "
+"``request.form`` or anything of that nature.  ``before_request_handlers``"
+" for instance should be careful not to access it)."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:46
+msgid "Example usage::"
+msgstr ""
+
+#: ../../patterns/singlepageapplications.rst:2
+msgid "Single-Page Applications"
+msgstr ""
+
+#: ../../patterns/singlepageapplications.rst:4
+msgid ""
+"Flask can be used to serve Single-Page Applications (SPA) by placing "
+"static files produced by your frontend framework in a subfolder inside of"
+" your project. You will also need to create a catch-all endpoint that "
+"routes all requests to your SPA."
+msgstr ""
+
+#: ../../patterns/singlepageapplications.rst:9
+msgid "The following example demonstrates how to serve an SPA along with an API::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:2
+msgid "SQLAlchemy in Flask"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:4
+msgid ""
+"Many people prefer `SQLAlchemy`_ for database access.  In this case it's "
+"encouraged to use a package instead of a module for your flask "
+"application and drop the models into a separate module (:doc:`packages`)."
+" While that is not necessary, it makes a lot of sense."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:9
+msgid ""
+"There are four very common ways to use SQLAlchemy.  I will outline each "
+"of them here:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:13
+msgid "Flask-SQLAlchemy Extension"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:15
+msgid ""
+"Because SQLAlchemy is a common database abstraction layer and object "
+"relational mapper that requires a little bit of configuration effort, "
+"there is a Flask extension that handles that for you.  This is "
+"recommended if you want to get started quickly."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:20
+msgid ""
+"You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
+"/Flask-SQLAlchemy/>`_."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:27
+msgid "Declarative"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:29
+msgid ""
+"The declarative extension in SQLAlchemy is the most recent method of "
+"using SQLAlchemy.  It allows you to define tables and models in one go, "
+"similar to how Django works.  In addition to the following text I "
+"recommend the official documentation on the `declarative`_ extension."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:34
+msgid "Here's the example :file:`database.py` module for your application::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:54
+msgid ""
+"To define your models, just subclass the `Base` class that was created by"
+" the code above.  If you are wondering why we don't have to care about "
+"threads here (like we did in the SQLite3 example above with the "
+":data:`~flask.g` object): that's because SQLAlchemy does that for us "
+"already with the :class:`~sqlalchemy.orm.scoped_session`."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:60
+msgid ""
+"To use SQLAlchemy in a declarative way with your application, you just "
+"have to put the following code into your application module.  Flask will "
+"automatically remove database sessions at the end of the request or when "
+"the application shuts down::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:71
+msgid "Here is an example model (put this into :file:`models.py`, e.g.)::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:89
+msgid "To create the database you can use the `init_db` function:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:94
+msgid "You can insert entries into the database like this:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:102
+msgid "Querying is simple as well:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:113
+msgid "Manual Object Relational Mapping"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:115
+msgid ""
+"Manual object relational mapping has a few upsides and a few downsides "
+"versus the declarative approach from above.  The main difference is that "
+"you define tables and classes separately and map them together.  It's "
+"more flexible but a little more to type.  In general it works like the "
+"declarative approach, so make sure to also split up your application into"
+" multiple modules in a package."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:122
+msgid "Here is an example :file:`database.py` module for your application::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:135
+msgid ""
+"As in the declarative approach, you need to close the session after each "
+"request or application context shutdown.  Put this into your application "
+"module::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:145
+msgid "Here is an example table and model (put this into :file:`models.py`)::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:168
+msgid "Querying and inserting works exactly the same as in the example above."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:172
+msgid "SQL Abstraction Layer"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:174
+msgid ""
+"If you just want to use the database system (and SQL) abstraction layer "
+"you basically only need the engine::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:182
+msgid ""
+"Then you can either declare the tables in your code like in the examples "
+"above, or automatically load them::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:189
+msgid ""
+"To insert data you can use the `insert` method.  We have to get a "
+"connection first so that we can use a transaction:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:195
+msgid "SQLAlchemy will automatically commit for us."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:197
+msgid "To query your database, you use the engine directly or use a connection:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:202
+msgid "These results are also dict-like tuples:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:208
+msgid ""
+"You can also pass strings of SQL statements to the "
+":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:214
+msgid ""
+"For more information about SQLAlchemy, head over to the `website "
+"<https://www.sqlalchemy.org/>`_."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:2
+msgid "Using SQLite 3 with Flask"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:4
+msgid ""
+"In Flask you can easily implement the opening of database connections on "
+"demand and closing them when the context dies (usually at the end of the "
+"request)."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:8
+msgid "Here is a simple example of how you can use SQLite 3 with Flask::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:27
+msgid ""
+"Now, to use the database, the application must either have an active "
+"application context (which is always true if there is a request in "
+"flight) or create an application context itself.  At that point the "
+"``get_db`` function can be used to get the current database connection.  "
+"Whenever the context is destroyed the database connection will be "
+"terminated."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:33
+msgid ""
+"Note: if you use Flask 0.9 or older you need to use "
+"``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` "
+"object was bound to the request and not application context."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:37
+msgid "Example::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:47
+msgid ""
+"Please keep in mind that the teardown request and appcontext functions "
+"are always executed, even if a before-request handler failed or was never"
+" executed.  Because of this we have to make sure here that the database "
+"is there before we close it."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:53
+msgid "Connect on Demand"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:55
+msgid ""
+"The upside of this approach (connecting on first use) is that this will "
+"only open the connection if truly necessary.  If you want to use this "
+"code outside a request context you can use it in a Python shell by "
+"opening the application context by hand::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:65
+msgid "Easy Querying"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:67
+msgid ""
+"Now in each request handling function you can access `get_db()` to get "
+"the current open database connection.  To simplify working with SQLite, a"
+" row factory function is useful.  It is executed for every result "
+"returned from the database to convert the result.  For instance, in order"
+" to get dictionaries instead of tuples, this could be inserted into the "
+"``get_db`` function we created above::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:80
+msgid ""
+"This will make the sqlite3 module return dicts for this database "
+"connection, which are much nicer to deal with. Even more simply, we could"
+" place this in ``get_db`` instead::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:84
+msgid ""
+"This would use Row objects rather than dicts to return the results of "
+"queries. These are ``namedtuple`` s, so we can access them either by "
+"index or by key. For example, assuming we have a ``sqlite3.Row`` called "
+"``r`` for the rows ``id``, ``FirstName``, ``LastName``, and "
+"``MiddleInitial``::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:100
+msgid ""
+"Additionally, it is a good idea to provide a query function that combines"
+" getting the cursor, executing and fetching the results::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:109
+msgid ""
+"This handy little function, in combination with a row factory, makes "
+"working with the database much more pleasant than it is by just using the"
+" raw cursor and connection objects."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:113
+msgid "Here is how you can use it::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:118
+msgid "Or if you just want a single result::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:127
+msgid ""
+"To pass variable parts to the SQL statement, use a question mark in the "
+"statement and pass in the arguments as a list.  Never directly add them "
+"to the SQL statement with string formatting because this makes it "
+"possible to attack the application using `SQL Injections "
+"<https://en.wikipedia.org/wiki/SQL_injection>`_."
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:134
+msgid "Initial Schemas"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:136
+msgid ""
+"Relational databases need schemas, so applications often ship a "
+"`schema.sql` file that creates the database.  It's a good idea to provide"
+" a function that creates the database based on that schema.  This "
+"function can do that for you::"
+msgstr ""
+
+#: ../../patterns/sqlite3.rst:148
+msgid "You can then create such a database from the Python shell:"
+msgstr ""
+
+#: ../../patterns/streaming.rst:2
+msgid "Streaming Contents"
+msgstr ""
+
+#: ../../patterns/streaming.rst:4
+msgid ""
+"Sometimes you want to send an enormous amount of data to the client, much"
+" more than you want to keep in memory.  When you are generating the data "
+"on the fly though, how do you send that back to the client without the "
+"roundtrip to the filesystem?"
+msgstr ""
+
+#: ../../patterns/streaming.rst:9
+msgid "The answer is by using generators and direct responses."
+msgstr ""
+
+#: ../../patterns/streaming.rst:12
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../patterns/streaming.rst:14
+msgid ""
+"This is a basic view function that generates a lot of CSV data on the "
+"fly. The trick is to have an inner function that uses a generator to "
+"generate data and to then invoke that function and pass it to a response "
+"object::"
+msgstr ""
+
+#: ../../patterns/streaming.rst:25
+msgid ""
+"Each ``yield`` expression is directly sent to the browser.  Note though "
+"that some WSGI middlewares might break streaming, so be careful there in "
+"debug environments with profilers and other things you might have "
+"enabled."
+msgstr ""
+
+#: ../../patterns/streaming.rst:30
+msgid "Streaming from Templates"
+msgstr ""
+
+#: ../../patterns/streaming.rst:32
+msgid ""
+"The Jinja2 template engine also supports rendering templates piece by "
+"piece.  This functionality is not directly exposed by Flask because it is"
+" quite uncommon, but you can easily do it yourself::"
+msgstr ""
+
+#: ../../patterns/streaming.rst:48
+msgid ""
+"The trick here is to get the template object from the Jinja2 environment "
+"on the application and to call :meth:`~jinja2.Template.stream` instead of"
+" :meth:`~jinja2.Template.render` which returns a stream object instead of"
+" a string.  Since we're bypassing the Flask template render functions and"
+" using the template object itself we have to make sure to update the "
+"render context ourselves by calling "
+":meth:`~flask.Flask.update_template_context`. The template is then "
+"evaluated as the stream is iterated over.  Since each time you do a yield"
+" the server will flush the content to the client you might want to buffer"
+" up a few items in the template which you can do with "
+"``rv.enable_buffering(size)``.  ``5`` is a sane default."
+msgstr ""
+
+#: ../../patterns/streaming.rst:60
+msgid "Streaming with Context"
+msgstr ""
+
+#: ../../patterns/streaming.rst:64
+msgid ""
+"Note that when you stream data, the request context is already gone the "
+"moment the function executes.  Flask 0.9 provides you with a helper that "
+"can keep the request context around during the execution of the "
+"generator::"
+msgstr ""
+
+#: ../../patterns/streaming.rst:79
+msgid ""
+"Without the :func:`~flask.stream_with_context` function you would get a "
+":class:`RuntimeError` at that point."
+msgstr ""
+
+#: ../../patterns/subclassing.rst:2
+msgid "Subclassing Flask"
+msgstr ""
+
+#: ../../patterns/subclassing.rst:4
+msgid "The :class:`~flask.Flask` class is designed for subclassing."
+msgstr ""
+
+#: ../../patterns/subclassing.rst:6
+msgid ""
+"For example, you may want to override how request parameters are handled "
+"to preserve their order::"
+msgstr ""
+
+#: ../../patterns/subclassing.rst:17
+msgid ""
+"This is the recommended approach for overriding or augmenting Flask's "
+"internal functionality."
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:2
+msgid "Template Inheritance"
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:4
+msgid ""
+"The most powerful part of Jinja is template inheritance. Template "
+"inheritance allows you to build a base \"skeleton\" template that "
+"contains all the common elements of your site and defines **blocks** that"
+" child templates can override."
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:8
+msgid ""
+"Sounds complicated but is very basic. It's easiest to understand it by "
+"starting with an example."
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:13
+msgid "Base Template"
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:15
+msgid ""
+"This template, which we'll call :file:`layout.html`, defines a simple "
+"HTML skeleton document that you might use for a simple two-column page. "
+"It's the job of \"child\" templates to fill the empty blocks with "
+"content:"
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:39
+msgid ""
+"In this example, the ``{% block %}`` tags define four blocks that child "
+"templates can fill in. All the `block` tag does is tell the template "
+"engine that a child template may override those portions of the template."
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:44
+msgid "Child Template"
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:46
+msgid "A child template might look like this:"
+msgstr ""
+
+#: ../../patterns/templateinheritance.rst:64
+#, python-format
+msgid ""
+"The ``{% extends %}`` tag is the key here. It tells the template engine "
+"that this template \"extends\" another template.  When the template "
+"system evaluates this template, first it locates the parent.  The extends"
+" tag must be the first tag in the template.  To render the contents of a "
+"block defined in the parent template, use ``{{ super() }}``."
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:2
+msgid "Using URL Processors"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:6
+msgid ""
+"Flask 0.7 introduces the concept of URL processors.  The idea is that you"
+" might have a bunch of resources with common parts in the URL that you "
+"don't always explicitly want to provide.  For instance you might have a "
+"bunch of URLs that have the language code in it but you don't want to "
+"have to handle it in every single function yourself."
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:12
+msgid ""
+"URL processors are especially helpful when combined with blueprints.  We "
+"will handle both application specific URL processors here as well as "
+"blueprint specifics."
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:17
+msgid "Internationalized Application URLs"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:19
+msgid "Consider an application like this::"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:35
+msgid ""
+"This is an awful lot of repetition as you have to handle the language "
+"code setting on the :data:`~flask.g` object yourself in every single "
+"function. Sure, a decorator could be used to simplify this, but if you "
+"want to generate URLs from one function to another you would have to "
+"still provide the language code explicitly which can be annoying."
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:41
+msgid ""
+"For the latter, this is where :func:`~flask.Flask.url_defaults` functions"
+" come in.  They can automatically inject values into a call to "
+":func:`~flask.url_for`.  The code below checks if the language code is "
+"not yet in the dictionary of URL values and if the endpoint wants a value"
+" named ``'lang_code'``::"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:54
+msgid ""
+"The method :meth:`~werkzeug.routing.Map.is_endpoint_expecting` of the URL"
+" map can be used to figure out if it would make sense to provide a "
+"language code for the given endpoint."
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:58
+msgid ""
+"The reverse of that function are "
+":meth:`~flask.Flask.url_value_preprocessor`\\s.  They are executed right "
+"after the request was matched and can execute code based on the URL "
+"values.  The idea is that they pull information out of the values "
+"dictionary and put it somewhere else::"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:68
+msgid ""
+"That way you no longer have to do the `lang_code` assignment to "
+":data:`~flask.g` in every function.  You can further improve that by "
+"writing your own decorator that prefixes URLs with the language code, but"
+" the more beautiful solution is using a blueprint.  Once the "
+"``'lang_code'`` is popped from the values dictionary and it will no "
+"longer be forwarded to the view function reducing the code to this::"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:99
+msgid "Internationalized Blueprint URLs"
+msgstr ""
+
+#: ../../patterns/urlprocessors.rst:101
+msgid ""
+"Because blueprints can automatically prefix all URLs with a common string"
+" it's easy to automatically do that for every function.  Furthermore "
+"blueprints can have per-blueprint URL processors which removes a whole "
+"lot of logic from the :meth:`~flask.Flask.url_defaults` function because "
+"it no longer has to check if the URL is really interested in a "
+"``'lang_code'`` parameter::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:2
+msgid "View Decorators"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:4
+msgid ""
+"Python has a really interesting feature called function decorators.  This"
+" allows some really neat things for web applications.  Because each view "
+"in Flask is a function, decorators can be used to inject additional "
+"functionality to one or more functions.  The :meth:`~flask.Flask.route` "
+"decorator is the one you probably used already.  But there are use cases "
+"for implementing your own decorator.  For instance, imagine you have a "
+"view that should only be used by people that are logged in.  If a user "
+"goes to the site and is not logged in, they should be redirected to the "
+"login page.  This is a good example of a use case where a decorator is an"
+" excellent solution."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:16
+msgid "Login Required Decorator"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:18
+msgid ""
+"So let's implement such a decorator.  A decorator is a function that "
+"wraps and replaces another function.  Since the original function is "
+"replaced, you need to remember to copy the original function's "
+"information to the new function.  Use :func:`functools.wraps` to handle "
+"this for you."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:23
+msgid ""
+"This example assumes that the login page is called ``'login'`` and that "
+"the current user is stored in ``g.user`` and is ``None`` if there is no-"
+"one logged in. ::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:38
+msgid ""
+"To use the decorator, apply it as innermost decorator to a view function."
+" When applying further decorators, always remember that the "
+":meth:`~flask.Flask.route` decorator is the outermost. ::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:48
+msgid ""
+"The ``next`` value will exist in ``request.args`` after a ``GET`` request"
+" for the login page.  You'll have to pass it along when sending the "
+"``POST`` request from the login form.  You can do this with a hidden "
+"input tag, then retrieve it from ``request.form`` when logging the user "
+"in. ::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:57
+msgid "Caching Decorator"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:59
+msgid ""
+"Imagine you have a view function that does an expensive calculation and "
+"because of that you would like to cache the generated results for a "
+"certain amount of time.  A decorator would be nice for that.  We're "
+"assuming you have set up a cache like mentioned in :doc:`caching`."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:64
+msgid ""
+"Here is an example cache function.  It generates the cache key from a "
+"specific prefix (actually a format string) and the current path of the "
+"request.  Notice that we are using a function that first creates the "
+"decorator that then decorates the function.  Sounds awful? Unfortunately "
+"it is a little bit more complex, but the code should still be "
+"straightforward to read."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:71
+msgid "The decorated function will then work as follows"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:73
+msgid ""
+"get the unique cache key for the current request based on the current "
+"path."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:75
+msgid ""
+"get the value for that key from the cache. If the cache returned "
+"something we will return that value."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:77
+msgid ""
+"otherwise the original function is called and the return value is stored "
+"in the cache for the timeout provided (by default 5 minutes)."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:80
+msgid "Here the code::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:99
+msgid ""
+"Notice that this assumes an instantiated ``cache`` object is available, "
+"see :doc:`caching`."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:104
+msgid "Templating Decorator"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:106
+msgid ""
+"A common pattern invented by the TurboGears guys a while back is a "
+"templating decorator.  The idea of that decorator is that you return a "
+"dictionary with the values passed to the template from the view function "
+"and the template is automatically rendered.  With that, the following "
+"three examples do exactly the same::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:126
+msgid ""
+"As you can see, if no template name is provided it will use the endpoint "
+"of the URL map with dots converted to slashes + ``'.html'``.  Otherwise "
+"the provided template name is used.  When the decorated function returns,"
+" the dictionary returned is passed to the template rendering function.  "
+"If ``None`` is returned, an empty dictionary is assumed, if something "
+"else than a dictionary is returned we return it from the function "
+"unchanged.  That way you can still use the redirect function or return "
+"simple strings."
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:134
+msgid "Here is the code for that decorator::"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:157
+msgid "Endpoint Decorator"
+msgstr ""
+
+#: ../../patterns/viewdecorators.rst:159
+msgid ""
+"When you want to use the werkzeug routing system for more flexibility you"
+" need to map the endpoint as defined in the "
+":class:`~werkzeug.routing.Rule` to a view function. This is possible with"
+" this decorator. For example::"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:2
+msgid "Form Validation with WTForms"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:4
+msgid ""
+"When you have to work with form data submitted by a browser view, code "
+"quickly becomes very hard to read.  There are libraries out there "
+"designed to make this process easier to manage.  One of them is "
+"`WTForms`_ which we will handle here.  If you find yourself in the "
+"situation of having many forms, you might want to give it a try."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:10
+msgid ""
+"When you are working with WTForms you have to define your forms as "
+"classes first.  I recommend breaking up the application into multiple "
+"modules (:doc:`packages`) for that and adding a separate module for the "
+"forms."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:15
+msgid "Getting the most out of WTForms with an Extension"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:17
+msgid ""
+"The `Flask-WTF`_ extension expands on this pattern and adds a few little "
+"helpers that make working with forms and Flask more fun.  You can get it "
+"from `PyPI <https://pypi.org/project/Flask-WTF/>`_."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:25
+msgid "The Forms"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:27
+msgid "This is an example form for a typical registration page::"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:42
+msgid "In the View"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:44
+msgid "In the view function, the usage of this form looks like this::"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:57
+msgid ""
+"Notice we're implying that the view is using SQLAlchemy here "
+"(:doc:`sqlalchemy`), but that's not a requirement, of course.  Adapt the "
+"code as necessary."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:61
+msgid "Things to remember:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:63
+msgid ""
+"create the form from the request :attr:`~flask.request.form` value if the"
+" data is submitted via the HTTP ``POST`` method and "
+":attr:`~flask.request.args` if the data is submitted as ``GET``."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:66
+msgid ""
+"to validate the data, call the :func:`~wtforms.form.Form.validate` "
+"method, which will return ``True`` if the data validates, ``False`` "
+"otherwise."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:69
+msgid "to access individual values from the form, access `form.<NAME>.data`."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:72
+msgid "Forms in Templates"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:74
+msgid ""
+"Now to the template side.  When you pass the form to the templates, you "
+"can easily render them there.  Look at the following example template to "
+"see how easy this is.  WTForms does half the form generation for us "
+"already. To make it even nicer, we can write a macro that renders a field"
+" with label and a list of errors if there are any."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:80
+msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:97
+msgid ""
+"This macro accepts a couple of keyword arguments that are forwarded to "
+"WTForm's field function, which renders the field for us.  The keyword "
+"arguments will be inserted as HTML attributes.  So, for example, you can "
+"call ``render_field(form.username, class='username')`` to add a class to "
+"the input element.  Note that WTForms returns standard Python strings, so"
+" we have to tell Jinja2 that this data is already HTML-escaped with the "
+"``|safe`` filter."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:105
+msgid ""
+"Here is the :file:`register.html` template for the function we used "
+"above, which takes advantage of the :file:`_formhelpers.html` template:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:122
+msgid "For more information about WTForms, head over to the `WTForms website`_."
+msgstr ""

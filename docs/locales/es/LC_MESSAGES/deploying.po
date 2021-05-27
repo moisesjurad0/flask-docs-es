@@ -1,0 +1,816 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es_LA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../deploying/asgi.rst:4
+msgid "ASGI"
+msgstr ""
+
+#: ../../deploying/asgi.rst:6
+msgid ""
+"If you'd like to use an ASGI server you will need to utilise WSGI to ASGI"
+" middleware. The asgiref [WsgiToAsgi](https://github.com/django/asgiref"
+"#wsgi-to-asgi-adapter) adapter is recommended as it integrates with the "
+"event loop used for Flask's :ref:`async_await` support. You can use the "
+"adapter by wrapping the Flask app,"
+msgstr ""
+
+#: ../../deploying/asgi.rst:24
+msgid ""
+"and then serving the ``asgi_app`` with the asgi server, e.g. using "
+"`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
+msgstr ""
+
+#: ../../deploying/cgi.rst:2
+msgid "CGI"
+msgstr ""
+
+#: ../../deploying/cgi.rst:4
+msgid ""
+"If all other deployment methods do not work, CGI will work for sure. CGI "
+"is supported by all major servers but usually has a sub-optimal "
+"performance."
+msgstr ""
+
+#: ../../deploying/cgi.rst:8
+msgid ""
+"This is also the way you can use a Flask application on Google's `App "
+"Engine`_, where execution happens in a CGI-like environment."
+msgstr ""
+
+#: ../../deploying/cgi.rst:11 ../../deploying/fastcgi.rst:10
+#: ../../deploying/mod_wsgi.rst:6 ../../deploying/uwsgi.rst:13
+msgid "Watch Out"
+msgstr ""
+
+#: ../../deploying/cgi.rst:13
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to CGI / app engine."
+msgstr ""
+
+#: ../../deploying/cgi.rst:19
+msgid ""
+"With CGI, you will also have to make sure that your code does not contain"
+" any ``print`` statements, or that ``sys.stdout`` is overridden by "
+"something that doesn't write into the HTTP response."
+msgstr ""
+
+#: ../../deploying/cgi.rst:24
+msgid "Creating a `.cgi` file"
+msgstr ""
+
+#: ../../deploying/cgi.rst:26
+msgid ""
+"First you need to create the CGI application file.  Let's call it "
+":file:`yourapplication.cgi`::"
+msgstr ""
+
+#: ../../deploying/cgi.rst:36
+msgid "Server Setup"
+msgstr ""
+
+#: ../../deploying/cgi.rst:38
+msgid ""
+"Usually there are two ways to configure the server.  Either just copy the"
+" ``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something "
+"similar to rewrite the URL) or let the server point to the file directly."
+msgstr ""
+
+#: ../../deploying/cgi.rst:42
+msgid "In Apache for example you can put something like this into the config:"
+msgstr ""
+
+#: ../../deploying/cgi.rst:48
+msgid ""
+"On shared webhosting, though, you might not have access to your Apache "
+"config. In this case, a file called ``.htaccess``, sitting in the public "
+"directory you want your app to be available, works too but the "
+"``ScriptAlias`` directive won't work in that case:"
+msgstr ""
+
+#: ../../deploying/cgi.rst:59
+msgid "For more information consult the documentation of your webserver."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:2
+msgid "FastCGI"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:4
+msgid ""
+"FastCGI is a deployment option on servers like `nginx`_, `lighttpd`_, and"
+" `cherokee`_; see :doc:`uwsgi` and :doc:`wsgi-standalone` for other "
+"options. To use your WSGI application with any of them you will need a "
+"FastCGI server first. The most popular one is `flup`_ which we will use "
+"for this guide. Make sure to have it installed to follow along."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:12
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to FastCGI."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:19
+msgid "Creating a `.fcgi` file"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:21
+msgid ""
+"First you need to create the FastCGI server file.  Let's call it "
+"`yourapplication.fcgi`::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:31
+msgid ""
+"This is enough for Apache to work, however nginx and older versions of "
+"lighttpd need a socket to be explicitly passed to communicate with the "
+"FastCGI server.  For that to work you need to pass the path to the socket"
+" to the :class:`~flup.server.fcgi.WSGIServer`::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:38
+msgid "The path has to be the exact same path you define in the server config."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:41
+msgid ""
+"Save the :file:`yourapplication.fcgi` file somewhere you will find it "
+"again. It makes sense to have that in :file:`/var/www/yourapplication` or"
+" something similar."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:45
+msgid ""
+"Make sure to set the executable bit on that file so that the servers can "
+"execute it:"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:53 ../../deploying/mod_wsgi.rst:82
+msgid "Configuring Apache"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:55
+msgid ""
+"The example above is good enough for a basic Apache deployment but your "
+"`.fcgi` file will appear in your application URL e.g. "
+"``example.com/yourapplication.fcgi/news/``. There are few ways to "
+"configure your application so that yourapplication.fcgi does not appear "
+"in the URL. A preferable way is to use the ScriptAlias and SetHandler "
+"configuration directives to route requests to the FastCGI server. The "
+"following example uses FastCgiServer to start 5 instances of the "
+"application which will handle all incoming requests::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:80
+msgid ""
+"These processes will be managed by Apache. If you're using a standalone "
+"FastCGI server, you can use the FastCgiExternalServer directive instead. "
+"Note that in the following the path is not real, it's simply used as an "
+"identifier to other directives such as AliasMatch::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:88
+msgid ""
+"If you cannot set ScriptAlias, for example on a shared web host, you can "
+"use WSGI middleware to remove yourapplication.fcgi from the URLs. Set "
+".htaccess::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:107
+msgid "Set yourapplication.fcgi::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:131
+msgid "Configuring lighttpd"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:133
+msgid "A basic FastCGI configuration for lighttpd looks like that::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:153
+msgid ""
+"Remember to enable the FastCGI, alias and rewrite modules. This "
+"configuration binds the application to ``/yourapplication``.  If you want"
+" the application to work in the URL root you have to work around a "
+"lighttpd bug with the "
+":class:`~werkzeug.contrib.fixers.LighttpdCGIRootFix` middleware."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:158
+msgid ""
+"Make sure to apply it only if you are mounting the application the URL "
+"root. Also, see the Lighty docs for more information on `FastCGI and "
+"Python "
+"<https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModFastCGI>`_ "
+"(note that explicitly passing a socket to run() is no longer necessary)."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:164 ../../deploying/uwsgi.rst:48
+msgid "Configuring nginx"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:166
+msgid ""
+"Installing FastCGI applications on nginx is a bit different because by "
+"default no FastCGI parameters are forwarded."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:169
+msgid "A basic Flask FastCGI configuration for nginx looks like this::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:181
+msgid ""
+"This configuration binds the application to ``/yourapplication``.  If you"
+" want to have it in the URL root it's a bit simpler because you don't "
+"have to figure out how to calculate ``PATH_INFO`` and ``SCRIPT_NAME``::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:194
+msgid "Running FastCGI Processes"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:196
+msgid ""
+"Since nginx and others do not load FastCGI apps, you have to do it by "
+"yourself.  `Supervisor can manage FastCGI processes. "
+"<http://supervisord.org/configuration.html#fcgi-program-x-section-"
+"settings>`_ You can look around for other FastCGI process managers or "
+"write a script to run your `.fcgi` file at boot, e.g. using a SysV "
+"``init.d`` script. For a temporary solution, you can always run the "
+"``.fcgi`` script inside GNU screen.  See ``man screen`` for details, and "
+"note that this is a manual solution which does not persist across system "
+"restart::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:209
+msgid "Debugging"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:211
+msgid ""
+"FastCGI deployments tend to be hard to debug on most web servers.  Very "
+"often the only thing the server log tells you is something along the "
+"lines of \"premature end of headers\".  In order to debug the application"
+" the only thing that can really give you ideas why it breaks is switching"
+" to the correct user and executing the application by hand."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:217
+msgid ""
+"This example assumes your application is called `application.fcgi` and "
+"that your web server user is `www-data`::"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:227
+msgid ""
+"In this case the error seems to be \"yourapplication\" not being on the "
+"python path.  Common problems are:"
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:230
+msgid "Relative paths being used.  Don't rely on the current working directory."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:231
+msgid ""
+"The code depending on environment variables that are not set by the web "
+"server."
+msgstr ""
+
+#: ../../deploying/fastcgi.rst:233
+msgid "Different python interpreters being used."
+msgstr ""
+
+#: ../../deploying/index.rst:2
+msgid "Deployment Options"
+msgstr ""
+
+#: ../../deploying/index.rst:4
+msgid ""
+"While lightweight and easy to use, **Flask's built-in server is not "
+"suitable for production** as it doesn't scale well.  Some of the options "
+"available for properly running Flask in production are documented here."
+msgstr ""
+
+#: ../../deploying/index.rst:8
+msgid ""
+"If you want to deploy your Flask application to a WSGI server not listed "
+"here, look up the server documentation about how to use a WSGI app with "
+"it.  Just remember that your :class:`Flask` application object is the "
+"actual WSGI application."
+msgstr ""
+
+#: ../../deploying/index.rst:15
+msgid "Hosted options"
+msgstr ""
+
+#: ../../deploying/index.rst:17
+msgid ""
+"`Deploying Flask on Heroku <https://devcenter.heroku.com/articles"
+"/getting-started-with-python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:18
+msgid ""
+"`Deploying Flask on Google App Engine "
+"<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:19
+msgid ""
+"`Deploying Flask on Google Cloud Run "
+"<https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:20
+msgid ""
+"`Deploying Flask on AWS Elastic Beanstalk "
+"<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
+"python-flask.html>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:21
+msgid ""
+"`Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
+"service/containers/how-to-configure-python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:22
+msgid ""
+"`Deploying on PythonAnywhere "
+"<https://help.pythonanywhere.com/pages/Flask/>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:25
+msgid "Self-hosted options"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:2
+msgid "mod_wsgi (Apache)"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:4
+msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:8
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to mod_wsgi."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:17
+msgid "Installing `mod_wsgi`"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:19
+msgid ""
+"If you don't have `mod_wsgi` installed yet you have to either install it "
+"using a package manager or compile it yourself.  The mod_wsgi "
+"`installation instructions`_ cover source installations on UNIX systems."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:23
+msgid ""
+"If you are using Ubuntu/Debian you can apt-get it and activate it as "
+"follows:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:30
+msgid ""
+"If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
+"can install it as follows:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:37
+msgid ""
+"On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by "
+"using pkg_add:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:44
+msgid ""
+"If you are using pkgsrc you can install `mod_wsgi` by compiling the "
+"`www/ap2-wsgi` package."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:47
+msgid ""
+"If you encounter segfaulting child processes after the first apache "
+"reload you can safely ignore them.  Just restart the server."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:51
+msgid "Creating a `.wsgi` file"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:53
+msgid ""
+"To run your application you need a :file:`yourapplication.wsgi` file. "
+"This file contains the code `mod_wsgi` is executing on startup to get the"
+" application object.  The object called `application` in that file is "
+"then used as application."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:58
+msgid "For most applications the following file should be sufficient::"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:62
+msgid ""
+"If a factory function is used in a :file:`__init__.py` file, then the "
+"function should be imported::"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:67
+msgid ""
+"If you don't have a factory function for application creation but a "
+"singleton instance you can directly import that one as `application`."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:70
+msgid ""
+"Store that file somewhere that you will find it again (e.g.: "
+":file:`/var/www/yourapplication`) and make sure that `yourapplication` "
+"and all the libraries that are in use are on the python load path.  If "
+"you don't want to install it system wide consider using a `virtual "
+"python`_ instance.  Keep in mind that you will have to actually install "
+"your application into the virtualenv as well.  Alternatively there is the"
+" option to just patch the path in the ``.wsgi`` file before the import::"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:84
+msgid ""
+"The last thing you have to do is to create an Apache configuration file "
+"for your application.  In this example we are telling `mod_wsgi` to "
+"execute the application under a different user for security reasons:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:104
+msgid ""
+"Note: WSGIDaemonProcess isn't implemented in Windows and Apache will "
+"refuse to run with the above configuration. On a Windows system, "
+"eliminate those lines:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:118
+msgid ""
+"Note: There have been some changes in access control configuration for "
+"`Apache 2.4`_."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:123
+msgid ""
+"Most notably, the syntax for directory permissions has changed from httpd"
+" 2.2"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:130
+msgid "to httpd 2.4 syntax"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:137
+msgid "For more information consult the `mod_wsgi documentation`_."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:145
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:147
+msgid "If your application does not run, follow this guide to troubleshoot:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:153
+msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:150
+msgid ""
+"You have an ``app.run()`` call in your application file that is not "
+"guarded by an ``if __name__ == '__main__':`` condition.  Either remove "
+"that :meth:`~flask.Flask.run` call from the file and move it into a "
+"separate :file:`run.py` file or put it into such an if block."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:160
+msgid "**Problem:** application gives permission errors"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:156
+msgid ""
+"Probably caused by your application running as the wrong user.  Make sure"
+" the folders the application needs access to have the proper privileges "
+"set and the application runs as the correct user (``user`` and ``group`` "
+"parameter to the `WSGIDaemonProcess` directive)"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:176
+msgid "**Problem:** application dies with an error on print"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:163
+msgid ""
+"Keep in mind that mod_wsgi disallows doing anything with "
+":data:`sys.stdout` and :data:`sys.stderr`.  You can disable this "
+"protection from the config by setting the `WSGIRestrictStdout` to "
+"``off``:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:172
+msgid ""
+"Alternatively you can also replace the standard out in the .wsgi file "
+"with a different stream::"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:186
+msgid "**Problem:** accessing resources gives IO errors"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:179
+msgid ""
+"Your application probably is a single .py file you symlinked into the "
+"site-packages folder.  Please be aware that this does not work, instead "
+"you either have to put the folder into the pythonpath the file is stored "
+"in, or convert your application into a package."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:184
+msgid ""
+"The reason for this is that for non-installed packages, the module "
+"filename is used to locate the resources and for symlinks the wrong "
+"filename is picked up."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:189
+msgid "Support for Automatic Reloading"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:191
+msgid ""
+"To help deployment tools you can activate support for automatic "
+"reloading.  Whenever something changes the ``.wsgi`` file, `mod_wsgi` "
+"will reload all the daemon processes for us."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:195
+msgid "For that, just add the following directive to your `Directory` section:"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:202
+msgid "Working with Virtual Environments"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:204
+msgid ""
+"Virtual environments have the advantage that they never install the "
+"required dependencies system wide so you have a better control over what "
+"is used where.  If you want to use a virtual environment with mod_wsgi "
+"you have to modify your ``.wsgi`` file slightly."
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:209
+msgid "Add the following lines to the top of your ``.wsgi`` file::"
+msgstr ""
+
+#: ../../deploying/mod_wsgi.rst:215
+msgid ""
+"This sets up the load paths according to the settings of the virtual "
+"environment.  Keep in mind that the path has to be absolute."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:2 ../../deploying/wsgi-standalone.rst:35
+msgid "uWSGI"
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:4
+msgid ""
+"uWSGI is a deployment option on servers like `nginx`_, `lighttpd`_, and "
+"`cherokee`_; see :doc:`fastcgi` and :doc:`wsgi-standalone` for other "
+"options. To use your WSGI application with uWSGI protocol you will need a"
+" uWSGI server first. uWSGI is both a protocol and an application server; "
+"the application server can serve uWSGI, FastCGI, and HTTP protocols."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:10
+msgid ""
+"The most popular uWSGI server is `uwsgi`_, which we will use for this "
+"guide. Make sure to have it installed to follow along."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:15
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to uWSGI."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:22
+msgid "Starting your app with uwsgi"
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:24
+msgid "`uwsgi` is designed to operate on WSGI callables found in python modules."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:26
+msgid "Given a flask application in myapp.py, use the following command:"
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:32
+msgid ""
+"The ``--manage-script-name`` will move the handling of ``SCRIPT_NAME`` to"
+" uwsgi, since it is smarter about that. It is used together with the "
+"``--mount`` directive which will make requests to ``/yourapplication`` be"
+" directed to ``myapp:app``. If your application is accessible at root "
+"level, you can use a single ``/`` instead of ``/yourapplication``. "
+"``myapp`` refers to the name of the file of your flask application "
+"(without extension) or the module which provides ``app``. ``app`` is the "
+"callable inside of your application (usually the line reads ``app = "
+"Flask(__name__)``."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:42
+msgid ""
+"If you want to deploy your flask application inside of a virtual "
+"environment, you need to also add ``--virtualenv "
+"/path/to/virtual/environment``. You might also need to add ``--plugin "
+"python`` or ``--plugin python3`` depending on which python version you "
+"use for your project."
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:50
+msgid "A basic flask nginx configuration looks like this::"
+msgstr ""
+
+#: ../../deploying/uwsgi.rst:59
+msgid ""
+"This configuration binds the application to ``/yourapplication``.  If you"
+" want to have it in the URL root its a bit simpler::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:2
+msgid "Standalone WSGI Containers"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:4
+msgid ""
+"There are popular servers written in Python that contain WSGI "
+"applications and serve HTTP.  These servers stand alone when they run; "
+"you can proxy to them from your web server.  Note the section on :ref"
+":`deploying-proxy-setups` if you run into issues."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:10
+msgid "Gunicorn"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:12
+msgid ""
+"`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-"
+"fork worker model ported from Ruby's Unicorn project. It supports both "
+"`eventlet`_ and `greenlet`_. Running a Flask application on this server "
+"is quite simple::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:18
+msgid ""
+"`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. "
+"For example, to run a Flask application with 4 worker processes (``-w "
+"4``) binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:24
+msgid ""
+"The ``gunicorn`` command expects the names of your application module or "
+"package and the application instance within the module. If you use the "
+"application factory pattern, you can pass a call to that::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:37
+msgid ""
+"`uWSGI`_ is a fast application server written in C. It is very "
+"configurable which makes it more complicated to setup than gunicorn."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:40
+msgid "Running `uWSGI HTTP Router`_::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:44
+msgid ""
+"For a more optimized setup, see :doc:`configuring uWSGI and NGINX "
+"<uwsgi>`."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:50
+msgid "Gevent"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:52
+msgid ""
+"`Gevent`_ is a coroutine-based Python networking library that uses "
+"`greenlet`_ to provide a high-level synchronous API on top of `libev`_ "
+"event loop::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:67
+msgid "Twisted Web"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:69
+msgid ""
+"`Twisted Web`_ is the web server shipped with `Twisted`_, a mature, non-"
+"blocking event-driven networking library. Twisted Web comes with a "
+"standard WSGI container which can be controlled from the command line "
+"using the ``twistd`` utility::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:76
+msgid ""
+"This example will run a Flask application called ``app`` from a module "
+"named ``myproject``."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:79
+msgid ""
+"Twisted Web supports many flags and options, and the ``twistd`` utility "
+"does as well; see ``twistd -h`` and ``twistd web -h`` for more "
+"information. For example, to run a Twisted Web server in the foreground, "
+"on port 8080, with an application from ``myproject``::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:92
+msgid "Proxy Setups"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:94
+msgid ""
+"If you deploy your application using one of these servers behind an HTTP "
+"proxy you will need to rewrite a few headers in order for the application"
+" to work. The two problematic values in the WSGI environment usually are "
+"``REMOTE_ADDR`` and ``HTTP_HOST``.  You can configure your httpd to pass "
+"these headers, or you can fix them in middleware.  Werkzeug ships a fixer"
+" that will solve some common setups, but you might want to write your own"
+" WSGI middleware for specific setups."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:102
+msgid ""
+"Here's a simple nginx configuration which proxies to an application "
+"served on localhost at port 8000, setting appropriate headers:"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:126
+msgid ""
+"If your httpd is not providing these headers, the most common setup "
+"invokes the host being set from ``X-Forwarded-Host`` and the remote "
+"address from ``X-Forwarded-For``::"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:133
+msgid "Trusting Headers"
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:135
+msgid ""
+"Please keep in mind that it is a security issue to use such a middleware "
+"in a non-proxy setup because it will blindly trust the incoming headers "
+"which might be forged by malicious clients."
+msgstr ""
+
+#: ../../deploying/wsgi-standalone.rst:139
+msgid ""
+"If you want to rewrite the headers from another header, you might want to"
+" use a fixer like this::"
+msgstr ""
