@@ -39,11 +39,13 @@ html_theme = "flask"
 html_theme_options = {"index_sidebar_logo": False}
 html_context = {
     "project_links": [
-        ProjectLink("Donate", "https://palletsprojects.com/donate"),
-        ProjectLink("PyPI Releases", "https://pypi.org/project/Flask/"),
-        ProjectLink("Source Code", "https://github.com/pallets/flask/"),
-        ProjectLink("Issue Tracker", "https://github.com/pallets/flask/issues/"),
-        ProjectLink("Website", "https://palletsprojects.com/p/flask/"),
+        ProjectLink("Donar", "https://palletsprojects.com/donate"),
+        ProjectLink("Publicaciones en PyPI", "https://pypi.org/project/Flask/"),
+        ProjectLink("Código fuente", "https://github.com/pallets/flask/"),
+        ProjectLink(
+            "Seguimiento de problemas", "https://github.com/pallets/flask/issues/"
+        ),
+        ProjectLink("Página web", "https://palletsprojects.com/p/flask/"),
         ProjectLink("Twitter", "https://twitter.com/PalletsTeam"),
         ProjectLink("Chat", "https://discord.gg/pallets"),
     ]
@@ -56,7 +58,7 @@ singlehtml_sidebars = {"index": ["project.html", "localtoc.html", "ethicalads.ht
 html_static_path = ["_static"]
 html_favicon = "_static/flask-icon.png"
 html_logo = "_static/flask-icon.png"
-html_title = f"Flask Documentation ({version})"
+html_title = f"Documentación de Flask ({version})"
 html_show_sourcelink = False
 
 # LaTeX ----------------------------------------------------------------
@@ -96,3 +98,11 @@ def github_link(name, rawtext, text, lineno, inliner, options=None, content=None
 
 def setup(app):
     app.add_role("gh", github_link)
+
+
+# Translation ----------------------------------------------------------
+
+locale_dirs = ["locales"]
+gettext_compact = False
+language = "es_LA"
+html_search_language = "es"
