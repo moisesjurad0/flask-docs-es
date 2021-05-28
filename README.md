@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/flask-es/badge/?version=main)](https://flask-es.readthedocs.io/?badge=main)
+
 # Traducción al Español de la documentación de Flask
 
 ## Guía de contribución
@@ -128,7 +130,7 @@ Para Windows:
 > .\make.bat html
 ```
 
-Abra `{project_location}/docs/_build/html/index.html` en su navegador para ver los documentos.
+Abra `{ruta_del_proyecto}/docs/_build/html/index.html` en su navegador para ver los documentos.
 
 - Si todo funciona como se espera, lleve los cambios a GitHub:
 
@@ -150,11 +152,11 @@ si no terminas la traducción en diez días.
 
 ### docs/
 
-- [ ] advanced_foreword (reserved)
-- [ ] appcontext
-- [ ] async-await
-- [ ] becomingbig
-- [ ] blueprints
+- [x] advanced_foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] appcontext [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] async-await [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] becomingbig [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] blueprints [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] changes
 - [ ] cli
 - [ ] config
@@ -164,36 +166,36 @@ si no terminas la traducción en diez días.
 - [ ] errorhandling
 - [ ] extensiondev
 - [ ] extensions
-- [ ] foreword (reserved)
+- [x] foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] htmlfaq
-- [ ] index (reserved)
-- [ ] installation (reserved)
+- [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] installation [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] logging
-- [ ] quickstart (reserved)
-- [ ] reqcontext
-- [ ] security
-- [ ] server
-- [ ] shell
-- [ ] signals
-- [ ] templating
-- [ ] testing
-- [ ] views
+- [x] quickstart [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] reqcontext [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] security [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] server [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] shell [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] signals [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templating [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] testing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] views [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
-### docs/tutorial/ (reserved)
+### docs/tutorial/
 
-- [ ] blog
-- [ ] database
-- [ ] deploy
-- [ ] factory
-- [ ] index
-- [ ] install
-- [ ] layout
-- [ ] next
-- [ ] static
-- [ ] templates
-- [ ] tests
-- [ ] views
+- [x] blog  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] database  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] deploy  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] factory  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] index  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] install  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] layout  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] next  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] static  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templates  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] tests  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] views  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ### docs/deploying/
