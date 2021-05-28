@@ -166,15 +166,15 @@ si no terminas la traducción en diez días.
 - [x] config [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] contributing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] debugging [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] design
-- [ ] errorhandling
-- [ ] extensiondev
+- [x] design [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] errorhandling [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] extensiondev [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] extensions [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] htmlfaq
+- [x] htmlfaq [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] installation [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] logging
+- [x] logging [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] quickstart [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] reqcontext [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] security [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
@@ -243,7 +243,7 @@ si no terminas la traducción en diez días.
 - [x] wtforms [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
-## docs/api
+## docs/api (Reservado)
 
 - [ ] L0~L1000
 - [ ] L1000~L1500
