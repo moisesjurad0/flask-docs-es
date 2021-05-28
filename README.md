@@ -64,6 +64,10 @@ Puedes vincular el nombre de usuario a tu perfil de GitHub:
 "Create a new branch for this commit and start a pull request" y haga clic en el botón
 "Commit changes" para crear un PR.
 
+### Software de traducción recomendado
+
+Como se explica a continuación, las traducciones se realizan mediante archivos `.po`. Un buen editor es [POEdit](https://poedit.net/) (no confundir con POEditor)
+
 
 ### Traducción
 
@@ -75,7 +79,7 @@ $ git fetch upstream
 $ git checkout -b nombre-de-tu-rama upstream/main
 ```
 
-- Traduzca el archivo `.po` en el directorio `docs/locales/es/LC_MESSAGES`.
+- Traduzca el archivo `.po` en el directorio `docs/locales/es_LA/LC_MESSAGES`.
 
 A continuación se muestra un ejemplo de un archivo de este tipo, de docs/.../index.po.
 
@@ -110,7 +114,7 @@ Tenga cuidado de no romper la notación reST. La mayoría de los
 - Confirme los cambios (commit):
 
 ```
-$ git add docs/locales/es/LC_MESSAGES/ejemplo.po README.md
+$ git add docs/locales/es_LA/LC_MESSAGES/ejemplo.po README.md
 $ git commit -m "Traducir docs/ejemplo"
 ```
 
@@ -159,13 +163,13 @@ si no terminas la traducción en diez días.
 - [x] blueprints [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] changes
 - [ ] cli
-- [ ] config
-- [ ] contributing
-- [ ] debugging
+- [x] config [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] contributing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] debugging [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] design
 - [ ] errorhandling
 - [ ] extensiondev
-- [ ] extensions
+- [x] extensions [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] foreword [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] htmlfaq
 - [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
@@ -184,18 +188,18 @@ si no terminas la traducción en diez días.
 
 ### docs/tutorial/
 
-- [x] blog  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] database  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] deploy  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] factory  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] index  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] install  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] layout  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] next  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] static  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] templates  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] tests  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [x] views  [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] blog [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] database [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] deploy [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] factory [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] install [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] layout [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] next [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] static [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templates [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] tests [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] views [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ### docs/deploying/
@@ -211,32 +215,32 @@ si no terminas la traducción en diez días.
 
 ### docs/patterns/
 
-- [ ] appdispatch
-- [ ] appfactories
-- [ ] caching
-- [ ] celery
-- [ ] deferredcallbacks
-- [ ] distribute
-- [ ] fabric
-- [ ] favicon
-- [ ] fileuploads
-- [ ] flashing
-- [ ] index
-- [ ] jquery
-- [ ] lazyloading
-- [ ] methodoverrides
-- [ ] mongoengine
-- [ ] packages
-- [ ] requestchecksum
-- [ ] singlepageapplications
-- [ ] sqlalchemy
-- [ ] sqlite3
-- [ ] streaming
-- [ ] subclassing
-- [ ] templateinheritance
-- [ ] urlprocessors
-- [ ] viewdecorators
-- [ ] wtforms
+- [x] appdispatch [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] appfactories [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] caching [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] celery [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] deferredcallbacks [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] distribute [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] fabric [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] favicon [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] fileuploads [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] flashing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] jquery [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] lazyloading [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] methodoverrides [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] mongoengine [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] packages [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] requestchecksum [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] singlepageapplications [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] sqlalchemy [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] sqlite3 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] streaming [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] subclassing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] templateinheritance [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] urlprocessors [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] viewdecorators [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] wtforms [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ## docs/api
