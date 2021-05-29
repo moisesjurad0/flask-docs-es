@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 07:20-0400\n"
-"PO-Revision-Date: 2021-05-28 13:54-0400\n"
+"PO-Revision-Date: 2021-05-29 07:09-0400\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
@@ -55,7 +55,7 @@ msgstr "Define el blueprint y regístralo en la fábrica de aplicaciones."
 #: ../../tutorial/blog.rst:142 ../../tutorial/blog.rst:198
 #: ../../tutorial/blog.rst:228 ../../tutorial/blog.rst:320
 msgid "``flaskr/blog.py``"
-msgstr ""
+msgstr "``flaskr/blog.py``"
 
 #: ../../tutorial/blog.rst:33 ../../tutorial/views.rst:46
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 #: ../../tutorial/blog.rst:37 ../../tutorial/database.rst:174
 #: ../../tutorial/factory.rst:35 ../../tutorial/views.rst:50
 msgid "``flaskr/__init__.py``"
-msgstr ""
+msgstr "``flaskr/__init__.py``"
 
 #: ../../tutorial/blog.rst:51
 msgid ""
@@ -94,12 +94,12 @@ msgid ""
 "``url_for('blog.index')`` will both work, generating the same ``/`` URL either "
 "way."
 msgstr ""
-"Sin embargo, el punto final para la vista ``index`` definida a continuación "
-"será ``blog.index``. Algunas de las vistas de autenticación hacían referencia "
-"a un punto final simple ``index``. :meth:`app.add_url_rule() <Flask."
-"add_url_rule>` asocia el nombre del punto final ``'index`` con la url ``/`` "
-"para que ``url_for('index')`` o ``url_for('blog.index')`` funcionen ambos, "
-"generando la misma URL ``/`` de cualquier manera."
+"Sin embargo, el endpoint para la vista ``index`` definida a continuación será "
+"``blog.index``. Algunas de las vistas de autenticación hacían referencia a un "
+"punto final simple ``index``. :meth:`app.add_url_rule() <Flask.add_url_rule>` "
+"asocia el nombre del punto final ``'index`` con la url ``/`` para que "
+"``url_for('index')`` o ``url_for('blog.index')`` funcionen ambos, generando la "
+"misma URL ``/`` de cualquier manera."
 
 #: ../../tutorial/blog.rst:63
 msgid ""
@@ -110,8 +110,8 @@ msgid ""
 msgstr ""
 "En otra aplicación podrías dar al blueprint del blog un ``url_prefix`` y "
 "definir una vista ``index`` separada en la fábrica de la aplicación, similar a "
-"la vista ``hello``. Entonces los puntos finales y las URL de ``index`` y "
-"``blog.index`` serían diferentes."
+"la vista ``hello``. Entonces los endpoints y las URL de ``index`` y ``blog."
+"index`` serían diferentes."
 
 #: ../../tutorial/blog.rst:70
 msgid "Index"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:89
 msgid "``flaskr/templates/blog/index.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/index.html``"
 
 #: ../../tutorial/blog.rst:121
 msgid ""
@@ -171,7 +171,7 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:170
 msgid "``flaskr/templates/blog/create.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/create.html``"
 
 #: ../../tutorial/blog.rst:191
 msgid "Update"
@@ -251,7 +251,7 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:274
 msgid "``flaskr/templates/blog/update.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/update.html``"
 
 #: ../../tutorial/blog.rst:298
 msgid ""
@@ -378,7 +378,7 @@ msgstr ""
 #: ../../tutorial/database.rst:36 ../../tutorial/database.rst:120
 #: ../../tutorial/database.rst:157
 msgid "``flaskr/db.py``"
-msgstr ""
+msgstr "``flaskr/db.py``"
 
 #: ../../tutorial/database.rst:63
 msgid ""
@@ -454,7 +454,7 @@ msgstr ""
 
 #: ../../tutorial/database.rst:96
 msgid "``flaskr/schema.sql``"
-msgstr ""
+msgstr "``flaskr/schema.sql``"
 
 #: ../../tutorial/database.rst:117
 msgid ""
@@ -651,15 +651,15 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:53 ../../tutorial/factory.rst:140
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../tutorial/deploy.rst:60 ../../tutorial/factory.rst:148
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../tutorial/deploy.rst:67 ../../tutorial/factory.rst:156
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../tutorial/deploy.rst:74
 msgid ""
@@ -703,7 +703,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:98
 msgid "``venv/var/flaskr-instance/config.py``"
-msgstr ""
+msgstr "``venv/var/flaskr-instance/config.py``"
 
 #: ../../tutorial/deploy.rst:103
 msgid ""
@@ -1138,7 +1138,7 @@ msgstr ""
 
 #: ../../tutorial/install.rst:34
 msgid "``setup.py``"
-msgstr ""
+msgstr "``setup.py``"
 
 #: ../../tutorial/install.rst:51
 msgid ""
@@ -1157,7 +1157,7 @@ msgstr ""
 
 #: ../../tutorial/install.rst:58
 msgid "``MANIFEST.in``"
-msgstr ""
+msgstr "``MANIFEST.in``"
 
 #: ../../tutorial/install.rst:66
 msgid ""
@@ -1248,7 +1248,7 @@ msgstr "Una aplicación Flask puede ser tan simple como un solo archivo."
 
 #: ../../tutorial/layout.rst:22
 msgid "``hello.py``"
-msgstr ""
+msgstr "``hello.py``"
 
 #: ../../tutorial/layout.rst:34
 msgid ""
@@ -1319,7 +1319,7 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:92
 msgid "``.gitignore``"
-msgstr ""
+msgstr "``.gitignore``"
 
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
@@ -1461,7 +1461,7 @@ msgstr ""
 
 #: ../../tutorial/static.rst:25
 msgid "``flaskr/static/style.css``"
-msgstr ""
+msgstr "``flaskr/static/style.css``"
 
 #: ../../tutorial/static.rst:55
 msgid ""
@@ -1576,7 +1576,7 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:46
 msgid "``flaskr/templates/base.html``"
-msgstr ""
+msgstr "``flaskr/templates/base.html``"
 
 #: ../../tutorial/templates.rst:74
 msgid ""
@@ -1651,7 +1651,7 @@ msgstr "Registro"
 
 #: ../../tutorial/templates.rst:105
 msgid "``flaskr/templates/auth/register.html``"
-msgstr ""
+msgstr "``flaskr/templates/auth/register.html``"
 
 #: ../../tutorial/templates.rst:124
 #, python-format
@@ -1708,7 +1708,7 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:149
 msgid "``flaskr/templates/auth/login.html``"
-msgstr ""
+msgstr "``flaskr/templates/auth/login.html``"
 
 #: ../../tutorial/templates.rst:170
 msgid "Register A User"
@@ -1783,15 +1783,20 @@ msgstr ""
 "Debes asegurarte de que cada función se pruebe con datos que cubran cada rama."
 
 #: ../../tutorial/tests.rst:15
-#, python-format
 msgid ""
 "The closer you get to 100% coverage, the more comfortable you can be that "
-"making a change won't unexpectedly change other behavior. However, "
-"100% coverage doesn't guarantee that your application doesn't have bugs. In "
+"making a change won't unexpectedly change other behavior. However, 100% "
+"coverage doesn't guarantee that your application doesn't have bugs. In "
 "particular, it doesn't test how the user interacts with the application in the "
 "browser. Despite this, test coverage is an important tool to use during "
 "development."
 msgstr ""
+"Cuanto más se acerque al 100% de cobertura, más seguro estará de que un cambio "
+"no modificará inesperadamente otros comportamientos. Sin embargo, una "
+"cobertura del 100% no garantiza que tu aplicación no tenga errores. En "
+"particular, no comprueba cómo interactúa el usuario con la aplicación en el "
+"navegador. A pesar de esto, la cobertura de las pruebas es una herramienta "
+"importante para utilizar durante el desarrollo."
 
 #: ../../tutorial/tests.rst:23
 msgid ""
@@ -1839,7 +1844,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:51
 msgid "``tests/data.sql``"
-msgstr ""
+msgstr "``tests/data.sql``"
 
 #: ../../tutorial/tests.rst:63
 msgid ""
@@ -1853,7 +1858,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:67 ../../tutorial/tests.rst:226
 msgid "``tests/conftest.py``"
-msgstr ""
+msgstr "``tests/conftest.py``"
 
 #: ../../tutorial/tests.rst:109
 msgid ""
@@ -1942,7 +1947,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:147
 msgid "``tests/test_factory.py``"
-msgstr ""
+msgstr "``tests/test_factory.py``"
 
 #: ../../tutorial/tests.rst:162
 msgid ""
@@ -1969,7 +1974,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:174 ../../tutorial/tests.rst:196
 msgid "``tests/test_db.py``"
-msgstr ""
+msgstr "``tests/test_db.py``"
 
 #: ../../tutorial/tests.rst:193
 msgid ""
@@ -2031,7 +2036,7 @@ msgstr ""
 #: ../../tutorial/tests.rst:256 ../../tutorial/tests.rst:316
 #: ../../tutorial/tests.rst:345
 msgid "``tests/test_auth.py``"
-msgstr ""
+msgstr "``tests/test_auth.py``"
 
 #: ../../tutorial/tests.rst:289
 msgid ""
@@ -2117,7 +2122,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:357
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: ../../tutorial/tests.rst:359
 msgid ""
@@ -2153,7 +2158,7 @@ msgstr ""
 #: ../../tutorial/tests.rst:371 ../../tutorial/tests.rst:397
 #: ../../tutorial/tests.rst:439 ../../tutorial/tests.rst:476
 msgid "``tests/test_blog.py``"
-msgstr ""
+msgstr "``tests/test_blog.py``"
 
 #: ../../tutorial/tests.rst:391
 msgid ""
@@ -2206,7 +2211,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:497
 msgid "``setup.cfg``"
-msgstr ""
+msgstr "``setup.cfg``"
 
 #: ../../tutorial/tests.rst:508
 msgid ""
@@ -2305,7 +2310,7 @@ msgstr ""
 #: ../../tutorial/views.rst:171 ../../tutorial/views.rst:218
 #: ../../tutorial/views.rst:247 ../../tutorial/views.rst:263
 msgid "``flaskr/auth.py``"
-msgstr ""
+msgstr "``flaskr/auth.py``"
 
 #: ../../tutorial/views.rst:41
 msgid ""
@@ -2611,9 +2616,8 @@ msgid ""
 "``'auth.login'`` because you added it to the ``'auth'`` blueprint."
 msgstr ""
 "Cuando se utiliza un blueprint, el nombre del blueprint se antepone al nombre "
-"de la función, por lo que el punto final de la función ``login`` que "
-"escribiste arriba es ``'auth.login'`` porque lo agregaste al blueprint "
-"``'auth'``."
+"de la función, por lo que el endpoint de la función ``login`` que escribiste "
+"arriba es ``'auth.login'`` porque lo agregaste al blueprint ``'auth'``."
 
 #: ../../tutorial/views.rst:301
 msgid "Continue to :doc:`templates`."

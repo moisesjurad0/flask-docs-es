@@ -17,7 +17,6 @@ msgstr ""
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "X-Generator: Poedit 2.4.3\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../index.rst:4
 msgid "Welcome to Flask"
