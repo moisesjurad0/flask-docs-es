@@ -97,4 +97,4 @@ msgstr ""
 "aquí para los interesados."
 
 #~ msgid "Flask: web development, one drop at a time"
-#~ msgstr "Flask: desarrollo web, una gota a la vez"
+#~ msgstr "Flask: Desarrollo web, una gota a la vez"

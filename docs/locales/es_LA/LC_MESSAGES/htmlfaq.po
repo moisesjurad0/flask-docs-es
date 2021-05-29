@@ -474,4 +474,4 @@ msgstr ""
 " XHTML."
 
 #~ msgid "Yes"
-#~ msgstr "Si"
+#~ msgstr "Sí"
