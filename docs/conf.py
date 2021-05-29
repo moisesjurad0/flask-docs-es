@@ -48,6 +48,9 @@ html_context = {
         ProjectLink("Página web", "https://palletsprojects.com/p/flask/"),
         ProjectLink("Twitter", "https://twitter.com/PalletsTeam"),
         ProjectLink("Chat", "https://discord.gg/pallets"),
+        ProjectLink(
+            "Participar en la traducción", "https://github.com/Jalkhov/flask-docs-es"
+        ),
     ]
 }
 html_sidebars = {
