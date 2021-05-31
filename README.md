@@ -204,13 +204,13 @@ si no terminas la traducción en diez días.
 
 ### docs/deploying/
 
-- [ ] asgi
-- [ ] cgi
-- [ ] fastcgi
-- [ ] index
-- [ ] mod_wsgi
-- [ ] uwsgi
-- [ ] wsgi-standalone
+- [x] asgi [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] cgi [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] fastcgi [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] index [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] mod_wsgi [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] uwsgi [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] wsgi-standalone [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
 ### docs/patterns/
