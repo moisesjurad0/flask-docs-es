@@ -79,7 +79,7 @@ $ git fetch upstream
 $ git checkout -b nombre-de-tu-rama upstream/main
 ```
 
-- Traduzca el archivo `.po` en el directorio `docs/locales/es_LA/LC_MESSAGES`.
+- Traduzca el archivo `.po` en el directorio `docs/locales/es/LC_MESSAGES`.
 
 A continuación se muestra un ejemplo de un archivo de este tipo, de docs/.../index.po.
 
@@ -114,7 +114,7 @@ Tenga cuidado de no romper la notación reST. La mayoría de los
 - Confirme los cambios (commit):
 
 ```
-$ git add docs/locales/es_LA/LC_MESSAGES/ejemplo.po README.md
+$ git add docs/locales/es/LC_MESSAGES/ejemplo.po README.md
 $ git commit -m "Traducir docs/ejemplo"
 ```
 
