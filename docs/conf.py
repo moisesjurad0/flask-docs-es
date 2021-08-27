@@ -1,6 +1,5 @@
 import packaging.version
-from pallets_sphinx_themes import get_version
-from pallets_sphinx_themes import ProjectLink
+from pallets_sphinx_themes import ProjectLink, get_version
 
 # Project --------------------------------------------------------------
 
@@ -40,7 +39,8 @@ html_theme_options = {"index_sidebar_logo": False}
 html_context = {
     "project_links": [
         ProjectLink("Donar", "https://palletsprojects.com/donate"),
-        ProjectLink("Publicaciones en PyPI", "https://pypi.org/project/Flask/"),
+        ProjectLink("Publicaciones en PyPI",
+                    "https://pypi.org/project/Flask/"),
         ProjectLink("Código fuente", "https://github.com/pallets/flask/"),
         ProjectLink(
             "Seguimiento de problemas", "https://github.com/pallets/flask/issues/"
@@ -57,7 +57,8 @@ html_sidebars = {
     "index": ["project.html", "localtoc.html", "searchbox.html", "ethicalads.html"],
     "**": ["localtoc.html", "relations.html", "searchbox.html", "ethicalads.html"],
 }
-singlehtml_sidebars = {"index": ["project.html", "localtoc.html", "ethicalads.html"]}
+singlehtml_sidebars = {
+    "index": ["project.html", "localtoc.html", "ethicalads.html"]}
 html_static_path = ["_static"]
 html_favicon = "_static/flask-icon.png"
 html_logo = "_static/flask-icon.png"
@@ -107,5 +108,5 @@ def setup(app):
 
 locale_dirs = ["locales"]
 gettext_compact = False
-language = "es_LA"
+language = "es"
 html_search_language = "es"
