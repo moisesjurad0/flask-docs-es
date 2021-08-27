@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 07:20-0400\n"
-"PO-Revision-Date: 2021-05-29 07:37-0400\n"
+"PO-Revision-Date: 2021-06-16 17:29-0400\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
-"Language: es_LA\n"
-"X-Generator: Poedit 2.4.3\n"
+"Language: es_419\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../changes.rst:2
 msgid "Changes"
@@ -29,53 +29,65 @@ msgstr "Versión 2.0.2"
 
 #: ../../../CHANGES.rst:6
 msgid "Unreleased"
-msgstr ""
+msgstr "Sin publicar"
 
 #: ../../../CHANGES.rst:8
 msgid "Fix type annotation for ``teardown_request``. :issue:`4093`"
-msgstr ""
+msgstr "Fijar la anotación de tipo para ``teardown_request``. :issue:`4093`"
 
 #: ../../../CHANGES.rst:9
 msgid ""
 "Fix type annotation for ``before_request`` and ``before_app_request`` "
 "decorators. :issue:`4104`"
 msgstr ""
+"Fijar la anotación de tipo para los decoradores ``before_request`` y "
+"``before_app_request``. :issue:`4104`"
 
 #: ../../../CHANGES.rst:14
 msgid "Version 2.0.1"
-msgstr ""
+msgstr "Versión 2.0.1"
 
 #: ../../../CHANGES.rst:16
 msgid "Released 2021-05-21"
-msgstr ""
+msgstr "Publicado el 2021-05-21"
 
 #: ../../../CHANGES.rst:18
 msgid ""
 "Re-add the ``filename`` parameter in ``send_from_directory``. The ``filename`` "
 "parameter has been renamed to ``path``, the old name is deprecated. :pr:`4019`"
 msgstr ""
+"Vuelve a añadir el parámetro ``filename`` en ``send_from_directory``. El "
+"parámetro ``filename`` ha sido renombrado a ``path``, el antiguo nombre está "
+"obsoleto. :pr:`4019`"
 
 #: ../../../CHANGES.rst:21
 msgid ""
 "Mark top-level names as exported so type checking understands imports in user "
 "projects. :issue:`4024`"
 msgstr ""
+"Marcar los nombres de nivel superior como exportados para que la comprobación "
+"de tipo entienda las importaciones en los proyectos de usuario. :issue:`4024`"
 
 #: ../../../CHANGES.rst:23
 msgid ""
 "Fix type annotation for ``g`` and inform mypy that it is a namespace object "
 "that has arbitrary attributes. :issue:`4020`"
 msgstr ""
+"Fijar la anotación de tipo para ``g`` e informar a mypy de que es un objeto de "
+"espacio de nombres que tiene atributos arbitrarios. :issue:`4020`"
 
 #: ../../../CHANGES.rst:25
 msgid "Fix some types that weren't available in Python 3.6.0. :issue:`4040`"
 msgstr ""
+"Corregir algunos tipos que no estaban disponibles en Python 3.6.0. :issue:`4040`"
 
 #: ../../../CHANGES.rst:26
 msgid ""
 "Improve typing for ``send_file``, ``send_from_directory``, and "
 "``get_send_file_max_age``. :issue:`4044`, :pr:`4026`"
 msgstr ""
+"Mejorar la tipificación de ``send_file``, ``send_from_directory`` y "
+"``get_send_file_max_age``. :issue:`4044`, :pr:`4026`"
 
 #: ../../../CHANGES.rst:28
 msgid ""
@@ -83,12 +95,17 @@ msgid ""
 "meaning, it is used to separate (nested) blueprint names and the endpoint "
 "name. :issue:`4041`"
 msgstr ""
+"Muestra un error cuando un nombre de blueprint contiene un punto. El ``.`` "
+"tiene un significado especial, se utiliza para separar los nombres de los "
+"planos (anidados) y el nombre del punto final. :issue:`4041`"
 
 #: ../../../CHANGES.rst:31
 msgid ""
 "Combine URL prefixes when nesting blueprints that were created with a "
 "``url_prefix`` value. :issue:`4037`"
 msgstr ""
+"Combinar prefijos de URL al anidar planos creados con un valor ``url_prefix``. :"
+"issue:`4037`"
 
 #: ../../../CHANGES.rst:33
 msgid ""
@@ -96,24 +113,34 @@ msgid ""
 "matched after the session is loaded, so the session is available in custom URL "
 "converters. :issue:`4053`"
 msgstr ""
+"Retroceder un cambio en el orden en que se hizo la coincidencia de URL. La URL "
+"vuelve a coincidir después de que se cargue la sesión, por lo que la sesión "
+"está disponible en los convertidores de URL personalizados. :issue:`4053`"
 
 #: ../../../CHANGES.rst:36
 msgid ""
 "Re-add deprecated ``Config.from_json``, which was accidentally removed early. :"
 "issue:`4078`"
 msgstr ""
+"Volver a añadir el obsoleto ``Config.from_json``, que fue eliminado "
+"accidentalmente antes. :issue:`4078`"
 
 #: ../../../CHANGES.rst:38
 msgid ""
 "Improve typing for some functions using ``Callable`` in their type signatures, "
 "focusing on decorator factories. :issue:`4060`"
 msgstr ""
+"Mejorar la tipificación de algunas funciones que utilizan ``Callable`` en sus "
+"firmas de tipo, centrándose en las fábricas de decoradores. :issue:`4060`"
 
 #: ../../../CHANGES.rst:40
 msgid ""
 "Nested blueprints are registered with their dotted name. This allows different "
 "blueprints with the same name to be nested at different locations. :issue:`4069`"
 msgstr ""
+"Los blueprints anidados se registran con su nombre punteado. Esto permite "
+"anidar diferentes blueprints con el mismo nombre en diferentes lugares. :issue:"
+"`4069`"
 
 #: ../../../CHANGES.rst:43
 msgid ""
@@ -122,22 +149,26 @@ msgid ""
 "registered multiple times with unique names for ``url_for``. Registering the "
 "same blueprint with the same name multiple times is deprecated. :issue:`1091`"
 msgstr ""
+"``register_blueprint`` toma una opción ``name`` para cambiar el nombre (pre-"
+"punteado) con el que se registra el blueprint. Esto permite registrar el mismo "
+"plano varias veces con nombres únicos para ``url_for``. Registrar el mismo "
+"plano con el mismo nombre varias veces está obsoleto. :issue:`1091`"
 
 #: ../../../CHANGES.rst:48
 msgid "Improve typing for ``stream_with_context``. :issue:`4052`"
-msgstr ""
+msgstr "Mejorar la tipificación de ``stream_with_context``. :issue:`4052`"
 
 #: ../../../CHANGES.rst:52
 msgid "Version 2.0.0"
-msgstr ""
+msgstr "Versión 2.0.0"
 
 #: ../../../CHANGES.rst:54
 msgid "Released 2021-05-11"
-msgstr ""
+msgstr "Released 2021-05-11"
 
 #: ../../../CHANGES.rst:56
 msgid "Drop support for Python 2 and 3.5."
-msgstr ""
+msgstr "Deja de ser compatible con Python 2 y 3.5."
 
 #: ../../../CHANGES.rst:57
 msgid ""
@@ -148,16 +179,24 @@ msgid ""
 "but using Click 7 will trigger a DeprecationWarning and Flask 2.1 will depend "
 "on Click 8."
 msgstr ""
+"Aumentar las versiones mínimas de otros proyectos de Pallets: Werkzeug >= 2, "
+"Jinja2 >= 3, MarkupSafe >= 2, ItsDangerous >= 2, Click >= 8. Asegúrese de "
+"comprobar los registros de cambios de cada proyecto. Para una mejor "
+"compatibilidad con otras aplicaciones (por ejemplo, Celery) que todavía "
+"requieren Click 7, todavía no hay dependencia dura de Click 8, pero el uso de "
+"Click 7 activará un DeprecationWarning y Flask 2.1 dependerá de Click 8."
 
 #: ../../../CHANGES.rst:63
 msgid ""
 "JSON support no longer uses simplejson. To use another JSON module, override "
 "``app.json_encoder`` and ``json_decoder``. :issue:`3555`"
 msgstr ""
+"El soporte de JSON ya no utiliza simplejson. Para utilizar otro módulo JSON, "
+"anule ``app.json_encoder`` y ``json_decoder``. :issue:`3555`"
 
 #: ../../../CHANGES.rst:65
 msgid "The ``encoding`` option to JSON functions is deprecated. :pr:`3562`"
-msgstr ""
+msgstr "La opción ``encoding`` de las funciones JSON está obsoleta. :pr:`3562`"
 
 #: ../../../CHANGES.rst:66
 msgid ""
@@ -165,18 +204,25 @@ msgid ""
 "portable outside the ``flask`` command. Use ``click.get_current_context().obj`` "
 "if it's needed. :issue:`3552`"
 msgstr ""
+"Pasar ``script_info`` a las funciones de fábrica de la aplicación está "
+"obsoleto. Esto no era portable fuera del comando ``flask``. Usa ``click."
+"get_current_context().obj`` si es necesario. :issue:`3552`"
 
 #: ../../../CHANGES.rst:69
 msgid ""
 "The CLI shows better error messages when the app failed to load when looking up "
 "commands. :issue:`2741`"
 msgstr ""
+"La CLI muestra mejores mensajes de error cuando la aplicación no se carga al "
+"buscar comandos. :issue:`2741`"
 
 #: ../../../CHANGES.rst:71
 msgid ""
 "Add :meth:`sessions.SessionInterface.get_cookie_name` to allow setting the "
 "session cookie name dynamically. :pr:`3369`"
 msgstr ""
+"Añadir :meth:`sessions.SessionInterface.get_cookie_name` para permitir "
+"establecer el nombre de la cookie de sesión de forma dinámica. :pr:`3369`"
 
 #: ../../../CHANGES.rst:73
 msgid ""
@@ -184,6 +230,9 @@ msgid ""
 "as ``toml.load`` or ``json.load``. :meth:`Config.from_json` is deprecated in "
 "favor of this. :pr:`3398`"
 msgstr ""
+"Añade :meth:`Config.from_file` para cargar la configuración utilizando "
+"cargadores de archivos arbitrarios, como ``toml.load`` o ``json.load``. :meth:"
+"`Config.from_json` está obsoleto en favor de esto. :pr:`3398`"
 
 #: ../../../CHANGES.rst:76
 msgid ""
@@ -191,6 +240,9 @@ msgid ""
 "during the initial call will cause the server to exit with the traceback "
 "immediately. :issue:`3431`"
 msgstr ""
+"El comando ``flask run`` sólo aplazará los errores en la recarga. Los errores "
+"que se produzcan durante la llamada inicial harán que el servidor salga con el "
+"rastreo inmediatamente. :issue:`3431`"
 
 #: ../../../CHANGES.rst:79
 msgid ""
@@ -198,24 +250,33 @@ msgid ""
 "text mode. Previously, it would respond with 200 OK and an empty file. :issue:"
 "`3358`"
 msgstr ""
+":func:`send_file` genera un :exc:`ValueError` cuando se le pasa un objeto :mod:"
+"`io` en modo texto. Anteriormente, respondía con 200 OK y un archivo vacío. :"
+"issue:`3358`"
 
 #: ../../../CHANGES.rst:82
 msgid ""
 "When using ad-hoc certificates, check for the cryptography library instead of "
 "PyOpenSSL. :pr:`3492`"
 msgstr ""
+"Al utilizar certificados ad-hoc, compruebe la biblioteca de criptografía en "
+"lugar de PyOpenSSL. :pr:`3492`"
 
 #: ../../../CHANGES.rst:84
 msgid ""
 "When specifying a factory function with ``FLASK_APP``, keyword argument can be "
 "passed. :issue:`3553`"
 msgstr ""
+"Al especificar una función de fábrica con ``FLASK_APP``, se puede pasar el "
+"argumento de la palabra clave. :issue:`3553`"
 
 #: ../../../CHANGES.rst:86
 msgid ""
 "When loading a ``.env`` or ``.flaskenv`` file, the current working directory is "
 "no longer changed to the location of the file. :pr:`3560`"
 msgstr ""
+"Al cargar un archivo ``.env`` o ``.flaskenv``, el directorio de trabajo actual "
+"ya no se cambia a la ubicación del archivo. :pr:`3560`"
 
 #: ../../../CHANGES.rst:89
 msgid ""
@@ -224,6 +285,11 @@ msgid ""
 "setting the ``Content-Type`` for ``jsonify()``. Use ``response.headers."
 "extend()`` if extending is desired. :issue:`3628`"
 msgstr ""
+"Cuando se devuelve una tupla ``(response, headers)`` desde una vista, las "
+"cabeceras reemplazan en lugar de extender las cabeceras existentes en la "
+"respuesta. Por ejemplo, esto permite establecer el ``Content-Type`` para "
+"``jsonify()``. Utiliza ``response.headers.extend()`` si deseas extenderla. :"
+"issue:`3628`"
 
 #: ../../../CHANGES.rst:94
 msgid ""
@@ -232,22 +298,30 @@ msgid ""
 "like ``Flask``, rather than opaque lambda functions. This is intended to "
 "improve consistency and maintainability. :issue:`3215`"
 msgstr ""
+"La clase ``Scaffold`` proporciona una API común para las clases ``Flask`` y "
+"``Blueprint``. La información de ``Blueprint`` se almacena en atributos al "
+"igual que ``Flask``, en lugar de funciones lambda opacas. Esto pretende mejorar "
+"la consistencia y la capacidad de mantenimiento. :issue:`3215`"
 
 #: ../../../CHANGES.rst:99
 msgid ""
 "Include ``samesite`` and ``secure`` options when removing the session cookie. :"
 "pr:`3726`"
 msgstr ""
+"Incluir las opciones ``samesite`` y ``secure`` al eliminar la cookie de "
+"sesión. :pr:`3726`"
 
 #: ../../../CHANGES.rst:101
 msgid "Support passing a ``pathlib.Path`` to ``static_folder``. :pr:`3579`"
-msgstr ""
+msgstr "Soporta pasar un ``pathlib.Path`` a ``static_folder``. :pr:`3579`"
 
 #: ../../../CHANGES.rst:102
 msgid ""
 "``send_file`` and ``send_from_directory`` are wrappers around the "
 "implementations in ``werkzeug.utils``. :pr:`3828`"
 msgstr ""
+"``send_file`` y ``send_from_directory`` son envolturas alrededor de las "
+"implementaciones en ``werkzeug.utils``. :pr:`3828`"
 
 #: ../../../CHANGES.rst:104
 msgid ""
@@ -255,12 +329,18 @@ msgid ""
 "``attachment_filename`` is renamed to ``download_name``. ``cache_timeout`` is "
 "renamed to ``max_age``. ``add_etags`` is renamed to ``etag``. :pr:`3828, 3883`"
 msgstr ""
+"Algunos parámetros de ``send_file`` han sido renombrados, los antiguos nombres "
+"están obsoletos. El nombre de ``attachment_filename`` ha cambiado a "
+"``download_name``. El nombre de ``cache_timeout`` ha cambiado a ``max_age``. "
+"``add_etags`` pasa a llamarse ``etag``. :pr:`3828, 3883`"
 
 #: ../../../CHANGES.rst:108
 msgid ""
 "``send_file`` passes ``download_name`` even if ``as_attachment=False`` by using "
 "``Content-Disposition: inline``. :pr:`3828`"
 msgstr ""
+"``send_file`` pasa ``download_name`` incluso si ``as_attachment=False`` "
+"utilizando ``Content-Disposition: inline``. :pr:`3828`"
 
 #: ../../../CHANGES.rst:111
 msgid ""
@@ -269,12 +349,19 @@ msgid ""
 "``public``. This tells browsers to validate conditional requests instead of "
 "using a timed cache. :pr:`3828`"
 msgstr ""
+"``send_file`` establece ``conditional=True`` y ``max_age=None`` por defecto. "
+"``Cache-Control`` se establece como ``no-cache`` si ``max_age`` no se "
+"establece, en caso contrario ``public``. Esto indica a los navegadores que "
+"validen las peticiones condicionales en lugar de utilizar una caché "
+"temporizada. :pr:`3828`"
 
 #: ../../../CHANGES.rst:115
 msgid ""
 "``helpers.safe_join`` is deprecated. Use ``werkzeug.utils.safe_join`` instead. :"
 "pr:`3828`"
 msgstr ""
+"``helpers.safe_join`` está obsoleto. Utiliza ``werkzeug.utils.safe_join`` en su "
+"lugar. :pr:`3828`"
 
 #: ../../../CHANGES.rst:117
 msgid ""
@@ -282,10 +369,13 @@ msgid ""
 "allow a session interface to change behavior based on ``request.endpoint``. :"
 "issue:`3776`"
 msgstr ""
+"El contexto de la solicitud hace la coincidencia de la ruta antes de abrir la "
+"sesión. Esto podría permitir que una interfaz de sesión cambie de "
+"comportamiento basándose en ``request.endpoint``. :issue:`3776`"
 
 #: ../../../CHANGES.rst:120
 msgid "Use Jinja's implementation of the ``|tojson`` filter. :issue:`3881`"
-msgstr ""
+msgstr "Utiliza la implementación de Jinja del filtro ``|tojson``. :issue:`3881`"
 
 #: ../../../CHANGES.rst:121
 msgid ""
@@ -293,94 +383,115 @@ msgid ""
 "\")`` is a shortcut for ``@app.route(\"/login\", methods=[\"POST\"])``. :pr:"
 "`3907`"
 msgstr ""
+"Añade decoradores de ruta para métodos HTTP comunes. Por ejemplo, ``@app."
+"post(\"/login\")`` es un atajo para ``@app.route(\"/login\", methods=[\"POST"
+"\"])``. :pr:`3907`"
 
 #: ../../../CHANGES.rst:124
 msgid ""
 "Support async views, error handlers, before and after request, and teardown "
 "functions. :pr:`3412`"
 msgstr ""
+"Soporta vistas asíncronas, manejadores de error, antes y después de la "
+"solicitud, y funciones de desmontaje. :pr:`3412`"
 
 #: ../../../CHANGES.rst:126
 msgid "Support nesting blueprints. :issue:`593, 1548`, :pr:`3923`"
-msgstr ""
+msgstr "Soporta el anidamiento de planos. :issue:`593, 1548`, :pr:`3923`"
 
 #: ../../../CHANGES.rst:127
 msgid ""
 "Set the default encoding to \"UTF-8\" when loading ``.env`` and ``.flaskenv`` "
 "files to allow to use non-ASCII characters. :issue:`3931`"
 msgstr ""
+"Establece la codificación por defecto en \"UTF-8\" al cargar los archivos ``."
+"env`` y ``.flaskenv`` para permitir el uso de caracteres no ASCII. :issue:`3931`"
 
 #: ../../../CHANGES.rst:129
 msgid ""
 "``flask shell`` sets up tab and history completion like the default ``python`` "
 "shell if ``readline`` is installed. :issue:`3941`"
 msgstr ""
+"``flask shell`` configura el completamiento de pestañas e historial como el "
+"shell ``python`` por defecto si ``readline`` está instalado. :issue:`3941`"
 
 #: ../../../CHANGES.rst:131
 msgid ""
 "``helpers.total_seconds()`` is deprecated. Use ``timedelta.total_seconds()`` "
 "instead. :pr:`3962`"
 msgstr ""
+"``helpers.total_seconds()`` está obsoleto. Utilice ``timedelta."
+"total_seconds()`` en su lugar. :pr:`3962`"
 
 #: ../../../CHANGES.rst:133
 msgid "Add type hinting. :pr:`3973`."
-msgstr ""
+msgstr "Añade una pista de tipo :pr:`3973`."
 
 #: ../../../CHANGES.rst:137
 msgid "Version 1.1.4"
-msgstr ""
+msgstr "Versión 1.1.4"
 
 #: ../../../CHANGES.rst:139 ../../../CHANGES.rst:148
 msgid "Released 2021-05-13"
-msgstr ""
+msgstr "Publicado el 2021-05-13"
 
 #: ../../../CHANGES.rst:141
 msgid ""
 "Update ``static_folder`` to use ``_compat.fspath`` instead of ``os.fspath`` to "
 "continue supporting Python < 3.6 :issue:`4050`"
 msgstr ""
+"Actualizar ``static_folder`` para utilizar ``_compat.fspath`` en lugar de ``os."
+"fspath`` para seguir soportando Python < 3.6 :issue:`4050`"
 
 #: ../../../CHANGES.rst:146
 msgid "Version 1.1.3"
-msgstr ""
+msgstr "Versión 1.1.3"
 
 #: ../../../CHANGES.rst:150
 msgid ""
 "Set maximum versions of Werkzeug, Jinja, Click, and ItsDangerous. :issue:`4043`"
 msgstr ""
+"Establecer las versiones máximas de Werkzeug, Jinja, Click y ItsDangerous. :"
+"issue:`4043`"
 
 #: ../../../CHANGES.rst:152
 msgid ""
 "Re-add support for passing a ``pathlib.Path`` for ``static_folder``. :pr:`3579`"
 msgstr ""
+"Volver a añadir soporte para pasar un ``pathlib.Path`` para ``static_folder``. :"
+"pr:`3579`"
 
 #: ../../../CHANGES.rst:157
 msgid "Version 1.1.2"
-msgstr ""
+msgstr "Versión 1.1.2"
 
 #: ../../../CHANGES.rst:159
 msgid "Released 2020-04-03"
-msgstr ""
+msgstr "Lanzamiento 2020-04-03"
 
 #: ../../../CHANGES.rst:161
 msgid ""
 "Work around an issue when running the ``flask`` command with an external "
 "debugger on Windows. :issue:`3297`"
 msgstr ""
+"Soluciona un problema al ejecutar el comando ``flask`` con un depurador externo "
+"en Windows. :issue:`3297`"
 
 #: ../../../CHANGES.rst:163
 msgid ""
 "The static route will not catch all URLs if the ``Flask`` ``static_folder`` "
 "argument ends with a slash. :issue:`3452`"
 msgstr ""
+"La ruta estática no captará todas las URLs si el argumento ``Flask`` "
+"``static_folder`` termina con una barra. :issue:`3452`"
 
 #: ../../../CHANGES.rst:168
 msgid "Version 1.1.1"
-msgstr ""
+msgstr "Versión 1.1.1"
 
 #: ../../../CHANGES.rst:170
 msgid "Released 2019-07-08"
-msgstr ""
+msgstr "Lanzamiento 2019-07-08"
 
 #: ../../../CHANGES.rst:172
 msgid ""
@@ -388,22 +499,25 @@ msgid ""
 "extensions. It will raise a deprecation warning when used, and will be removed "
 "in version 2.0.0. :issue:`3288`"
 msgstr ""
+"Se ha vuelto a añadir la bandera ``flask.json_available`` por compatibilidad "
+"con algunas extensiones. Se emitirá una advertencia de desaprobación cuando se "
+"utilice, y se eliminará en la versión 2.0.0. :issue:`3288`"
 
 #: ../../../CHANGES.rst:178
 msgid "Version 1.1.0"
-msgstr ""
+msgstr "Versión 1.1.0"
 
 #: ../../../CHANGES.rst:180 ../../../CHANGES.rst:270
 msgid "Released 2019-07-04"
-msgstr ""
+msgstr "Lanzamiento 2019-07-04"
 
 #: ../../../CHANGES.rst:182
 msgid "Bump minimum Werkzeug version to >= 0.15."
-msgstr ""
+msgstr "Aumentar la versión mínima de la herramienta a >= 0.15."
 
 #: ../../../CHANGES.rst:183
 msgid "Drop support for Python 3.4."
-msgstr ""
+msgstr "Deja de ser compatible con Python 3.4."
 
 #: ../../../CHANGES.rst:184
 msgid ""
@@ -414,12 +528,20 @@ msgid ""
 "handler is for the base ``HTTPException``. This makes error handler behavior "
 "more consistent. :pr:`3266`"
 msgstr ""
+"A los manejadores de errores para ``InternalServerError`` o ``500`` siempre se "
+"les pasará una instancia de ``InternalServerError``. Si son invocados debido a "
+"una excepción no manejada, esa excepción original está ahora disponible como "
+"``e.original_exception`` en lugar de ser pasada directamente al manejador. Lo "
+"mismo ocurre si el manejador es para la base ``HTTPException``. Esto hace que "
+"el comportamiento del manejador de errores sea más consistente. :pr:`3266`"
 
 #: ../../../CHANGES.rst:192
 msgid ""
 ":meth:`Flask.finalize_request` is called for all unhandled exceptions even if "
 "there is no ``500`` error handler."
 msgstr ""
+":meth:`Flask.finalize_request` es llamado para todas las excepciones no "
+"manejadas incluso si no hay un manejador de errores ``500``."
 
 #: ../../../CHANGES.rst:195
 msgid ""
@@ -429,6 +551,11 @@ msgid ""
 "warning will be shown if old configuration is detected that needs to be moved. :"
 "issue:`2866`"
 msgstr ""
+":attr:`Flask.logger` toma el mismo nombre que :attr:`Flask.name` (el valor "
+"pasado como ``Flask(import_name)``. Esto revierte el comportamiento de la "
+"versión 1.0 de registrar siempre en ``\"flask.app\"``, con el fin de soportar "
+"múltiples aplicaciones en el mismo proceso. Se mostrará una advertencia si se "
+"detecta una configuración antigua que debe ser movida. :issue:`2866`"
 
 #: ../../../CHANGES.rst:201
 msgid ""
@@ -436,35 +563,48 @@ msgid ""
 "request context copy. This prevents ``session`` pointing to an out-of-date "
 "object. :issue:`2935`"
 msgstr ""
+":meth:`flask.RequestContext.copy` incluye el objeto de sesión actual en la "
+"copia del contexto de petición. Esto evita que ``sesión`` apunte a un objeto "
+"obsoleto. :issue:`2935`"
 
 #: ../../../CHANGES.rst:204
 msgid ""
 "Using built-in RequestContext, unprintable Unicode characters in Host header "
 "will result in a HTTP 400 response and not HTTP 500 as previously. :pr:`2994`"
 msgstr ""
+"Utilizando el RequestContext incorporado, los caracteres Unicode no imprimibles "
+"en la cabecera Host darán lugar a una respuesta HTTP 400 y no HTTP 500 como "
+"anteriormente. :pr:`2994`"
 
 #: ../../../CHANGES.rst:207
 msgid ""
 ":func:`send_file` supports :class:`~os.PathLike` objects as described in PEP "
 "0519, to support :mod:`pathlib` in Python 3. :pr:`3059`"
 msgstr ""
+":func:`send_file` soporta objetos :class:`~os.PathLike` como se describe en PEP "
+"0519, para soportar :mod:`pathlib` en Python 3. :pr:`3059`"
 
 #: ../../../CHANGES.rst:210
 msgid ""
 ":func:`send_file` supports :class:`~io.BytesIO` partial content. :issue:`2957`"
 msgstr ""
+":func:`send_file` soporta :class:`~io.BytesIO` contenido parcial. :issue:`2957`"
 
 #: ../../../CHANGES.rst:212
 msgid ""
 ":func:`open_resource` accepts the \"rt\" file mode. This still does the same "
 "thing as \"r\". :issue:`3163`"
 msgstr ""
+":func:`open_resource` acepta el modo de archivo \"rt\". Esto sigue haciendo lo "
+"mismo que \"r\". :issue:`3163`"
 
 #: ../../../CHANGES.rst:214
 msgid ""
 "The :attr:`MethodView.methods` attribute set in a base class is used by "
 "subclasses. :issue:`3138`"
 msgstr ""
+"El atributo :attr:`MethodView.methods` establecido en una clase base es "
+"utilizado por las subclases. :issue:`3138`"
 
 #: ../../../CHANGES.rst:216
 msgid ""
@@ -472,6 +612,9 @@ msgid ""
 "allow easier configuration. Changes must still be made before creating the "
 "environment. :pr:`3190`"
 msgstr ""
+":attr:`Flask.jinja_options` es un ``dict`` en lugar de un ``ImmutableDict`` "
+"para permitir una configuración más fácil. Los cambios deben realizarse antes "
+"de crear el entorno. :pr:`3190`"
 
 #: ../../../CHANGES.rst:219
 msgid ""
@@ -479,6 +622,9 @@ msgid ""
 "Werkzeug. Use Werkzeug's version with Flask-specific support. This bumps the "
 "Werkzeug dependency to >= 0.15. :issue:`3125`"
 msgstr ""
+"El ``JSONMixin`` de Flask para las envolturas de solicitud y respuesta fue "
+"trasladado a Werkzeug. Utiliza la versión de Werkzeug con soporte específico "
+"para Flask. Esto eleva la dependencia de Werkzeug a >= 0.15. :issue:`3125`"
 
 #: ../../../CHANGES.rst:223
 msgid ""
@@ -486,32 +632,43 @@ msgid ""
 "0.15's better reloader support. This bumps the Werkzeug dependency to >= 0.15. :"
 "issue:`3022`"
 msgstr ""
+"El entry point del comando ``flask`` se ha simplificado para aprovechar el "
+"mejor soporte del recargador de Werkzeug 0.15. Esto eleva la dependencia de "
+"Werkzeug a >= 0.15. :issue:`3022`"
 
 #: ../../../CHANGES.rst:226
 msgid "Support ``static_url_path`` that ends with a forward slash. :issue:`3134`"
 msgstr ""
+"Soporta ``static_url_path`` que termina con una barra diagonal. :issue:`3134`"
 
 #: ../../../CHANGES.rst:228
 msgid ""
 "Support empty ``static_folder`` without requiring setting an empty "
 "``static_url_path`` as well. :pr:`3124`"
 msgstr ""
+"Soportar ``static_folder`` vacía sin necesidad de establecer también una "
+"``static_url_path`` vacía. :pr:`3124`"
 
 #: ../../../CHANGES.rst:230
 msgid ""
 ":meth:`jsonify` supports :class:`dataclasses.dataclass` objects. :pr:`3195`"
 msgstr ""
+":meth:`jsonify` soporta objetos :class:`dataclasses.dataclass`. :pr:`3195`"
 
 #: ../../../CHANGES.rst:232
 msgid ""
 "Allow customizing the :attr:`Flask.url_map_class` used for routing. :pr:`3069`"
 msgstr ""
+"Permite personalizar el :attr:`Flask.url_map_class` utilizado para el "
+"enrutamiento. :pr:`3069`"
 
 #: ../../../CHANGES.rst:234
 msgid ""
 "The development server port can be set to 0, which tells the OS to pick an "
 "available port. :issue:`2926`"
 msgstr ""
+"El puerto del servidor de desarrollo puede establecerse en 0, lo que indica al "
+"sistema operativo que elija un puerto disponible. :issue:`2926`"
 
 #: ../../../CHANGES.rst:236
 msgid ""
@@ -519,18 +676,25 @@ msgid ""
 "documentation. It will return ``False`` if python-dotenv is not installed, or "
 "if the given path isn't a file. :issue:`2937`"
 msgstr ""
+"El valor de retorno de :meth:`cli.load_dotenv` es más consistente con la "
+"documentación. Devolverá ``False`` si python-dotenv no está instalado, o si la "
+"ruta dada no es un archivo. :issue:`2937`"
 
 #: ../../../CHANGES.rst:239
 msgid ""
 "Signaling support has a stub for the ``connect_via`` method when the Blinker "
 "library is not installed. :pr:`3208`"
 msgstr ""
+"El soporte de señalización tiene un stub para el método ``connect_via`` cuando "
+"la biblioteca Blinker no está instalada. :pr:`3208`"
 
 #: ../../../CHANGES.rst:241
 msgid ""
 "Add an ``--extra-files`` option to the ``flask run`` CLI command to specify "
 "extra files that will trigger the reloader on change. :issue:`2897`"
 msgstr ""
+"Añade una opción ``--extra-files`` al comando CLI ``flask run`` para "
+"especificar archivos extra que activarán el recargador al cambiar. :issue:`2897`"
 
 #: ../../../CHANGES.rst:244
 msgid ""
@@ -538,6 +702,10 @@ msgid ""
 "string will produce a ``text/html`` response, returning a dict will call "
 "``jsonify`` to produce a ``application/json`` response. :pr:`3111`"
 msgstr ""
+"Permite devolver un diccionario desde una función de vista. Al igual que "
+"devolver una cadena producirá una respuesta ``text/html``, devolver un dict "
+"llamará a ``jsonify`` para producir una respuesta ``application/json``. :pr:"
+"`3111`"
 
 #: ../../../CHANGES.rst:248
 msgid ""
@@ -545,6 +713,9 @@ msgid ""
 "with a blueprint will be available as a group under the ``flask`` command. :"
 "issue:`1357`."
 msgstr ""
+"Los blueprints tienen un grupo de clics ``cli`` como ``app.cli``. Los comandos "
+"CLI registrados con un blueprint estarán disponibles como grupo bajo el comando "
+"``flask``. :issue:`1357`."
 
 #: ../../../CHANGES.rst:251
 msgid ""
@@ -552,18 +723,26 @@ msgid ""
 "preserved request contexts are popped when the block exits, ensuring nested "
 "contexts are cleaned up correctly. :pr:`3157`"
 msgstr ""
+"Cuando se utiliza el cliente de prueba como gestor de contextos (``with client:"
+"``), todos los contextos de solicitud conservados se eliminan al salir del "
+"bloque, asegurando que los contextos anidados se limpien correctamente. :pr:"
+"`3157`"
 
 #: ../../../CHANGES.rst:254
 msgid ""
 "Show a better error message when the view return type is not supported. :issue:"
 "`3214`"
 msgstr ""
+"Mostrar un mejor mensaje de error cuando el tipo de retorno de la vista no es "
+"compatible. :issue:`3214`"
 
 #: ../../../CHANGES.rst:256
 msgid ""
 "``flask.testing.make_test_environ_builder()`` has been deprecated in favour of "
 "a new class ``flask.testing.EnvironBuilder``. :pr:`3232`"
 msgstr ""
+"``flask.testing.make_test_environ_builder()`` ha quedado obsoleta en favor de "
+"una nueva clase ``flask.testing.EnvironBuilder``. :pr:`3232`"
 
 #: ../../../CHANGES.rst:258
 msgid ""
@@ -571,6 +750,9 @@ msgid ""
 "support. Using the ``--cert`` option will show an appropriate error message. :"
 "issue:`3211`"
 msgstr ""
+"El comando ``flask run`` ya no falla si Python no está construido con soporte "
+"SSL. El uso de la opción ``--cert`` mostrará un mensaje de error apropiado. :"
+"issue:`3211`"
 
 #: ../../../CHANGES.rst:261
 msgid ""
@@ -578,10 +760,15 @@ msgid ""
 "it's created. This allows custom URL converters to access the app and request "
 "contexts, such as to query a database for an id. :issue:`3088`"
 msgstr ""
+"La coincidencia de URLs se produce ahora después de que el contexto de "
+"solicitud sea empujado, en lugar de cuando se crea. Esto permite que los "
+"convertidores de URL personalizados accedan a la aplicación y a los contextos "
+"de solicitud, como por ejemplo para consultar una base de datos para un id. :"
+"issue:`3088`"
 
 #: ../../../CHANGES.rst:268
 msgid "Version 1.0.4"
-msgstr ""
+msgstr "Versión 1.0.4"
 
 #: ../../../CHANGES.rst:272
 msgid ""
@@ -589,6 +776,9 @@ msgid ""
 "debug mode, so error handlers can still access it. This requires upgrading to "
 "Werkzeug 0.15.5. :issue:`3249`"
 msgstr ""
+"La información de la clave para ``BadRequestKeyError`` ya no se borra fuera del "
+"modo de depuración, por lo que los gestores de errores pueden seguir accediendo "
+"a ella. Esto requiere la actualización a Werkzeug 0.15.5. :issue:`3249`"
 
 #: ../../../CHANGES.rst:275
 msgid ""
