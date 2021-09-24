@@ -71,7 +71,7 @@ msgid ""
 "should be treated as a package."
 msgstr ""
 "¡Es hora de empezar a codificar! Crea el directorio ``flaskr`` y añade el "
-"archivo ``init__.py``. El archivo ``__init__.py`` tiene una doble función: "
+"archivo ``__init__.py``. El archivo ``__init__.py`` tiene una doble función: "
 "Contendrá la fábrica de la aplicación, y le dice a Python que el directorio "
 "``flaskr`` debe ser tratado como un paquete."
 
