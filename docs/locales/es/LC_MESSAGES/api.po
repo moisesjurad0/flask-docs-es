@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-29 08:14-0400\n"
-"PO-Revision-Date: 2021-09-22 21:46-0400\n"
+"PO-Revision-Date: 2021-10-06 13:43-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
@@ -2671,6 +2671,9 @@ msgid ""
 "change the routing converters after the class was created but before any routes "
 "are connected.  Example::"
 msgstr ""
+"La :clase:`~werkzeug.routing.Map` para esta instancia. Se puede utilizar para "
+"cambiar los convertidores de enrutamiento después de la creación de la clase "
+"pero antes de que se conecte ninguna ruta. Ejemplo::"
 
 #: flask.scaffold.Scaffold.url_value_preprocessor:1 of
 msgid ""
@@ -2678,6 +2681,9 @@ msgid ""
 "application. These functions will be called before the :meth:`before_request` "
 "functions."
 msgstr ""
+"Registrar una función de preprocesador de valores de URL para todas las "
+"funciones de vista en la aplicación. Estas funciones serán llamadas antes de las "
+"funciones :meth:`before_request`."
 
 #: flask.scaffold.Scaffold.url_value_preprocessor:5 of
 msgid ""
@@ -2685,12 +2691,18 @@ msgid ""
 "passed to the view. For example, this can be used to pop a common language code "
 "value and place it in ``g`` rather than pass it to every view."
 msgstr ""
+"La función puede modificar los valores capturados de la url coincidente antes de "
+"pasarlos a la vista. Por ejemplo, se puede utilizar para hacer saltar un valor "
+"de código de lenguaje común y colocarlo en ``g`` en lugar de pasarlo a cada "
+"vista."
 
 #: flask.scaffold.Scaffold.url_value_preprocessor:10 of
 msgid ""
 "The function is passed the endpoint name and values dict. The return value is "
 "ignored."
 msgstr ""
+"A la función se le pasa el nombre del endpoint y el dictado de valores. El valor "
+"de retorno se ignora."
 
 #: ../../docstring flask.Blueprint.url_value_preprocessors:1
 #: flask.Flask.url_value_preprocessors:1 of
@@ -2700,11 +2712,16 @@ msgid ""
 "the name of a blueprint the functions are active for, or ``None`` for all "
 "requests."
 msgstr ""
+"Una estructura de datos de funciones a las que llamar para modificar los "
+"argumentos de palabras clave pasados a la función de vista, con el formato "
+"``{scope: [functions]}``. La clave ``scope`` es el nombre de un plano para el "
+"que las funciones están activas, o ``None`` para todas las solicitudes."
 
 #: ../../docstring flask.Blueprint.url_value_preprocessors:7
 #: flask.Flask.url_value_preprocessors:7 of
 msgid "To register a function, use the :meth:`url_value_preprocessor` decorator."
 msgstr ""
+"Para registrar una función, utilice el decorador :meth:`url_value_preprocessor`."
 
 #: ../../docstring flask.Flask.use_x_sendfile:1 of
 msgid ""
@@ -2712,20 +2729,27 @@ msgid ""
 "server has to support this.  This only affects files sent with the :func:"
 "`send_file` method."
 msgstr ""
+"Active esta opción si desea utilizar la función X-Sendfile. Tenga en cuenta que "
+"el servidor tiene que soportar esto. Esto sólo afecta a los archivos enviados "
+"con el método :func:`send_file`."
 
 #: ../../docstring flask.Flask.use_x_sendfile:7 of
 msgid ""
 "This attribute can also be configured from the config with the "
 "``USE_X_SENDFILE`` configuration key.  Defaults to ``False``."
 msgstr ""
+"Este atributo también se puede configurar desde la configuración con la clave de "
+"configuración ``USE_X_SENDFILE``. Por defecto es ``False``."
 
 #: ../../docstring flask.Blueprint.view_functions:1 flask.Flask.view_functions:1 of
 msgid "A dictionary mapping endpoint names to view functions."
 msgstr ""
+"Un diccionario que asigna los nombres de los endpoints a las funciones de la "
+"vista."
 
 #: ../../docstring flask.Blueprint.view_functions:3 flask.Flask.view_functions:3 of
 msgid "To register a view function, use the :meth:`route` decorator."
-msgstr ""
+msgstr "Para registrar una función de vista, utilice el decorador :meth:`route`."
 
 #: flask.app.Flask.wsgi_app:1 of
 msgid ""
@@ -2733,16 +2757,21 @@ msgid ""
 "middlewares can be applied without losing a reference to the app object. Instead "
 "of doing this::"
 msgstr ""
+"La aplicación WSGI real. Esto no está implementado en :meth:`__call__` para que "
+"los middlewares puedan ser aplicados sin perder una referencia al objeto app. En "
+"lugar de hacer esto::"
 
 #: flask.app.Flask.wsgi_app:7 of
 msgid "It's a better idea to do this instead::"
-msgstr ""
+msgstr "Es mejor hacer esto en su lugar::"
 
 #: flask.app.Flask.wsgi_app:11 of
 msgid ""
 "Then you still have the original application object around and can continue to "
 "call methods on it."
 msgstr ""
+"Entonces todavía tienes el objeto original de la aplicación y puedes seguir "
+"llamando a los métodos en él."
 
 #: flask.app.Flask.wsgi_app:14 of
 msgid ""
@@ -2750,26 +2779,34 @@ msgid ""
 "error occurs. Other events may not be called depending on when an error occurs "
 "during dispatch. See :ref:`callbacks-and-errors`."
 msgstr ""
+"Los eventos de desmontaje para los contextos de solicitud y de aplicación se "
+"llaman incluso si se produce un error no manejado. Otros eventos pueden no ser "
+"llamados dependiendo de cuándo se produzca un error durante el despacho. Véase :"
+"ref:`callbacks-and-errors`."
 
 #: flask.app.Flask.wsgi_app:20 of
 msgid "A WSGI environment."
-msgstr ""
+msgstr "Un entorno WSGI."
 
 #: flask.app.Flask.wsgi_app:21 of
 msgid ""
 "A callable accepting a status code, a list of headers, and an optional exception "
 "context to start the response."
 msgstr ""
+"Una llamada que acepta un código de estado, una lista de cabeceras y un contexto "
+"de excepción opcional para iniciar la respuesta."
 
 #: ../../api.rst:20
 msgid "Blueprint Objects"
-msgstr ""
+msgstr "Objetos Blueprint"
 
 #: flask.blueprints.Blueprint:1 of
 msgid ""
 "Represents a blueprint, a collection of routes and other app-related functions "
 "that can be registered on a real application later."
 msgstr ""
+"Representa un blueprint, una colección de rutas y otras funciones relacionadas "
+"con la aplicación que pueden ser registradas en una aplicación real más tarde."
 
 #: flask.blueprints.Blueprint:5 of
 msgid ""
@@ -2778,6 +2815,10 @@ msgid ""
 "class:`~flask.Flask`, but defers the need for an application by recording them "
 "for later registration."
 msgstr ""
+"Un blueprint es un objeto que permite definir las funciones de la aplicación sin "
+"requerir un objeto de aplicación por adelantado. Utiliza los mismos decoradores "
+"que :class:`~flask.Flask`, pero aplaza la necesidad de una aplicación "
+"registrándolos para su posterior registro."
 
 #: flask.blueprints.Blueprint:10 of
 msgid ""
@@ -2785,20 +2826,25 @@ msgid ""
 "called with :class:`~flask.blueprints.BlueprintSetupState` when the blueprint is "
 "registered on an application."
 msgstr ""
+"Al decorar una función con un blueprint se crea una función diferida que se "
+"llama con :class:`~flask.blueprints.BlueprintSetupState` cuando el blueprint se "
+"registra en una aplicación."
 
 #: flask.blueprints.Blueprint:14 of
 msgid "See :doc:`/blueprints` for more information."
-msgstr ""
+msgstr "Consulte :doc:`/blueprints` para más información."
 
 #: flask.blueprints.Blueprint:16 of
 msgid "The name of the blueprint. Will be prepended to each endpoint name."
-msgstr ""
+msgstr "El nombre del blueprint. Se antepondrá a cada nombre de endpoint."
 
 #: flask.blueprints.Blueprint:18 of
 msgid ""
 "The name of the blueprint package, usually ``__name__``. This helps locate the "
 "``root_path`` for the blueprint."
 msgstr ""
+"El nombre del paquete del blueprint, normalmente ``__name__``. Esto ayuda a "
+"localizar el ``root_path`` para el blueprint."
 
 #: flask.blueprints.Blueprint:21 of
 msgid ""
@@ -2806,6 +2852,9 @@ msgid ""
 "route. The path is relative to the blueprint's root path. Blueprint static files "
 "are disabled by default."
 msgstr ""
+"Una carpeta con archivos estáticos que deben ser servidos por la ruta estática "
+"del blueprint. La ruta es relativa a la ruta raíz del blueprint. Los archivos "
+"estáticos del blueprint están desactivados por defecto."
 
 #: flask.blueprints.Blueprint:25 of
 msgid ""
@@ -2813,6 +2862,10 @@ msgid ""
 "blueprint does not have a ``url_prefix``, the app's static route will take "
 "precedence, and the blueprint's static files won't be accessible."
 msgstr ""
+"La url desde la que se sirven los archivos estáticos. Por defecto es "
+"``static_folder``. Si el blueprint no tiene un ``url_prefix``, la ruta estática "
+"de la aplicación tendrá prioridad, y los archivos estáticos del blueprint no "
+"serán accesibles."
 
 #: flask.blueprints.Blueprint:29 of
 msgid ""
@@ -2821,20 +2874,29 @@ msgid ""
 "disabled by default. Blueprint templates have a lower precedence than those in "
 "the app's templates folder."
 msgstr ""
+"Una carpeta con plantillas que debe añadirse a la ruta de búsqueda de plantillas "
+"de la aplicación. La ruta es relativa a la ruta raíz del blueprint. Las "
+"plantillas de blueprint están desactivadas por defecto. Las plantillas de "
+"blueprint tienen una precedencia menor que las de la carpeta de plantillas de la "
+"app."
 
 #: flask.blueprints.Blueprint:34 of
 msgid ""
 "A path to prepend to all of the blueprint's URLs, to make them distinct from the "
 "rest of the app's routes."
 msgstr ""
+"Una ruta que se añade a todas las URL del blueprint, para distinguirlas del "
+"resto de las rutas de la aplicación."
 
 #: flask.blueprints.Blueprint:36 of
 msgid "A subdomain that blueprint routes will match on by default."
-msgstr ""
+msgstr "Un subdominio en el que las rutas blueprint coincidirán por defecto."
 
 #: flask.blueprints.Blueprint:38 of
 msgid "A dict of default values that blueprint routes will receive by default."
 msgstr ""
+"Un diccionario de valores por defecto que las rutas de blueprint recibirán por "
+"defecto."
 
 #: flask.blueprints.Blueprint:40 of
 msgid ""
@@ -2842,6 +2904,9 @@ msgid ""
 "In certain situations this automatic detection can fail, so the path can be "
 "specified manually instead."
 msgstr ""
+"Por defecto, el blueprint lo establecerá automáticamente basándose en "
+"``import_name``. En ciertas situaciones esta detección automática puede fallar, "
+"por lo que la ruta puede ser especificada manualmente en su lugar."
 
 #: flask.blueprints.Blueprint:45 of
 msgid ""
@@ -2849,6 +2914,9 @@ msgid ""
 "``cli_group`` parameter controls the name of the group under the ``flask`` "
 "command."
 msgstr ""
+"Los blueprints tienen un grupo ``cli`` para registrar los comandos CLI anidados. "
+"El parámetro ``cli_group`` controla el nombre del grupo bajo el comando "
+"``flask``."
 
 #: flask.blueprints.Blueprint.add_app_template_filter:1 of
 msgid ""
@@ -2856,6 +2924,9 @@ msgid ""
 "`Flask.add_template_filter` but for a blueprint.  Works exactly like the :meth:"
 "`app_template_filter` decorator."
 msgstr ""
+"Registra un filtro de plantilla personalizado, disponible en toda la aplicación. "
+"Como :meth:`Flask.add_template_filter` pero para un blueprint. Funciona "
+"exactamente igual que el decorador :meth:`app_template_filter`."
 
 #: flask.blueprints.Blueprint.add_app_template_global:1 of
 msgid ""
@@ -2863,11 +2934,16 @@ msgid ""
 "`Flask.add_template_global` but for a blueprint.  Works exactly like the :meth:"
 "`app_template_global` decorator."
 msgstr ""
+"Registrar una plantilla personalizada global, disponible en toda la aplicación. "
+"Como :meth:`Flask.add_template_global` pero para un blueprint. Funciona "
+"exactamente igual que el decorador :meth:`app_template_global`."
 
 #: flask.blueprints.Blueprint.add_app_template_global:7
 #: flask.blueprints.Blueprint.app_template_global:6 of
 msgid "the optional name of the global, otherwise the function name will be used."
 msgstr ""
+"el nombre opcional del global, de lo contrario se utilizará el nombre de la "
+"función."
 
 #: flask.blueprints.Blueprint.add_app_template_test:1 of
 msgid ""
@@ -2875,80 +2951,105 @@ msgid ""
 "add_template_test` but for a blueprint.  Works exactly like the :meth:"
 "`app_template_test` decorator."
 msgstr ""
+"Registra una prueba de plantilla personalizada, disponible en toda la "
+"aplicación. Como :meth:`Flask.add_template_test` pero para un blueprint. "
+"Funciona exactamente igual que el decorador :meth:`app_template_test`."
 
 #: flask.blueprints.Blueprint.add_url_rule:1 of
 msgid ""
 "Like :meth:`Flask.add_url_rule` but for a blueprint.  The endpoint for the :func:"
 "`url_for` function is prefixed with the name of the blueprint."
 msgstr ""
+"Como :meth:`Flask.add_url_rule` pero para un blueprint. El endpoint de la "
+"función :func:`url_for` lleva como prefijo el nombre del blueprint."
 
 #: flask.blueprints.Blueprint.after_app_request:1 of
 msgid ""
 "Like :meth:`Flask.after_request` but for a blueprint.  Such a function is "
 "executed after each request, even if outside of the blueprint."
 msgstr ""
+"Como :meth:`Flask.after_request` pero para un blueprint. Dicha función se "
+"ejecuta después de cada petición, incluso si está fuera del blueprint."
 
 #: flask.blueprints.Blueprint.app_context_processor:1 of
 msgid ""
 "Like :meth:`Flask.context_processor` but for a blueprint.  Such a function is "
 "executed each request, even if outside of the blueprint."
 msgstr ""
+"Como :meth:`Flask.context_processor` pero para un blueprint. Dicha función se "
+"ejecuta en cada petición, incluso si está fuera del blueprint."
 
 #: flask.blueprints.Blueprint.app_errorhandler:1 of
 msgid ""
 "Like :meth:`Flask.errorhandler` but for a blueprint.  This handler is used for "
 "all requests, even if outside of the blueprint."
 msgstr ""
+"Como :meth:`Flask.errorhandler` pero para un blueprint. Este manejador se "
+"utiliza para todas las solicitudes, incluso si están fuera del blueprint."
 
 #: flask.blueprints.Blueprint.app_template_filter:1 of
 msgid ""
 "Register a custom template filter, available application wide.  Like :meth:"
 "`Flask.template_filter` but for a blueprint."
 msgstr ""
+"Registra un filtro de plantilla personalizado, disponible en toda la aplicación. "
+"Como :meth:`Flask.template_filter` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_template_global:1 of
 msgid ""
 "Register a custom template global, available application wide.  Like :meth:"
 "`Flask.template_global` but for a blueprint."
 msgstr ""
+"Registrar una plantilla personalizada global, disponible en toda la aplicación. "
+"Como :meth:`Flask.template_global` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_template_test:1 of
 msgid ""
 "Register a custom template test, available application wide.  Like :meth:`Flask."
 "template_test` but for a blueprint."
 msgstr ""
+"Registra una prueba de plantilla personalizada, disponible en toda la "
+"aplicación. Como :meth:`Flask.template_test` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_url_defaults:1 of
 msgid "Same as :meth:`url_defaults` but application wide."
-msgstr ""
+msgstr "Igual que :meth:`url_defaults` pero en toda la aplicación."
 
 #: flask.blueprints.Blueprint.app_url_value_preprocessor:1 of
 msgid "Same as :meth:`url_value_preprocessor` but application wide."
-msgstr ""
+msgstr "Igual que :meth:`url_value_preprocessor` pero en toda la aplicación."
 
 #: flask.blueprints.Blueprint.before_app_first_request:1 of
 msgid ""
 "Like :meth:`Flask.before_first_request`.  Such a function is executed before the "
 "first request to the application."
 msgstr ""
+"Como :meth:`Flask.before_first_request`. Dicha función se ejecuta antes de la "
+"primera petición a la aplicación."
 
 #: flask.blueprints.Blueprint.before_app_request:1 of
 msgid ""
 "Like :meth:`Flask.before_request`.  Such a function is executed before each "
 "request, even if outside of a blueprint."
 msgstr ""
+"Como :meth:`Flask.before_request`. Esta función se ejecuta antes de cada "
+"solicitud, incluso si está fuera de un blueprint."
 
 #: ../../docstring flask.Blueprint.json_decoder:1 of
 msgid ""
 "Blueprint local JSON decoder class to use. Set to ``None`` to use the app's :"
 "class:`~flask.Flask.json_decoder`."
 msgstr ""
+"Clase de decodificador JSON local del blueprint a utilizar. Establezca ``None`` "
+"para utilizar la :clase:`~flask.Flask.json_decoder` de la aplicación."
 
 #: ../../docstring flask.Blueprint.json_encoder:1 of
 msgid ""
 "Blueprint local JSON encoder class to use. Set to ``None`` to use the app's :"
 "class:`~flask.Flask.json_encoder`."
 msgstr ""
+"Clase de codificador JSON local del blueprint a utilizar. Establezca ``None`` "
+"para utilizar la :clase:`~flask.Flask.json_encoder` de la aplicación."
 
 #: flask.blueprints.Blueprint.make_setup_state:1 of
 msgid ""
@@ -2956,6 +3057,9 @@ msgid ""
 "is later passed to the register callback functions. Subclasses can override this "
 "to return a subclass of the setup state."
 msgstr ""
+"Crea una instancia del objeto :meth:`~flask.blueprints.BlueprintSetupState` que "
+"luego se pasa a las funciones de callback de registro. Las subclases pueden "
+"anular esto para devolver una subclase del estado de configuración."
 
 #: flask.blueprints.Blueprint.record:1 of
 msgid ""
@@ -2963,6 +3067,9 @@ msgid ""
 "application.  This function is called with the state as argument as returned by "
 "the :meth:`make_setup_state` method."
 msgstr ""
+"Registra una función que es llamada cuando el blueprint es registrado en la "
+"aplicación. Esta función se llama con el estado como argumento devuelto por el "
+"método :meth:`make_setup_state`."
 
 #: flask.blueprints.Blueprint.record_once:1 of
 msgid ""
@@ -2970,6 +3077,9 @@ msgid ""
 "ensure the function is only called once.  If the blueprint is registered a "
 "second time on the application, the function passed is not called."
 msgstr ""
+"Funciona como :meth:`record` pero envuelve la función en otra función que "
+"asegurará que la función sólo se llame una vez. Si el blueprint se registra una "
+"segunda vez en la aplicación, la función pasada no se llama."
 
 #: flask.blueprints.Blueprint.register:1 of
 msgid ""
@@ -2977,48 +3087,64 @@ msgid ""
 "registered on the blueprint with the application. Creates a :class:`."
 "BlueprintSetupState` and calls each :meth:`record` callback with it."
 msgstr ""
+"Llamado por :meth:`Flask.register_blueprint` para registrar todas las vistas y "
+"callbacks registrados en el blueprint con la aplicación. Crea un :class:`."
+"BlueprintSetupState` y llama a cada callback :meth:`record` con él."
 
 #: flask.blueprints.Blueprint.register:6 of
 msgid "The application this blueprint is being registered with."
-msgstr ""
+msgstr "La aplicación con la que se registra este blueprint."
 
 #: flask.blueprints.Blueprint.register:8 of
 msgid "Keyword arguments forwarded from :meth:`~Flask.register_blueprint`."
 msgstr ""
+"Argumentos de la palabra clave reenviados desde :meth:`~Flask."
+"register_blueprint`."
 
 #: flask.blueprints.Blueprint.register:11 of
 msgid ""
 "Nested blueprints are registered with their dotted name. This allows different "
 "blueprints with the same name to be nested at different locations."
 msgstr ""
+"Los blueprints anidados se registran con su nombre punteado. Esto permite anidar "
+"diferentes blueprints con el mismo nombre en diferentes lugares."
 
 #: flask.blueprints.Blueprint.register:22 of
 msgid ""
 "Registering the same blueprint with the same name multiple times is deprecated "
 "and will become an error in Flask 2.1."
 msgstr ""
+"Registrar el mismo blueprint con el mismo nombre varias veces está obsoleto y "
+"será un error en Flask 2.1."
 
 #: flask.blueprints.Blueprint.register_blueprint:1 of
 msgid ""
 "Register a :class:`~flask.Blueprint` on this blueprint. Keyword arguments passed "
 "to this method will override the defaults set on the blueprint."
 msgstr ""
+"Registra una :clase:`~flask.Blueprint` en este blueprint. Los argumentos de "
+"palabras clave pasados a este método anulan los valores predeterminados "
+"establecidos en el blueprint."
 
 #: flask.blueprints.Blueprint.teardown_app_request:1 of
 msgid ""
 "Like :meth:`Flask.teardown_request` but for a blueprint.  Such a function is "
 "executed when tearing down each request, even if outside of the blueprint."
 msgstr ""
+"Como :meth:`Flask.teardown_request` pero para un blueprint. Dicha función se "
+"ejecuta al derribar cada solicitud, incluso si está fuera del blueprint."
 
 #: ../../api.rst:27
 msgid "Incoming Request Data"
-msgstr ""
+msgstr "Datos de la solicitud entrante"
 
 #: flask.wrappers.Request:1 of
 msgid ""
 "The request object used by default in Flask.  Remembers the matched endpoint and "
 "view arguments."
 msgstr ""
+"El objeto de solicitud utilizado por defecto en Flask. Recuerda el endpoint "
+"coincidente y los argumentos de la vista."
 
 #: flask.wrappers.Request:4 of
 msgid ""
@@ -3026,36 +3152,51 @@ msgid ""
 "request object used you can subclass this and set :attr:`~flask.Flask."
 "request_class` to your subclass."
 msgstr ""
+"Es lo que termina como :class:`~flask.request`. Si quieres reemplazar el objeto "
+"request usado puedes subclasificar esto y establecer :attr:`~flask.Flask."
+"request_class` a tu subclase."
 
 #: flask.wrappers.Request:8 of
 msgid ""
 "The request object is a :class:`~werkzeug.wrappers.Request` subclass and "
 "provides all of the attributes Werkzeug defines plus a few Flask specific ones."
 msgstr ""
+"El objeto request es una subclase :class:`~werkzeug.wrappers.Request` y "
+"proporciona todos los atributos que define Werkzeug más algunos específicos de "
+"Flask."
 
 #: flask.Request.accept_charsets:1 of
 msgid ""
 "List of charsets this client supports as :class:`~werkzeug.datastructures."
 "CharsetAccept` object."
 msgstr ""
+"Lista de conjuntos de caracteres que soporta este cliente como objeto :class:"
+"`~werkzeug.datastructures.CharsetAccept`."
 
 #: flask.Request.accept_encodings:1 of
 msgid ""
 "List of encodings this client accepts.  Encodings in a HTTP term are compression "
 "encodings such as gzip.  For charsets have a look at :attr:`accept_charset`."
 msgstr ""
+"Lista de codificaciones que acepta este cliente. Las codificaciones en un "
+"término HTTP son codificaciones de compresión como gzip. Para los conjuntos de "
+"caracteres, consulte :attr:`accept_charset`."
 
 #: flask.Request.accept_languages:1 of
 msgid ""
 "List of languages this client accepts as :class:`~werkzeug.datastructures."
 "LanguageAccept` object."
 msgstr ""
+"Lista de idiomas que este cliente acepta como objeto :class:`~werkzeug."
+"datastructures.LanguageAccept`."
 
 #: flask.Request.accept_mimetypes:1 of
 msgid ""
 "List of mimetypes this client supports as :class:`~werkzeug.datastructures."
 "MIMEAccept` object."
 msgstr ""
+"Lista de mimetypes que este cliente soporta como objeto :class:`~werkzeug."
+"datastructures.MIMEAccept`."
 
 #: ../../docstring flask.Request.access_control_request_headers:1 of
 msgid ""
@@ -3064,6 +3205,10 @@ msgid ""
 "access_control_allow_headers` on the response to indicate which headers are "
 "allowed."
 msgstr ""
+"Se envía con una solicitud de verificación previa para indicar qué cabeceras se "
+"enviarán con la solicitud de origen cruzado. Establece :attr:`~CORSResponseMixin."
+"access_control_allow_headers` en la respuesta para indicar qué cabeceras están "
+"permitidas."
 
 #: ../../docstring flask.Request.access_control_request_method:1 of
 msgid ""
@@ -3072,12 +3217,18 @@ msgid ""
 "access_control_allow_methods` on the response to indicate which methods are "
 "allowed."
 msgstr ""
+"Enviado con una solicitud de preflight para indicar qué método se utilizará para "
+"la solicitud de origen cruzado. Establece :attr:`~CORSResponseMixin."
+"access_control_allow_methods` en la respuesta para indicar qué métodos están "
+"permitidos."
 
 #: flask.Request.access_route:1 of
 msgid ""
 "If a forwarded header exists this is a list of all ip addresses from the client "
 "ip to the last proxy server."
 msgstr ""
+"Si existe una cabecera de reenvío esta es una lista de todas las direcciones ip "
+"desde la ip del cliente hasta el último servidor proxy."
 
 #: of werkzeug.wrappers.request.Request.application:1
 msgid ""
@@ -3086,24 +3237,32 @@ msgid ""
 "request object as the last argument and the request object will be closed "
 "automatically::"
 msgstr ""
+"Decora una función como respondedor que acepta la petición como último "
+"argumento. Esto funciona como el decorador :func:`responder` pero a la función "
+"se le pasa el objeto request como último argumento y el objeto request se "
+"cerrará automáticamente::"
 
 #: of werkzeug.wrappers.request.Request.application:11
 msgid ""
 "As of Werkzeug 0.14 HTTP exceptions are automatically caught and converted to "
 "responses instead of failing."
 msgstr ""
+"A partir de Werkzeug 0.14 las excepciones HTTP se capturan automáticamente y se "
+"convierten en respuestas en lugar de fallar."
 
 #: of werkzeug.wrappers.request.Request.application:14
 msgid "the WSGI callable to decorate"
-msgstr ""
+msgstr "la llamada WSGI para decorar"
 
 #: of werkzeug.wrappers.request.Request.application:15
 msgid "a new WSGI callable"
-msgstr ""
+msgstr "una nueva llamada WSGI"
 
 #: flask.Request.args:1 of
 msgid "The parsed URL parameters (the part in the URL after the question mark)."
 msgstr ""
+"Los parámetros de la URL analizados (la parte de la URL después del signo de "
+"interrogación)."
 
 #: flask.Request.args:4 of
 msgid ""
@@ -3112,47 +3271,61 @@ msgid ""
 "`parameter_storage_class` to a different type.  This might be necessary if the "
 "order of the form data is important."
 msgstr ""
+"Por defecto, esta función devuelve una :class:`~werkzeug.datastructures."
+"ImmutableMultiDict`. Esto puede cambiarse estableciendo :attr:"
+"`parameter_storage_class` a un tipo diferente. Esto puede ser necesario si el "
+"orden de los datos del formulario es importante."
 
 #: flask.Request.authorization:1 of
 msgid "The `Authorization` object in parsed form."
-msgstr ""
+msgstr "El objeto `Authorization` en forma analizada."
 
 #: flask.Request.base_url:1 of
 msgid "Like :attr:`url` but without the query string."
-msgstr ""
+msgstr "Como :attr:`url` pero sin la cadena de consulta."
 
 #: flask.Request.blueprint:1 of
 msgid "The registered name of the current blueprint."
-msgstr ""
+msgstr "El nombre registrado del blueprint actual."
 
 #: flask.Request.blueprint:3 of
 msgid ""
 "This will be ``None`` if the endpoint is not part of a blueprint, or if URL "
 "matching failed or has not been performed yet."
 msgstr ""
+"Será ``None`` si el endpoint no forma parte de un blueprint, o si la "
+"coincidencia de la URL ha fallado o no se ha realizado todavía."
 
 #: flask.Request.blueprint:7 of
 msgid ""
 "This does not necessarily match the name the blueprint was created with. It may "
 "have been nested, or registered with a different name."
 msgstr ""
+"Esto no coincide necesariamente con el nombre con el que se creó el blueprint. "
+"Puede haber sido anidado o registrado con un nombre diferente."
 
 #: flask.Request.blueprints:1 of
 msgid ""
 "The registered names of the current blueprint upwards through parent blueprints."
 msgstr ""
+"Los nombres registrados del blueprint actual hacia arriba a través de los "
+"blueprints padre."
 
 #: flask.Request.blueprints:4 of
 msgid ""
 "This will be an empty list if there is no current blueprint, or if URL matching "
 "failed."
 msgstr ""
+"Será una lista vacía si no hay ningún blueprint actual, o si la coincidencia de "
+"URLs ha fallado."
 
 #: flask.Request.cache_control:1 of
 msgid ""
 "A :class:`~werkzeug.datastructures.RequestCacheControl` object for the incoming "
 "cache control headers."
 msgstr ""
+"Un objeto :class:`~werkzeug.datastructures.RequestCacheControl` para las "
+"cabeceras de control de caché entrantes."
 
 #: of werkzeug.wrappers.request.Request.close:1
 msgid ""
@@ -3160,6 +3333,9 @@ msgid ""
 "handles explicitly.  You can also use the request object in a with statement "
 "which will automatically close it."
 msgstr ""
+"Cierra los recursos asociados a este objeto de petición. Esto cierra todos los "
+"manejadores de archivo explícitamente. También puede utilizar el objeto request "
+"en una sentencia with que lo cerrará automáticamente."
 
 #: ../../docstring flask.Request.content_encoding:1
 #: flask.Response.content_encoding:1 of
@@ -3170,6 +3346,11 @@ msgid ""
 "applied in order to obtain the media-type referenced by the Content-Type header "
 "field."
 msgstr ""
+"El campo de cabecera de entidad Content-Encoding se utiliza como modificador del "
+"tipo de medio. Cuando está presente, su valor indica qué codificaciones de "
+"contenido adicionales se han aplicado al cuerpo de la entidad y, por tanto, qué "
+"mecanismos de descodificación deben aplicarse para obtener el tipo de medio al "
+"que se refiere el campo de cabecera Content-Type."
 
 #: flask.Request.content_length:1 of
 msgid ""
@@ -3177,6 +3358,9 @@ msgid ""
 "bytes or, in the case of the HEAD method, the size of the entity-body that would "
 "have been sent had the request been a GET."
 msgstr ""
+"El campo Content-Length de la cabecera de la entidad indica el tamaño del cuerpo "
+"de la entidad en bytes o, en el caso del método HEAD, el tamaño del cuerpo de la "
+"entidad que se habría enviado si la solicitud hubiera sido un GET."
 
 #: ../../docstring flask.Request.content_md5:1 flask.Response.content_md5:1 of
 msgid ""
@@ -3186,6 +3370,11 @@ msgid ""
 "modification of the entity-body in transit, but is not proof against malicious "
 "attacks.)"
 msgstr ""
+"El campo de cabecera de entidad Content-MD5, tal y como se define en el RFC "
+"1864, es un compendio MD5 del cuerpo de la entidad con el fin de proporcionar "
+"una comprobación de integridad del mensaje de extremo a extremo (MIC) del cuerpo "
+"de la entidad. (Nota: un MIC es bueno para detectar modificaciones accidentales "
+"del cuerpo de la entidad en tránsito, pero no es a prueba de ataques maliciosos)."
 
 #: ../../docstring flask.Request.content_type:1 flask.Response.content_type:1 of
 msgid ""
@@ -3193,6 +3382,9 @@ msgid ""
 "sent to the recipient or, in the case of the HEAD method, the media type that "
 "would have been sent had the request been a GET."
 msgstr ""
+"El campo Content-Type de la cabecera de la entidad indica el tipo de medio del "
+"cuerpo de la entidad enviado al destinatario o, en el caso del método HEAD, el "
+"tipo de medio que se habría enviado si la solicitud hubiera sido un GET."
 
 #: flask.Request.cookies:1 of
 msgid ""
