@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-29 08:14-0400\n"
-"PO-Revision-Date: 2021-10-06 13:43-0400\n"
+"PO-Revision-Date: 2022-01-26 23:50-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
@@ -3390,45 +3390,55 @@ msgstr ""
 msgid ""
 "A :class:`dict` with the contents of all cookies transmitted with the request."
 msgstr ""
+"Un :class:`dict` con el contenido de todas las cookies transmitidas con la "
+"solicitud."
 
 #: flask.Request.data:1 of
 msgid ""
 "Contains the incoming request data as string in case it came with a mimetype "
 "Werkzeug does not handle."
 msgstr ""
+"Contiene los datos de la solicitud entrante como cadena en caso de que venga con "
+"un mimetype que Werkzeug no maneja."
 
 #: ../../docstring flask.Request.date:1 flask.Response.date:1 of
 msgid ""
 "The Date general-header field represents the date and time at which the message "
 "was originated, having the same semantics as orig-date in RFC 822."
 msgstr ""
+"El campo de cabecera general Date representa la fecha y hora en la que se "
+"originó el mensaje, teniendo la misma semántica que orig-date en RFC 822."
 
 #: ../../docstring flask.Request.date:5 flask.Request.if_modified_since:3
 #: flask.Request.if_unmodified_since:3 flask.Response.date:5
 #: flask.Response.expires:5 flask.Response.last_modified:5
 #: flask.Response.retry_after:7 of
 msgid "The datetime object is timezone-aware."
-msgstr ""
+msgstr "El objeto datetime tiene en cuenta la zona horaria."
 
 #: flask.Request.endpoint:1 of
 msgid "The endpoint that matched the request URL."
-msgstr ""
+msgstr "El endpoint que coincide con la URL de la solicitud."
 
 #: flask.Request.endpoint:3 of
 msgid "This will be ``None`` if matching failed or has not been performed yet."
-msgstr ""
+msgstr "Será ``None`` si la coincidencia ha fallado o no se ha realizado todavía."
 
 #: flask.Request.endpoint:6 of
 msgid ""
 "This in combination with :attr:`view_args` can be used to reconstruct the same "
 "URL or a modified URL."
 msgstr ""
+"Esto en combinación con :attr:`view_args` puede utilizarse para reconstruir la "
+"misma URL o una URL modificada."
 
 #: ../../docstring flask.Request.environ:1 of
 msgid ""
 "The WSGI environment containing HTTP headers and information from the WSGI "
 "server."
 msgstr ""
+"El entorno WSGI que contiene las cabeceras HTTP y la información del servidor "
+"WSGI."
 
 #: flask.Request.files:1 of
 msgid ""
@@ -3437,6 +3447,10 @@ msgid ""
 "name=\"\">``.  Each value in :attr:`files` is a Werkzeug :class:`~werkzeug."
 "datastructures.FileStorage` object."
 msgstr ""
+":class:`~werkzeug.datastructures.MultiDict` objeto que contiene todos los "
+"archivos subidos. Cada clave en :attr:`files` es el nombre del archivo ``<input "
+"type=\"file\" name=\"\">``. Cada valor en :attr:`files` es un objeto Werkzeug :"
+"class:`~werkzeug.datastructures.FileStorage`."
 
 #: flask.Request.files:6 of
 msgid ""
@@ -3444,6 +3458,10 @@ msgid ""
 "difference that it also has a :meth:`~werkzeug.datastructures.FileStorage.save` "
 "function that can store the file on the filesystem."
 msgstr ""
+"Básicamente se comporta como un objeto archivo estándar que conoces de Python, "
+"con la diferencia de que también tiene una función :meth:`~werkzeug."
+"datastructures.FileStorage.save` que puede almacenar el archivo en el sistema de "
+"archivos."
 
 #: flask.Request.files:11 of
 msgid ""
@@ -3451,6 +3469,9 @@ msgid ""
 "PUT or PATCH and the ``<form>`` that posted to the request had ``enctype="
 "\"multipart/form-data\"``.  It will be empty otherwise."
 msgstr ""
+"Tenga en cuenta que :attr:`files` sólo contendrá datos si el método de solicitud "
+"fue POST, PUT o PATCH y el ``<form>`` que envió la solicitud tenía ``enctype="
+"\"multipart/form-data\"``.  En caso contrario, estará vacío."
 
 #: flask.Request.files:15 of
 msgid ""
@@ -3458,6 +3479,9 @@ msgid ""
 "datastructures.FileStorage` documentation for more details about the used data "
 "structure."
 msgstr ""
+"Consulte la documentación de :class:`~werkzeug.datastructures.MultiDict` / :"
+"class:`~werkzeug.datastructures.FileStorage` para más detalles sobre la "
+"estructura de datos utilizada."
 
 #: flask.Request.form:1 of
 msgid ""
@@ -3466,18 +3490,26 @@ msgid ""
 "setting :attr:`parameter_storage_class` to a different type.  This might be "
 "necessary if the order of the form data is important."
 msgstr ""
+"Los parámetros del formulario. Por defecto, esta función devuelve una :class:"
+"`~werkzeug.datastructures.ImmutableMultiDict`.  Esto puede cambiarse "
+"estableciendo :attr:`parameter_storage_class` a un tipo diferente.  Esto puede "
+"ser necesario si el orden de los datos del formulario es importante."
 
 #: flask.Request.form:7 of
 msgid ""
 "Please keep in mind that file uploads will not end up here, but instead in the :"
 "attr:`files` attribute."
 msgstr ""
+"Por favor, tenga en cuenta que las subidas de archivos no acabarán aquí, sino en "
+"el atributo :attr:`files`."
 
 #: flask.Request.form:12 of
 msgid ""
 "Previous to Werkzeug 0.9 this would only contain form data for POST and PUT "
 "requests."
 msgstr ""
+"Antes de Werkzeug 0.9 esto sólo contenía datos de formulario para peticiones "
+"POST y PUT."
 
 #: of werkzeug.wrappers.request.Request.from_values:1
 msgid ""
@@ -3487,11 +3519,17 @@ msgid ""
 "unittesting, there is a full featured client object (:class:`Client`) that "
 "allows to create multipart requests, support for cookies etc."
 msgstr ""
+"Crea un nuevo objeto de solicitud basado en los valores proporcionados. Si se da "
+"environ los valores que faltan se rellenan a partir de ahí. Este método es útil "
+"para pequeños scripts cuando se necesita simular una petición desde una URL. No "
+"utilice este método para pruebas unitarias, hay un objeto cliente completo (:"
+"class:`Client`) que permite crear peticiones multiparte, soporte para cookies, "
+"etc."
 
 #: of werkzeug.wrappers.request.Request.from_values:8
 msgid ""
 "This accepts the same options as the :class:`~werkzeug.test.EnvironBuilder`."
-msgstr ""
+msgstr "Acepta las mismas opciones que el :class:`~werkzeug.test.EnvironBuilder`."
 
 #: of werkzeug.wrappers.request.Request.from_values:11
 msgid ""
@@ -3499,14 +3537,17 @@ msgid ""
 "EnvironBuilder`.  Because of this the `environ` parameter is now called "
 "`environ_overrides`."
 msgstr ""
+"Este método acepta ahora los mismos argumentos que :class:`~werkzeug.test."
+"EnvironBuilder`. Debido a esto el parámetro `environ` se llama ahora "
+"`environ_overrides`."
 
 #: of werkzeug.wrappers.request.Request.from_values:16
 msgid "request object"
-msgstr ""
+msgstr "objeto de la solicitud"
 
 #: flask.Request.full_path:1 of
 msgid "Requested path, including the query string."
-msgstr ""
+msgstr "Ruta solicitada, incluyendo la cadena de consulta."
 
 #: of werkzeug.wrappers.request.Request.get_data:1
 msgid ""
@@ -3514,6 +3555,9 @@ msgid ""
 "default this is cached but that behavior can be changed by setting `cache` to "
 "`False`."
 msgstr ""
+"Esto lee los datos entrantes en el buffer del cliente en un objeto de bytes. Por "
+"defecto se almacena en caché, pero este comportamiento puede cambiarse "
+"estableciendo `cache` a `False`."
 
 #: of werkzeug.wrappers.request.Request.get_data:5
 msgid ""
@@ -3521,6 +3565,9 @@ msgid ""
 "first as a client could send dozens of megabytes or more to cause memory "
 "problems on the server."
 msgstr ""
+"Normalmente es una mala idea llamar a este método sin comprobar primero la "
+"longitud del contenido, ya que un cliente podría enviar docenas de megabytes o "
+"más y causar problemas de memoria en el servidor."
 
 #: of werkzeug.wrappers.request.Request.get_data:9
 msgid ""
@@ -3534,15 +3581,28 @@ msgid ""
 "length first in any case before calling this method to avoid exhausting server "
 "memory."
 msgstr ""
+"Tenga en cuenta que si los datos del formulario ya han sido analizados, este "
+"método no devolverá nada, ya que el análisis de los datos del formulario no "
+"almacena en caché los datos como hace este método. Para invocar implícitamente "
+"la función de análisis de datos del formulario establezca `parse_form_data` a "
+"`True`. Cuando se hace esto el valor de retorno de este método será una cadena "
+"vacía si el analizador de formularios maneja los datos. Esto generalmente no es "
+"necesario, ya que si todos los datos se almacenan en caché (que es el valor "
+"predeterminado) el analizador de formularios utilizará los datos almacenados en "
+"caché para analizar los datos del formulario. Por favor, sea consciente de "
+"comprobar la longitud del contenido primero en cualquier caso antes de llamar a "
+"este método para evitar agotar la memoria del servidor."
 
 #: of werkzeug.wrappers.request.Request.get_data:20
 #: werkzeug.wrappers.response.Response.get_data:8
 msgid "If `as_text` is set to `True` the return value will be a decoded string."
 msgstr ""
+"Si `as_text` se establece como `True` el valor de retorno será una cadena "
+"decodificada."
 
 #: of werkzeug.wrappers.request.Request.get_json:1
 msgid "Parse :attr:`data` as JSON."
-msgstr ""
+msgstr "Analiza :attr:`data` como JSON."
 
 #: of werkzeug.wrappers.request.Request.get_json:3
 #: werkzeug.wrappers.response.Response.get_json:3
@@ -3550,36 +3610,42 @@ msgid ""
 "If the mimetype does not indicate JSON (:mimetype:`application/json`, see :meth:"
 "`is_json`), this returns ``None``."
 msgstr ""
+"Si el mimetype no indica JSON (:mimetype:`application/json`, ver :meth:"
+"`is_json`), devuelve ``None``."
 
 #: of werkzeug.wrappers.request.Request.get_json:7
 msgid ""
 "If parsing fails, :meth:`on_json_loading_failed` is called and its return value "
 "is used as the return value."
 msgstr ""
+"Si el análisis sintáctico falla, se llama a :meth:`on_json_loading_failed` y su "
+"valor de retorno se utiliza como valor de retorno."
 
 #: of werkzeug.wrappers.request.Request.get_json:10
 #: werkzeug.wrappers.response.Response.get_json:9
 msgid "Ignore the mimetype and always try to parse JSON."
-msgstr ""
+msgstr "Ignora el mimetype e intenta siempre parsear JSON."
 
 #: of werkzeug.wrappers.request.Request.get_json:11
 #: werkzeug.wrappers.response.Response.get_json:10
 msgid "Silence parsing errors and return ``None`` instead."
-msgstr ""
+msgstr "Silencia los errores de análisis y devuelve ``None`` en su lugar."
 
 #: of werkzeug.wrappers.request.Request.get_json:13
 msgid "Store the parsed JSON to return for subsequent calls."
-msgstr ""
+msgstr "Almacena el JSON analizado para devolverlo en posteriores llamadas."
 
 #: ../../docstring flask.Request.headers:1 of
 msgid "The headers received with the request."
-msgstr ""
+msgstr "Las cabeceras recibidas con la solicitud."
 
 #: flask.Request.host:1 of
 msgid ""
 "The host name the request was made to, including the port if it's non-standard. "
 "Validated with :attr:`trusted_hosts`."
 msgstr ""
+"El nombre del host al que se hizo la petición, incluyendo el puerto si no es "
+"estándar. Validado con :attr:`trusted_hosts`."
 
 #: flask.Request.host_url:1 of
 msgid "The request URL scheme and host only."
