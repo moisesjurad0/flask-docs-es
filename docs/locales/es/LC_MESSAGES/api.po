@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-29 08:14-0400\n"
-"PO-Revision-Date: 2022-01-26 23:50-0400\n"
+"PO-Revision-Date: 2022-01-27 01:46-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
@@ -3649,63 +3649,75 @@ msgstr ""
 
 #: flask.Request.host_url:1 of
 msgid "The request URL scheme and host only."
-msgstr ""
+msgstr "El esquema de la URL de la solicitud y el host solamente."
 
 #: flask.Request.if_match:1 of
 msgid "An object containing all the etags in the `If-Match` header."
 msgstr ""
+"Un objeto que contiene todas las etiquetas electrónicas de la cabecera `If-"
+"Match`."
 
 #: flask.Request.if_match:3 flask.Request.if_none_match:3 of
 msgid ":class:`~werkzeug.datastructures.ETags`"
-msgstr ""
+msgstr ":class:`~werkzeug.datastructures.ETags`"
 
 #: flask.Request.if_modified_since:1 of
 msgid "The parsed `If-Modified-Since` header as a datetime object."
-msgstr ""
+msgstr "La cabecera `If-Modified-Since` analizada como un objeto datetime."
 
 #: flask.Request.if_none_match:1 of
 msgid "An object containing all the etags in the `If-None-Match` header."
 msgstr ""
+"Un objeto que contiene todas las etiquetas electrónicas de la cabecera `If-None-"
+"Match`."
 
 #: flask.Request.if_range:1 of
 msgid "The parsed ``If-Range`` header."
-msgstr ""
+msgstr "La cabecera ``If-Range`` analizada."
 
 #: flask.Request.if_range:3 of
 msgid "``IfRange.date`` is timezone-aware."
-msgstr ""
+msgstr "``IfRange.date`` tiene en cuenta la zona horaria."
 
 #: flask.Request.if_unmodified_since:1 of
 msgid "The parsed `If-Unmodified-Since` header as a datetime object."
-msgstr ""
+msgstr "La cabecera `If-Unmodified-Since` analizada como un objeto datetime."
 
 #: ../../docstring flask.Request.input_stream:1 of
 msgid "The WSGI input stream."
-msgstr ""
+msgstr "El flujo de entrada WSGI."
 
 #: ../../docstring flask.Request.input_stream:3 of
 msgid ""
 "In general it's a bad idea to use this one because you can easily read past the "
 "boundary.  Use the :attr:`stream` instead."
 msgstr ""
+"En general es una mala idea usar este porque puedes leer fácilmente más allá del "
+"límite.  Utiliza el :attr:`stream` en su lugar."
 
 #: flask.Request.is_json:1 flask.Response.is_json:1 of
 msgid ""
 "Check if the mimetype indicates JSON data, either :mimetype:`application/json` "
 "or :mimetype:`application/*+json`."
 msgstr ""
+"Comprueba si el mimetype indica datos JSON, ya sea :mimetype:`application/json` "
+"o :mimetype:`application/*+json`."
 
 #: ../../docstring flask.Request.is_multiprocess:1 of
 msgid ""
 "boolean that is `True` if the application is served by a WSGI server that spawns "
 "multiple processes."
 msgstr ""
+"booleano que es `True` si la aplicación es servida por un servidor WSGI que "
+"genera múltiples procesos."
 
 #: ../../docstring flask.Request.is_multithread:1 of
 msgid ""
 "boolean that is `True` if the application is served by a multithreaded WSGI "
 "server."
 msgstr ""
+"booleano que es `aTrue` si la aplicación es servida por un servidor WSGI "
+"multihilo."
 
 #: ../../docstring flask.Request.is_run_once:1 of
 msgid ""
@@ -3713,30 +3725,37 @@ msgid ""
 "process lifetime.  This is the case for CGI for example, but it's not guaranteed "
 "that the execution only happens one time."
 msgstr ""
+"booleano que es `True` si la aplicación se ejecutará sólo una vez en la vida del "
+"proceso. Este es el caso de CGI, por ejemplo, pero no está garantizado que la "
+"ejecución sólo se produzca una vez."
 
 #: flask.Request.is_secure:1 of
 msgid "``True`` if the request was made with a secure protocol (HTTPS or WSS)."
-msgstr ""
+msgstr "``True`` si la solicitud se hizo con un protocolo seguro (HTTPS o WSS)."
 
 #: flask.Request.json:1 flask.Response.json:1 of
 msgid ""
 "The parsed JSON data if :attr:`mimetype` indicates JSON (:mimetype:`application/"
 "json`, see :meth:`is_json`)."
 msgstr ""
+"Los datos JSON analizados si :attr:`mimetype` indica JSON (:mimetype:"
+"`application/json`, véase :meth:`is_json`)."
 
 #: flask.Request.json:4 flask.Response.json:4 of
 msgid "Calls :meth:`get_json` with default arguments."
-msgstr ""
+msgstr "Llama a :meth:`get_json` con argumentos por defecto."
 
 #: of werkzeug.wrappers.request.Request.make_form_data_parser:1
 msgid ""
 "Creates the form data parser. Instantiates the :attr:`form_data_parser_class` "
 "with some parameters."
 msgstr ""
+"Crea el analizador de datos del formulario. Instala la clase :attr:"
+"`form_data_parser_class` con algunos parámetros."
 
 #: flask.Request.max_content_length:1 of
 msgid "Read-only view of the ``MAX_CONTENT_LENGTH`` config key."
-msgstr ""
+msgstr "Vista de sólo lectura de la clave de configuración ``MAX_CONTENT_LENGTH``."
 
 #: ../../docstring flask.Request.max_forwards:1 of
 msgid ""
@@ -3744,10 +3763,13 @@ msgid ""
 "OPTIONS methods to limit the number of proxies or gateways that can forward the "
 "request to the next inbound server."
 msgstr ""
+"El campo Max-Forwards de la cabecera de la petición proporciona un mecanismo con "
+"los métodos TRACE y OPTIONS para limitar el número de proxies o pasarelas que "
+"pueden reenviar la petición al siguiente servidor entrante."
 
 #: ../../docstring flask.Request.method:1 of
 msgid "The method the request was made with, such as ``GET``."
-msgstr ""
+msgstr "El método con el que se hizo la petición, como ``GET``."
 
 #: flask.Request.mimetype:1 of
 msgid ""
@@ -3755,12 +3777,17 @@ msgid ""
 "etc.) and always lowercase.  For example if the content type is ``text/HTML; "
 "charset=utf-8`` the mimetype would be ``'text/html'``."
 msgstr ""
+"Como :attr:`content_type`, pero sin parámetros (por ejemplo, sin charset, tipo, "
+"etc.) y siempre en minúsculas. Por ejemplo, si el tipo de contenido es ``text/"
+"HTML; charset=utf-8`` el mimetype sería ``'text/html'``."
 
 #: flask.Request.mimetype_params:1 of
 msgid ""
 "The mimetype parameters as dict.  For example if the content type is ``text/"
 "html; charset=utf-8`` the params would be ``{'charset': 'utf-8'}``."
 msgstr ""
+"Los parámetros de mimetype como dict. Por ejemplo, si el tipo de contenido es "
+"``text/html; charset=utf-8`` los parámetros serían ``{'charset': 'utf-8'}``."
 
 #: flask.wrappers.Request.on_json_loading_failed:1 of
 msgid ""
@@ -3768,6 +3795,10 @@ msgid ""
 "returns a value, it is used as the return value for :meth:`get_json`. The "
 "default implementation raises :exc:`~werkzeug.exceptions.BadRequest`."
 msgstr ""
+"Se llama si el análisis sintáctico de :meth:`get_json` falla y no se silencia. "
+"Si este método devuelve un valor, se utiliza como valor de retorno para :meth:"
+"`get_json`. La implementación por defecto lanza :exc:`~werkzeug.exceptions."
+"BadRequest`."
 
 #: ../../docstring flask.Request.origin:1 of
 msgid ""
@@ -3775,12 +3806,17 @@ msgid ""
 "access_control_allow_origin` on the response to indicate which origins are "
 "allowed."
 msgstr ""
+"El host desde el que se originó la solicitud. Establezca :attr:"
+"`~CORSResponseMixin.access_control_allow_origin` en la respuesta para indicar "
+"qué orígenes están permitidos."
 
 #: ../../docstring flask.Request.path:1 of
 msgid ""
 "The path part of the URL after :attr:`root_path`. This is the path used for "
 "routing within the application."
 msgstr ""
+"La parte de la ruta de la URL después de :attr:`root_path`. Esta es la ruta "
+"utilizada para el enrutamiento dentro de la aplicación."
 
 #: flask.Request.pragma:1 of
 msgid ""
@@ -3790,20 +3826,28 @@ msgid ""
 "protocol; however, some systems MAY require that behavior be consistent with the "
 "directives."
 msgstr ""
+"El campo Pragma general-header se utiliza para incluir directivas específicas de "
+"la implementación que podrían aplicarse a cualquier destinatario a lo largo de "
+"la cadena de solicitud/respuesta. Todas las directivas pragma especifican un "
+"comportamiento opcional desde el punto de vista del protocolo; sin embargo, "
+"algunos sistemas PUEDEN exigir que el comportamiento sea coherente con las "
+"directivas."
 
 #: ../../docstring flask.Request.query_string:1 of
 msgid ""
 "The part of the URL after the \"?\". This is the raw value, use :attr:`args` for "
 "the parsed values."
 msgstr ""
+"La parte de la URL después del \"?\". Este es el valor bruto, utilice :attr:"
+"`args` para los valores analizados."
 
 #: flask.Request.range:1 of
 msgid "The parsed `Range` header."
-msgstr ""
+msgstr "La cabecera `Range` analizada."
 
 #: flask.Request.range:5 of
 msgid ":class:`~werkzeug.datastructures.Range`"
-msgstr ""
+msgstr ":class:`~werkzeug.datastructures.Range`"
 
 #: ../../docstring flask.Request.referrer:1 of
 msgid ""
@@ -3811,28 +3855,38 @@ msgid ""
 "server's benefit, the address (URI) of the resource from which the Request-URI "
 "was obtained (the \"referrer\", although the header field is misspelled)."
 msgstr ""
+"El campo Referer[sic] request-header permite al cliente especificar, en "
+"beneficio del servidor, la dirección (URI) del recurso del que se obtuvo la "
+"Request-URI (el \"referrer\", aunque el campo de la cabecera está mal escrito)."
 
 #: ../../docstring flask.Request.remote_addr:1 of
 msgid "The address of the client sending the request."
-msgstr ""
+msgstr "La dirección del cliente que envía la solicitud."
 
 #: ../../docstring flask.Request.remote_user:1 of
 msgid ""
 "If the server supports user authentication, and the script is protected, this "
 "attribute contains the username the user has authenticated as."
 msgstr ""
+"Si el servidor admite la autenticación del usuario, y el script está protegido, "
+"este atributo contiene el nombre de usuario con el que el usuario se ha "
+"autenticado."
 
 #: ../../docstring flask.Request.root_path:1 of
 msgid ""
 "The prefix that the application is mounted under, without a trailing slash. :"
 "attr:`path` comes after this."
 msgstr ""
+"El prefijo con el que se monta la aplicación, sin una barra al final. :attr:"
+"`path` viene después de esto."
 
 #: flask.Request.root_url:1 of
 msgid ""
 "The request URL scheme, host, and root path. This is the root that the "
 "application is accessed from."
 msgstr ""
+"El esquema de la URL de la solicitud, el host y la ruta raíz. Esta es la raíz "
+"desde la que se accede a la aplicación."
 
 #: ../../docstring flask.Request.routing_exception:1 of
 msgid ""
@@ -3840,23 +3894,32 @@ msgid ""
 "raised as part of the request handling.  This is usually a :exc:`~werkzeug."
 "exceptions.NotFound` exception or something similar."
 msgstr ""
+"Si la coincidencia de la URL falló, esta es la excepción que se lanzará / se "
+"lanzó como parte del manejo de la solicitud. Normalmente es una excepción :exc:"
+"`~werkzeug.exceptions.NotFound` o algo similar."
 
 #: ../../docstring flask.Request.scheme:1 of
 msgid ""
 "The URL scheme of the protocol the request used, such as ``https`` or ``wss``."
 msgstr ""
+"El esquema de la URL del protocolo que la solicitud utilizó, como ``https`` o "
+"``wss``."
 
 #: flask.Request.script_root:1 of
 msgid ""
 "Alias for :attr:`self.root_path`. ``environ[\"SCRIPT_ROOT\"]`` without a "
 "trailing slash."
 msgstr ""
+"Alias para :attr:`self.root_path`. ``environ[\"SCRIPT_ROOT\"]`` sin una barra al "
+"final."
 
 #: ../../docstring flask.Request.server:1 of
 msgid ""
 "The address of the server. ``(host, port)``, ``(path, None)`` for unix sockets, "
 "or ``None`` if not known."
 msgstr ""
+"La dirección del servidor. ``(host, port)``, ``(path, None)`` para sockets unix, "
+"o ``None`` si no se conoce."
 
 #: ../../docstring flask.Request.shallow:1 of
 msgid ""
@@ -3864,6 +3927,9 @@ msgid ""
 "will cause a ``RuntimeException``. Useful to prevent modifying the stream from "
 "middleware."
 msgstr ""
+"Se establece al crear el objeto de la petición. Si ``True``, la lectura del "
+"cuerpo de la petición causará una ``RuntimeException``. Útil para evitar la "
+"modificación del flujo desde el middleware."
 
 #: flask.Request.stream:1 of
 msgid ""
@@ -3872,6 +3938,10 @@ msgid ""
 "better idea to use :attr:`data` which will give you that data as a string.  The "
 "stream only returns the data once."
 msgstr ""
+"Si los datos del formulario entrante no fueron codificados con un mimetype "
+"conocido, los datos se almacenan sin modificar en este flujo para su consumo. La "
+"mayoría de las veces es mejor usar :attr:`data` que le dará esos datos como una "
+"cadena. El flujo sólo devuelve los datos una vez."
 
 #: flask.Request.stream:6 of
 msgid ""
@@ -3880,28 +3950,41 @@ msgid ""
 "refer to this stream to read data which makes it possible to wrap this object "
 "with a stream that does filtering."
 msgstr ""
+"A diferencia de :attr:`input_stream` este flujo está debidamente protegido para "
+"que no se pueda leer accidentalmente más allá de la longitud de la entrada. "
+"Werkzeug siempre se referirá internamente a este flujo para leer los datos, lo "
+"que hace posible envolver este objeto con un flujo que hace el filtrado."
 
 #: flask.Request.stream:11 of
 msgid ""
 "This stream is now always available but might be consumed by the form parser "
 "later on.  Previously the stream was only set if no parsing happened."
 msgstr ""
+"Este flujo está ahora siempre disponible pero puede ser consumido por el "
+"analizador de formularios más adelante. Anteriormente, el flujo sólo se "
+"establecía si no se realizaba el análisis."
 
 #: flask.Request.url:1 of
 msgid ""
 "The full request URL with the scheme, host, root path, path, and query string."
 msgstr ""
+"La URL completa de la solicitud con el esquema, el host, la ruta raíz, la ruta y "
+"la cadena de consulta."
 
 #: flask.Request.url_charset:1 of
 msgid ""
 "The charset that is assumed for URLs. Defaults to the value of :attr:`charset`."
 msgstr ""
+"El conjunto de caracteres que se asume para las URL. Por defecto, el valor de :"
+"attr:`charset`."
 
 #: flask.Request.url_root:1 of
 msgid ""
 "Alias for :attr:`root_url`. The URL with scheme, host, and root path. For "
 "example, ``https://example.com/app/``."
 msgstr ""
+"Alias de :attr:`root_url`. La URL con esquema, host y ruta raíz. Por ejemplo, "
+"``https://example.com/app/``."
 
 #: ../../docstring flask.Request.url_rule:1 of
 msgid ""
@@ -3912,6 +3995,13 @@ msgid ""
 "(an attribute of the Werkzeug exception :exc:`~werkzeug.exceptions."
 "MethodNotAllowed`) because the request was never internally bound."
 msgstr ""
+"La regla interna de la URL que coincidió con la solicitud. Esto puede ser útil "
+"para inspeccionar qué métodos están permitidos para la URL desde un manejador "
+"before/after (``request.url_rule.methods``), etc. Aunque si el método de la "
+"petición no era válido para la regla de URL, la lista válida está disponible en "
+"``routing_exception.valid_methods`` en su lugar (un atributo de la excepción de "
+"Werkzeug :exc:`~werkzeug.exceptions.MethodNotAllowed`) porque la petición nunca "
+"estuvo vinculada internamente."
 
 #: flask.Request.user_agent:1 of
 msgid ""
@@ -3919,34 +4009,48 @@ msgid ""
 "`user_agent_class` to a subclass of :class:`~werkzeug.user_agent.UserAgent` to "
 "provide parsing for the other properties or other extended data."
 msgstr ""
+"El user agent. Utilice ``user_agent.string`` para obtener el valor de la "
+"cabecera. Establece :attr:`user_agent_class` a una subclase de :class:`~werkzeug."
+"user_agent.UserAgent` para proporcionar el análisis de las otras propiedades u "
+"otros datos extendidos."
 
 #: flask.Request.user_agent:6 of
 msgid ""
 "The built in parser is deprecated and will be removed in Werkzeug 2.1. A "
 "``UserAgent`` subclass must be set to parse data from the string."
 msgstr ""
+"El analizador incorporado está obsoleto y será eliminado en Werkzeug 2.1. Se "
+"debe establecer una subclase ``UserAgent`` para analizar los datos de la cadena."
 
 #: flask.Request.values:1 of
 msgid ""
 "A :class:`werkzeug.datastructures.CombinedMultiDict` that combines :attr:`args` "
 "and :attr:`form`."
 msgstr ""
+"Una :class:`werkzeug.datastructures.CombinedMultiDict` que combina :attr:`args` "
+"y :attr:`form`."
 
 #: flask.Request.values:4 flask.Request.values:6 of
 msgid "For GET requests, only ``args`` are present, not ``form``."
 msgstr ""
+"En el caso de las peticiones GET, sólo están presentes los ``args``, no el "
+"``form``."
 
 #: ../../docstring flask.Request.view_args:1 of
 msgid ""
 "A dict of view arguments that matched the request.  If an exception happened "
 "when matching, this will be ``None``."
 msgstr ""
+"Un dictado de los argumentos de la vista que coinciden con la solicitud. Si se "
+"ha producido una excepción durante la búsqueda, será ``None``."
 
 #: flask.Request.want_form_data_parsed:1 of
 msgid ""
 "``True`` if the request method carries content. By default this is true if a "
 "``Content-Type`` is sent."
 msgstr ""
+"``True`` si el método de solicitud lleva contenido. Por defecto, esto es "
+"verdadero si se envía un ``Content-Type``."
 
 #: ../../api.rst:36
 msgid ""
@@ -3955,18 +4059,25 @@ msgid ""
 "global object.  Internally Flask makes sure that you always get the correct data "
 "for the active thread if you are in a multithreaded environment."
 msgstr ""
+"Para acceder a los datos de las peticiones entrantes, puedes utilizar el objeto "
+"global `request`. Flask analiza los datos de las peticiones entrantes por ti y "
+"te da acceso a ellos a través de ese objeto global. Internamente Flask se "
+"asegura de que siempre obtengas los datos correctos para el hilo activo si estás "
+"en un entorno multihilo."
 
 #: ../../api.rst:42 ../../api.rst:72
 msgid "This is a proxy.  See :ref:`notes-on-proxies` for more information."
 msgstr ""
+"Se trata de un prox.  Consulte :ref:`notes-on-proxies` para obtener más "
+"información."
 
 #: ../../api.rst:44
 msgid "The request object is an instance of a :class:`~flask.Request`."
-msgstr ""
+msgstr "El objeto request es una instancia de una :clase:`~flask.Request`."
 
 #: ../../api.rst:48
 msgid "Response Objects"
-msgstr ""
+msgstr "Objetos de respuesta"
 
 #: flask.wrappers.Response:1 of
 msgid ""
@@ -3975,32 +4086,43 @@ msgid ""
 "often you don't have to create this object yourself because :meth:`~flask.Flask."
 "make_response` will take care of that for you."
 msgstr ""
+"El objeto de respuesta que se utiliza por defecto en Flask. Funciona como el "
+"objeto de respuesta de Werkzeug pero está configurado para tener un mimetype "
+"HTML por defecto. A menudo no tienes que crear este objeto tú mismo porque :meth:"
+"`~flask.Flask.make_response` se encargará de ello por ti."
 
 #: flask.wrappers.Response:6 of
 msgid ""
 "If you want to replace the response object used you can subclass this and set :"
 "attr:`~flask.Flask.response_class` to your subclass."
 msgstr ""
+"Si quieres reemplazar el objeto de respuesta utilizado puedes subclasificar esto "
+"y establecer :attr:`~flask.Flask.response_class` a tu subclase."
 
 #: flask.wrappers.Response:9 of
 msgid ""
 "JSON support is added to the response, like the request. This is useful when "
 "testing to get the test client response data as JSON."
 msgstr ""
+"El soporte JSON se añade a la respuesta, al igual que la solicitud. Esto es útil "
+"cuando se hacen pruebas para obtener los datos de respuesta del cliente de "
+"prueba como JSON."
 
 #: flask.wrappers.Response:15 of
 msgid "Added :attr:`max_cookie_size`."
-msgstr ""
+msgstr "Añadido :attr:`max_cookie_size`."
 
 #: ../../docstring flask.Response.accept_ranges:1 of
 msgid ""
 "The `Accept-Ranges` header. Even though the name would indicate that multiple "
 "values are supported, it must be one string token only."
 msgstr ""
+"La cabecera `Accept-Ranges`. Aunque el nombre indique que se admiten varios "
+"valores, debe ser un solo token de cadena."
 
 #: ../../docstring flask.Response.accept_ranges:5 of
 msgid "The values ``'bytes'`` and ``'none'`` are common."
-msgstr ""
+msgstr "Los valores \"bytes\" y ``'none'`` son comunes."
 
 #: flask.Response.access_control_allow_credentials:1 of
 msgid ""
@@ -4008,46 +4130,63 @@ msgid ""
 "the preflight request it indicates whether credentials can be used on the cross "
 "origin request."
 msgstr ""
+"Si las credenciales pueden ser compartidas por el navegador al código "
+"JavaScript. Como parte de la solicitud de verificación previa, indica si las "
+"credenciales se pueden utilizar en la solicitud de origen cruzado."
 
 #: ../../docstring flask.Response.access_control_allow_headers:1 of
 msgid "Which headers can be sent with the cross origin request."
-msgstr ""
+msgstr "Qué cabeceras se pueden enviar con la solicitud de origen cruzado."
 
 #: ../../docstring flask.Response.access_control_allow_methods:1 of
 msgid "Which methods can be used for the cross origin request."
-msgstr ""
+msgstr "Qué métodos se pueden utilizar para la solicitud de origen cruzado."
 
 #: ../../docstring flask.Response.access_control_allow_origin:1 of
 msgid "The origin or '*' for any origin that may make cross origin requests."
 msgstr ""
+"El origen o '*' para cualquier origen que pueda hacer peticiones de origen "
+"cruzado."
 
 #: ../../docstring flask.Response.access_control_expose_headers:1 of
 msgid "Which headers can be shared by the browser to JavaScript code."
 msgstr ""
+"Qué cabeceras pueden ser compartidas por el navegador al código JavaScript."
 
 #: ../../docstring flask.Response.access_control_max_age:1 of
 msgid "The maximum age in seconds the access control settings can be cached for."
 msgstr ""
+"La edad máxima en segundos que la configuración del control de acceso puede ser "
+"almacenada en caché."
 
 #: of werkzeug.wrappers.response.Response.add_etag:1
 msgid "Add an etag for the current response if there is none yet."
 msgstr ""
+"Añade una etiqueta electrónica para la respuesta actual si todavía no hay "
+"ninguna."
 
 #: of werkzeug.wrappers.response.Response.add_etag:3
 msgid ""
 "SHA-1 is used to generate the value. MD5 may not be available in some "
 "environments."
 msgstr ""
+"Se utiliza SHA-1 para generar el valor. MD5 puede no estar disponible en algunos "
+"entornos."
 
 #: ../../docstring flask.Response.age:1 of
 msgid ""
 "The Age response-header field conveys the sender's estimate of the amount of "
 "time since the response (or its revalidation) was generated at the origin server."
 msgstr ""
+"El campo de encabezado de respuesta Age transmite la estimación del remitente "
+"sobre el tiempo transcurrido desde que se generó la respuesta (o su "
+"revalidación) en el servidor de origen."
 
 #: ../../docstring flask.Response.age:5 of
 msgid "Age values are non-negative decimal integers, representing time in seconds."
 msgstr ""
+"Los valores de edad son enteros decimales no negativos que representan el tiempo "
+"en segundos."
 
 #: flask.Response.allow:1 of
 msgid ""
@@ -4056,16 +4195,25 @@ msgid ""
 "the recipient of valid methods associated with the resource. An Allow header "
 "field MUST be present in a 405 (Method Not Allowed) response."
 msgstr ""
+"El campo Allow entity-header enumera el conjunto de métodos admitidos por el "
+"recurso identificado por la Request-URI. El propósito de este campo es "
+"estrictamente informar al destinatario de los métodos válidos asociados con el "
+"recurso. Un campo de cabecera Allow DEBE estar presente en una respuesta 405 "
+"(Method Not Allowed)."
 
 #: flask.Response.cache_control:1 of
 msgid ""
 "The Cache-Control general-header field is used to specify directives that MUST "
 "be obeyed by all caching mechanisms along the request/response chain."
 msgstr ""
+"El campo Cache-Control general-header se utiliza para especificar las directivas "
+"que DEBEN ser obedecidas por todos los mecanismos de almacenamiento en caché a "
+"lo largo de la cadena de solicitud/respuesta."
 
 #: of werkzeug.wrappers.response.Response.calculate_content_length:1
 msgid "Returns the content length if available or `None` otherwise."
 msgstr ""
+"Devuelve la longitud del contenido si está disponible o `None` en caso contrario."
 
 #: of werkzeug.wrappers.response.Response.call_on_close:1
 msgid ""
@@ -4073,16 +4221,22 @@ msgid ""
 "of closing down the response.  Since 0.7 this function also returns the function "
 "that was passed so that this can be used as a decorator."
 msgstr ""
+"Añade una función a la lista interna de funciones que deben ser llamadas como "
+"parte del cierre de la respuesta. Desde la versión 0.7 esta función también "
+"devuelve la función que se pasó para que esta pueda ser utilizada como un "
+"decorador."
 
 #: of werkzeug.wrappers.response.Response.close:1
 msgid ""
 "Close the wrapped response if possible.  You can also use the object in a with "
 "statement which will automatically close it."
 msgstr ""
+"Cierre la respuesta envuelta si es posible. También puedes utilizar el objeto en "
+"una sentencia with que lo cerrará automáticamente."
 
 #: of werkzeug.wrappers.response.Response.close:4
 msgid "Can now be used in a with statement."
-msgstr ""
+msgstr "Ahora se puede utilizar en una declaración con."
 
 #: flask.Response.content_language:1 of
 msgid ""
@@ -4090,6 +4244,10 @@ msgid ""
 "the intended audience for the enclosed entity. Note that this might not be "
 "equivalent to all the languages used within the entity-body."
 msgstr ""
+"El campo Content-Language de la cabecera de la entidad describe la(s) lengua(s) "
+"natural(es) de los destinatarios de la entidad adjunta. Tenga en cuenta que esto "
+"podría no ser equivalente a todos los idiomas utilizados dentro del cuerpo de la "
+"entidad."
 
 #: ../../docstring flask.Response.content_length:1 of
 msgid ""
@@ -4098,6 +4256,10 @@ msgid ""
 "method, the size of the entity-body that would have been sent had the request "
 "been a GET."
 msgstr ""
+"El campo Content-Length de la cabecera de la entidad indica el tamaño del cuerpo "
+"de la entidad, en número decimal de OCTETs, enviado al destinatario o, en el "
+"caso del método HEAD, el tamaño del cuerpo de la entidad que se habría enviado "
+"si la petición hubiera sido un GET."
 
 #: ../../docstring flask.Response.content_location:1 of
 msgid ""
@@ -4105,24 +4267,34 @@ msgid ""
 "location for the entity enclosed in the message when that entity is accessible "
 "from a location separate from the requested resource's URI."
 msgstr ""
+"El campo de cabecera de entidad Content-Location PUEDE utilizarse para "
+"proporcionar la ubicación del recurso para la entidad incluida en el mensaje "
+"cuando dicha entidad es accesible desde una ubicación distinta del URI del "
+"recurso solicitado."
 
 #: flask.Response.content_range:1 of
 msgid ""
 "The ``Content-Range`` header as a :class:`~werkzeug.datastructures.ContentRange` "
 "object. Available even if the header is not set."
 msgstr ""
+"La cabecera ``Content-Range`` como objeto :class:`~werkzeug.datastructures."
+"ContentRange`. Disponible incluso si la cabecera no está establecida."
 
 #: ../../docstring flask.Response.content_security_policy:1 of
 msgid ""
 "The Content-Security-Policy header adds an additional layer of security to help "
 "detect and mitigate certain types of attacks."
 msgstr ""
+"La cabecera Content-Security-Policy añade una capa adicional de seguridad para "
+"ayudar a detectar y mitigar ciertos tipos de ataques."
 
 #: ../../docstring flask.Response.content_security_policy_report_only:1 of
 msgid ""
 "The Content-Security-Policy-Report-Only header adds a csp policy that is not "
 "enforced but is reported thereby helping detect certain types of attacks."
 msgstr ""
+"La cabecera Content-Security-Policy-Report-Only añade una política csp que no se "
+"aplica, pero que se notifica, ayudando así a detectar ciertos tipos de ataques."
 
 #: ../../docstring flask.Response.cross_origin_embedder_policy:1 of
 msgid ""
@@ -4130,46 +4302,56 @@ msgid ""
 "explicitly grant the document permission. Values must be a member of the :class:"
 "`werkzeug.http.COEP` enum."
 msgstr ""
+"Evita que un documento cargue cualquier recurso de origen cruzado que no conceda "
+"explícitamente el permiso al documento. Los valores deben ser miembros de la "
+"clase :class:`werkzeug.http.COEP` enum."
 
 #: ../../docstring flask.Response.cross_origin_opener_policy:1 of
 msgid ""
 "Allows control over sharing of browsing context group with cross-origin "
 "documents. Values must be a member of the :class:`werkzeug.http.COOP` enum."
 msgstr ""
+"Permite controlar el uso compartido del grupo de contexto de navegación con "
+"documentos de origen cruzado. Los valores deben ser miembros de la clase :class:"
+"`werkzeug.http.COOP` enum."
 
 #: flask.Response.data:1 of
 msgid "A descriptor that calls :meth:`get_data` and :meth:`set_data`."
-msgstr ""
+msgstr "Un descriptor que llama a :meth:`get_data` y :meth:`set_data`."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:1
 msgid "Delete a cookie.  Fails silently if key doesn't exist."
-msgstr ""
+msgstr "Borrar una cookie. Falla silenciosamente si la clave no existe."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:3
 msgid "the key (name) of the cookie to be deleted."
-msgstr ""
+msgstr "la clave (nombre) de la cookie que se va a eliminar."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:4
 msgid ""
 "if the cookie that should be deleted was limited to a path, the path has to be "
 "defined here."
 msgstr ""
+"si la cookie que debe ser eliminada estaba limitada a una ruta, la ruta tiene "
+"que ser definida aquí."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:6
 msgid ""
 "if the cookie that should be deleted was limited to a domain, that domain has to "
 "be defined here."
 msgstr ""
+"si la cookie que debe ser eliminada estaba limitada a un dominio, ese dominio "
+"tiene que ser definido aquí."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:8
 #: werkzeug.sansio.response.Response.set_cookie:19
 msgid "If ``True``, the cookie will only be available via HTTPS."
-msgstr ""
+msgstr "Si es ``True``, la cookie sólo estará disponible a través de HTTPS."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:10
 #: werkzeug.sansio.response.Response.set_cookie:21
 msgid "Disallow JavaScript access to the cookie."
-msgstr ""
+msgstr "No permitir el acceso de JavaScript a la cookie."
 
 #: of werkzeug.sansio.response.Response.delete_cookie:11
 #: werkzeug.sansio.response.Response.set_cookie:22
@@ -4177,6 +4359,8 @@ msgid ""
 "Limit the scope of the cookie to only be attached to requests that are \"same-"
 "site\"."
 msgstr ""
+"Limitar el alcance de la cookie para que sólo se adjunte a las solicitudes que "
+"son \"del mismo sitio\"."
 
 #: ../../docstring flask.Response.direct_passthrough:1 of
 msgid ""
@@ -4185,12 +4369,19 @@ msgid ""
 "unnecessary checks. Use :func:`~werkzeug.utils.send_file` instead of setting "
 "this manually."
 msgstr ""
+"Pasar el cuerpo de la respuesta directamente como el iterable WSGI. Esto puede "
+"usarse cuando el cuerpo es un archivo binario u otro iterable de bytes, para "
+"saltarse algunas comprobaciones innecesarias. Utilice :func:`~werkzeug.utils."
+"send_file` en lugar de establecerlo manualmente."
 
 #: ../../docstring flask.Response.expires:1 of
 msgid ""
 "The Expires entity-header field gives the date/time after which the response is "
 "considered stale. A stale cache entry may not normally be returned by a cache."
 msgstr ""
+"El campo \"Expires entity-header\" indica la fecha/hora a partir de la cual la "
+"respuesta se considera antigua. Una entrada de caché obsoleta normalmente no "
+"puede ser devuelta por una caché."
 
 #: of werkzeug.wrappers.response.Response.force_type:1
 msgid ""
@@ -4199,63 +4390,78 @@ msgid ""
 "exceptions.  If you call :meth:`get_response` on an exception you will get back "
 "a regular :class:`Response` object, even if you are using a custom subclass."
 msgstr ""
+"Hacer que la respuesta WSGI sea un objeto de respuesta de la clase actual.  "
+"Werkzeug utilizará la :class:`Response` internamente en muchas situaciones como "
+"las excepciones.  Si llamas a :meth:`get_response` en una excepción obtendrás un "
+"objeto :class:`Response` normal, incluso si estás usando una subclase "
+"personalizada."
 
 #: of werkzeug.wrappers.response.Response.force_type:7
 msgid ""
 "This method can enforce a given response type, and it will also convert "
 "arbitrary WSGI callables into response objects if an environ is provided::"
 msgstr ""
+"Este método puede imponer un tipo de respuesta dado, y también convertirá "
+"callables WSGI arbitrarios en objetos de respuesta si se proporciona un entorno::"
 
 #: of werkzeug.wrappers.response.Response.force_type:18
 msgid ""
 "This is especially useful if you want to post-process responses in the main "
 "dispatcher and use functionality provided by your subclass."
 msgstr ""
+"Esto es especialmente útil si quieres posprocesar las respuestas en el "
+"despachador principal y utilizar la funcionalidad proporcionada por tu subclase."
 
 #: of werkzeug.wrappers.response.Response.force_type:21
 msgid "Keep in mind that this will modify response objects in place if possible!"
 msgstr ""
+"¡Tenga en cuenta que esto modificará los objetos de respuesta en su lugar si es "
+"posible!"
 
 #: of werkzeug.wrappers.response.Response.force_type:24
 msgid "a response object or wsgi application."
-msgstr ""
+msgstr "un objeto de respuesta o aplicación wsgi."
 
 #: of werkzeug.wrappers.response.Response.force_type:25
 msgid "a WSGI environment object."
-msgstr ""
+msgstr "un objeto de entorno WSGI."
 
 #: of werkzeug.wrappers.response.Response.force_type:26
 #: werkzeug.wrappers.response.Response.from_app:11
 msgid "a response object."
-msgstr ""
+msgstr "un objeto de respuesta."
 
 #: of werkzeug.wrappers.response.Response.freeze:1
 msgid "Make the response object ready to be pickled. Does the following:"
-msgstr ""
+msgstr "Prepara el objeto de respuesta para ser decapado. Hace lo siguiente:"
 
 #: of werkzeug.wrappers.response.Response.freeze:4
 msgid ""
 "Buffer the response into a list, ignoring :attr:`implicity_sequence_conversion` "
 "and :attr:`direct_passthrough`."
 msgstr ""
+"Almacena la respuesta en una lista, ignorando :attr:"
+"`implicity_sequence_conversion` y :attr:`direct_passthrough`."
 
 #: of werkzeug.wrappers.response.Response.freeze:7
 msgid "Set the ``Content-Length`` header."
-msgstr ""
+msgstr "Establece la cabecera ``Content-Length``."
 
 #: of werkzeug.wrappers.response.Response.freeze:8
 msgid "Generate an ``ETag`` header if one is not already set."
-msgstr ""
+msgstr "Genera una cabecera ``ETag`` si aún no se ha establecido una."
 
 #: of werkzeug.wrappers.response.Response.freeze:10
 msgid ""
 "An ``ETag`` header is added, the ``no_etag`` parameter is deprecated and will be "
 "removed in Werkzeug 2.1."
 msgstr ""
+"Se añade una cabecera ``ETag``, el parámetro ``no_etag`` está obsoleto y se "
+"eliminará en Werkzeug 2.1."
 
 #: of werkzeug.wrappers.response.Response.freeze:14
 msgid "The ``Content-Length`` header is set."
-msgstr ""
+msgstr "La cabecera ``Content-Length`` se ha establecido."
 
 #: of werkzeug.wrappers.response.Response.from_app:1
 msgid ""
@@ -4266,18 +4472,24 @@ msgid ""
 "don't get the expected output you should set `buffered` to `True` which enforces "
 "buffering."
 msgstr ""
+"Crea un nuevo objeto de respuesta a partir de la salida de una aplicación.  Esto "
+"funciona mejor si le pasas una aplicación que devuelva un generador todo el "
+"tiempo.  A veces las aplicaciones pueden utilizar la llamada `write()` devuelta "
+"por la función `start_response`.  Esto trata de resolver estos casos extremos "
+"automáticamente.  Pero si no obtienes la salida esperada, deberías poner "
+"`buffered` a `True`, lo que refuerza el buffering."
 
 #: of werkzeug.wrappers.response.Response.from_app:8
 msgid "the WSGI application to execute."
-msgstr ""
+msgstr "la aplicación WSGI a ejecutar."
 
 #: of werkzeug.wrappers.response.Response.from_app:9
 msgid "the WSGI environment to execute against."
-msgstr ""
+msgstr "el entorno WSGI contra el que se va a ejecutar."
 
 #: of werkzeug.wrappers.response.Response.from_app:10
 msgid "set to `True` to enforce buffering."
-msgstr ""
+msgstr "se establece como `True` para reforzar el buffering."
 
 #: of werkzeug.wrappers.response.Response.get_app_iter:1
 msgid ""
@@ -4285,22 +4497,28 @@ msgid ""
 "request method and the current status code the return value might be an empty "
 "response rather than the one from the response."
 msgstr ""
+"Devuelve el iterador de la solicitud para el entorno dado.  Dependiendo del "
+"método de solicitud y del código de estado actual, el valor de retorno podría "
+"ser una respuesta vacía en lugar de la de la respuesta."
 
 #: of werkzeug.wrappers.response.Response.get_app_iter:5
 msgid ""
 "If the request method is `HEAD` or the status code is in a range where the HTTP "
 "specification requires an empty response, an empty iterable is returned."
 msgstr ""
+"Si el método de solicitud es `HEAD` o el código de estado está en un rango en el "
+"que la especificación HTTP requiere una respuesta vacía, se devuelve un iterable "
+"vacío."
 
 #: of werkzeug.wrappers.response.Response.get_app_iter:11
 #: werkzeug.wrappers.response.Response.get_wsgi_headers:20
 #: werkzeug.wrappers.response.Response.get_wsgi_response:10
 msgid "the WSGI environment of the request."
-msgstr ""
+msgstr "el entorno WSGI de la solicitud."
 
 #: of werkzeug.wrappers.response.Response.get_app_iter:12
 msgid "a response iterable."
-msgstr ""
+msgstr "un iterable de respuesta."
 
 #: of werkzeug.wrappers.response.Response.get_data:1
 msgid ""
@@ -4308,26 +4526,35 @@ msgid ""
 "the response iterable is encoded and flattened.  This can lead to unwanted "
 "behavior if you stream big data."
 msgstr ""
+"La representación en forma de cadena del cuerpo de la respuesta.  Cada vez que "
+"se llama a esta propiedad, el iterable de la respuesta se codifica y se aplana.  "
+"Esto puede dar lugar a un comportamiento no deseado si se transmiten grandes "
+"datos."
 
 #: of werkzeug.wrappers.response.Response.get_data:5
 msgid ""
 "This behavior can be disabled by setting :attr:`implicit_sequence_conversion` to "
 "`False`."
 msgstr ""
+"Este comportamiento puede desactivarse estableciendo :attr:"
+"`implicit_sequence_conversion` a `False`."
 
 #: of werkzeug.sansio.response.Response.get_etag:1
 msgid ""
 "Return a tuple in the form ``(etag, is_weak)``.  If there is no ETag the return "
 "value is ``(None, None)``."
 msgstr ""
+"Devuelve una tupla de la forma ``(etag, is_weak)``.  Si no hay ETag el valor de "
+"retorno es ``(None, None)``."
 
 #: of werkzeug.wrappers.response.Response.get_json:1
 msgid "Parse :attr:`data` as JSON. Useful during testing."
-msgstr ""
+msgstr "Analiza :attr:`data` como JSON. Útil durante las pruebas."
 
 #: of werkzeug.wrappers.response.Response.get_json:7
 msgid "Unlike :meth:`Request.get_json`, the result is not cached."
 msgstr ""
+"A diferencia de :meth:`Request.get_json`, el resultado no se almacena en caché."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:1
 msgid ""
@@ -4335,6 +4562,9 @@ msgid ""
 "headers modified for the given environment.  It returns a copy of the headers "
 "from the response with some modifications applied if necessary."
 msgstr ""
+"Se llama automáticamente justo antes de que se inicie la respuesta y devuelve "
+"las cabeceras modificadas para el entorno dado.  Devuelve una copia de las "
+"cabeceras de la respuesta con algunas modificaciones aplicadas si es necesario."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:6
 msgid ""
@@ -4342,6 +4572,9 @@ msgid ""
 "environment.  Also the content length is automatically set to zero here for "
 "certain status codes."
 msgstr ""
+"Por ejemplo, la cabecera location (si está presente) se une a la URL raíz del "
+"entorno.  También la longitud del contenido se pone automáticamente a cero aquí "
+"para ciertos códigos de estado."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:10
 msgid ""
@@ -4349,6 +4582,9 @@ msgid ""
 "object in place.  Also since 0.6, IRIs in location and content-location headers "
 "are handled properly."
 msgstr ""
+"Anteriormente esa función se llamaba `fix_headers` y modificaba el objeto de "
+"respuesta en su lugar.  Además, desde la versión 0.6, los IRIs en las cabeceras "
+"location y content-location se manejan correctamente."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:15
 msgid ""
@@ -4356,10 +4592,14 @@ msgid ""
 "able to figure it out on its own.  This is the case if all the strings in the "
 "response iterable are already encoded and the iterable is buffered."
 msgstr ""
+"También a partir de la versión 0.6, Werkzeug intentará establecer la longitud "
+"del contenido si es capaz de averiguarlo por sí mismo.  Este es el caso si todas "
+"las cadenas en el iterable de respuesta ya están codificadas y el iterable está "
+"en el buffer."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:21
 msgid "returns a new :class:`~werkzeug.datastructures.Headers` object."
-msgstr ""
+msgstr "devuelve un nuevo objeto :class:`~werkzeug.datastructures.Headers`."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_response:1
 msgid ""
@@ -4369,10 +4609,16 @@ msgid ""
 "example if the request method in the WSGI environment is ``'HEAD'`` the response "
 "will be empty and only the headers and status code will be present."
 msgstr ""
+"Devuelve la respuesta final de WSGI como una tupla.  El primer elemento de la "
+"tupla es el iterador de la aplicación, el segundo el estado y el tercero la "
+"lista de cabeceras.  La respuesta devuelta se crea especialmente para el entorno "
+"dado.  Por ejemplo, si el método de solicitud en el entorno WSGI es ``'HEAD'`` "
+"la respuesta estará vacía y sólo estarán presentes las cabeceras y el código de "
+"estado."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_response:11
 msgid "an ``(app_iter, status, headers)`` tuple."
-msgstr ""
+msgstr "an ``(app_iter, status, headers)`` tuple."
 
 #: flask.Response.is_sequence:1 of
 msgid ""
@@ -4380,6 +4626,9 @@ msgid ""
 "will consider an iterator to be buffered if the response attribute is a list or "
 "tuple."
 msgstr ""
+"Si el iterador se almacena en un buffer, esta propiedad será `True`.  Un objeto "
+"de respuesta considerará que un iterador está almacenado en buffer si el "
+"atributo de la respuesta es una lista o tupla."
 
 #: flask.Response.is_streamed:1 of
 msgid ""
@@ -4388,12 +4637,18 @@ msgid ""
 "no information about the number of iterations. This is usually `True` if a "
 "generator is passed to the response object."
 msgstr ""
+"Si la respuesta es \"streamed\" (la respuesta no es un iterable con información "
+"de longitud) esta propiedad es `True`.  En este caso, streamed significa que no "
+"hay información sobre el número de iteraciones. Normalmente es `True` si se pasa "
+"un generador al objeto de respuesta."
 
 #: flask.Response.is_streamed:6 of
 msgid ""
 "This is useful for checking before applying some sort of post filtering that "
 "should not take place for streamed responses."
 msgstr ""
+"Esto es útil para comprobar antes de aplicar algún tipo de filtrado de correos "
+"que no debería tener lugar para las respuestas transmitidas."
 
 #: of werkzeug.wrappers.response.Response.iter_encoded:1
 msgid ""
@@ -4401,12 +4656,18 @@ msgid ""
 "object is invoked as WSGI application the return value of this method is used as "
 "application iterator unless :attr:`direct_passthrough` was activated."
 msgstr ""
+"Itera la respuesta codificada con la codificación de la respuesta. Si el objeto "
+"de respuesta se invoca como aplicación WSGI, el valor de retorno de este método "
+"se utiliza como iterador de la aplicación, a menos que se haya activado :attr:"
+"`direct_passthrough`."
 
 #: ../../docstring flask.Response.last_modified:1 of
 msgid ""
 "The Last-Modified entity-header field indicates the date and time at which the "
 "origin server believes the variant was last modified."
 msgstr ""
+"El campo de cabecera de entidad Last-Modified indica la fecha y hora en la que "
+"el servidor de origen cree que la variante fue modificada por última vez."
 
 #: ../../docstring flask.Response.location:1 of
 msgid ""
@@ -4414,6 +4675,9 @@ msgid ""
 "location other than the Request-URI for completion of the request or "
 "identification of a new resource."
 msgstr ""
+"El campo Location response-header se utiliza para redirigir al destinatario a "
+"una ubicación distinta de la Request-URI para completar la solicitud o "
+"identificar un nuevo recurso."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:1
 msgid ""
@@ -4421,12 +4685,18 @@ msgid ""
 "was defined for the response already.  The `add_etag` method can be used to do "
 "that.  If called without etag just the date header is set."
 msgstr ""
+"Hacer que la respuesta esté condicionada a la solicitud.  Este método funciona "
+"mejor si ya se ha definido una etiqueta electrónica para la respuesta.  El "
+"método `add_etag` puede utilizarse para ello.  Si se llama sin etag sólo se "
+"establece la cabecera de la fecha."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:6
 msgid ""
 "This does nothing if the request method in the request or environ is anything "
 "but GET or HEAD."
 msgstr ""
+"Esto no hace nada si el método de solicitud en la petición o el entorno es "
+"cualquier cosa que no sea GET o HEAD."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:9
 msgid ""
@@ -4435,24 +4705,35 @@ msgid ""
 "described by :py:class:`io.IOBase`.  Objects returned by :meth:`~werkzeug.wsgi."
 "wrap_file` automatically implement those methods."
 msgstr ""
+"Para obtener un rendimiento óptimo en el manejo de las solicitudes de rango, se "
+"recomienda que su objeto de datos de respuesta implemente los métodos "
+"`seekable`, `seek` y `tell` como se describe en :py:class:`io.IOBase`.  Los "
+"objetos devueltos por :meth:`~werkzeug.wsgi.wrap_file` implementan "
+"automáticamente estos métodos."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:14
 msgid ""
 "It does not remove the body of the response because that's something the :meth:"
 "`__call__` function does for us automatically."
 msgstr ""
+"No elimina el cuerpo de la respuesta porque eso es algo que la función :meth:"
+"`__call__` hace por nosotros automáticamente."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:17
 msgid ""
 "Returns self so that you can do ``return resp.make_conditional(req)`` but "
 "modifies the object in-place."
 msgstr ""
+"Devuelve self para que puedas hacer ``return resp.make_conditional(req)`` pero "
+"modificando el objeto en el lugar."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:20
 msgid ""
 "a request object or WSGI environment to be used to make the response conditional "
 "against."
 msgstr ""
+"un objeto de solicitud o entorno WSGI que se utilizará para condicionar la "
+"respuesta."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:23
 msgid ""
@@ -4461,6 +4742,10 @@ msgid ""
 "If ``None``, it will be set to ``\"none\"``. If it's a string, it will use this "
 "value."
 msgstr ""
+"Este parámetro dicta el valor de la cabecera `Accept-Ranges`. Si es ``False`` "
+"(por defecto), la cabecera no se establece. Si es ``True``, se establecerá como "
+"``\"bytes\"``. Si ``None``, se establecerá como ``\"none\"``. Si es una cadena, "
+"se utilizará este valor."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:29
 msgid ""
@@ -4468,22 +4753,30 @@ msgid ""
 "length value and compute `Content-Length` real value. This parameter is "
 "mandatory for successful Range Requests completion."
 msgstr ""
+"Se utilizará sólo en las solicitudes válidas de Range. Establecerá el valor de "
+"longitud completa de `Content-Range` y calculará el valor real de `Content-"
+"Length`. Este parámetro es obligatorio para completar con éxito las solicitudes "
+"de rango."
 
 #: of werkzeug.wrappers.response.Response.make_conditional
 msgid "raises"
-msgstr ""
+msgstr "levanta"
 
 #: of werkzeug.wrappers.response.Response.make_conditional:34
 msgid ""
 ":class:`~werkzeug.exceptions.RequestedRangeNotSatisfiable` if `Range` header "
 "could not be parsed or satisfied."
 msgstr ""
+":class:`~werkzeug.exceptions.RequestedRangeNotSatisfiable` si la cabecera "
+"`Range` no ha podido ser analizada o satisfecha."
 
 #: of werkzeug.wrappers.response.Response.make_conditional:37
 msgid ""
 "Range processing is skipped if length is 0 instead of raising a 416 Range Not "
 "Satisfiable error."
 msgstr ""
+"El procesamiento del rango se salta si la longitud es 0 en lugar de lanzar un "
+"error 416 de rango no satisfactorio."
 
 #: of werkzeug.wrappers.response.Response.make_sequence:1
 msgid ""
@@ -4492,24 +4785,33 @@ msgid ""
 "automatically called and some properties might raise exceptions.  This also "
 "encodes all the items."
 msgstr ""
+"Convierte el iterador de respuesta en una lista.  Por defecto, esto ocurre "
+"automáticamente si es necesario.  Si `implicit_sequence_conversion` está "
+"deshabilitado, este método no se llama automáticamente y algunas propiedades "
+"podrían lanzar excepciones.  Esto también codifica todos los elementos."
 
 #: flask.Response.max_cookie_size:1 of
 msgid "Read-only view of the :data:`MAX_COOKIE_SIZE` config key."
 msgstr ""
+"Vista de sólo lectura de la clave de configuración :data:`MAX_COOKIE_SIZE`."
 
 #: flask.Response.max_cookie_size:3 of
 msgid "See :attr:`~werkzeug.wrappers.Response.max_cookie_size` in Werkzeug's docs."
 msgstr ""
+"Ver :attr:`~werkzeug.wrappers.Response.max_cookie_size` en la documentación de "
+"Werkzeug."
 
 #: flask.Response.mimetype:1 of
 msgid "The mimetype (content type without charset etc.)"
-msgstr ""
+msgstr "El mimetype (tipo de contenido sin charset, etc.)"
 
 #: flask.Response.mimetype_params:1 of
 msgid ""
 "The mimetype parameters as dict. For example if the content type is ``text/html; "
 "charset=utf-8`` the params would be ``{'charset': 'utf-8'}``."
 msgstr ""
+"Los parámetros de mimetype como dict. Por ejemplo, si el tipo de contenido es "
+"``text/html; charset=utf-8`` los parámetros serían ``{'charset': 'utf-8'}``."
 
 #: flask.Response.retry_after:1 of
 msgid ""
@@ -4517,43 +4819,51 @@ msgid ""
 "Unavailable) response to indicate how long the service is expected to be "
 "unavailable to the requesting client."
 msgstr ""
+"El campo Retry-After response-header puede utilizarse con una respuesta 503 "
+"(Service Unavailable) para indicar cuánto tiempo se espera que el servicio no "
+"esté disponible para el cliente solicitante."
 
 #: flask.Response.retry_after:5 of
 msgid "Time in seconds until expiration or date."
-msgstr ""
+msgstr "Tiempo en segundos hasta el vencimiento o la fecha."
 
 #: of werkzeug.sansio.response.Response.set_cookie:1
 msgid "Sets a cookie."
-msgstr ""
+msgstr "Establece una cookie."
 
 #: of werkzeug.sansio.response.Response.set_cookie:3
 msgid ""
 "A warning is raised if the size of the cookie header exceeds :attr:"
 "`max_cookie_size`, but the header will still be set."
 msgstr ""
+"Se produce una advertencia si el tamaño de la cabecera de la cookie excede :attr:"
+"`max_cookie_size`, pero la cabecera seguirá siendo establecida."
 
 #: of werkzeug.sansio.response.Response.set_cookie:6
 msgid "the key (name) of the cookie to be set."
-msgstr ""
+msgstr "la clave (nombre) de la cookie que se va a establecer."
 
 #: of werkzeug.sansio.response.Response.set_cookie:7
 msgid "the value of the cookie."
-msgstr ""
+msgstr "el valor de la cookie."
 
 #: of werkzeug.sansio.response.Response.set_cookie:8
 msgid ""
 "should be a number of seconds, or `None` (default) if the cookie should last "
 "only as long as the client's browser session."
 msgstr ""
+"debe ser un número de segundos, o `None` (por defecto) si la cookie debe durar "
+"sólo mientras la sesión del navegador del cliente."
 
 #: of werkzeug.sansio.response.Response.set_cookie:11
 msgid "should be a `datetime` object or UNIX timestamp."
-msgstr ""
+msgstr "debe ser un objeto `datetime` o una marca de tiempo UNIX."
 
 #: of werkzeug.sansio.response.Response.set_cookie:12
 msgid ""
 "limits the cookie to a given path, per default it will span the whole domain."
 msgstr ""
+"limita la cookie a una ruta determinada, por defecto abarcará todo el dominio."
 
 #: of werkzeug.sansio.response.Response.set_cookie:14
 msgid ""
@@ -4562,28 +4872,35 @@ msgid ""
 "example.com`` etc.  Otherwise, a cookie will only be readable by the domain that "
 "set it."
 msgstr ""
+"si desea establecer una cookie multidominio.  Por ejemplo, ``dominio=\".ejemplo."
+"com\"`` establecerá una cookie legible por el dominio ``www.example.com``, ``foo."
+"ejemplo.com``, etc.  En caso contrario, una cookie sólo podrá ser leída por el "
+"dominio que la estableció."
 
 #: of werkzeug.wrappers.response.Response.set_data:1
 msgid ""
 "Sets a new string as response.  The value must be a string or bytes. If a string "
 "is set it's encoded to the charset of the response (utf-8 by default)."
 msgstr ""
+"Establece una nueva cadena como respuesta.  El valor debe ser una cadena o "
+"bytes. Si se establece una cadena, se codifica con el conjunto de caracteres de "
+"la respuesta (utf-8 por defecto)."
 
 #: of werkzeug.sansio.response.Response.set_etag:1
 msgid "Set the etag, and override the old one if there was one."
-msgstr ""
+msgstr "Establece el etag, y anula el anterior si lo hubiera."
 
 #: flask.Response.status:1 of
 msgid "The HTTP status code as a string."
-msgstr ""
+msgstr "El código de estado HTTP como una cadena."
 
 #: flask.Response.status_code:1 of
 msgid "The HTTP status code as a number."
-msgstr ""
+msgstr "El código de estado HTTP como un número."
 
 #: flask.Response.stream:1 of
 msgid "The response iterable as write-only stream."
-msgstr ""
+msgstr "La respuesta iterable como flujo de sólo escritura."
 
 #: flask.Response.vary:1 of
 msgid ""
@@ -4591,14 +4908,18 @@ msgid ""
 "determines, while the response is fresh, whether a cache is permitted to use the "
 "response to reply to a subsequent request without revalidation."
 msgstr ""
+"El valor del campo Vary indica el conjunto de campos de la cabecera de la "
+"solicitud que determina completamente, mientras la respuesta está fresca, si se "
+"permite que una caché utilice la respuesta para responder a una solicitud "
+"posterior sin revalidación."
 
 #: flask.Response.www_authenticate:1 of
 msgid "The ``WWW-Authenticate`` header in a parsed form."
-msgstr ""
+msgstr "La cabecera ``WW-Authenticate`` en forma analizada."
 
 #: ../../api.rst:56
 msgid "Sessions"
-msgstr ""
+msgstr "Sesiones"
 
 #: ../../api.rst:58
 msgid ""
@@ -4609,24 +4930,32 @@ msgid ""
 "can't modify it unless they know the secret key, so make sure to set that to "
 "something complex and unguessable."
 msgstr ""
+"Si has establecido :attr:`Flask.secret_key` (o lo has configurado desde :data:"
+"`SECRET_KEY`) puedes utilizar sesiones en las aplicaciones Flask. Una sesión "
+"permite recordar información de una solicitud a otra. La forma en que Flask hace "
+"esto es utilizando una cookie firmada. El usuario puede ver el contenido de la "
+"sesión, pero no puede modificarlo a menos que conozca la clave secreta, así que "
+"asegúrate de establecerla con algo complejo e indescifrable."
 
 #: ../../api.rst:65
 msgid "To access the current session you can use the :class:`session` object:"
-msgstr ""
+msgstr "Para acceder a la sesión actual puede utilizar el objeto :class:`session`:"
 
 #: ../../api.rst:69
 msgid ""
 "The session object works pretty much like an ordinary dict, with the difference "
 "that it keeps track of modifications."
 msgstr ""
+"El objeto de sesión funciona de forma muy parecida a un dict ordinario, con la "
+"diferencia de que lleva la cuenta de las modificaciones."
 
 #: ../../api.rst:74
 msgid "The following attributes are interesting:"
-msgstr ""
+msgstr "Los siguientes atributos son interesantes:"
 
 #: ../../api.rst:78
 msgid "``True`` if the session is new, ``False`` otherwise."
-msgstr ""
+msgstr "``True`` si la sesión es nueva, ``False`` en caso contrario."
 
 #: ../../api.rst:82
 msgid ""
@@ -4635,6 +4964,10 @@ msgid ""
 "situation you have to explicitly set the attribute to ``True`` yourself.  Here "
 "an example::"
 msgstr ""
+"``True`` si el objeto de sesión ha detectado una modificación.  Tenga en cuenta "
+"que las modificaciones en las estructuras mutables no se recogen "
+"automáticamente, en esa situación tiene que establecer explícitamente el "
+"atributo a ``True`` usted mismo.  Aquí un ejemplo::"
 
 #: ../../api.rst:95
 msgid ""
@@ -4643,16 +4976,22 @@ msgid ""
 "``False`` (which is the default) the session will be deleted when the user "
 "closes the browser."
 msgstr ""
+"Si se establece como ``True`` la sesión vive durante :attr:`~flask.Flask."
+"permanent_session_lifetime` segundos.  El valor por defecto es de 31 días.  Si "
+"se establece en ``False`` (que es el valor por defecto) la sesión se borrará "
+"cuando el usuario cierre el navegador."
 
 #: ../../api.rst:102
 msgid "Session Interface"
-msgstr ""
+msgstr "Interfaz de la sesión"
 
 #: ../../api.rst:106
 msgid ""
 "The session interface provides a simple way to replace the session "
 "implementation that Flask is using."
 msgstr ""
+"La interfaz de sesión proporciona una forma sencilla de reemplazar la "
+"implementación de sesión que utiliza Flask."
 
 #: flask.sessions.SessionInterface:1 of
 msgid ""
@@ -4661,6 +5000,11 @@ msgid ""
 "methods you have to implement are :meth:`open_session` and :meth:`save_session`, "
 "the others have useful defaults which you don't need to change."
 msgstr ""
+"La interfaz básica que tienes que implementar para reemplazar la interfaz de "
+"sesión por defecto que utiliza la implementación de securecookie de werkzeug.  "
+"Los únicos métodos que tienes que implementar son :meth:`open_session` y :meth:"
+"`save_session`, los demás tienen útiles valores por defecto que no necesitas "
+"cambiar."
 
 #: flask.sessions.SessionInterface:7 of
 msgid ""
@@ -4668,6 +5012,10 @@ msgid ""
 "dictionary like interface plus the properties and methods from the :class:"
 "`SessionMixin`.  We recommend just subclassing a dict and adding that mixin::"
 msgstr ""
+"El objeto de sesión devuelto por el método :meth:`open_session` tiene que "
+"proporcionar una interfaz similar a la de un diccionario, además de las "
+"propiedades y métodos de la :class:`SessionMixin`.  Recomendamos simplemente "
+"subclasificar un diccionario y añadir ese mixin::"
 
 #: flask.sessions.SessionInterface:15 of
 msgid ""
@@ -4677,42 +5025,56 @@ msgid ""
 "class:`NullSession` class that is created will complain that the secret key was "
 "not set."
 msgstr ""
+"Si :meth:`open_session` devuelve ``None`` Flask llamará a :meth:"
+"`make_null_session` para crear una sesión que actúe como reemplazo si el soporte "
+"de sesión no puede funcionar porque no se cumple algún requisito.  La clase :"
+"class:`NullSession` por defecto que se crea se quejará de que no se ha "
+"establecido la clave secreta."
 
 #: flask.sessions.SessionInterface:21 of
 msgid ""
 "To replace the session interface on an application all you have to do is to "
 "assign :attr:`flask.Flask.session_interface`::"
 msgstr ""
+"Para reemplazar la interfaz de sesión en una aplicación todo lo que tienes que "
+"hacer es asignar :attr:`flask.Flask.session_interface`::"
 
 #: flask.sessions.SessionInterface.get_cookie_domain:1 of
 msgid "Returns the domain that should be set for the session cookie."
-msgstr ""
+msgstr "Devuelve el dominio que debe establecerse para la cookie de sesión."
 
 #: flask.sessions.SessionInterface.get_cookie_domain:3 of
 msgid ""
 "Uses ``SESSION_COOKIE_DOMAIN`` if it is configured, otherwise falls back to "
 "detecting the domain based on ``SERVER_NAME``."
 msgstr ""
+"Utiliza ``SESSION_COOKIE_DOMAIN`` si está configurado, de lo contrario vuelve a "
+"detectar el dominio basado en ``SERVER_NAME``."
 
 #: flask.sessions.SessionInterface.get_cookie_domain:6 of
 msgid ""
 "Once detected (or if not set at all), ``SESSION_COOKIE_DOMAIN`` is updated to "
 "avoid re-running the logic."
 msgstr ""
+"Una vez detectado (o si no se establece en absoluto), ``SESSION_COOKIE_DOMAIN`` "
+"se actualiza para evitar volver a ejecutar la lógica."
 
 #: flask.sessions.SessionInterface.get_cookie_httponly:1 of
 msgid ""
 "Returns True if the session cookie should be httponly.  This currently just "
 "returns the value of the ``SESSION_COOKIE_HTTPONLY`` config var."
 msgstr ""
+"Devuelve True si la cookie de sesión debe ser httponly.  Actualmente sólo "
+"devuelve el valor de la varilla de configuración ``SESSION_COOKIE_HTTPONLY``."
 
 #: flask.sessions.SessionInterface.get_cookie_name:1 of
 msgid "Returns the name of the session cookie."
-msgstr ""
+msgstr "Devuelve el nombre de la cookie de sesión."
 
 #: flask.sessions.SessionInterface.get_cookie_name:3 of
 msgid "Uses ``app.session_cookie_name`` which is set to ``SESSION_COOKIE_NAME``"
 msgstr ""
+"Utiliza ``app.session_cookie_name`` que se establece como ``SESSION_COOKIE_NAME``"
 
 #: flask.sessions.SessionInterface.get_cookie_path:1 of
 msgid ""
@@ -4720,6 +5082,9 @@ msgid ""
 "implementation uses the value from the ``SESSION_COOKIE_PATH`` config var if "
 "it's set, and falls back to ``APPLICATION_ROOT`` or uses ``/`` if it's ``None``."
 msgstr ""
+"Devuelve la ruta para la que la cookie debe ser válida.  La implementación por "
+"defecto utiliza el valor de la var de configuración ``SESSION_COOKIE_PATH`` si "
+"está establecida, y vuelve a ``APPLICATION_ROOT`` o utiliza ``/`` si es ``None``."
 
 #: flask.sessions.SessionInterface.get_cookie_samesite:1 of
 msgid ""
@@ -4727,12 +5092,17 @@ msgid ""
 "attribute. This currently just returns the value of the :data:"
 "`SESSION_COOKIE_SAMESITE` setting."
 msgstr ""
+"Devuelve ``'Strict'`` o ``'Lax'`` si la cookie debe utilizar el atributo "
+"``SameSite``. Actualmente sólo devuelve el valor del ajuste :data:"
+"`SESSION_COOKIE_SAMESITE`."
 
 #: flask.sessions.SessionInterface.get_cookie_secure:1 of
 msgid ""
 "Returns True if the cookie should be secure.  This currently just returns the "
 "value of the ``SESSION_COOKIE_SECURE`` setting."
 msgstr ""
+"Devuelve True si la cookie debe ser segura.  Actualmente sólo devuelve el valor "
+"del ajuste ``SESSION_COOKIE_SECURE``."
 
 #: flask.sessions.SessionInterface.get_expiration_time:1 of
 msgid ""
@@ -4740,18 +5110,26 @@ msgid ""
 "the session is linked to the browser session.  The default implementation "
 "returns now + the permanent session lifetime configured on the application."
 msgstr ""
+"Un método de ayuda que devuelve una fecha de caducidad para la sesión o ``None`` "
+"si la sesión está vinculada a la sesión del navegador.  La implementación por "
+"defecto devuelve now + el tiempo de vida de la sesión permanente configurada en "
+"la aplicación."
 
 #: flask.sessions.SessionInterface.is_null_session:1 of
 msgid ""
 "Checks if a given object is a null session.  Null sessions are not asked to be "
 "saved."
 msgstr ""
+"Comprueba si un objeto dado es una sesión nula.  No se pide que se guarden las "
+"sesiones nulas."
 
 #: flask.sessions.SessionInterface.is_null_session:4 of
 msgid ""
 "This checks if the object is an instance of :attr:`null_session_class` by "
 "default."
 msgstr ""
+"Comprueba si el objeto es una instancia de :attr:`null_session_class` por "
+"defecto."
 
 #: flask.sessions.SessionInterface.make_null_session:1 of
 msgid ""
@@ -4761,10 +5139,15 @@ msgid ""
 "without complaining but modifications are answered with a helpful error message "
 "of what failed."
 msgstr ""
+"Crea una sesión nula que actúa como objeto de reemplazo si el soporte de la "
+"sesión real no pudo ser cargado debido a un error de configuración.  Esto ayuda "
+"principalmente a la experiencia del usuario porque el trabajo de la sesión nula "
+"es seguir soportando la búsqueda sin quejarse, pero las modificaciones se "
+"responden con un mensaje de error útil de lo que falló."
 
 #: flask.sessions.SessionInterface.make_null_session:8 of
 msgid "This creates an instance of :attr:`null_session_class` by default."
-msgstr ""
+msgstr "Esto crea una instancia de :attr:`null_session_class` por defecto."
 
 #: flask.sessions.NullSession:1 of
 msgid ""
@@ -4772,6 +5155,9 @@ msgid ""
 "when a null session is requested.  Likewise the :meth:`is_null_session` method "
 "will perform a typecheck against this type."
 msgstr ""
+":meth:`make_null_session` buscará aquí la clase que debe crearse cuando se "
+"solicita una sesión nula.  Del mismo modo, el método :meth:`is_null_session` "
+"realizará una comprobación de tipo con respecto a esta clase."
 
 #: flask.sessions.SecureCookieSessionInterface.open_session:1
 #: flask.sessions.SessionInterface.open_session:1 of
@@ -4781,6 +5167,10 @@ msgid ""
 "object which implements a dictionary like interface + the methods and attributes "
 "on :class:`SessionMixin`."
 msgstr ""
+"Este método debe ser implementado y debe devolver ``None`` en caso de que la "
+"carga haya fallado por un error de configuración o una instancia de un objeto de "
+"sesión que implemente una interfaz tipo diccionario + los métodos y atributos "
+"de :class:`SessionMixin`."
 
 #: ../../docstring flask.sessions.SessionInterface.pickle_based:1 of
 msgid ""
@@ -4788,6 +5178,9 @@ msgid ""
 "by Flask extensions to make a decision in regards to how to deal with the "
 "session object."
 msgstr ""
+"Una bandera que indica si la interfaz de sesión está basada en pickle. Esto "
+"puede ser utilizado por las extensiones de Flask para tomar una decisión con "
+"respecto a cómo tratar el objeto de sesión."
 
 #: flask.sessions.SecureCookieSessionInterface.save_session:1
 #: flask.sessions.SessionInterface.save_session:1 of
@@ -4796,6 +5189,9 @@ msgid ""
 "of the request.  This is still called during a request context so if you "
 "absolutely need access to the request you can do that."
 msgstr ""
+"Se llama a las sesiones reales devueltas por :meth:`open_session` al final de la "
+"solicitud.  Esto todavía se llama durante un contexto de solicitud, por lo que "
+"si es absolutamente necesario el acceso a la solicitud puede hacerlo."
 
 #: flask.sessions.SessionInterface.should_set_cookie:1 of
 msgid ""
@@ -4804,31 +5200,42 @@ msgid ""
 "cookie is set. If the session is permanent and the "
 "``SESSION_REFRESH_EACH_REQUEST`` config is true, the cookie is always set."
 msgstr ""
+"Utilizado por los backends de sesión para determinar si se debe establecer una "
+"cabecera ``Set-Cookie`` para esta cookie de sesión para esta respuesta. Si la "
+"sesión ha sido modificada, se establece la cookie. Si la sesión es permanente y "
+"la configuración ``SESSION_REFRESH_EACH_REQUEST`` es verdadera, la cookie se "
+"establece siempre."
 
 #: flask.sessions.SessionInterface.should_set_cookie:7 of
 msgid "This check is usually skipped if the session was deleted."
-msgstr ""
+msgstr "Esta comprobación suele omitirse si la sesión se ha eliminado."
 
 #: flask.sessions.SecureCookieSessionInterface:1 of
 msgid ""
 "The default session interface that stores sessions in signed cookies through "
 "the :mod:`itsdangerous` module."
 msgstr ""
+"La interfaz de sesión por defecto que almacena las sesiones en cookies firmadas "
+"a través del módulo :mod:`itsdangerous`."
 
 #: _hashlib.openssl_sha1:1 of
 msgid "the hash function to use for the signature.  The default is sha1"
-msgstr ""
+msgstr "la función hash a utilizar para la firma.  El valor por defecto es sha1"
 
 #: ../../docstring flask.sessions.SecureCookieSessionInterface.key_derivation:1 of
 msgid ""
 "the name of the itsdangerous supported key derivation.  The default is hmac."
 msgstr ""
+"el nombre de la derivación de clave soportada por itsdangerous.  El valor por "
+"defecto es hmac."
 
 #: ../../docstring flask.sessions.SecureCookieSessionInterface.salt:1 of
 msgid ""
 "the salt that should be applied on top of the secret key for the signing of "
 "cookie based sessions."
 msgstr ""
+"la sal que debe aplicarse sobre la clave secreta para la firma de las sesiones "
+"basadas en cookies."
 
 #: ../../docstring flask.sessions.SecureCookieSessionInterface.serializer:1 of
 msgid ""
@@ -4836,10 +5243,13 @@ msgid ""
 "serializer with support for some extra Python types such as datetime objects or "
 "tuples."
 msgstr ""
+"Un serializador de Python para la carga útil.  El valor por defecto es un "
+"serializador compacto derivado de JSON con soporte para algunos tipos extra de "
+"Python como objetos datetime o tuplas."
 
 #: flask.sessions.SecureCookieSession:1 of
 msgid "Base class for sessions based on signed cookies."
-msgstr ""
+msgstr "Clase base para sesiones basadas en cookies firmadas."
 
 #: flask.sessions.SecureCookieSession:3 of
 msgid ""
@@ -4847,17 +5257,24 @@ msgid ""
 "attributes. It cannot reliably track whether a session is new (vs. empty), so :"
 "attr:`new` remains hard coded to ``False``."
 msgstr ""
+"Este backend de sesión establecerá los atributos :attr:`modified` y :attr:"
+"`accessed`. No se puede saber de forma fiable si una sesión es nueva (frente a "
+"una vacía), por lo que :attr:`new` permanece codificado en ``False``."
 
 #: ../../docstring flask.sessions.SecureCookieSession.accessed:1 of
 msgid ""
 "header, which allows caching proxies to cache different pages for different "
 "users."
 msgstr ""
+"que permite a los proxies de caché almacenar en caché diferentes páginas para "
+"diferentes usuarios."
 
 #: flask.sessions.SecureCookieSession.get:1
 #: flask.sessions.SecureCookieSession.setdefault:3 of
 msgid "Return the value for key if key is in the dictionary, else default."
 msgstr ""
+"Devuelve el valor de la clave si la clave está en el diccionario, si no, por "
+"defecto."
 
 #: ../../docstring flask.sessions.SecureCookieSession.modified:1 of
 msgid ""
@@ -4866,40 +5283,54 @@ msgid ""
 "dict) then this must be set to ``True`` manually when modifying that data. The "
 "session cookie will only be written to the response if this is ``True``."
 msgstr ""
+"Cuando se modifican los datos, esto se establece como ``True``. Sólo se rastrea "
+"el diccionario de sesión en sí mismo; si la sesión contiene datos mutables (por "
+"ejemplo, un dict anidado) entonces esto debe ser establecido a ``True`` "
+"manualmente cuando se modifican esos datos. La cookie de sesión sólo se "
+"escribirá en la respuesta si es ``True``."
 
 #: flask.sessions.SecureCookieSession.setdefault:1 of
 msgid "Insert key with a value of default if key is not in the dictionary."
 msgstr ""
+"Inserta la clave con un valor por defecto si la clave no está en el diccionario."
 
 #: flask.sessions.NullSession:1 of
 msgid ""
 "Class used to generate nicer error messages if sessions are not available.  Will "
 "still allow read-only access to the empty session but fail on setting."
 msgstr ""
+"Clase utilizada para generar mensajes de error más agradables si las sesiones no "
+"están disponibles.  Seguirá permitiendo el acceso de sólo lectura a la sesión "
+"vacía, pero fallará al establecerla."
 
 #: flask.sessions.SessionMixin:1 of
 msgid "Expands a basic dictionary with session attributes."
-msgstr ""
+msgstr "Amplía un diccionario básico con atributos de sesión."
 
 #: ../../docstring flask.sessions.SessionMixin.accessed:1 of
 msgid ""
 "Some implementations can detect when session data is read or written and set "
 "this when that happens. The mixin default is hard coded to ``True``."
 msgstr ""
+"Algunas implementaciones pueden detectar cuando se leen o escriben datos de la "
+"sesión y establecer esto cuando sucede. El mixin por defecto está codificado en "
+"``True``."
 
 #: ../../docstring flask.sessions.SessionMixin.modified:1 of
 msgid ""
 "Some implementations can detect changes to the session and set this when that "
 "happens. The mixin default is hard coded to ``True``."
 msgstr ""
+"Algunas implementaciones pueden detectar cambios en la sesión y establecer esto "
+"cuando sucede. El mixin por defecto está codificado en ``True``."
 
 #: flask.sessions.SessionMixin.permanent:1 of
 msgid "This reflects the ``'_permanent'`` key in the dict."
-msgstr ""
+msgstr "Esto refleja la clave \"_permanente\" en el dict."
 
 #: ../../api.rst:126
 msgid "Notice"
-msgstr ""
+msgstr "Aviso"
 
 #: ../../api.rst:128
 msgid ""
@@ -4908,10 +5339,14 @@ msgid ""
 "permanent_session_lifetime` attribute on the app which converts the result to an "
 "integer automatically."
 msgstr ""
+"La clave de configuración ``PERMANENT_SESSION_LIFETIME`` también puede ser un "
+"entero a partir de Flask 0.8.  Puede capturar esto usted mismo o utilizar el "
+"atributo :attr:`~flask.Flask.permanent_session_lifetime` en la aplicación que "
+"convierte el resultado en un número entero automáticamente."
 
 #: ../../api.rst:135
 msgid "Test Client"
-msgstr ""
+msgstr "Test Client"
 
 #: flask.testing.FlaskClient:1 of
 msgid ""
@@ -4920,22 +5355,32 @@ msgid ""
 "body when used in a ``with`` statement.  For general information about how to "
 "use this class refer to :class:`werkzeug.test.Client`."
 msgstr ""
+"Funciona como un cliente de prueba normal de Werkzeug, pero tiene cierto "
+"conocimiento de cómo funciona Flask para aplazar la limpieza de la pila de "
+"contexto de la solicitud al final de un cuerpo ``with`` cuando se utiliza en una "
+"declaración ``with``.  Para obtener información general sobre cómo utilizar esta "
+"clase, consulta :class:`werkzeug.test.Client`."
 
 #: flask.testing.FlaskClient:7 of
 msgid ""
 "`app.test_client()` includes preset default environment, which can be set after "
 "instantiation of the `app.test_client()` object in `client.environ_base`."
 msgstr ""
+"`app.test_client()` incluye un entorno predeterminado, que se puede establecer "
+"después de la instanciación del objeto `app.test_client()` en `client."
+"environ_base`."
 
 #: flask.testing.FlaskClient:12 of
 msgid "Basic usage is outlined in the :doc:`/testing` chapter."
-msgstr ""
+msgstr "El uso básico se describe en el capítulo :doc:`/testing`."
 
 #: flask.testing.FlaskClient.open:1 of
 msgid ""
 "Generate an environ dict from the given arguments, make a request to the "
 "application using it, and return the response."
 msgstr ""
+"Genera un environ dict a partir de los argumentos dados, realiza una petición a "
+"la aplicación que lo utiliza y devuelve la respuesta."
 
 #: flask.testing.FlaskClient.open:4 of
 msgid ""
@@ -4943,30 +5388,42 @@ msgid ""
 "single arg is passed, it can be an existing :class:`EnvironBuilder` or an "
 "environ dict."
 msgstr ""
+"Se pasa a :class:`EnvironBuilder` para crear el entorno para la solicitud. Si se "
+"pasa un solo arg, puede ser un :class:`EnvironBuilder` existente o un environ "
+"dict."
 
 #: flask.testing.FlaskClient.open:7 of
 msgid ""
 "Convert the iterator returned by the app into a list. If the iterator has a "
 "``close()`` method, it is called automatically."
 msgstr ""
+"Convierte el iterador devuelto por la aplicación en una lista. Si el iterador "
+"tiene un método ``close()``, se llama automáticamente."
 
 #: flask.testing.FlaskClient.open:10 of
 msgid ""
 "Make additional requests to follow HTTP redirects until a non-redirect status is "
 "returned. :attr:`TestResponse.history` lists the intermediate responses."
 msgstr ""
+"Realiza peticiones adicionales para seguir las redirecciones HTTP hasta que se "
+"devuelva un estado de no redirección. :attr:`TestResponse.history` lista las "
+"respuestas intermedias."
 
 #: flask.testing.FlaskClient.open:15 of
 msgid ""
 "``as_tuple`` is deprecated and will be removed in Werkzeug 2.1. Use :attr:"
 "`TestResponse.request` and ``request.environ`` instead."
 msgstr ""
+"``as_tuple`` está obsoleto y será eliminado en Werkzeug 2.1. Utilice :attr:"
+"`TestResponse.request` y ``request.environ`` en su lugar."
 
 #: flask.testing.FlaskClient.open:20 of
 msgid ""
 "The request input stream is closed when calling ``response.close()``. Input "
 "streams for redirects are automatically closed."
 msgstr ""
+"El flujo de entrada de la solicitud se cierra al llamar a ``response.close()``. "
+"Los flujos de entrada para las redirecciones se cierran automáticamente."
 
 #: flask.testing.FlaskClient.open:25 of
 msgid ""
@@ -4974,10 +5431,13 @@ msgid ""
 "type has to be called ``content_type`` instead of ``mimetype``. This change was "
 "made for consistency with :class:`werkzeug.FileWrapper`."
 msgstr ""
+"Si se proporciona un dict como archivo en el dict para el parámetro ``data`` el "
+"tipo de contenido debe llamarse ``content_type`` en lugar de ``mimetype``. Este "
+"cambio se ha realizado por coherencia con :class:`werkzeug.FileWrapper`."
 
 #: flask.testing.FlaskClient.open:31 of
 msgid "Added the ``follow_redirects`` parameter."
-msgstr ""
+msgstr "Se ha añadido el parámetro ``follow_redirects``."
 
 #: flask.testing.FlaskClient.session_transaction:1 of
 msgid ""
@@ -4985,6 +5445,10 @@ msgid ""
 "transaction.  This can be used to modify the session that the test client uses.  "
 "Once the ``with`` block is left the session is stored back."
 msgstr ""
+"Cuando se utiliza en combinación con una sentencia ``with`` se abre una "
+"transacción de sesión.  Esto se puede utilizar para modificar la sesión que "
+"utiliza el cliente de prueba.  Una vez que se abandona el bloque ``with`` se "
+"vuelve a guardar la sesión."
 
 #: flask.testing.FlaskClient.session_transaction:11 of
 msgid ""
@@ -4993,10 +5457,14 @@ msgid ""
 "accepts the same arguments as :meth:`~flask.Flask.test_request_context` which "
 "are directly passed through."
 msgstr ""
+"Internamente esto se implementa pasando por un contexto de solicitud de prueba "
+"temporal y como el manejo de la sesión podría depender de las variables de la "
+"solicitud, esta función acepta los mismos argumentos que :meth:`~flask.Flask."
+"test_request_context` que se pasan directamente."
 
 #: ../../api.rst:144
 msgid "Test CLI Runner"
-msgstr ""
+msgstr "Test CLI Runner"
 
 #: flask.testing.FlaskCliRunner:1 of
 msgid ""
@@ -5004,6 +5472,9 @@ msgid ""
 "Typically created using :meth:`~flask.Flask.test_cli_runner`. See :ref:`testing-"
 "cli`."
 msgstr ""
+"Un :class:`~click.testing.CliRunner` para probar los comandos CLI de una "
+"aplicación Flask. Normalmente se crea usando :meth:`~flask.Flask."
+"test_cli_runner`. Ver :ref:`testing-cli`."
 
 #: flask.testing.FlaskCliRunner.invoke:1 of
 msgid ""
@@ -5011,30 +5482,37 @@ msgid ""
 "<click.testing.CliRunner.invoke>` for full method documentation. See :ref:"
 "`testing-cli` for examples."
 msgstr ""
+"Invoca un comando CLI en un entorno aislado. Ver :meth:`CliRunner.invoke <click."
+"testing.CliRunner.invoke>` para la documentación completa del método. Consulte :"
+"ref:`testing-cli` para ver ejemplos."
 
 #: flask.testing.FlaskCliRunner.invoke:5 of
 msgid ""
 "If the ``obj`` argument is not given, passes an instance of :class:`~flask.cli."
 "ScriptInfo` that knows how to load the Flask app being tested."
 msgstr ""
+"Si el argumento ``obj`` no se da, pasa una instancia de :class:`~flask.cli."
+"ScriptInfo` que sabe cómo cargar la aplicación Flask que se está probando."
 
 #: flask.testing.FlaskCliRunner.invoke:9 of
 msgid ""
 "Command object to invoke. Default is the app's :attr:`~flask.app.Flask.cli` "
 "group."
 msgstr ""
+"Objeto de comando a invocar. Por defecto es el grupo :attr:`~flask.app.Flask."
+"cli` de la aplicación."
 
 #: flask.testing.FlaskCliRunner.invoke:11 of
 msgid "List of strings to invoke the command with."
-msgstr ""
+msgstr "Lista de cadenas para invocar el comando."
 
 #: flask.testing.FlaskCliRunner.invoke:13 of
 msgid "a :class:`~click.testing.Result` object."
-msgstr ""
+msgstr "un objeto :class:`~click.testing.Result`."
 
 #: ../../api.rst:153
 msgid "Application Globals"
-msgstr ""
+msgstr "Globales de aplicación"
 
 #: ../../api.rst:157
 msgid ""
@@ -5045,6 +5523,12 @@ msgid ""
 "request.  In a nutshell: it does the right thing, like it does for :class:"
 "`request` and :class:`session`."
 msgstr ""
+"Para compartir datos que son válidos sólo para una petición de una función a "
+"otra, una variable global no es suficiente porque se rompería en entornos con "
+"hilos.  Flask te proporciona un objeto especial que asegura que sólo es válido "
+"para la petición activa y que devolverá valores diferentes para cada petición.  "
+"En pocas palabras: hace lo correcto, como lo hace para :class:`request` y :class:"
+"`session`."
 
 #: ../../api.rst:166
 msgid ""
@@ -5052,80 +5536,98 @@ msgid ""
 "appcontext>`. This is an instance of :attr:`Flask.app_ctx_globals_class`, which "
 "defaults to :class:`ctx._AppCtxGlobals`."
 msgstr ""
+"Un objeto de espacio de nombres que puede almacenar datos durante un :doc:"
+"`contexto de aplicación </appcontext>`. Es una instancia de :attr:`Flask."
+"app_ctx_globals_class`, que por defecto es :class:`ctx._AppCtxGlobals`."
 
 #: ../../api.rst:171
 msgid ""
 "This is a good place to store resources during a request. During testing, you "
 "can use the :ref:`faking-resources` pattern to pre-configure such resources."
 msgstr ""
+"Este es un buen lugar para almacenar recursos durante una petición. Durante las "
+"pruebas, puede utilizar el patrón :ref:`faking-resources` para preconfigurar "
+"dichos recursos."
 
 #: ../../api.rst:175 ../../api.rst:199
 msgid "This is a proxy. See :ref:`notes-on-proxies` for more information."
 msgstr ""
+"Se trata de un proxy. Consulte :ref:`notas sobre proxies` para obtener más "
+"información."
 
 #: ../../api.rst:177
 msgid "Bound to the application context instead of the request context."
 msgstr ""
+"Vinculado al contexto de la aplicación en lugar del contexto de la solicitud."
 
 #: flask.ctx._AppCtxGlobals:1 of
 msgid ""
 "A plain object. Used as a namespace for storing data during an application "
 "context."
 msgstr ""
+"Un objeto simple. Se utiliza como espacio de nombres para almacenar datos "
+"durante un contexto de aplicación."
 
 #: flask.ctx._AppCtxGlobals:4 of
 msgid ""
 "Creating an app context automatically creates this object, which is made "
 "available as the :data:`g` proxy."
 msgstr ""
+"La creación de un contexto de aplicación crea automáticamente este objeto, que "
+"se pone a disposición como proxy :data:`g`."
 
 #: flask.ctx._AppCtxGlobals:9 of
 msgid "Check whether an attribute is present."
-msgstr ""
+msgstr "Comprueba si un atributo está presente."
 
 #: flask.ctx._AppCtxGlobals:15 of
 msgid "Return an iterator over the attribute names."
-msgstr ""
+msgstr "Devuelve un iterador sobre los nombres de atributos."
 
 #: flask.ctx._AppCtxGlobals.get:1 of
 msgid "Get an attribute by name, or a default value. Like :meth:`dict.get`."
 msgstr ""
+"Obtener un atributo por su nombre, o un valor por defecto. Como :meth:`dict.get`."
 
 #: flask.ctx._AppCtxGlobals.get:4 flask.ctx._AppCtxGlobals.setdefault:4 of
 msgid "Name of attribute to get."
-msgstr ""
+msgstr "Nombre del atributo a obtener."
 
 #: flask.ctx._AppCtxGlobals.get:5 of
 msgid "Value to return if the attribute is not present."
-msgstr ""
+msgstr "Valor a devolver si el atributo no está presente."
 
 #: flask.ctx._AppCtxGlobals.pop:1 of
 msgid "Get and remove an attribute by name. Like :meth:`dict.pop`."
-msgstr ""
+msgstr "Obtener y eliminar un atributo por su nombre. Como :meth:`dict.pop`."
 
 #: flask.ctx._AppCtxGlobals.pop:3 of
 msgid "Name of attribute to pop."
-msgstr ""
+msgstr "Nombre del atributo a reventar."
 
 #: flask.ctx._AppCtxGlobals.pop:4 of
 msgid ""
 "Value to return if the attribute is not present, instead of raising a "
 "``KeyError``."
 msgstr ""
+"Valor a devolver si el atributo no está presente, en lugar de lanzar un "
+"``KeyError``."
 
 #: flask.ctx._AppCtxGlobals.setdefault:1 of
 msgid ""
 "Get the value of an attribute if it is present, otherwise set and return a "
 "default value. Like :meth:`dict.setdefault`."
 msgstr ""
+"Obtiene el valor de un atributo si está presente, en caso contrario establece y "
+"devuelve un valor por defecto. Como :meth:`dict.setdefault`."
 
 #: flask.ctx._AppCtxGlobals.setdefault:5 of
 msgid "Value to set and return if the attribute is not present."
-msgstr ""
+msgstr "Valor a establecer y devolver si el atributo no está presente."
 
 #: ../../api.rst:185
 msgid "Useful Functions and Classes"
-msgstr ""
+msgstr "Funciones y clases útiles"
 
 #: ../../api.rst:189
 msgid ""
@@ -5134,6 +5636,10 @@ msgid ""
 "such as when using the application factory pattern or in blueprints and "
 "extensions."
 msgstr ""
+"Un proxy de la aplicación que gestiona la solicitud actual. Esto es útil para "
+"acceder a la aplicación sin necesidad de importarla, o si no se puede importar, "
+"como cuando se utiliza el patrón de fábrica de aplicaciones o en blueprints y "
+"extensiones."
 
 #: ../../api.rst:194
 msgid ""
@@ -5141,6 +5647,9 @@ msgid ""
 "pushed. This happens automatically during requests and CLI commands. It can be "
 "controlled manually with :meth:`~flask.Flask.app_context`."
 msgstr ""
+"Esto sólo está disponible cuando un :doc:`contexto de aplicación </appcontext>` "
+"es empujado. Esto ocurre automáticamente durante las solicitudes y los comandos "
+"CLI. Se puede controlar manualmente con :meth:`~flask.Flask.app_context`."
 
 #: flask.ctx.has_request_context:1 of
 msgid ""
@@ -5149,12 +5658,18 @@ msgid ""
 "information if the request object is available, but fail silently if it is "
 "unavailable."
 msgstr ""
+"Si usted tiene código que quiere probar si un contexto de solicitud está o no "
+"esta función puede ser utilizada.  Por ejemplo, puede querer aprovechar la "
+"información de la solicitud si el objeto de solicitud está disponible, pero "
+"fallar silenciosamente si no está disponible."
 
 #: flask.ctx.has_request_context:16 of
 msgid ""
 "Alternatively you can also just test any of the context bound objects (such as :"
 "class:`request` or :class:`g`) for truthness::"
 msgstr ""
+"También puede comprobar la veracidad de cualquiera de los objetos vinculados al "
+"contexto (como :class:`request` o :class:`g`):"
 
 #: flask.ctx.copy_current_request_context:1 of
 msgid ""
@@ -5164,16 +5679,24 @@ msgid ""
 "function is called.  The current session is also included in the copied request "
 "context."
 msgstr ""
+"Una función de ayuda que decora una función para retener el contexto de la "
+"solicitud actual.  Esto es útil cuando se trabaja con greenlets.  En el momento "
+"en que la función es decorada, se crea una copia del contexto de la solicitud y "
+"luego se empuja cuando la función es llamada.  La sesión actual también se "
+"incluye en el contexto de solicitud copiado."
 
 #: flask.ctx.has_app_context:1 of
 msgid ""
 "Works like :func:`has_request_context` but for the application context.  You can "
 "also just do a boolean check on the :data:`current_app` object instead."
 msgstr ""
+"Funciona como :func:`has_request_context` pero para el contexto de la "
+"aplicación.  También puede hacer una comprobación booleana en el objeto :data:"
+"`current_app`."
 
 #: flask.helpers.url_for:1 of
 msgid "Generates a URL to the given endpoint with the method provided."
-msgstr ""
+msgstr "Genera una URL al endpoint dado con el método proporcionado."
 
 #: flask.helpers.url_for:3 of
 msgid ""
@@ -5183,20 +5706,27 @@ msgid ""
 "references to the same blueprint by prefixing the local endpoint with a dot (``."
 "``)."
 msgstr ""
+"Los argumentos variables que son desconocidos para el punto final de destino se "
+"añaden a la URL generada como argumentos de consulta.  Si el valor de un "
+"argumento de consulta es ``None``, se omite todo el par.  En el caso de que los "
+"planos estén activos, puede abreviar las referencias al mismo plano anteponiendo "
+"un punto (``.``) al punto final local."
 
 #: flask.helpers.url_for:9 of
 msgid "This will reference the index function local to the current blueprint::"
-msgstr ""
+msgstr "Esto hará referencia a la función de índice local del plano actual::"
 
 #: flask.helpers.url_for:13 of
 msgid "See :ref:`url-building`."
-msgstr ""
+msgstr "Véase :ref:`construcción de URL`."
 
 #: flask.helpers.url_for:15 of
 msgid ""
 "Configuration values ``APPLICATION_ROOT`` and ``SERVER_NAME`` are only used when "
 "generating URLs outside of a request context."
 msgstr ""
+"Los valores de configuración ``APPLICATION_ROOT`` y ``SERVER_NAME`` sólo se "
+"utilizan cuando se generan URLs fuera de un contexto de petición."
 
 #: flask.helpers.url_for:18 of
 msgid ""
@@ -5209,6 +5739,15 @@ msgid ""
 "of `url_for`'s default to raise the :exc:`~werkzeug.routing.BuildError` "
 "exception) or re-raise the exception. An example::"
 msgstr ""
+"Para integrar aplicaciones, :class:`Flask` tiene un gancho para interceptar "
+"errores de construcción de URLs a través de :attr:`Flask."
+"url_build_error_handlers`.  La función `url_for` da lugar a un :exc:`~werkzeug."
+"routing.BuildError` cuando la aplicación actual no tiene una URL para el punto "
+"final y los valores dados.  Cuando la tiene, :data:`~flask.current_app` llama a "
+"su :attr:`~Flask.url_build_error_handlers` si no es ``None``, que puede devolver "
+"una cadena para usar como resultado de `url_for` (en lugar del valor por defecto "
+"de `url_for` para lanzar la excepción :exc:`~werkzeug.routing.BuildError`) o "
+"volver a lanzar la excepción. Un ejemplo::"
 
 #: flask.helpers.url_for:47 of
 msgid ""
@@ -5217,27 +5756,32 @@ msgid ""
 "is for building URLs outside the current application, and not for handling 404 "
 "NotFound errors."
 msgstr ""
+"Aquí, `error` es la instancia de :exc:`~werkzeug.routing.BuildError`, y "
+"`endpoint` y `values` son los argumentos pasados a `url_for`.  Ten en cuenta que "
+"esto es para construir URLs fuera de la aplicación actual, y no para manejar "
+"errores 404 NotFound."
 
 #: flask.helpers.url_for:52 of
 msgid "The `_scheme` parameter was added."
-msgstr ""
+msgstr "Se ha añadido el parámetro `_scheme`."
 
 #: flask.helpers.url_for:55 of
 msgid "The `_anchor` and `_method` parameters were added."
-msgstr ""
+msgstr "Se han añadido los parámetros `_anchor` y `_method`."
 
 #: flask.helpers.url_for:58 of
 msgid ""
 "Calls :meth:`Flask.handle_build_error` on :exc:`~werkzeug.routing.BuildError`."
 msgstr ""
+"Llama a :meth:`Flask.handle_build_error` en :exc:`~werkzeug.routing.BuildError`."
 
 #: flask.helpers.url_for:62 of
 msgid "the endpoint of the URL (name of the function)"
-msgstr ""
+msgstr "el punto final de la URL (nombre de la función)"
 
 #: flask.helpers.url_for:63 of
 msgid "the variable arguments of the URL rule"
-msgstr ""
+msgstr "los argumentos variables de la regla URL"
 
 #: flask.helpers.url_for:64 of
 msgid ""
@@ -5245,6 +5789,10 @@ msgid ""
 "via ``SERVER_NAME`` configuration variable which falls back to the `Host` "
 "header, then to the IP and port of the request."
 msgstr ""
+"si se establece como ``True``, se genera una URL absoluta. La dirección del "
+"servidor puede cambiarse a través de la variable de configuración "
+"``SERVER_NAME``, que se remite a la cabecera ``Host``, y luego a la IP y el "
+"puerto de la solicitud."
 
 #: flask.helpers.url_for:67 of
 msgid ""
@@ -5254,19 +5802,27 @@ msgid ""
 "request context is available. This also can be set to an empty string to build "
 "protocol-relative URLs."
 msgstr ""
+"una cadena que especifica el esquema de URL deseado. El parámetro `_external` "
+"debe tener el valor ``True`` o se producirá un :exc:`ValueError`. El "
+"comportamiento por defecto utiliza el mismo esquema que la petición actual, o :"
+"data:`PREFERRED_URL_SCHEME` si no hay un contexto de petición disponible. "
+"También puede establecerse como una cadena vacía para construir URLs relativas "
+"al protocolo."
 
 #: flask.helpers.url_for:73 of
 msgid "if provided this is added as anchor to the URL."
-msgstr ""
+msgstr "si se proporciona, se añade como ancla a la URL."
 
 #: flask.helpers.url_for:74 of
 msgid "if provided this explicitly specifies an HTTP method."
-msgstr ""
+msgstr "si se proporciona esto especifica explícitamente un método HTTP."
 
 #: of werkzeug.exceptions.abort:1
 msgid ""
 "Raises an :py:exc:`HTTPException` for the given status code or WSGI application."
 msgstr ""
+"Lanza una :py:exc:`HTTPException` para el código de estado dado o la aplicación "
+"WSGI."
 
 #: of werkzeug.exceptions.abort:4
 msgid ""
@@ -5274,6 +5830,9 @@ msgid ""
 "will raise that exception.  If passed a WSGI application, it will wrap it in a "
 "proxy WSGI exception and raise that::"
 msgstr ""
+"Si se da un código de estado, se buscará en la lista de excepciones y se lanzará "
+"esa excepción.  Si se le pasa una aplicación WSGI, la envolverá en una excepción "
+"proxy WSGI y la lanzará::"
 
 #: of werkzeug.utils.redirect:1
 msgid ""
@@ -5282,30 +5841,39 @@ msgid ""
 "308. 300 is not supported because it's not a real redirect and 304 because it's "
 "the answer for a request with a request with defined If-Modified-Since headers."
 msgstr ""
+"Devuelve un objeto de respuesta (una aplicación WSGI) que, si se llama, redirige "
+"al cliente a la ubicación de destino. Los códigos soportados son 301, 302, 303, "
+"305, 307 y 308. El 300 no está soportado porque no es una redirección real y el "
+"304 porque es la respuesta para una petición con una cabecera If-Modified-Since "
+"definida."
 
 #: of werkzeug.utils.redirect:11
 msgid "The class used for the Response object can now be passed in."
-msgstr ""
+msgstr "Ahora se puede pasar la clase utilizada para el objeto Response."
 
 #: of werkzeug.utils.redirect:7
 msgid ""
 "The location can now be a unicode string that is encoded using the :func:"
 "`iri_to_uri` function."
 msgstr ""
+"La ubicación puede ser ahora una cadena unicode codificada mediante la función :"
+"func:`iri_to_uri`."
 
 #: of werkzeug.utils.redirect:14
 msgid "the location the response should redirect to."
-msgstr ""
+msgstr "la ubicación a la que debe redirigirse la respuesta."
 
 #: of werkzeug.utils.redirect:15
 msgid "the redirect status code. defaults to 302."
-msgstr ""
+msgstr "El código de estado de la redirección. Por defecto es 302."
 
 #: of werkzeug.utils.redirect:16
 msgid ""
 "a Response class to use when instantiating a response. The default is :class:"
 "`werkzeug.wrappers.Response` if unspecified."
 msgstr ""
+"una clase de respuesta para usar cuando se instancie una respuesta. El valor por "
+"defecto es :class:`werkzeug.wrappers.Response` si no se especifica."
 
 #: flask.helpers.make_response:1 of
 msgid ""
@@ -5315,45 +5883,58 @@ msgid ""
 "This function can be called instead of using a return and you will get a "
 "response object which you can use to attach headers."
 msgstr ""
+"A veces es necesario establecer cabeceras adicionales en una vista.  Dado que "
+"las vistas no tienen que devolver objetos de respuesta sino que pueden devolver "
+"un valor que es convertido en un objeto de respuesta por el propio Flask, "
+"resulta complicado añadirle cabeceras.  Se puede llamar a esta función en lugar "
+"de utilizar un retorno y se obtendrá un objeto respuesta que se puede utilizar "
+"para adjuntar cabeceras."
 
 #: flask.helpers.make_response:7 of
 msgid "If view looked like this and you want to add a new header::"
-msgstr ""
+msgstr "Si la vista tuviera este aspecto y quisiera añadir un nuevo encabezado::"
 
 #: flask.helpers.make_response:12 of
 msgid "You can now do something like this::"
-msgstr ""
+msgstr "Ahora puedes hacer algo así::"
 
 #: flask.helpers.make_response:19 of
 msgid ""
 "This function accepts the very same arguments you can return from a view "
 "function.  This for example creates a response with a 404 error code::"
 msgstr ""
+"Esta función acepta los mismos argumentos que puede devolver una función de "
+"vista.  Esto, por ejemplo, crea una respuesta con un código de error 404::"
 
 #: flask.helpers.make_response:25 of
 msgid ""
 "The other use case of this function is to force the return value of a view "
 "function into a response which is helpful with view decorators::"
 msgstr ""
+"El otro caso de uso de esta función es forzar el valor de retorno de una función "
+"de vista en una respuesta que es útil con los decoradores de vista::"
 
 #: flask.helpers.make_response:32 of
 msgid "Internally this function does the following things:"
-msgstr ""
+msgstr "Internamente esta función hace lo siguiente:"
 
 #: flask.helpers.make_response:34 of
 msgid "if no arguments are passed, it creates a new response argument"
-msgstr ""
+msgstr "si no se pasan argumentos, crea un nuevo argumento de respuesta"
 
 #: flask.helpers.make_response:35 of
 msgid ""
 "if one argument is passed, :meth:`flask.Flask.make_response` is invoked with it."
 msgstr ""
+"si se pasa un argumento, se invoca :meth:`flask.Flask.make_response` con él."
 
 #: flask.helpers.make_response:37 of
 msgid ""
 "if more than one argument is passed, the arguments are passed to the :meth:"
 "`flask.Flask.make_response` function as tuple."
 msgstr ""
+"si se pasa más de un argumento, los argumentos se pasan a la función :meth:"
+"`flask.Flask.make_response` como tupla."
 
 #: flask.ctx.after_this_request:1 of
 msgid ""
@@ -5361,6 +5942,9 @@ msgid ""
 "objects.  The function is passed the response object and has to return the same "
 "or a new one."
 msgstr ""
+"Ejecuta una función después de esta solicitud.  Esto es útil para modificar los "
+"objetos de respuesta.  A la función se le pasa el objeto de respuesta y tiene "
+"que devolver el mismo o uno nuevo."
 
 #: flask.ctx.after_this_request:15 of
 msgid ""
@@ -5368,10 +5952,13 @@ msgid ""
 "response.  For instance think of a decorator that wants to add some headers "
 "without converting the return value into a response object."
 msgstr ""
+"Esto es más útil si una función distinta de la función de la vista quiere "
+"modificar una respuesta.  Por ejemplo, piensa en un decorador que quiera añadir "
+"algunas cabeceras sin convertir el valor de retorno en un objeto de respuesta."
 
 #: flask.helpers.send_file:1 of
 msgid "Send the contents of a file to the client."
-msgstr ""
+msgstr "Enviar el contenido de un archivo al cliente."
 
 #: flask.helpers.send_file:3 of
 msgid ""
@@ -5381,6 +5968,12 @@ msgid ""
 "binary mode, and is mostly useful when building a file in memory with :class:`io."
 "BytesIO`."
 msgstr ""
+"El primer argumento puede ser una ruta de archivo o un objeto similar a un "
+"archivo. Las rutas son preferibles en la mayoría de los casos porque Werkzeug "
+"puede gestionar el archivo y obtener información extra de la ruta. Pasar un "
+"objeto tipo archivo requiere que el archivo se abra en modo binario, y es "
+"mayormente útil cuando se construye un archivo en memoria con :class:`io."
+"BytesIO`."
 
 #: flask.helpers.send_file:9 of
 msgid ""
@@ -5389,6 +5982,11 @@ msgid ""
 "`send_from_directory` to safely serve user-requested paths from within a "
 "directory."
 msgstr ""
+"Nunca pases rutas de archivos proporcionadas por un usuario. Se asume que la "
+"ruta es de confianza, por lo que un usuario podría elaborar una ruta para "
+"acceder a un archivo que no era su intención. Utilice :func:"
+"`send_from_directory` para servir de forma segura las rutas solicitadas por el "
+"usuario desde un directorio."
 
 #: flask.helpers.send_file:14 of
 msgid ""
@@ -5398,6 +5996,11 @@ msgid ""
 "server to send the given path, which is much more efficient than reading it in "
 "Python."
 msgstr ""
+"Si el servidor WSGI establece un ``file_wrapper`` en ``environ``, se utiliza, de "
+"lo contrario se utiliza el wrapper incorporado de Werkzeug. Alternativamente, si "
+"el servidor HTTP soporta ``X-Sendfile``, configurando Flask con ``USE_X_SENDFILE "
+"= True`` le dirá al servidor que envíe la ruta dada, lo cual es mucho más "
+"eficiente que leerla en Python."
 
 #: flask.helpers.send_file:20 of
 msgid ""
@@ -5405,42 +6008,57 @@ msgid ""
 "relative path is given. Alternatively, a file-like object opened in binary mode. "
 "Make sure the file pointer is seeked to the start of the data."
 msgstr ""
+"La ruta del archivo a enviar, relativa al directorio de trabajo actual si se da "
+"una ruta relativa. Alternativamente, un objeto tipo archivo abierto en modo "
+"binario. Asegúrese de que el puntero del archivo se busque al principio de los "
+"datos."
 
 #: flask.helpers.send_file:24 of
 msgid ""
 "The MIME type to send for the file. If not provided, it will try to detect it "
 "from the file name."
 msgstr ""
+"El tipo MIME a enviar para el archivo. Si no se proporciona, intentará "
+"detectarlo a partir del nombre del archivo."
 
 #: flask.helpers.send_file:26 of
 msgid ""
 "Indicate to a browser that it should offer to save the file instead of "
 "displaying it."
 msgstr ""
+"Indicar a un navegador que debe ofrecer guardar el archivo en lugar de mostrarlo."
 
 #: flask.helpers.send_file:28 of
 msgid ""
 "The default name browsers will use when saving the file. Defaults to the passed "
 "file name."
 msgstr ""
+"El nombre por defecto que utilizarán los navegadores al guardar el archivo. El "
+"nombre por defecto es el nombre del archivo pasado."
 
 #: flask.helpers.send_file:30 of
 msgid ""
 "Enable conditional and range responses based on request headers. Requires "
 "passing a file path and ``environ``."
 msgstr ""
+"Habilitar respuestas condicionales y de rango basadas en las cabeceras de las "
+"peticiones. Requiere pasar una ruta de archivo y ``environ``."
 
 #: flask.helpers.send_file:32 of
 msgid ""
 "Calculate an ETag for the file, which requires passing a file path. Can also be "
 "a string to use instead."
 msgstr ""
+"Calcula un ETag para el archivo, que requiere pasar una ruta de archivo. También "
+"puede ser una cadena para usar en su lugar."
 
 #: flask.helpers.send_file:34 of
 msgid ""
 "The last modified time to send for the file, in seconds. If not provided, it "
 "will try to detect it from the file path."
 msgstr ""
+"La última hora de modificación para enviar el archivo, en segundos. Si no se "
+"proporciona, intentará detectarla a partir de la ruta del archivo."
 
 #: flask.helpers.send_file:37 of
 msgid ""
@@ -5448,6 +6066,9 @@ msgid ""
 "will be ``public``, otherwise it will be ``no-cache`` to prefer conditional "
 "caching."
 msgstr ""
+"El tiempo que el cliente debe almacenar en caché el archivo, en segundos. Si se "
+"establece, ``Cache-Control`` será ``public``, de lo contrario será ``no-cache`` "
+"para preferir el almacenamiento en caché condicional."
 
 #: flask.helpers.send_file:41 of
 msgid ""
@@ -5455,48 +6076,60 @@ msgid ""
 "``as_attachment=False``, it is passed with ``Content-Disposition: inline`` "
 "instead."
 msgstr ""
+"``download_name`` sustituye al parámetro ``attachment_filename``. Si "
+"``as_attachment=False``, se pasa con ``Content-Disposition: inline`` en su lugar."
 
 #: flask.helpers.send_file:46 of
 msgid ""
 "``max_age`` replaces the ``cache_timeout`` parameter. ``conditional`` is enabled "
 "and ``max_age`` is not set by default."
 msgstr ""
+"``max_age`` sustituye al parámetro ``cache_timeout``. El parámetro "
+"``conditional`` está activado y ``max_age`` no está establecido por defecto."
 
 #: flask.helpers.send_file:51 of
 msgid ""
 "``etag`` replaces the ``add_etags`` parameter. It can be a string to use instead "
 "of generating one."
 msgstr ""
+"``etag`` sustituye al parámetro ``add_etags``. Puede ser una cadena para usar en "
+"lugar de generar una."
 
 #: flask.helpers.send_file:55 of
 msgid ""
 "Passing a file-like object that inherits from :class:`~io.TextIOBase` will raise "
 "a :exc:`ValueError` rather than sending an empty file."
 msgstr ""
+"Al pasar un objeto tipo archivo que herede de :class:`~io.TextIOBase` se "
+"producirá un :exc:`ValueError` en lugar de enviar un archivo vacío."
 
 #: flask.helpers.send_file:60 flask.helpers.send_from_directory:27 of
 msgid ""
 "Moved the implementation to Werkzeug. This is now a wrapper to pass some Flask-"
 "specific arguments."
 msgstr ""
+"Se ha trasladado la implementación a Werkzeug. Ahora es una envoltura para pasar "
+"algunos argumentos específicos de Flask."
 
 #: flask.helpers.send_file:64 of
 msgid "``filename`` may be a :class:`~os.PathLike` object."
-msgstr ""
+msgstr "``filename`` puede ser un objeto :class:`~os.PathLike`."
 
 #: flask.helpers.send_file:67 of
 msgid "Passing a :class:`~io.BytesIO` object supports range requests."
-msgstr ""
+msgstr "Pasar un objeto :class:`~io.BytesIO` soporta solicitudes de rango."
 
 #: flask.helpers.send_file:70 of
 msgid ""
 "Filenames are encoded with ASCII instead of Latin-1 for broader compatibility "
 "with WSGI servers."
 msgstr ""
+"Los nombres de los archivos se codifican con ASCII en lugar de Latin-1 para una "
+"mayor compatibilidad con los servidores WSGI."
 
 #: flask.helpers.send_file:74 of
 msgid "UTF-8 filenames as specified in :rfc:`2231` are supported."
-msgstr ""
+msgstr "Se admiten los nombres de archivo UTF-8 especificados en :rfc:`2231`."
 
 #: flask.helpers.send_file:77 of
 msgid ""
@@ -5504,14 +6137,18 @@ msgid ""
 "to use automatic MIME and etag support, pass a filename via ``filename_or_fp`` "
 "or ``attachment_filename``."
 msgstr ""
+"El nombre del archivo ya no se infiere automáticamente de los objetos de "
+"archivo. Si quieres utilizar el soporte automático de MIME y etags, pasa un "
+"nombre de archivo a través de ``filename_or_fp`` o ``attachment_filename``."
 
 #: flask.helpers.send_file:83 of
 msgid "``attachment_filename`` is preferred over ``filename`` for MIME detection."
 msgstr ""
+"Se prefiere ``attachment_filename`` a ``filename`` para la detección de MIME."
 
 #: flask.helpers.send_file:87 of
 msgid "``cache_timeout`` defaults to :meth:`Flask.get_send_file_max_age`."
-msgstr ""
+msgstr "``cache_timeout`` por defecto es :meth:`Flask.get_send_file_max_age`."
 
 #: flask.helpers.send_file:91 of
 msgid ""
@@ -5519,16 +6156,21 @@ msgid ""
 "was unreliable. Pass a filename if you are able to, otherwise attach an etag "
 "yourself."
 msgstr ""
+"El soporte de conjeturas MIME y etags para objetos tipo archivo fue obviado "
+"porque no era confiable. Pase un nombre de archivo si puede hacerlo, de lo "
+"contrario adjunte una etiqueta electrónica usted mismo."
 
 #: flask.helpers.send_file:96 of
 msgid ""
 "The ``add_etags``, ``cache_timeout`` and ``conditional`` parameters were added. "
 "The default behavior is to add etags."
 msgstr ""
+"Se han añadido los parámetros ``add_etags``, ``cache_timeout`` y "
+"``conditional``. El comportamiento por defecto es añadir etags."
 
 #: flask.helpers.send_from_directory:1 of
 msgid "Send a file from within a directory using :func:`send_file`."
-msgstr ""
+msgstr "Enviar un archivo desde un directorio utilizando :func:`send_file`."
 
 #: flask.helpers.send_from_directory:11 of
 msgid ""
@@ -5537,46 +6179,55 @@ msgid ""
 "from the client is not maliciously crafted to point outside the specified "
 "directory."
 msgstr ""
+"Esta es una forma segura de servir archivos desde una carpeta, como archivos "
+"estáticos o cargas. Utiliza :func:`~werkzeug.security.safe_join` para asegurar "
+"que la ruta que viene del cliente no está maliciosamente diseñada para apuntar "
+"fuera del directorio especificado."
 
 #: flask.helpers.send_from_directory:16 of
 msgid ""
 "If the final path does not point to an existing regular file, raises a 404 :exc:"
 "`~werkzeug.exceptions.NotFound` error."
 msgstr ""
+"Si la ruta final no apunta a un archivo regular existente, genera un error 404 :"
+"exc:`~werkzeug.exceptions.NotFound`."
 
 #: flask.helpers.send_from_directory:19 of
 msgid "The directory that ``path`` must be located under."
-msgstr ""
+msgstr "El directorio en el que debe encontrarse ``path``."
 
 #: flask.helpers.send_from_directory:20 of
 msgid "The path to the file to send, relative to ``directory``."
-msgstr ""
+msgstr "La ruta del archivo a enviar, relativa al ``directory``."
 
 #: flask.helpers.send_from_directory:22 of
 msgid "Arguments to pass to :func:`send_file`."
-msgstr ""
+msgstr "Argumentos para pasar a :func:`send_file`."
 
 #: flask.helpers.send_from_directory:24 of
 msgid "``path`` replaces the ``filename`` parameter."
-msgstr ""
+msgstr "``path`` sustituye al parámetro ``filename``."
 
 #: flask.helpers.safe_join:1 of
 msgid ""
 "Safely join zero or more untrusted path components to a base directory to avoid "
 "escaping the base directory."
 msgstr ""
+"Unir de forma segura cero o más componentes de ruta no confiables a un "
+"directorio base para evitar el escape del directorio base."
 
 #: flask.helpers.safe_join:4 of
 msgid "The trusted base directory."
-msgstr ""
+msgstr "El directorio base de confianza."
 
 #: flask.helpers.safe_join:5 of
 msgid "The untrusted path components relative to the base directory."
 msgstr ""
+"Los componentes de la ruta de acceso no fiable relativos al directorio base."
 
 #: flask.helpers.safe_join:7 of
 msgid "A safe path, otherwise ``None``."
-msgstr ""
+msgstr "Una ruta segura, de lo contrario ``None``."
 
 #: ../../docstring markupsafe._speedups.escape:1 of
 msgid ""
@@ -5584,26 +6235,33 @@ msgid ""
 "HTML-safe sequences. Use this if you need to display text that might contain "
 "such characters in HTML."
 msgstr ""
+"Reemplaza los caracteres ``&``, ``<``, ``>``, ``'``, y ``\"`` en la cadena con "
+"secuencias seguras para HTML. Utilícelo si necesita mostrar un texto que pueda "
+"contener dichos caracteres en HTML."
 
 #: ../../docstring markupsafe._speedups.escape:3 of
 msgid ""
 "If the object has an ``__html__`` method, it is called and the return value is "
 "assumed to already be safe for HTML."
 msgstr ""
+"Si el objeto tiene un método ``__html__``, se llama y se asume que el valor de "
+"retorno ya es seguro para HTML."
 
 #: ../../docstring markupsafe._speedups.escape:5 of
 msgid "An object to be converted to a string and escaped."
-msgstr ""
+msgstr "Un objeto que debe convertirse en una cadena y escaparse."
 
 #: ../../docstring markupsafe._speedups.escape:6 of
 msgid "A :class:`Markup` string with the escaped text."
-msgstr ""
+msgstr "Una cadena :class:`Markup` con el texto escapado."
 
 #: markupsafe.Markup:1 of
 msgid ""
 "A string that is ready to be safely inserted into an HTML or XML document, "
 "either because it was escaped or because it was marked safe."
 msgstr ""
+"Una cadena que está lista para ser insertada de forma segura en un documento "
+"HTML o XML, ya sea porque fue escapada o porque fue marcada como segura."
 
 #: markupsafe.Markup:5 of
 msgid ""
@@ -5611,6 +6269,9 @@ msgid ""
 "safe without escaping. To escape the text, use the :meth:`escape` class method "
 "instead."
 msgstr ""
+"Pasar un objeto al constructor lo convierte en texto y lo envuelve para marcarlo "
+"como seguro sin escapar. Para escapar el texto, utilice el método de clase :meth:"
+"`escape` en su lugar."
 
 #: markupsafe.Markup:16 of
 msgid ""
@@ -5618,34 +6279,45 @@ msgid ""
 "an object that implements ``__html__()`` will wrap the output of that method, "
 "marking it safe."
 msgstr ""
+"Esto implementa la interfaz ``__html__()`` que utilizan algunos frameworks. Al "
+"pasar un objeto que implemente ``__html__()`` se envolverá la salida de ese "
+"método, marcándolo como seguro."
 
 #: markupsafe.Markup:27 of
 msgid ""
 "This is a subclass of :class:`str`. It has the same methods, but escapes their "
 "arguments and returns a ``Markup`` instance."
 msgstr ""
+"Es una subclase de :class:`str`. Tiene los mismos métodos, pero escapa sus "
+"argumentos y devuelve una instancia de ``Markup``."
 
 #: markupsafe.Markup.escape:1 of
 msgid ""
 "Escape a string. Calls :func:`escape` and ensures that for subclasses the "
 "correct type is returned."
 msgstr ""
+"Escapar una cadena. Llama a :func:`escape` y asegura que para las subclases se "
+"devuelva el tipo correcto."
 
 #: markupsafe.Markup.striptags:1 of
 msgid ""
 ":meth:`unescape` the markup, remove tags, and normalize whitespace to single "
 "spaces."
 msgstr ""
+":meth:`unescape` el marcado, elimina las etiquetas y normaliza los espacios en "
+"blanco a espacios simples."
 
 #: markupsafe.Markup.unescape:1 of
 msgid ""
 "Convert escaped markup back into a text string. This replaces HTML entities with "
 "the characters they represent."
 msgstr ""
+"Convierte las marcas escapadas en una cadena de texto. Esto reemplaza las "
+"entidades HTML con los caracteres que representan."
 
 #: ../../api.rst:229
 msgid "Message Flashing"
-msgstr ""
+msgstr "Mensaje intermitente"
 
 #: flask.helpers.flash:1 of
 msgid ""
@@ -5653,14 +6325,17 @@ msgid ""
 "from the session and to display it to the user, the template has to call :func:"
 "`get_flashed_messages`."
 msgstr ""
+"Destella un mensaje a la siguiente petición.  Para eliminar el mensaje flasheado "
+"de la sesión y mostrarlo al usuario, la plantilla debe llamar a :func:"
+"`get_flashed_messages`."
 
 #: flask.helpers.flash:5 of
 msgid "`category` parameter added."
-msgstr ""
+msgstr "Se ha añadido el parámetro \"category\"."
 
 #: flask.helpers.flash:8 of
 msgid "the message to be flashed."
-msgstr ""
+msgstr "el mensaje que se va a emitir."
 
 #: flask.helpers.flash:9 of
 msgid ""
@@ -5669,6 +6344,10 @@ msgid ""
 "information messages and ``'warning'`` for warnings.  However any kind of string "
 "can be used as category."
 msgstr ""
+"la categoría del mensaje.  Se recomiendan los siguientes valores: ``'message'`` "
+"para cualquier tipo de mensaje, ``'error'`` para los errores, ``'info'`` para "
+"los mensajes de información y ``'warning'`` para las advertencias.  Sin embargo, "
+"se puede utilizar cualquier tipo de cadena como categoría."
 
 #: flask.helpers.get_flashed_messages:1 of
 msgid ""
@@ -5678,6 +6357,11 @@ msgid ""
 "return value will be a list of tuples in the form ``(category, message)`` "
 "instead."
 msgstr ""
+"Extrae todos los mensajes de la sesión y los devuelve. Las llamadas posteriores "
+"en la misma petición a la función devolverán los mismos mensajes.  Por defecto "
+"sólo se devuelven los mensajes, pero cuando `with_categories` se establece como "
+"``True``, el valor de retorno será una lista de tuplas de la forma ``(category, "
+"message)``."
 
 #: flask.helpers.get_flashed_messages:7 of
 msgid ""
@@ -5685,44 +6369,55 @@ msgid ""
 "categories in `category_filter`.  This allows rendering categories in separate "
 "html blocks.  The `with_categories` and `category_filter` arguments are distinct:"
 msgstr ""
+"Filtra los mensajes parpadeantes a una o más categorías proporcionando esas "
+"categorías en `category_filter`.  Esto permite mostrar las categorías en bloques "
+"html separados.  Los argumentos `with_categories` y `category_filter` son "
+"distintos:"
 
 #: flask.helpers.get_flashed_messages:12 of
 msgid ""
 "`with_categories` controls whether categories are returned with message text "
 "(``True`` gives a tuple, where ``False`` gives just the message text)."
 msgstr ""
+"`with_categories` controla si las categorías se devuelven con el texto del "
+"mensaje (``True`` da una tupla, mientras que ``False`` da sólo el texto del "
+"mensaje)."
 
 #: flask.helpers.get_flashed_messages:14 of
 msgid ""
 "`category_filter` filters the messages down to only those matching the provided "
 "categories."
 msgstr ""
+"El filtro de categorías filtra los mensajes para que sólo coincidan con las "
+"categorías indicadas."
 
 #: flask.helpers.get_flashed_messages:17 of
 msgid "See :doc:`/patterns/flashing` for examples."
-msgstr ""
+msgstr "Consulte :doc:`/patterns/flashing` para ver ejemplos."
 
 #: flask.helpers.get_flashed_messages:22 of
 msgid "`category_filter` parameter added."
-msgstr ""
+msgstr "Se ha añadido el parámetro `category_filter`."
 
 #: flask.helpers.get_flashed_messages:19 of
 msgid "`with_categories` parameter added."
-msgstr ""
+msgstr "Se ha añadido el parámetro `with_categories`."
 
 #: flask.helpers.get_flashed_messages:25 of
 msgid "set to ``True`` to also receive categories."
-msgstr ""
+msgstr "se establece en ``True`` para recibir también las categorías."
 
 #: flask.helpers.get_flashed_messages:26 of
 msgid ""
 "filter of categories to limit return values.  Only categories in the list will "
 "be returned."
 msgstr ""
+"filtro de categorías para limitar los valores devueltos.  Sólo se devolverán las "
+"categorías de la lista."
 
 #: ../../api.rst:237
 msgid "JSON Support"
-msgstr ""
+msgstr "Soporte JSON"
 
 #: ../../api.rst:241
 msgid ""
@@ -5730,6 +6425,9 @@ msgid ""
 "current blueprint's or application's JSON encoder and decoder for easier "
 "customization. By default it handles some extra data types:"
 msgstr ""
+"Flask utiliza el módulo incorporado :mod:`json` para manejar JSON. Utilizará el "
+"codificador y decodificador JSON del plano o aplicación actual para facilitar la "
+"personalización. Por defecto maneja algunos tipos de datos extra:"
 
 #: ../../api.rst:245 flask.json.JSONEncoder:4 of
 msgid ""
