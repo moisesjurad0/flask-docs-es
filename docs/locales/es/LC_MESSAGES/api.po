@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-29 08:14-0400\n"
-"PO-Revision-Date: 2022-02-15 17:47-0400\n"
+"PO-Revision-Date: 2022-02-15 17:51-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
@@ -5552,7 +5552,7 @@ msgstr ""
 #: ../../api.rst:175 ../../api.rst:199
 msgid "This is a proxy. See :ref:`notes-on-proxies` for more information."
 msgstr ""
-"Se trata de un proxy. Consulte :ref:`notas sobre proxies` para obtener más "
+"Se trata de un proxy. Consulte :ref:`notes-on-proxies` para obtener más "
 "información."
 
 #: ../../api.rst:177
@@ -5718,7 +5718,7 @@ msgstr "Esto hará referencia a la función de índice local del plano actual::"
 
 #: flask.helpers.url_for:13 of
 msgid "See :ref:`url-building`."
-msgstr "Véase :ref:`construcción de URL`."
+msgstr "Véase :ref:`url-building`."
 
 #: flask.helpers.url_for:15 of
 msgid ""
