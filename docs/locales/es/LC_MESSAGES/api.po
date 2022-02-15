@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-29 08:14-0400\n"
-"PO-Revision-Date: 2022-01-27 01:46-0400\n"
+"PO-Revision-Date: 2022-02-15 17:47-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../api.rst:2
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: ../../api.rst:6
 msgid ""
@@ -4073,7 +4073,7 @@ msgstr ""
 
 #: ../../api.rst:44
 msgid "The request object is an instance of a :class:`~flask.Request`."
-msgstr "El objeto request es una instancia de una :clase:`~flask.Request`."
+msgstr "El objeto request es una instancia de una :class:`~flask.Request`."
 
 #: ../../api.rst:48
 msgid "Response Objects"
@@ -5865,7 +5865,7 @@ msgstr "la ubicación a la que debe redirigirse la respuesta."
 
 #: of werkzeug.utils.redirect:15
 msgid "the redirect status code. defaults to 302."
-msgstr "El código de estado de la redirección. Por defecto es 302."
+msgstr "el código de estado de la redirección. Por defecto es 302."
 
 #: of werkzeug.utils.redirect:16
 msgid ""
