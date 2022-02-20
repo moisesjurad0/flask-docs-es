@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/flask-es/badge/?version=main)](https://flask-es.readthedocs.io/?badge=main)
+[![Documentation Status](https://readthedocs.org/projects/flask-es/badge/?version=main)](https://flask-es.readthedocs.io/?badge=main) ![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg)
 
 # Traducción al Español de la documentación de Flask
 
