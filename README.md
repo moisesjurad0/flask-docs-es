@@ -162,7 +162,7 @@ si no terminas la traducción en diez días.
 - [x] becomingbig [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] blueprints [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [ ] changes
-- [ ] cli
+- [x] cli [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] config [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] contributing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] debugging [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
