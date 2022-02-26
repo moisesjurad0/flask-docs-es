@@ -243,17 +243,17 @@ si no terminas la traducción en diez días.
 - [x] wtforms [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
-## docs/api (Reservado)
+## docs/api
 
-- [ ] L0~L1000
-- [ ] L1000~L1500
-- [ ] L1500~L2000
-- [ ] L2000~L2500
-- [ ] L2500~L3000
-- [ ] L3000~L3500
-- [ ] L3500~L4000
-- [ ] L4000~L4500
-- [ ] L4500~L5000
-- [ ] L5000~L5500
-- [ ] L5500~L6000
-- [ ] L6000~L6500
+- [x] L0~L1000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L1000~L1500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L1500~L2000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L2000~L2500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L2500~L3000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L3000~L3500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L3500~L4000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L4000~L4500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L4500~L5000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L5000~L5500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L5500~L6000 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
+- [x] L6000~L6500 [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
