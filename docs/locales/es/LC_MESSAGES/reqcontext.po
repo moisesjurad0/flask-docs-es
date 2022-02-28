@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 07:20-0400\n"
-"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"PO-Revision-Date: 2022-02-27 22:34-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
-"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
-"Language: es\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../reqcontext.rst:4
 msgid "The Request Context"
@@ -324,7 +324,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:159
 msgid "Teardown Callbacks"
-msgstr ""
+msgstr "Teardown Callbacks"
 
 #: ../../reqcontext.rst:161
 msgid ""
