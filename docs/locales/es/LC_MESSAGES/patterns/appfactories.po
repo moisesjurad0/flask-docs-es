@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 07:20-0400\n"
-"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"PO-Revision-Date: 2022-02-27 23:09-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
-"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
-"Language: es\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../../patterns/appfactories.rst:2
 msgid "Application Factories"
@@ -142,17 +142,17 @@ msgstr ""
 #: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
 #: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:127
 #: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:134
 #: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../patterns/appfactories.rst:115
 msgid ""
