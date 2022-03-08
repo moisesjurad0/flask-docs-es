@@ -182,7 +182,7 @@ si no terminas la traducción en diez días.
 - [x] shell [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] signals [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] templating [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] testing
+- [x] testing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] views [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 
 
