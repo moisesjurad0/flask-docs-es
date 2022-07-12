@@ -124,10 +124,9 @@ shell with the :func:`shell <cli.shell_command>` command. An application
 context will be active, and the app instance will be imported. ::
 
     $ flask shell
-    Python 3.6.2 (default, Jul 20 2017, 03:52:27)
-    [GCC 7.1.1 20170630] on linux
-    App: example
-    Instance: /home/user/Projects/hello/instance
+    Python 3.10.0 (default, Oct 27 2021, 06:59:51) [GCC 11.1.0] on linux
+    App: example [production]
+    Instance: /home/david/Projects/pallets/flask/instance
     >>>
 
 Use :meth:`~Flask.shell_context_processor` to add other automatic imports.
@@ -263,6 +262,15 @@ separated with ``:``, or ``;`` on Windows.
            * Detected change in '/path/to/file1', reloading
 
 
+Ignore files with the Reloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The reloader can also ignore files using :mod:`fnmatch` patterns with
+the ``--exclude-patterns`` option, or the ``FLASK_RUN_EXCLUDE_PATTERNS``
+environment variable. Multiple patterns are separated with ``:``, or
+``;`` on Windows.
+
+
 Debug Mode
 ----------
 
@@ -291,9 +299,7 @@ used for public variables, such as ``FLASK_APP``, while :file:`.env` should not
 be committed to your repository so that it can set private variables.
 
 Directories are scanned upwards from the directory you call ``flask``
-from to locate the files. The current working directory will be set to the
-location of the file, with the assumption that that is the top level project
-directory.
+from to locate the files.
 
 The files are only loaded by the ``flask`` command or calling
 :meth:`~Flask.run`. If you would like to load these files when running in

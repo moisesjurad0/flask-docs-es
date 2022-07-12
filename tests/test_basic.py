@@ -1,6 +1,5 @@
 import gc
 import re
-import sys
 import time
 import uuid
 import warnings
@@ -16,6 +15,7 @@ from werkzeug.exceptions import Forbidden
 from werkzeug.exceptions import NotFound
 from werkzeug.http import parse_date
 from werkzeug.routing import BuildError
+from werkzeug.routing import RequestRedirect
 
 import flask
 
@@ -150,10 +150,7 @@ def test_request_dispatching(app, client):
 
 def test_disallow_string_for_allowed_methods(app):
     with pytest.raises(TypeError):
-
-        @app.route("/", methods="GET POST")
-        def index():
-            return "Hey"
+        app.add_url_rule("/", methods="GET POST", endpoint="test")
 
 
 def test_url_mapping(app, client):
@@ -937,8 +934,9 @@ def test_baseexception_error_handling(app, client):
     def broken_func():
         raise KeyboardInterrupt()
 
-    with pytest.raises(KeyboardInterrupt):
-        client.get("/")
+    with client:
+        with pytest.raises(KeyboardInterrupt):
+            client.get("/")
 
         ctx = flask._request_ctx_stack.top
         assert ctx.preserved
@@ -1243,20 +1241,25 @@ def test_response_type_errors():
 
     with pytest.raises(TypeError) as e:
         c.get("/none")
-        assert "returned None" in str(e.value)
-        assert "from_none" in str(e.value)
+
+    assert "returned None" in str(e.value)
+    assert "from_none" in str(e.value)
 
     with pytest.raises(TypeError) as e:
         c.get("/small_tuple")
-        assert "tuple must have the form" in str(e.value)
 
-    pytest.raises(TypeError, c.get, "/large_tuple")
+    assert "tuple must have the form" in str(e.value)
+
+    with pytest.raises(TypeError):
+        c.get("/large_tuple")
 
     with pytest.raises(TypeError) as e:
         c.get("/bad_type")
-        assert "it was a bool" in str(e.value)
 
-    pytest.raises(TypeError, c.get, "/bad_wsgi")
+    assert "it was a bool" in str(e.value)
+
+    with pytest.raises(TypeError):
+        c.get("/bad_wsgi")
 
 
 def test_make_response(app, req_ctx):
@@ -1324,7 +1327,6 @@ def test_jsonify_mimetype(app, req_ctx):
     assert rv.mimetype == "application/vnd.api+json"
 
 
-@pytest.mark.skipif(sys.version_info < (3, 7), reason="requires Python >= 3.7")
 def test_json_dump_dataclass(app, req_ctx):
     from dataclasses import make_dataclass
 
@@ -1675,11 +1677,9 @@ def test_debug_mode_complains_after_first_request(app, client):
 
     assert not app.got_first_request
     assert client.get("/").data == b"Awesome"
-    with pytest.raises(AssertionError) as e:
 
-        @app.route("/foo")
-        def broken():
-            return "Meh"
+    with pytest.raises(AssertionError) as e:
+        app.add_url_rule("/foo", endpoint="late")
 
     assert "A setup function was called" in str(e.value)
 
@@ -1726,28 +1726,29 @@ def test_before_first_request_functions_concurrent(app, client):
     assert app.got_first_request
 
 
-def test_routing_redirect_debugging(app, client):
-    app.debug = True
-
+def test_routing_redirect_debugging(monkeypatch, app, client):
     @app.route("/foo/", methods=["GET", "POST"])
     def foo():
         return "success"
 
-    with client:
-        with pytest.raises(AssertionError) as e:
-            client.post("/foo", data={})
-        assert "http://localhost/foo/" in str(e.value)
-        assert "Make sure to directly send your POST-request to this URL" in str(
-            e.value
-        )
-
-        rv = client.get("/foo", data={}, follow_redirects=True)
-        assert rv.data == b"success"
-
     app.debug = False
+    rv = client.post("/foo", data={}, follow_redirects=True)
+    assert rv.data == b"success"
+
+    app.debug = True
+
     with client:
         rv = client.post("/foo", data={}, follow_redirects=True)
         assert rv.data == b"success"
+        rv = client.get("/foo", data={}, follow_redirects=True)
+        assert rv.data == b"success"
+
+    monkeypatch.setattr(RequestRedirect, "code", 301)
+
+    with client, pytest.raises(AssertionError) as e:
+        client.post("/foo", data={})
+
+    assert "canonical URL 'http://localhost/foo/'" in str(e.value)
 
 
 def test_route_decorator_custom_endpoint(app, client):
