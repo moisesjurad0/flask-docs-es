@@ -1167,7 +1167,7 @@ msgid ""
 msgstr ""
 "La url ``send_file`` entrecomilla los caracteres \":\" y \"/\" para hacer"
 " más compatible el nombre de archivo UTF-8 en algunos navegadores. "
-":issue:`3074"
+":issue:`3074`"
 
 #: ../../../CHANGES.rst:405
 msgid "Fixes for PEP451 import loaders and pytest 5.x. :issue:`3275`"
@@ -1177,7 +1177,7 @@ msgstr ""
 
 #: ../../../CHANGES.rst:406
 msgid "Show message about dotenv on stderr instead of stdout. :issue:`3285`"
-msgstr "Muestra mensaje sobre dotenv en stderr en lugar de stdout. :issue:`3285"
+msgstr "Muestra mensaje sobre dotenv en stderr en lugar de stdout. :issue:`3285`"
 
 #: ../../../CHANGES.rst:410
 msgid "Version 1.0.3"
@@ -1818,7 +1818,7 @@ msgid ""
 msgstr ""
 "Añadido :data:`MAX_COOKIE_SIZE` y :attr:`Response.max_cookie_size` para "
 "controlar cuándo Werkzeug avisa de las cookies grandes que los "
-"navegadores pueden ignorar. :pr:`2693"
+"navegadores pueden ignorar. :pr:`2693`"
 
 #: ../../../CHANGES.rst:616
 msgid ""
@@ -2029,7 +2029,7 @@ msgid ""
 " :pr:`1872`"
 msgstr ""
 "Se ha corregido un error que impedía el funcionamiento de "
-"``FLASK_APP=foobar/__init__.py``. :pr:`1872"
+"``FLASK_APP=foobar/__init__.py``. :pr:`1872`"
 
 #: ../../../CHANGES.rst:710
 msgid "Version 0.11"
