@@ -161,7 +161,7 @@ si no terminas la traducción en diez días.
 - [x] async-await [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] becomingbig [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] blueprints [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
-- [ ] changes
+- [x] changes [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] cli [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] config [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
 - [x] contributing [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt
