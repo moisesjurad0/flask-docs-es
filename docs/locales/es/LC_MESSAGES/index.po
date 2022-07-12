@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-11 22:54-0400\n"
+"POT-Creation-Date: 2022-07-12 13:50-0400\n"
 "PO-Revision-Date: 2022-03-07 14:02-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Welcome to Flask"
 msgstr "Bienvenido a Flask"
 
-msgid "Flask: desarrollo web, una gota a la vez"
+msgid "Flask: web development, one drop at a time"
 msgstr ""
 
 #: ../../index.rst:11
@@ -100,4 +100,4 @@ msgstr ""
 #~ msgstr "Flask: desarrollo web, una gota a la vez"
 
 #~ msgid "Flask: desarrollo web, una gota a la vez"
-#~ msgstr "Flask: desarrollo web, una gota a la vez"
+#~ msgstr ""

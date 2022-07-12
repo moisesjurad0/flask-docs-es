@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-11 22:49-0400\n"
+"POT-Creation-Date: 2022-07-12 13:50-0400\n"
 "PO-Revision-Date: 2022-03-07 14:52-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -84,7 +84,7 @@ msgstr ""
 "Vaya a http://127.0.0.1:5000/auth/login y la página debería ser como la "
 "captura de pantalla de abajo."
 
-msgid "captura de pantalla de la página de inicio de sesión"
+msgid "screenshot of login page"
 msgstr ""
 
 #: ../../tutorial/static.rst:66
@@ -103,3 +103,6 @@ msgstr "Continuar con :doc:`blog`."
 
 #~ msgid "screenshot of login page"
 #~ msgstr "captura de pantalla de la página de inicio de sesión"
+
+#~ msgid "captura de pantalla de la página de inicio de sesión"
+#~ msgstr ""

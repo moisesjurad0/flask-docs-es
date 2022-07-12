@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-11 22:49-0400\n"
+"POT-Creation-Date: 2022-07-12 13:50-0400\n"
 "PO-Revision-Date: 2022-03-07 13:46-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -203,7 +203,7 @@ msgid "|Y| [1]_"
 msgstr "|Y| [1]_"
 
 #: ../../htmlfaq.rst:111
-msgid "Sí"
+msgid "Yes"
 msgstr ""
 
 #: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
@@ -479,3 +479,6 @@ msgstr ""
 
 #~ msgid "Si"
 #~ msgstr "Si"
+
+#~ msgid "Sí"
+#~ msgstr ""

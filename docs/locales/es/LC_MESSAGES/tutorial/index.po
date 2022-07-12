@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-11 22:49-0400\n"
+"POT-Creation-Date: 2022-07-12 13:50-0400\n"
 "PO-Revision-Date: 2022-02-15 21:58-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -38,7 +38,7 @@ msgstr ""
 "crear mensajes y editar o eliminar sus propios mensajes. Podrás "
 "empaquetar e instalar la aplicación en otros ordenadores."
 
-msgid "captura de pantalla de la página de índice"
+msgid "screenshot of index page"
 msgstr ""
 
 #: ../../tutorial/index.rst:30
@@ -67,7 +67,7 @@ msgstr ""
 "proyecto, podrías decidir usar :doc:`/extensions` u otras bibliotecas "
 "para hacer algunas tareas más simples."
 
-msgid "captura de pantalla de la página de inicio de sesión"
+msgid "screenshot of login page"
 msgstr ""
 
 #: ../../tutorial/index.rst:47
@@ -88,6 +88,9 @@ msgstr ""
 "proyecto que es fácil de ampliar. Una vez que te sientas más cómodo con "
 "Flask, podrás salir de esta estructura y aprovechar al máximo la "
 "flexibilidad de Flask."
+
+msgid "screenshot of edit page"
+msgstr ""
 
 #: ../../tutorial/index.rst:60
 msgid ""
@@ -111,3 +114,9 @@ msgstr "Continúe con :doc:`layout`."
 
 #~ msgid "screenshot of edit page"
 #~ msgstr "captura de pantalla de la página de inicio de sesión"
+
+#~ msgid "captura de pantalla de la página de índice"
+#~ msgstr ""
+
+#~ msgid "captura de pantalla de la página de inicio de sesión"
+#~ msgstr ""
