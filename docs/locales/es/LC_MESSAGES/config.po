@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-12 13:50-0400\n"
-"PO-Revision-Date: 2022-07-12 20:55-0400\n"
+"PO-Revision-Date: 2022-07-13 17:35-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -756,7 +756,7 @@ msgid ""
 "to the environment variable name without the prefix i.e."
 msgstr ""
 "Las variables se pueden cargar y acceder a través de la configuración con una "
-"clave igual al nombre de la variable de entorno sin el prefijo, es decir"
+"clave igual al nombre de la variable de entorno sin el prefijo, por ejemplo:"
 
 #: ../../config.rst:540
 msgid ""
@@ -822,7 +822,7 @@ msgid "Configuration Best Practices"
 msgstr "Mejores prácticas de configuración"
 
 #: ../../config.rst:577
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The downside with the approach mentioned earlier is that it makes testing a "
 "little harder.  There is no single 100% solution for this problem in general, "
