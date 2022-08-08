@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-12 13:50-0400\n"
-"PO-Revision-Date: 2022-07-12 18:57-0400\n"
+"PO-Revision-Date: 2022-07-13 17:54-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -830,15 +830,15 @@ msgstr "Llamada por :meth:`.url_for` si se ha producido un :exc:`~werkzeug.routi
 
 #: flask.app.Flask.handle_url_build_error:6 of
 msgid "Each function in :attr:`url_build_error_handlers` is called with ``error``, ``endpoint`` and ``values``. If a function returns ``None`` or raises a ``BuildError``, it is skipped. Otherwise, its return value is returned by ``url_for``."
-msgstr ""
+msgstr "Cada función en :attr:`url_build_error_handlers` es llamada con ``error``, ``endpoint`` y ``values``. Si una función devuelve ``None`` o genera un ``BuildError``, se omite. De lo contrario, su valor de retorno es devuelto por ``url_for``."
 
 #: flask.app.Flask.handle_url_build_error:11 of
 msgid "The active ``BuildError`` being handled."
-msgstr ""
+msgstr "El ``BuildError`` activo que se está manejando."
 
 #: flask.app.Flask.handle_url_build_error:12 of
 msgid "The endpoint being built."
-msgstr ""
+msgstr "El punto final que se construye."
 
 #: flask.app.Flask.handle_url_build_error:13 of
 #, fuzzy
@@ -919,11 +919,11 @@ msgstr "Se ha simplificado el comportamiento. El registrador siempre se llama ``
 
 #: flask.app.Flask.make_aborter:1 of
 msgid "Create the object to assign to :attr:`aborter`. That object is called by :func:`flask.abort` to raise HTTP errors, and can be called directly as well."
-msgstr ""
+msgstr "Crea el objeto para asignar a :attr:`aborter`. Ese objeto es llamado por :func:`flask.abort` para levantar errores HTTP, y también puede ser llamado directamente."
 
 #: flask.app.Flask.make_aborter:5 of
 msgid "By default, this creates an instance of :attr:`aborter_class`, which defaults to :class:`werkzeug.exceptions.Aborter`."
-msgstr ""
+msgstr "Por defecto, esto crea una instancia de :attr:`aborter_class`, que por defecto es :class:`werkzeug.exceptions.Aborter`."
 
 #: flask.app.Flask.make_config:1 of
 msgid "Used to create the config attribute by the Flask constructor. The `instance_relative` parameter is passed in from the constructor of Flask (there named `instance_relative_config`) and indicates if the config should be relative to the instance path or the root path of the application."
@@ -977,15 +977,15 @@ msgstr "`int`"
 
 #: flask.app.Flask.make_response:20 of
 msgid "A list that will be jsonify'd before being returned."
-msgstr ""
+msgstr "Una lista que será jsonificada antes de ser devuelta."
 
 #: flask.app.Flask.make_response:24 of
 msgid "``generator`` or ``iterator``"
-msgstr ""
+msgstr "``generator`` o ``iterador``"
 
 #: flask.app.Flask.make_response:23 of
 msgid "A generator that returns ``str`` or ``bytes`` to be streamed as the response."
-msgstr ""
+msgstr "Un generador que devuelve ``str`` o ``bytes`` para ser transmitidos como respuesta."
 
 #: flask.app.Flask.make_response:33 of
 msgid "``tuple``"
@@ -1021,7 +1021,7 @@ msgstr "La función se llama como una aplicación WSGI. El resultado se utiliza 
 
 #: flask.app.Flask.make_response:45 of
 msgid "A generator will be converted to a streaming response. A list will be converted to a JSON response."
-msgstr ""
+msgstr "Un generador se convertirá en una respuesta en streaming. Una lista se convertirá en una respuesta JSON."
 
 #: flask.app.Flask.make_response:49 of
 #, fuzzy
@@ -1136,7 +1136,7 @@ msgstr "un objeto de respuesta."
 
 #: flask.app.Flask.redirect:3 of
 msgid "This is called by :func:`flask.redirect`, and can be called directly as well."
-msgstr ""
+msgstr "Esto es llamado por :func:`flask.redirect`, y puede ser llamado directamente también."
 
 #: flask.app.Flask.redirect:6 flask.helpers.redirect:7 of
 #, fuzzy
@@ -1150,7 +1150,7 @@ msgstr "El código de estado HTTP como un número."
 
 #: flask.app.Flask.redirect:9 of
 msgid "Moved from ``flask.redirect``, which calls this method."
-msgstr ""
+msgstr "Movido de ``flask.redirect``, que llama a este método."
 
 #: flask.app.Flask.register_blueprint:1 of
 msgid "Register a :class:`~flask.Blueprint` on the application. Keyword arguments passed to this method will override the defaults set on the blueprint."
@@ -1351,7 +1351,7 @@ msgstr "Si no se ha configurado durante el init, se deriva de :attr:`static_fold
 
 #: flask.app.Flask.teardown_appcontext:1 of
 msgid "Registers a function to be called when the application context is popped. The application context is typically popped after the request context for each request, at the end of CLI commands, or after a manually pushed context ends."
-msgstr ""
+msgstr "Registra una función que será llamada cuando el contexto de la aplicación sea extraído. El contexto de la aplicación se abre normalmente después del contexto de solicitud de cada petición, al final de los comandos de la CLI, o después de que un contexto empujado manualmente termine."
 
 #: flask.app.Flask.teardown_appcontext:11 of
 #, fuzzy
@@ -1380,11 +1380,11 @@ msgstr "Una lista de funciones que son llamadas cuando el contexto de la aplicac
 
 #: flask.scaffold.Scaffold.teardown_request:1 of
 msgid "Register a function to be called when the request context is popped. Typically this happens at the end of each request, but contexts may be pushed manually as well during testing."
-msgstr ""
+msgstr "Registra una función para ser llamada cuando el contexto de la solicitud es empujado. Normalmente, esto ocurre al final de cada solicitud, pero los contextos pueden ser empujados manualmente también durante las pruebas."
 
 #: flask.scaffold.Scaffold.teardown_request:10 of
 msgid "When the ``with`` block exits (or ``ctx.pop()`` is called), the teardown functions are called just before the request context is made inactive."
-msgstr ""
+msgstr "Cuando el bloque ``with`` sale (o se llama a ``ctx.pop()``), las funciones de desmontaje son llamadas justo antes de que el contexto de la petición se vuelva inactivo."
 
 #: ../../docstring flask.Blueprint.teardown_request_funcs:1
 #: flask.Flask.teardown_request_funcs:1 of
@@ -1565,7 +1565,7 @@ msgstr "el contexto como un diccionario que se actualiza en el lugar para añadi
 
 #: ../../docstring flask.Flask.url_build_error_handlers:1 of
 msgid "A list of functions that are called by :meth:`handle_url_build_error` when :meth:`.url_for` raises a :exc:`~werkzeug.routing.BuildError`. Each function is called with ``error``, ``endpoint`` and ``values``. If a function returns ``None`` or raises a ``BuildError``, it is skipped. Otherwise, its return value is returned by ``url_for``."
-msgstr ""
+msgstr "Una lista de funciones que son llamadas por :meth:`handle_url_build_error` cuando :meth:`.url_for` genera un :exc:`~werkzeug.routing.BuildError`. Cada función es llamada con ``error``, ``endpoint`` y ``values``. Si una función devuelve ``None`` o genera un ``BuildError``, se omite. De lo contrario, su valor de retorno es devuelto por ``url_for``."
 
 #: ../../docstring flask.Blueprint.url_default_functions:1
 #: flask.Flask.url_default_functions:1 of
@@ -1588,27 +1588,27 @@ msgstr "Genera una URL al endpoint dado con el método proporcionado."
 
 #: flask.app.Flask.url_for:3 of
 msgid "This is called by :func:`flask.url_for`, and can be called directly as well."
-msgstr ""
+msgstr "Esto es llamado por :func:`flask.url_for`, y puede ser llamado directamente también."
 
 #: flask.app.Flask.url_for:6 of
 msgid "An *endpoint* is the name of a URL rule, usually added with :meth:`@app.route() <route>`, and usually the same name as the view function. A route defined in a :class:`~flask.Blueprint` will prepend the blueprint's name separated by a ``.`` to the endpoint."
-msgstr ""
+msgstr "Un *endpoint* es el nombre de una regla de URL, normalmente añadida con :meth:`@app.route() <route>`, y normalmente el mismo nombre que la función de la vista. Una ruta definida en un :class:`~flask.Blueprint` antepondrá el nombre del blueprint separado por un ``.`` al endpoint."
 
 #: flask.app.Flask.url_for:12 of
 msgid "In some cases, such as email messages, you want URLs to include the scheme and domain, like ``https://example.com/hello``. When not in an active request, URLs will be external by default, but this requires setting :data:`SERVER_NAME` so Flask knows what domain to use. :data:`APPLICATION_ROOT` and :data:`PREFERRED_URL_SCHEME` should also be configured as needed. This config is only used when not in an active request."
-msgstr ""
+msgstr "En algunos casos, como en los mensajes de correo electrónico, quieres que las URLs incluyan el esquema y el dominio, como ``https://example.com/hello``. Cuando no está en una petición activa, las URLs serán externas por defecto, pero esto requiere configurar :data:`SERVER_NAME` para que Flask sepa qué dominio usar. :data:`APPLICATION_ROOT` y :data:`PREFERRED_URL_SCHEME` también deben configurarse según sea necesario. Esta configuración sólo se utiliza cuando no está en una solicitud activa."
 
 #: flask.app.Flask.url_for:20 of
 msgid "Functions can be decorated with :meth:`url_defaults` to modify keyword arguments before the URL is built."
-msgstr ""
+msgstr "Las funciones pueden ser decoradas con :meth:`url_defaults` para modificar los argumentos de las palabras clave antes de construir la URL."
 
 #: flask.app.Flask.url_for:23 of
 msgid "If building fails for some reason, such as an unknown endpoint or incorrect values, the app's :meth:`handle_url_build_error` method is called. If that returns a string, that is returned, otherwise a :exc:`~werkzeug.routing.BuildError` is raised."
-msgstr ""
+msgstr "Si la construcción falla por alguna razón, como un punto final desconocido o valores incorrectos, se llama al método :meth:`handle_url_build_error` de la aplicación. Si devuelve una cadena, se devuelve, de lo contrario se lanza un :exc:`~werkzeug.routing.BuildError`."
 
 #: flask.app.Flask.url_for:28 flask.helpers.url_for:7 of
 msgid "The endpoint name associated with the URL to generate. If this starts with a ``.``, the current blueprint name (if any) will be used."
-msgstr ""
+msgstr "El nombre del endpoint asociado a la URL a generar. Si empieza por ``.``, se utilizará el nombre del plano actual (si lo hay)."
 
 #: flask.app.Flask.url_for:31 flask.helpers.url_for:10 of
 #, fuzzy
@@ -1617,23 +1617,23 @@ msgstr "si se proporciona, se añade como ancla a la URL."
 
 #: flask.app.Flask.url_for:32 flask.helpers.url_for:11 of
 msgid "If given, generate the URL associated with this method for the endpoint."
-msgstr ""
+msgstr "Si se da, genera la URL asociada a este método para el punto final."
 
 #: flask.app.Flask.url_for:34 flask.helpers.url_for:13 of
 msgid "If given, the URL will have this scheme if it is external."
-msgstr ""
+msgstr "Si se da, la URL tendrá este esquema si es externa."
 
 #: flask.app.Flask.url_for:36 flask.helpers.url_for:15 of
 msgid "If given, prefer the URL to be internal (False) or require it to be external (True). External URLs include the scheme and domain. When not in an active request, URLs are external by default."
-msgstr ""
+msgstr "Si se da, prefiere que la URL sea interna (False) o requiere que sea externa (True). Las URLs externas incluyen el esquema y el dominio. Cuando no están en una solicitud activa, las URL son externas por defecto."
 
 #: flask.app.Flask.url_for:40 flask.helpers.url_for:19 of
 msgid "Values to use for the variable parts of the URL rule. Unknown keys are appended as query string arguments, like ``?a=b&c=d``."
-msgstr ""
+msgstr "Valores a utilizar para las partes variables de la regla URL. Las claves desconocidas se añaden como argumentos de la cadena de consulta, como ``?a=b&c=d``."
 
 #: flask.app.Flask.url_for:44 of
 msgid "Moved from ``flask.url_for``, which calls this method."
-msgstr ""
+msgstr "Movido de ``flask.url_for``, que llama a este método."
 
 #: ../../docstring flask.Flask.url_map:1 of
 msgid "The :class:`~werkzeug.routing.Map` for this instance.  You can use this to change the routing converters after the class was created but before any routes are connected.  Example::"
@@ -2105,7 +2105,7 @@ msgstr "Analiza :attr:`data` como JSON."
 
 #: of werkzeug.wrappers.request.Request.get_json:3
 msgid "If the mimetype does not indicate JSON (:mimetype:`application/json`, see :attr:`is_json`), or parsing fails, :meth:`on_json_loading_failed` is called and its return value is used as the return value. By default this raises a 400 Bad Request error."
-msgstr ""
+msgstr "Si el mimetype no indica JSON (:mimetype:`application/json`, véase :attr:`is_json`), o el análisis sintáctico falla, se llama a :meth:`on_json_loading_failed` y su valor de retorno se utiliza como valor de retorno. Por defecto, esto genera un error 400 Bad Request."
 
 #: of werkzeug.wrappers.request.Request.get_json:9
 #: werkzeug.wrappers.response.Response.get_json:9
@@ -2123,7 +2123,7 @@ msgstr "Almacena el JSON analizado para devolverlo en posteriores llamadas."
 
 #: flask.Request.json:9 of werkzeug.wrappers.request.Request.get_json:15
 msgid "Raise a 400 error if the content type is incorrect."
-msgstr ""
+msgstr "Generar un error 400 si el tipo de contenido es incorrecto."
 
 #: ../../docstring flask.Request.headers:1 of
 msgid "The headers received with the request."
@@ -2203,7 +2203,7 @@ msgstr "Llama a :meth:`get_json` con argumentos por defecto."
 
 #: flask.Request.json:6 of
 msgid "If the request content type is not ``application/json``, this will raise a 400 Bad Request error."
-msgstr ""
+msgstr "Si el tipo de contenido de la solicitud no es ``application/json``, se producirá un error 400 Bad Request."
 
 #: of werkzeug.wrappers.request.Request.make_form_data_parser:1
 msgid "Creates the form data parser. Instantiates the :attr:`form_data_parser_class` with some parameters."
@@ -2231,7 +2231,7 @@ msgstr "Los parámetros de mimetype como dict. Por ejemplo, si el tipo de conten
 
 #: flask.wrappers.Request.on_json_loading_failed:1 of
 msgid "Called if :meth:`get_json` fails and isn't silenced."
-msgstr ""
+msgstr "Se llama si :meth:`get_json` falla y no se silencia."
 
 #: flask.wrappers.Request.on_json_loading_failed:3 of
 #, fuzzy
@@ -2240,7 +2240,7 @@ msgstr "Se llama si el análisis sintáctico de :meth:`get_json` falla y no se s
 
 #: flask.wrappers.Request.on_json_loading_failed:7 of
 msgid "If parsing failed, this is the exception. It will be ``None`` if the content type wasn't ``application/json``."
-msgstr ""
+msgstr "Si el análisis sintáctico falló, esta es la excepción. Será ``None`` si el tipo de contenido no era ``application/json``."
 
 #: ../../docstring flask.Request.origin:1 of
 msgid "The host that the request originated from. Set :attr:`~CORSResponseMixin.access_control_allow_origin` on the response to indicate which origins are allowed."
@@ -3098,7 +3098,7 @@ msgstr "Test Client"
 
 #: flask.testing.FlaskClient:1 of
 msgid "Works like a regular Werkzeug test client but has knowledge about Flask's contexts to defer the cleanup of the request context until the end of a ``with`` block. For general information about how to use this class refer to :class:`werkzeug.test.Client`."
-msgstr ""
+msgstr "Funciona como un cliente de prueba Werkzeug normal, pero tiene conocimiento de los contextos de Flask para aplazar la limpieza del contexto de la solicitud hasta el final de un bloque ``with``. Para información general sobre cómo usar esta clase, consulta :class:`werkzeug.test.Client`."
 
 #: flask.testing.FlaskClient:6 of
 msgid "`app.test_client()` includes preset default environment, which can be set after instantiation of the `app.test_client()` object in `client.environ_base`."
@@ -3286,11 +3286,11 @@ msgstr "Funciona como :func:`has_request_context` pero para el contexto de la ap
 
 #: flask.helpers.url_for:3 of
 msgid "This requires an active request or application context, and calls :meth:`current_app.url_for() <flask.Flask.url_for>`. See that method for full documentation."
-msgstr ""
+msgstr "Esto requiere una solicitud activa o un contexto de aplicación, y llama a :meth:`current_app.url_for() <flask.Flask.url_for>`. Consulte ese método para ver la documentación completa."
 
 #: flask.helpers.url_for:23 of
 msgid "Calls ``current_app.url_for``, allowing an app to override the behavior."
-msgstr ""
+msgstr "Llama a ``current_app.url_for``, permitiendo que una aplicación anule el comportamiento."
 
 #: flask.helpers.url_for:27 of
 #, fuzzy
@@ -3314,19 +3314,19 @@ msgstr "Lanza una :py:exc:`HTTPException` para el código de estado dado o la ap
 
 #: flask.helpers.abort:4 of
 msgid "If :data:`~flask.current_app` is available, it will call its :attr:`~flask.Flask.aborter` object, otherwise it will use :func:`werkzeug.exceptions.abort`."
-msgstr ""
+msgstr "Si :data:`~flask.current_app` está disponible, llamará a su objeto :attr:`~flask.Flask.aborter`, en caso contrario utilizará :func:`werkzeug.exceptions.abort`."
 
 #: flask.helpers.abort:8 of
 msgid "The status code for the exception, which must be registered in ``app.aborter``."
-msgstr ""
+msgstr "El código de estado de la excepción, que debe registrarse en ``app.aborter``."
 
 #: flask.helpers.abort:10 flask.helpers.abort:11 of
 msgid "Passed to the exception."
-msgstr ""
+msgstr "Pasó a la excepción."
 
 #: flask.helpers.abort:13 of
 msgid "Calls ``current_app.aborter`` if available instead of always using Werkzeug's default ``abort``."
-msgstr ""
+msgstr "Llama a ``current_app.aborter`` si está disponible en lugar de utilizar siempre el ``abort`` por defecto de Werkzeug."
 
 #: flask.helpers.redirect:3 of
 msgid "If :data:`~flask.current_app` is available, it will use its :meth:`~flask.Flask.redirect` method, otherwise it will use :func:`werkzeug.utils.redirect`."
