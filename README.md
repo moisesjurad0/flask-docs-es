@@ -1,6 +1,6 @@
 [![Estado de la documentación](https://readthedocs.org/projects/flask-es/badge/?version=main)](https://flask-es.readthedocs.io/?badge=main)
 ![Progreso de traducción](https://jalkhov.github.io/docspro/badge/es_progress.svg)
-![Última sincronización con Flask](https://img.shields.io/static/v1?label=Última%20sincronización%20con%20Flask&message=11-07-2022&color=cyan)
+![Última sincronización con Flask](https://img.shields.io/static/v1?label=last%20sync%20with%20Flask&message=11-07-2022&color=cyan)
 
 [Ver commits en Flask desde la última sincronización](https://github.com/pallets/flask/search?o=desc&q=author-date%3A%3E2022-07-11&s=committer-date&type=Commits)
 
