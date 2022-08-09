@@ -1448,7 +1448,7 @@ msgstr "Publicado 2018-04-29"
 msgid ""
 "Fix registering partials (with no ``__name__``) as view functions. :pr:`2730`"
 msgstr ""
-"Corrige el registro de parciales (sin ``nombre__``) como funciones de vista. :pr:"
+"Corrige el registro de parciales (sin ``__name__``) como funciones de vista. :pr:"
 "`2730`"
 
 #: ../../../CHANGES.rst:528
