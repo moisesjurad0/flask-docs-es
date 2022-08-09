@@ -4194,7 +4194,7 @@ msgstr "Vincula el contexto de la aplicación al contexto actual."
 
 #: ../../api.rst:330
 msgid "The current :class:`~flask.ctx.AppContext`. If an app context is not active, accessing attributes on this proxy will raise a ``RuntimeError``."
-msgstr "La actual :clase:`~flask.ctx.AppContext`. Si un contexto de aplicación no está activo, el acceso a los atributos de este proxy generará un ``RuntimeError``."
+msgstr "La actual :class:`~flask.ctx.AppContext`. Si un contexto de aplicación no está activo, el acceso a los atributos de este proxy generará un ``RuntimeError``."
 
 #: ../../api.rst:334
 msgid "This is an internal object that is essential to how Flask handles requests. Accessing this should not be needed in most cases. Most likely you want :data:`current_app` and :data:`g` instead."
