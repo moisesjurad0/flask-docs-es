@@ -4174,7 +4174,7 @@ msgstr "Se ha añadido el argumento `exc`."
 
 #: ../../api.rst:317
 msgid "The current :class:`~flask.ctx.RequestContext`. If a request context is not active, accessing attributes on this proxy will raise a ``RuntimeError``."
-msgstr "La clase actual :`~flask.ctx.RequestContext`. Si un contexto de solicitud no está activo, el acceso a los atributos de este proxy generará un ``RuntimeError``."
+msgstr "La :class:`~flask.ctx.RequestContext` actual. Si un contexto de solicitud no está activo, el acceso a los atributos de este proxy generará un ``RuntimeError``."
 
 #: ../../api.rst:321
 msgid "This is an internal object that is essential to how Flask handles requests. Accessing this should not be needed in most cases. Most likely you want :data:`request` and :data:`session` instead."
