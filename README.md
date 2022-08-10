@@ -52,17 +52,7 @@ Para Windows:
 - Haz clic en el botón de edición (un icono de un lápiz en la esquina superior derecha del README)
 para editar el README.
 - Encuentra la sección "Lista de tareas de traducción", marca el capítulo que quieres
-traducir en el siguiente formato:
-
-```
-- [ ] ejemplo @tu_usuario Tu nombre
-```
-
-Puedes vincular el nombre de usuario a tu perfil de GitHub:
-
-```
-- [ ] ejemplo [@tu_usuario](https://github.com/tu_usuario) Tu nombre
-```
+traducir en el respectivo formato de la tabla y colocando tu nombre y nombre de usuario de Github.
 
 - Deje un commit (por ejemplo, "Asignar ejemplo a @tu_usuario"), luego seleccione
 "Create a new branch for this commit and start a pull request" y haga clic en el botón
@@ -159,122 +149,122 @@ si no terminas la traducción en diez días.
 
 ## docs/
 
-| Finished | File              | Assigned                                             |
-| -------- | ----------------- | ---------------------------------------------------- |
-| &#9745;  | advanced_foreword | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | api               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | appcontext        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | async-await       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | becomingbig       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | blueprints        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | changes           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | cli               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | config            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | contributing      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | debugging         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | design            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | errorhandling     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-|          | extensiondev      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | extensions        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | foreword          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | htmlfaq           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | index             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | installation      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | license           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | logging           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | quickstart        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | reqcontext        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | security          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | server            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | shell             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | signals           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | templating        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | testing           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | views             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| Finalizado | Archivo           | Asignado                                             |
+| ---------- | ----------------- | ---------------------------------------------------- |
+| &#9745;    | advanced_foreword | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | api               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | appcontext        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | async-await       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | becomingbig       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | blueprints        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | changes           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | cli               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | config            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | contributing      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | debugging         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | design            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | errorhandling     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | extensiondev      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | extensions        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | foreword          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | htmlfaq           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | index             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | installation      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | license           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | logging           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | quickstart        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | reqcontext        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | security          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | server            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | shell             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | signals           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | templating        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | testing           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | views             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
 
 
 ## deploying/
 
-| Finished |       File      |                       Assigned                       |
-|----------|-----------------|------------------------------------------------------|
-| &#9745;  |   apache-httpd  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       asgi      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       cgi       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     eventlet    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     fastcgi     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      gevent     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     gunicorn    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      index      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     mod_wsgi    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      nginx      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |    proxy_fix    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      uwsgi      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     waitress    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | wsgi-standalone | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| Finalizado | Archivo         | Asignado                                             |
+| ---------- | --------------- | ---------------------------------------------------- |
+| &#9745;    | apache-httpd    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | asgi            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | cgi             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | eventlet        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | fastcgi         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | gevent          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | gunicorn        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | index           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | mod_wsgi        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | nginx           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | proxy_fix       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | uwsgi           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | waitress        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | wsgi-standalone | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
 
 
 ## patterns/
 
-| Finished |          File          |                       Assigned                       |
-|----------|------------------------|------------------------------------------------------|
-| &#9745;  |      appdispatch       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      appfactories      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        caching         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |         celery         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   deferredcallbacks    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       distribute       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |         fabric         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        favicon         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      fileuploads       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        flashing        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |         index          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       javascript       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |         jquery         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      lazyloading       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |    methodoverrides     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      mongoengine       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        packages        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |    requestchecksum     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | singlepageapplications | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       sqlalchemy       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        sqlite3         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |       streaming        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |      subclassing       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |  templateinheritance   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     urlprocessors      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |     viewdecorators     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |        wtforms         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| Finalizado | Archivo                | Asignado                                             |
+| ---------- | ---------------------- | ---------------------------------------------------- |
+| &#9745;    | appdispatch            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | appfactories           | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | caching                | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | celery                 | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | deferredcallbacks      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | distribute             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | fabric                 | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | favicon                | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | fileuploads            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | flashing               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | index                  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | javascript             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | jquery                 | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | lazyloading            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | methodoverrides        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | mongoengine            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | packages               | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | requestchecksum        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | singlepageapplications | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | sqlalchemy             | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | sqlite3                | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | streaming              | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | subclassing            | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | templateinheritance    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | urlprocessors          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | viewdecorators         | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | wtforms                | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
 
 
 ## tutorial/
 
-| Finished |    File   |                       Assigned                       |
-|----------|-----------|------------------------------------------------------|
-| &#9745;  |    blog   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |  database | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   deploy  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |  factory  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   index   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |  install  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   layout  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |    next   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   static  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | templates | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   tests   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  |   views   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| Finalizado | Archivo   | Asignado                                             |
+| ---------- | --------- | ---------------------------------------------------- |
+| &#9745;    | blog      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | database  | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | deploy    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | factory   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | index     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | install   | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | layout    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | next      | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | static    | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | templates | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | tests     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | views     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
 
 
 ## docs/api
 
 
-| Finished | Strings range | Assigned                                             |
-| -------- | ------------- | ---------------------------------------------------- |
-| &#9745;  | 001~123       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 123~246       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 246~369       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 369~492       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 492~615       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 615~738       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 738~861       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 861~984       | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
-| &#9745;  | 984~1.107     | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| Finalizado | Rango de strings | Asignado                                             |
+| ---------- | ---------------- | ---------------------------------------------------- |
+| &#9745;    | 001~123          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 123~246          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 246~369          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 369~492          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 492~615          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 615~738          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 738~861          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 861~984          | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
+| &#9745;    | 984~1.107        | [@Jalkhov](https://github.com/jalkhov) Pedro Torcatt |
