@@ -42,38 +42,22 @@ method::
     )
 
 
-Environment and Debug Features
-------------------------------
+Debug Mode
+----------
 
-The :data:`ENV` and :data:`DEBUG` config values are special because they
-may behave inconsistently if changed after the app has begun setting up.
-In order to set the environment and debug mode reliably, pass options to
-the ``flask`` command or use environment variables.
-
-The execution environment is used to indicate to Flask, extensions, and
-other programs, like Sentry, what context Flask is running in. It is
-controlled with the ``FLASK_ENV`` environment variable, or the
-``--env`` option when using the ``flask`` command, and defaults to
-``production``.
-
-Setting ``--env development`` will enable debug mode. ``flask run`` will
-use the interactive debugger and reloader by default in debug mode. To
-control this separately from the environment, use the
-``--debug/--no-debug`` option or the ``FLASK_DEBUG`` environment
-variable.
-
-To switch Flask to the development environment and enable debug mode,
-set ``--env``:
+The :data:`DEBUG` config value is special because it may behave inconsistently if
+changed after the app has begun setting up. In order to set debug mode reliably, use the
+``--debug`` option on the ``flask`` or ``flask run`` command. ``flask run`` will use the
+interactive debugger and reloader by default in debug mode.
 
 .. code-block:: text
 
-    $ flask --app hello --env development run
+    $ flask --app hello run --debug
 
-Using the options or environment variables as described above is
-recommended. While it is possible to set :data:`ENV` and :data:`DEBUG`
-in your config or code, this is strongly discouraged. They can't be read
-early by the ``flask`` command, and some systems or extensions may have
-already configured themselves based on a previous value.
+Using the option is recommended. While it is possible to set :data:`DEBUG` in your
+config or code, this is strongly discouraged. It can't be read early by the
+``flask run`` command, and some systems or extensions may have already configured
+themselves based on a previous value.
 
 
 Builtin Configuration Values
@@ -81,34 +65,17 @@ Builtin Configuration Values
 
 The following configuration values are used internally by Flask:
 
-.. py:data:: ENV
-
-    What environment the app is running in. Flask and extensions may
-    enable behaviors based on the environment, such as enabling debug
-    mode. The :attr:`~flask.Flask.env` attribute maps to this config
-    key. This is set by the :envvar:`FLASK_ENV` environment variable and
-    may not behave as expected if set in code.
-
-    **Do not enable development when deploying in production.**
-
-    Default: ``'production'``
-
-    .. versionadded:: 1.0
-
 .. py:data:: DEBUG
 
-    Whether debug mode is enabled. When using ``flask run`` to start the
-    development server, an interactive debugger will be shown for
-    unhandled exceptions, and the server will be reloaded when code
-    changes. The :attr:`~flask.Flask.debug` attribute maps to this
-    config key. This is enabled when :data:`ENV` is ``'development'``
-    and is overridden by the ``FLASK_DEBUG`` environment variable. It
-    may not behave as expected if set in code.
+    Whether debug mode is enabled. When using ``flask run`` to start the development
+    server, an interactive debugger will be shown for unhandled exceptions, and the
+    server will be reloaded when code changes. The :attr:`~flask.Flask.debug` attribute
+    maps to this config key. This is set with the ``FLASK_DEBUG`` environment variable.
+    It may not behave as expected if set in code.
 
     **Do not enable debug mode when deploying in production.**
 
-    Default: ``True`` if :data:`ENV` is ``'development'``, or ``False``
-    otherwise.
+    Default: ``False``
 
 .. py:data:: TESTING
 
@@ -167,11 +134,16 @@ The following configuration values are used internally by Flask:
 
 .. py:data:: SESSION_COOKIE_DOMAIN
 
-    The domain match rule that the session cookie will be valid for. If not
-    set, the cookie will be valid for all subdomains of :data:`SERVER_NAME`.
-    If ``False``, the cookie's domain will not be set.
+    The value of the ``Domain`` parameter on the session cookie. If not set, browsers
+    will only send the cookie to the exact domain it was set from. Otherwise, they
+    will send it to any subdomain of the given value as well.
+
+    Not setting this value is more restricted and secure than setting it.
 
     Default: ``None``
+
+    .. versionchanged:: 2.3
+        Not set by default, does not fall back to ``SERVER_NAME``.
 
 .. py:data:: SESSION_COOKIE_PATH
 
@@ -252,18 +224,13 @@ The following configuration values are used internally by Flask:
     Inform the application what host and port it is bound to. Required
     for subdomain route matching support.
 
-    If set, will be used for the session cookie domain if
-    :data:`SESSION_COOKIE_DOMAIN` is not set. Modern web browsers will
-    not allow setting cookies for domains without a dot. To use a domain
-    locally, add any names that should route to the app to your
-    ``hosts`` file. ::
-
-        127.0.0.1 localhost.dev
-
     If set, ``url_for`` can generate external URLs with only an application
     context instead of a request context.
 
     Default: ``None``
+
+    .. versionchanged:: 2.3
+        Does not affect ``SESSION_COOKIE_DOMAIN``.
 
 .. py:data:: APPLICATION_ROOT
 
@@ -291,37 +258,6 @@ The following configuration values are used internally by Flask:
     read for security.
 
     Default: ``None``
-
-.. py:data:: JSON_AS_ASCII
-
-    Serialize objects to ASCII-encoded JSON. If this is disabled, the
-    JSON returned from ``jsonify`` will contain Unicode characters. This
-    has security implications when rendering the JSON into JavaScript in
-    templates, and should typically remain enabled.
-
-    Default: ``True``
-
-.. py:data:: JSON_SORT_KEYS
-
-    Sort the keys of JSON objects alphabetically. This is useful for caching
-    because it ensures the data is serialized the same way no matter what
-    Python's hash seed is. While not recommended, you can disable this for a
-    possible performance improvement at the cost of caching.
-
-    Default: ``True``
-
-.. py:data:: JSONIFY_PRETTYPRINT_REGULAR
-
-    ``jsonify`` responses will be output with newlines, spaces, and indentation
-    for easier reading by humans. Always enabled in debug mode.
-
-    Default: ``False``
-
-.. py:data:: JSONIFY_MIMETYPE
-
-    The mimetype of ``jsonify`` responses.
-
-    Default: ``'application/json'``
 
 .. py:data:: TEMPLATES_AUTO_RELOAD
 
@@ -387,17 +323,23 @@ The following configuration values are used internally by Flask:
 .. versionchanged:: 2.2
     Removed ``PRESERVE_CONTEXT_ON_EXCEPTION``.
 
+.. versionchanged:: 2.3
+    ``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_MIMETYPE``, and
+    ``JSONIFY_PRETTYPRINT_REGULAR`` were removed. The default ``app.json`` provider has
+    equivalent attributes instead.
+
+.. versionchanged:: 2.3
+    ``ENV`` was removed.
+
 
 Configuring from Python Files
 -----------------------------
 
-Configuration becomes more useful if you can store it in a separate file,
-ideally located outside the actual application package. This makes
-packaging and distributing your application possible via various package
-handling tools (:doc:`/patterns/distribute`) and finally modifying the
-configuration file afterwards.
+Configuration becomes more useful if you can store it in a separate file, ideally
+located outside the actual application package. You can deploy your application, then
+separately configure it for the specific deployment.
 
-So a common pattern is this::
+A common pattern is this::
 
     app = Flask(__name__)
     app.config.from_object('yourapplication.default_settings')
@@ -689,10 +631,8 @@ your configuration files.  However here a list of good recommendations:
     code at all.  If you are working often on different projects you can
     even create your own script for sourcing that activates a virtualenv
     and exports the development configuration for you.
--   Use a tool like `fabric`_ in production to push code and
-    configurations separately to the production server(s).  For some
-    details about how to do that, head over to the
-    :doc:`/patterns/fabric` pattern.
+-   Use a tool like `fabric`_ to push code and configuration separately
+    to the production server(s).
 
 .. _fabric: https://www.fabfile.org/
 

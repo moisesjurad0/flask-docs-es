@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import typing as t
 
 if t.TYPE_CHECKING:  # pragma: no cover
@@ -11,7 +13,8 @@ ResponseValue = t.Union[
     str,
     bytes,
     t.List[t.Any],
-    t.Dict[str, t.Any],
+    # Only dict is actually accepted, but Mapping allows for TypedDict.
+    t.Mapping[str, t.Any],
     t.Iterator[str],
     t.Iterator[bytes],
 ]
