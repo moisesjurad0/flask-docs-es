@@ -38,6 +38,15 @@ def hello_json_list() -> t.List[t.Any]:
     return [{"message": "Hello"}, {"message": "World"}]
 
 
+class StatusJSON(t.TypedDict):
+    status: str
+
+
+@app.route("/typed-dict")
+def typed_dict() -> StatusJSON:
+    return {"status": "ok"}
+
+
 @app.route("/generator")
 def hello_generator() -> t.Generator[str, None, None]:
     def show() -> t.Generator[str, None, None]:

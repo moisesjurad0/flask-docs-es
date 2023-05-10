@@ -3,6 +3,7 @@ import logging
 import pytest
 import werkzeug.serving
 from jinja2 import TemplateNotFound
+from markupsafe import Markup
 
 import flask
 
@@ -73,7 +74,7 @@ def test_escaping(app, client):
     @app.route("/")
     def index():
         return flask.render_template(
-            "escaping_template.html", text=text, html=flask.Markup(text)
+            "escaping_template.html", text=text, html=Markup(text)
         )
 
     lines = client.get("/").data.splitlines()
@@ -93,7 +94,7 @@ def test_no_escaping(app, client):
     @app.route("/")
     def index():
         return flask.render_template(
-            "non_escaping_template.txt", text=text, html=flask.Markup(text)
+            "non_escaping_template.txt", text=text, html=Markup(text)
         )
 
     lines = client.get("/").data.splitlines()
@@ -397,11 +398,9 @@ def test_templates_auto_reload_debug_run(app, monkeypatch):
     monkeypatch.setattr(werkzeug.serving, "run_simple", run_simple_mock)
 
     app.run()
-    assert not app.templates_auto_reload
     assert not app.jinja_env.auto_reload
 
     app.run(debug=True)
-    assert app.templates_auto_reload
     assert app.jinja_env.auto_reload
 
 

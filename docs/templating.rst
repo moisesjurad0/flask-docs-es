@@ -18,7 +18,7 @@ Jinja Setup
 Unless customized, Jinja2 is configured by Flask as follows:
 
 -   autoescaping is enabled for all templates ending in ``.html``,
-    ``.htm``, ``.xml`` as well as ``.xhtml`` when using
+    ``.htm``, ``.xml``, ``.xhtml``, as well as ``.svg`` when using
     :func:`~flask.templating.render_template`.
 -   autoescaping is enabled for all strings when using
     :func:`~flask.templating.render_template_string`.
@@ -115,7 +115,7 @@ markdown to HTML converter.
 
 There are three ways to accomplish that:
 
--   In the Python code, wrap the HTML string in a :class:`~flask.Markup`
+-   In the Python code, wrap the HTML string in a :class:`~markupsafe.Markup`
     object before passing it to the template.  This is in general the
     recommended way.
 -   Inside the template, use the ``|safe`` filter to explicitly mark a

@@ -6,7 +6,6 @@ import werkzeug.exceptions
 
 import flask
 from flask.helpers import get_debug_flag
-from flask.helpers import get_env
 
 
 class FakePath:
@@ -219,8 +218,8 @@ class TestNoImports:
     imp modules in the Python standard library.
     """
 
-    def test_name_with_import_error(self, modules_tmpdir):
-        modules_tmpdir.join("importerror.py").write("raise NotImplementedError()")
+    def test_name_with_import_error(self, modules_tmp_path):
+        (modules_tmp_path / "importerror.py").write_text("raise NotImplementedError()")
         try:
             flask.Flask("importerror")
         except NotImplementedError:
@@ -303,38 +302,18 @@ class TestStreaming:
 
 class TestHelpers:
     @pytest.mark.parametrize(
-        "debug, expected_flag, expected_default_flag",
+        ("debug", "expect"),
         [
-            ("", False, False),
-            ("0", False, False),
-            ("False", False, False),
-            ("No", False, False),
-            ("True", True, True),
+            ("", False),
+            ("0", False),
+            ("False", False),
+            ("No", False),
+            ("True", True),
         ],
     )
-    def test_get_debug_flag(
-        self, monkeypatch, debug, expected_flag, expected_default_flag
-    ):
+    def test_get_debug_flag(self, monkeypatch, debug, expect):
         monkeypatch.setenv("FLASK_DEBUG", debug)
-        if expected_flag is None:
-            assert get_debug_flag() is None
-        else:
-            assert get_debug_flag() == expected_flag
-        assert get_debug_flag() == expected_default_flag
-
-    @pytest.mark.parametrize(
-        "env, ref_env, debug",
-        [
-            ("", "production", False),
-            ("production", "production", False),
-            ("development", "development", True),
-            ("other", "other", False),
-        ],
-    )
-    def test_get_env(self, monkeypatch, env, ref_env, debug):
-        monkeypatch.setenv("FLASK_ENV", env)
-        assert get_debug_flag() == debug
-        assert get_env() == ref_env
+        assert get_debug_flag() == expect
 
     def test_make_response(self):
         app = flask.Flask(__name__)

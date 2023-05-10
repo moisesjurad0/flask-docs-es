@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import typing as t
 from collections import defaultdict
@@ -14,9 +16,6 @@ if t.TYPE_CHECKING:  # pragma: no cover
 
 DeferredSetupFunction = t.Callable[["BlueprintSetupState"], t.Callable]
 T_after_request = t.TypeVar("T_after_request", bound=ft.AfterRequestCallable)
-T_before_first_request = t.TypeVar(
-    "T_before_first_request", bound=ft.BeforeFirstRequestCallable
-)
 T_before_request = t.TypeVar("T_before_request", bound=ft.BeforeRequestCallable)
 T_error_handler = t.TypeVar("T_error_handler", bound=ft.ErrorHandlerCallable)
 T_teardown = t.TypeVar("T_teardown", bound=ft.TeardownCallable)
@@ -41,8 +40,8 @@ class BlueprintSetupState:
 
     def __init__(
         self,
-        blueprint: "Blueprint",
-        app: "Flask",
+        blueprint: Blueprint,
+        app: Flask,
         options: t.Any,
         first_registration: bool,
     ) -> None:
@@ -88,8 +87,8 @@ class BlueprintSetupState:
     def add_url_rule(
         self,
         rule: str,
-        endpoint: t.Optional[str] = None,
-        view_func: t.Optional[t.Callable] = None,
+        endpoint: str | None = None,
+        view_func: t.Callable | None = None,
         **options: t.Any,
     ) -> None:
         """A helper method to register a rule (and optionally a view function)
@@ -174,25 +173,18 @@ class Blueprint(Scaffold):
 
     _got_registered_once = False
 
-    #: Blueprint local JSON encoder class to use. Set to ``None`` to use
-    #: the app's :class:`~flask.Flask.json_encoder`.
-    json_encoder = None
-    #: Blueprint local JSON decoder class to use. Set to ``None`` to use
-    #: the app's :class:`~flask.Flask.json_decoder`.
-    json_decoder = None
-
     def __init__(
         self,
         name: str,
         import_name: str,
-        static_folder: t.Optional[t.Union[str, os.PathLike]] = None,
-        static_url_path: t.Optional[str] = None,
-        template_folder: t.Optional[str] = None,
-        url_prefix: t.Optional[str] = None,
-        subdomain: t.Optional[str] = None,
-        url_defaults: t.Optional[dict] = None,
-        root_path: t.Optional[str] = None,
-        cli_group: t.Optional[str] = _sentinel,  # type: ignore
+        static_folder: str | os.PathLike | None = None,
+        static_url_path: str | None = None,
+        template_folder: str | os.PathLike | None = None,
+        url_prefix: str | None = None,
+        subdomain: str | None = None,
+        url_defaults: dict | None = None,
+        root_path: str | None = None,
+        cli_group: str | None = _sentinel,  # type: ignore
     ):
         super().__init__(
             import_name=import_name,
@@ -202,36 +194,32 @@ class Blueprint(Scaffold):
             root_path=root_path,
         )
 
+        if not name:
+            raise ValueError("'name' may not be empty.")
+
         if "." in name:
             raise ValueError("'name' may not contain a dot '.' character.")
 
         self.name = name
         self.url_prefix = url_prefix
         self.subdomain = subdomain
-        self.deferred_functions: t.List[DeferredSetupFunction] = []
+        self.deferred_functions: list[DeferredSetupFunction] = []
 
         if url_defaults is None:
             url_defaults = {}
 
         self.url_values_defaults = url_defaults
         self.cli_group = cli_group
-        self._blueprints: t.List[t.Tuple["Blueprint", dict]] = []
+        self._blueprints: list[tuple[Blueprint, dict]] = []
 
     def _check_setup_finished(self, f_name: str) -> None:
         if self._got_registered_once:
-            import warnings
-
-            warnings.warn(
-                f"The setup method '{f_name}' can no longer be called on"
-                f" the blueprint '{self.name}'. It has already been"
-                " registered at least once, any changes will not be"
-                " applied consistently.\n"
-                "Make sure all imports, decorators, functions, etc."
-                " needed to set up the blueprint are done before"
-                " registering it.\n"
-                "This warning will become an exception in Flask 2.3.",
-                UserWarning,
-                stacklevel=3,
+            raise AssertionError(
+                f"The setup method '{f_name}' can no longer be called on the blueprint"
+                f" '{self.name}'. It has already been registered at least once, any"
+                " changes will not be applied consistently.\n"
+                "Make sure all imports, decorators, functions, etc. needed to set up"
+                " the blueprint are done before registering it."
             )
 
     @setupmethod
@@ -258,7 +246,7 @@ class Blueprint(Scaffold):
         self.record(update_wrapper(wrapper, func))
 
     def make_setup_state(
-        self, app: "Flask", options: dict, first_registration: bool = False
+        self, app: Flask, options: dict, first_registration: bool = False
     ) -> BlueprintSetupState:
         """Creates an instance of :meth:`~flask.blueprints.BlueprintSetupState`
         object that is later passed to the register callback functions.
@@ -267,7 +255,7 @@ class Blueprint(Scaffold):
         return BlueprintSetupState(self, app, options, first_registration)
 
     @setupmethod
-    def register_blueprint(self, blueprint: "Blueprint", **options: t.Any) -> None:
+    def register_blueprint(self, blueprint: Blueprint, **options: t.Any) -> None:
         """Register a :class:`~flask.Blueprint` on this blueprint. Keyword
         arguments passed to this method will override the defaults set
         on the blueprint.
@@ -284,7 +272,7 @@ class Blueprint(Scaffold):
             raise ValueError("Cannot register a blueprint on itself")
         self._blueprints.append((blueprint, options))
 
-    def register(self, app: "Flask", options: dict) -> None:
+    def register(self, app: Flask, options: dict) -> None:
         """Called by :meth:`Flask.register_blueprint` to register all
         views and callbacks registered on the blueprint with the
         application. Creates a :class:`.BlueprintSetupState` and calls
@@ -294,6 +282,13 @@ class Blueprint(Scaffold):
             with.
         :param options: Keyword arguments forwarded from
             :meth:`~Flask.register_blueprint`.
+
+        .. versionchanged:: 2.3
+            Nested blueprints now correctly apply subdomains.
+
+        .. versionchanged:: 2.1
+            Registering the same blueprint with the same name multiple
+            times is an error.
 
         .. versionchanged:: 2.0.1
             Nested blueprints are registered with their dotted name.
@@ -305,10 +300,6 @@ class Blueprint(Scaffold):
             name the blueprint is registered with. This allows the same
             blueprint to be registered multiple times with unique names
             for ``url_for``.
-
-        .. versionchanged:: 2.0.1
-            Registering the same blueprint with the same name multiple
-            times is deprecated and will become an error in Flask 2.1.
         """
         name_prefix = options.get("name_prefix", "")
         self_name = options.get("name", self.name)
@@ -390,6 +381,17 @@ class Blueprint(Scaffold):
         for blueprint, bp_options in self._blueprints:
             bp_options = bp_options.copy()
             bp_url_prefix = bp_options.get("url_prefix")
+            bp_subdomain = bp_options.get("subdomain")
+
+            if bp_subdomain is None:
+                bp_subdomain = blueprint.subdomain
+
+            if state.subdomain is not None and bp_subdomain is not None:
+                bp_options["subdomain"] = bp_subdomain + "." + state.subdomain
+            elif bp_subdomain is not None:
+                bp_options["subdomain"] = bp_subdomain
+            elif state.subdomain is not None:
+                bp_options["subdomain"] = state.subdomain
 
             if bp_url_prefix is None:
                 bp_url_prefix = blueprint.url_prefix
@@ -410,13 +412,16 @@ class Blueprint(Scaffold):
     def add_url_rule(
         self,
         rule: str,
-        endpoint: t.Optional[str] = None,
-        view_func: t.Optional[ft.RouteCallable] = None,
-        provide_automatic_options: t.Optional[bool] = None,
+        endpoint: str | None = None,
+        view_func: ft.RouteCallable | None = None,
+        provide_automatic_options: bool | None = None,
         **options: t.Any,
     ) -> None:
-        """Like :meth:`Flask.add_url_rule` but for a blueprint.  The endpoint for
-        the :func:`url_for` function is prefixed with the name of the blueprint.
+        """Register a URL rule with the blueprint. See :meth:`.Flask.add_url_rule` for
+        full documentation.
+
+        The URL rule is prefixed with the blueprint's URL prefix. The endpoint name,
+        used with :func:`url_for`, is prefixed with the blueprint's name.
         """
         if endpoint and "." in endpoint:
             raise ValueError("'endpoint' may not contain a dot '.' character.")
@@ -436,10 +441,10 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def app_template_filter(
-        self, name: t.Optional[str] = None
+        self, name: str | None = None
     ) -> t.Callable[[T_template_filter], T_template_filter]:
-        """Register a custom template filter, available application wide.  Like
-        :meth:`Flask.template_filter` but for a blueprint.
+        """Register a template filter, available in any template rendered by the
+        application. Equivalent to :meth:`.Flask.template_filter`.
 
         :param name: the optional name of the filter, otherwise the
                      function name will be used.
@@ -453,11 +458,11 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def add_app_template_filter(
-        self, f: ft.TemplateFilterCallable, name: t.Optional[str] = None
+        self, f: ft.TemplateFilterCallable, name: str | None = None
     ) -> None:
-        """Register a custom template filter, available application wide.  Like
-        :meth:`Flask.add_template_filter` but for a blueprint.  Works exactly
-        like the :meth:`app_template_filter` decorator.
+        """Register a template filter, available in any template rendered by the
+        application. Works like the :meth:`app_template_filter` decorator. Equivalent to
+        :meth:`.Flask.add_template_filter`.
 
         :param name: the optional name of the filter, otherwise the
                      function name will be used.
@@ -470,10 +475,10 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def app_template_test(
-        self, name: t.Optional[str] = None
+        self, name: str | None = None
     ) -> t.Callable[[T_template_test], T_template_test]:
-        """Register a custom template test, available application wide.  Like
-        :meth:`Flask.template_test` but for a blueprint.
+        """Register a template test, available in any template rendered by the
+        application. Equivalent to :meth:`.Flask.template_test`.
 
         .. versionadded:: 0.10
 
@@ -489,11 +494,11 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def add_app_template_test(
-        self, f: ft.TemplateTestCallable, name: t.Optional[str] = None
+        self, f: ft.TemplateTestCallable, name: str | None = None
     ) -> None:
-        """Register a custom template test, available application wide.  Like
-        :meth:`Flask.add_template_test` but for a blueprint.  Works exactly
-        like the :meth:`app_template_test` decorator.
+        """Register a template test, available in any template rendered by the
+        application. Works like the :meth:`app_template_test` decorator. Equivalent to
+        :meth:`.Flask.add_template_test`.
 
         .. versionadded:: 0.10
 
@@ -508,10 +513,10 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def app_template_global(
-        self, name: t.Optional[str] = None
+        self, name: str | None = None
     ) -> t.Callable[[T_template_global], T_template_global]:
-        """Register a custom template global, available application wide.  Like
-        :meth:`Flask.template_global` but for a blueprint.
+        """Register a template global, available in any template rendered by the
+        application. Equivalent to :meth:`.Flask.template_global`.
 
         .. versionadded:: 0.10
 
@@ -527,11 +532,11 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def add_app_template_global(
-        self, f: ft.TemplateGlobalCallable, name: t.Optional[str] = None
+        self, f: ft.TemplateGlobalCallable, name: str | None = None
     ) -> None:
-        """Register a custom template global, available application wide.  Like
-        :meth:`Flask.add_template_global` but for a blueprint.  Works exactly
-        like the :meth:`app_template_global` decorator.
+        """Register a template global, available in any template rendered by the
+        application. Works like the :meth:`app_template_global` decorator. Equivalent to
+        :meth:`.Flask.add_template_global`.
 
         .. versionadded:: 0.10
 
@@ -546,8 +551,8 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def before_app_request(self, f: T_before_request) -> T_before_request:
-        """Like :meth:`Flask.before_request`.  Such a function is executed
-        before each request, even if outside of a blueprint.
+        """Like :meth:`before_request`, but before every request, not only those handled
+        by the blueprint. Equivalent to :meth:`.Flask.before_request`.
         """
         self.record_once(
             lambda s: s.app.before_request_funcs.setdefault(None, []).append(f)
@@ -555,32 +560,9 @@ class Blueprint(Scaffold):
         return f
 
     @setupmethod
-    def before_app_first_request(
-        self, f: T_before_first_request
-    ) -> T_before_first_request:
-        """Like :meth:`Flask.before_first_request`.  Such a function is
-        executed before the first request to the application.
-
-        .. deprecated:: 2.2
-            Will be removed in Flask 2.3. Run setup code when creating
-            the application instead.
-        """
-        import warnings
-
-        warnings.warn(
-            "'before_app_first_request' is deprecated and will be"
-            " removed in Flask 2.3. Use 'record_once' instead to run"
-            " setup code when registering the blueprint.",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        self.record_once(lambda s: s.app.before_first_request_funcs.append(f))
-        return f
-
-    @setupmethod
     def after_app_request(self, f: T_after_request) -> T_after_request:
-        """Like :meth:`Flask.after_request` but for a blueprint.  Such a function
-        is executed after each request, even if outside of the blueprint.
+        """Like :meth:`after_request`, but after every request, not only those handled
+        by the blueprint. Equivalent to :meth:`.Flask.after_request`.
         """
         self.record_once(
             lambda s: s.app.after_request_funcs.setdefault(None, []).append(f)
@@ -589,9 +571,8 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def teardown_app_request(self, f: T_teardown) -> T_teardown:
-        """Like :meth:`Flask.teardown_request` but for a blueprint.  Such a
-        function is executed when tearing down each request, even if outside of
-        the blueprint.
+        """Like :meth:`teardown_request`, but after every request, not only those
+        handled by the blueprint. Equivalent to :meth:`.Flask.teardown_request`.
         """
         self.record_once(
             lambda s: s.app.teardown_request_funcs.setdefault(None, []).append(f)
@@ -602,8 +583,8 @@ class Blueprint(Scaffold):
     def app_context_processor(
         self, f: T_template_context_processor
     ) -> T_template_context_processor:
-        """Like :meth:`Flask.context_processor` but for a blueprint.  Such a
-        function is executed each request, even if outside of the blueprint.
+        """Like :meth:`context_processor`, but for templates rendered by every view, not
+        only by the blueprint. Equivalent to :meth:`.Flask.context_processor`.
         """
         self.record_once(
             lambda s: s.app.template_context_processors.setdefault(None, []).append(f)
@@ -612,10 +593,10 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def app_errorhandler(
-        self, code: t.Union[t.Type[Exception], int]
+        self, code: type[Exception] | int
     ) -> t.Callable[[T_error_handler], T_error_handler]:
-        """Like :meth:`Flask.errorhandler` but for a blueprint.  This
-        handler is used for all requests, even if outside of the blueprint.
+        """Like :meth:`errorhandler`, but for every request, not only those handled by
+        the blueprint. Equivalent to :meth:`.Flask.errorhandler`.
         """
 
         def decorator(f: T_error_handler) -> T_error_handler:
@@ -628,7 +609,9 @@ class Blueprint(Scaffold):
     def app_url_value_preprocessor(
         self, f: T_url_value_preprocessor
     ) -> T_url_value_preprocessor:
-        """Same as :meth:`url_value_preprocessor` but application wide."""
+        """Like :meth:`url_value_preprocessor`, but for every request, not only those
+        handled by the blueprint. Equivalent to :meth:`.Flask.url_value_preprocessor`.
+        """
         self.record_once(
             lambda s: s.app.url_value_preprocessors.setdefault(None, []).append(f)
         )
@@ -636,7 +619,9 @@ class Blueprint(Scaffold):
 
     @setupmethod
     def app_url_defaults(self, f: T_url_defaults) -> T_url_defaults:
-        """Same as :meth:`url_defaults` but application wide."""
+        """Like :meth:`url_defaults`, but for every request, not only those handled by
+        the blueprint. Equivalent to :meth:`.Flask.url_defaults`.
+        """
         self.record_once(
             lambda s: s.app.url_default_functions.setdefault(None, []).append(f)
         )
