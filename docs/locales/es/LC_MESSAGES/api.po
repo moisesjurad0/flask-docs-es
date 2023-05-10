@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-09 22:02-0400\n"
+"POT-Creation-Date: 2023-05-09 22:51-0400\n"
 "PO-Revision-Date: 2022-08-09 10:25-0400\n"
 "Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: ../../api.rst:2
 msgid "API"
@@ -173,17 +173,17 @@ msgstr ""
 #: ../../api.rst ../../docstring flask.app.Flask
 #: flask.app.Flask.add_template_filter flask.app.Flask.add_template_global
 #: flask.app.Flask.add_template_test flask.app.Flask.add_url_rule
-#: flask.app.Flask.async_to_sync flask.app.Flask.before_first_request
-#: flask.app.Flask.create_url_adapter flask.app.Flask.do_teardown_appcontext
-#: flask.app.Flask.do_teardown_request flask.app.Flask.ensure_sync
-#: flask.app.Flask.finalize_request flask.app.Flask.handle_exception
-#: flask.app.Flask.handle_http_exception flask.app.Flask.handle_url_build_error
-#: flask.app.Flask.handle_user_exception flask.app.Flask.inject_url_defaults
-#: flask.app.Flask.log_exception flask.app.Flask.make_config
-#: flask.app.Flask.make_response flask.app.Flask.open_instance_resource
-#: flask.app.Flask.process_response flask.app.Flask.redirect
-#: flask.app.Flask.register_blueprint flask.app.Flask.request_context
-#: flask.app.Flask.run flask.app.Flask.select_jinja_autoescape
+#: flask.app.Flask.async_to_sync flask.app.Flask.create_url_adapter
+#: flask.app.Flask.do_teardown_appcontext flask.app.Flask.do_teardown_request
+#: flask.app.Flask.ensure_sync flask.app.Flask.finalize_request
+#: flask.app.Flask.handle_exception flask.app.Flask.handle_http_exception
+#: flask.app.Flask.handle_url_build_error flask.app.Flask.handle_user_exception
+#: flask.app.Flask.inject_url_defaults flask.app.Flask.log_exception
+#: flask.app.Flask.make_config flask.app.Flask.make_response
+#: flask.app.Flask.open_instance_resource flask.app.Flask.process_response
+#: flask.app.Flask.redirect flask.app.Flask.register_blueprint
+#: flask.app.Flask.request_context flask.app.Flask.run
+#: flask.app.Flask.select_jinja_autoescape
 #: flask.app.Flask.shell_context_processor flask.app.Flask.should_ignore_error
 #: flask.app.Flask.teardown_appcontext flask.app.Flask.template_filter
 #: flask.app.Flask.template_global flask.app.Flask.template_test
@@ -203,7 +203,6 @@ msgstr ""
 #: flask.blueprints.Blueprint.app_template_test
 #: flask.blueprints.Blueprint.app_url_defaults
 #: flask.blueprints.Blueprint.app_url_value_preprocessor
-#: flask.blueprints.Blueprint.before_app_first_request
 #: flask.blueprints.Blueprint.before_app_request
 #: flask.blueprints.Blueprint.make_setup_state
 #: flask.blueprints.Blueprint.record flask.blueprints.Blueprint.record_once
@@ -228,10 +227,17 @@ msgstr ""
 #: flask.helpers.redirect flask.helpers.send_file
 #: flask.helpers.send_from_directory flask.helpers.stream_with_context
 #: flask.helpers.url_for flask.json.dump flask.json.dumps flask.json.jsonify
-#: flask.json.load flask.json.loads flask.json.tag.JSONTag
-#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
-#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
-#: flask.json.tag.TaggedJSONSerializer.dumps
+#: flask.json.load flask.json.loads flask.json.provider.DefaultJSONProvider
+#: flask.json.provider.DefaultJSONProvider.dumps
+#: flask.json.provider.DefaultJSONProvider.loads
+#: flask.json.provider.DefaultJSONProvider.response
+#: flask.json.provider.JSONProvider flask.json.provider.JSONProvider.dump
+#: flask.json.provider.JSONProvider.dumps flask.json.provider.JSONProvider.load
+#: flask.json.provider.JSONProvider.loads
+#: flask.json.provider.JSONProvider.response flask.json.provider._default
+#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
+#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
+#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
 #: flask.json.tag.TaggedJSONSerializer.tag
@@ -410,7 +416,7 @@ msgstr ""
 #: flask.app.Flask.add_template_filter flask.app.Flask.add_template_global
 #: flask.app.Flask.add_template_test flask.app.Flask.add_url_rule
 #: flask.app.Flask.app_context flask.app.Flask.async_to_sync
-#: flask.app.Flask.auto_find_instance_path flask.app.Flask.before_first_request
+#: flask.app.Flask.auto_find_instance_path
 #: flask.app.Flask.create_global_jinja_loader
 #: flask.app.Flask.create_jinja_environment flask.app.Flask.create_url_adapter
 #: flask.app.Flask.dispatch_request flask.app.Flask.do_teardown_appcontext
@@ -444,7 +450,6 @@ msgstr ""
 #: flask.blueprints.Blueprint.app_template_test
 #: flask.blueprints.Blueprint.app_url_defaults
 #: flask.blueprints.Blueprint.app_url_value_preprocessor
-#: flask.blueprints.Blueprint.before_app_first_request
 #: flask.blueprints.Blueprint.before_app_request
 #: flask.blueprints.Blueprint.make_setup_state
 #: flask.blueprints.Blueprint.record flask.blueprints.Blueprint.record_once
@@ -471,10 +476,17 @@ msgstr ""
 #: flask.helpers.make_response flask.helpers.redirect flask.helpers.send_file
 #: flask.helpers.send_from_directory flask.helpers.stream_with_context
 #: flask.helpers.url_for flask.json.dump flask.json.dumps flask.json.jsonify
-#: flask.json.load flask.json.loads flask.json.tag.JSONTag
-#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
-#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
-#: flask.json.tag.TaggedJSONSerializer
+#: flask.json.load flask.json.loads flask.json.provider.DefaultJSONProvider
+#: flask.json.provider.DefaultJSONProvider.dumps
+#: flask.json.provider.DefaultJSONProvider.loads
+#: flask.json.provider.DefaultJSONProvider.response
+#: flask.json.provider.JSONProvider flask.json.provider.JSONProvider.dump
+#: flask.json.provider.JSONProvider.dumps flask.json.provider.JSONProvider.load
+#: flask.json.provider.JSONProvider.loads
+#: flask.json.provider.JSONProvider.response flask.json.provider._default
+#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
+#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
+#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer
 #: flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
@@ -689,6 +701,15 @@ msgstr ""
 "las acciones que deben ejecutarse, como para cerrar los recursos. Utilice"
 " :meth:`teardown_request` para eso."
 
+#: flask.scaffold.Scaffold.after_request:12 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this executes after every request. When used on a blueprint, this "
+"executes after every request that the blueprint handles. To register with"
+" a blueprint and execute after every request, use "
+":meth:`.Blueprint.after_app_request`."
+msgstr ""
+
 #: ../../docstring flask.Blueprint.after_request_funcs:1
 #: flask.Flask.after_request_funcs:1 of
 msgid ""
@@ -775,42 +796,6 @@ msgstr ""
 "de una carpeta llamada ``instance`` junto a su archivo principal o al "
 "paquete."
 
-#: flask.app.Flask.before_first_request:1 of
-msgid ""
-"Registers a function to be run before the first request to this instance "
-"of the application."
-msgstr ""
-"Registra una función que se ejecutará antes de la primera petición a esta"
-" instancia de la aplicación."
-
-#: flask.app.Flask.before_first_request:4 of
-msgid ""
-"The function will be called without any arguments and its return value is"
-" ignored."
-msgstr ""
-"La función será llamada sin argumentos y su valor de retorno será "
-"ignorado."
-
-#: ../../docstring flask.Flask.before_first_request_funcs:5
-#: flask.app.Flask.before_first_request:7
-#: flask.blueprints.Blueprint.before_app_first_request:4 of
-msgid ""
-"Will be removed in Flask 2.3. Run setup code when creating the "
-"application instead."
-msgstr ""
-"Se eliminará en Flask 2.3. Ejecute el código de configuración al crear la"
-" aplicación en su lugar."
-
-#: ../../docstring flask.Flask.before_first_request_funcs:1 of
-msgid ""
-"A list of functions that will be called at the beginning of the first "
-"request to this instance. To register a function, use the "
-":meth:`before_first_request` decorator."
-msgstr ""
-"Una lista de funciones que serán llamadas al principio de la primera "
-"petición a esta instancia. Para registrar una función, utilice el "
-"decorador :meth:`before_first_request`."
-
 #: flask.scaffold.Scaffold.before_request:1 of
 msgid "Register a function to run before each request."
 msgstr "Registrar una función para ejecutar antes de cada solicitud."
@@ -832,6 +817,15 @@ msgstr ""
 "La función será llamada sin ningún argumento. Si devuelve un valor que no"
 " sea ``None``, el valor se maneja como si fuera el valor de retorno de la"
 " vista, y se detiene el manejo de la solicitud."
+
+#: flask.scaffold.Scaffold.before_request:18 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this executes before every request. When used on a blueprint, this "
+"executes before every request that the blueprint handles. To register "
+"with a blueprint and execute before every request, use "
+":meth:`.Blueprint.before_app_request`."
+msgstr ""
 
 #: ../../docstring flask.Blueprint.before_request_funcs:1
 #: flask.Flask.before_request_funcs:1 of
@@ -882,8 +876,20 @@ msgstr ""
 "para cargar una configuración desde archivos."
 
 #: flask.scaffold.Scaffold.context_processor:1 of
-msgid "Registers a template context processor function."
-msgstr "Registra una función de procesador de contexto de plantilla."
+msgid ""
+"Registers a template context processor function. These functions run "
+"before rendering a template. The keys of the returned dict are added as "
+"variables available in the template."
+msgstr ""
+
+#: flask.scaffold.Scaffold.context_processor:5 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this is called for every rendered template. When used on a blueprint, "
+"this is called for templates rendered from the blueprint's views. To "
+"register with a blueprint and affect every template, use "
+":meth:`.Blueprint.app_context_processor`."
+msgstr ""
 
 #: flask.app.Flask.create_global_jinja_loader:1 of
 msgid ""
@@ -952,13 +958,13 @@ msgstr ""
 "el adaptador de URL para el contexto de la aplicación."
 
 #: flask.Flask.debug:1 of
+#, fuzzy
 msgid ""
 "Whether debug mode is enabled. When using ``flask run`` to start the "
 "development server, an interactive debugger will be shown for unhandled "
 "exceptions, and the server will be reloaded when code changes. This maps "
-"to the :data:`DEBUG` config key. This is enabled when :attr:`env` is "
-"``'development'`` and is overridden by the ``FLASK_DEBUG`` environment "
-"variable. It may not behave as expected if set in code."
+"to the :data:`DEBUG` config key. It may not behave as expected if set "
+"late."
 msgstr ""
 "Si el modo de depuración está activado. Cuando se utiliza ``flask run`` "
 "para iniciar el servidor de desarrollo, se mostrará un depurador "
@@ -968,17 +974,14 @@ msgstr ""
 "anula con la variable de entorno ``FLASK_DEBUG``. Puede que no se "
 "comporte como se espera si se establece en el código."
 
-#: flask.Flask.debug:9 of
+#: flask.Flask.debug:6 of
 msgid "**Do not enable debug mode when deploying in production.**"
 msgstr "**No active el modo de depuración cuando se despliegue en producción.**"
 
-#: flask.Flask.debug:11 of
-msgid ""
-"Default: ``True`` if :attr:`env` is ``'development'``, or ``False`` "
-"otherwise."
-msgstr ""
-"Por defecto: ``True`` si :attr:`env` es ``'development``, o ``False`` en "
-"caso contrario."
+#: flask.Flask.debug:8 of
+#, fuzzy
+msgid "Default: ``False``"
+msgstr "`defaults`"
 
 #: ../../docstring flask.Flask.default_config:1 of
 msgid "Default configuration parameters."
@@ -1104,29 +1107,6 @@ msgstr ""
 "Anula este método para cambiar la forma en que la aplicación ejecuta las "
 "vistas asíncronas."
 
-#: ../../docstring flask.Flask.env:1 of
-msgid ""
-"What environment the app is running in. Flask and extensions may enable "
-"behaviors based on the environment, such as enabling debug mode. This "
-"maps to the :data:`ENV` config key. This is set by the "
-":envvar:`FLASK_ENV` environment variable and may not behave as expected "
-"if set in code."
-msgstr ""
-"En qué entorno se está ejecutando la aplicación. Flask y las extensiones "
-"pueden habilitar comportamientos basados en el entorno, como habilitar el"
-" modo de depuración. Esto se asigna a la clave de configuración "
-":data:`ENV`. Esto es establecido por la variable de entorno "
-":envvar:`FLASK_ENV` y puede no comportarse como se espera si se establece"
-" en el código."
-
-#: ../../docstring flask.Flask.env:7 of
-msgid "**Do not enable development when deploying in production.**"
-msgstr "**No activar el desarrollo cuando se despliega en producción.**"
-
-#: ../../docstring flask.Flask.env:9 of
-msgid "Default: ``'production'``"
-msgstr "Por defecto: ``'producción'``"
-
 #: ../../docstring flask.Blueprint.error_handler_spec:1
 #: flask.Flask.error_handler_spec:1 of
 msgid ""
@@ -1172,6 +1152,15 @@ msgstr "También puedes registrar manejadores para excepciones arbitrarias::"
 
 #: flask.scaffold.Scaffold.errorhandler:16 of
 msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this can handle errors from every request. When used on a blueprint, "
+"this can handle errors from requests that the blueprint handles. To "
+"register with a blueprint and affect every request, use "
+":meth:`.Blueprint.app_errorhandler`."
+msgstr ""
+
+#: flask.scaffold.Scaffold.errorhandler:21 of
+msgid ""
 "Use :meth:`register_error_handler` instead of modifying "
 ":attr:`error_handler_spec` directly, for application wide error handlers."
 msgstr ""
@@ -1179,7 +1168,7 @@ msgstr ""
 ":attr:`error_handler_spec` directamente, para los manejadores de error de"
 " toda la aplicación."
 
-#: flask.scaffold.Scaffold.errorhandler:21 of
+#: flask.scaffold.Scaffold.errorhandler:26 of
 msgid ""
 "One can now additionally also register custom exception types that do not"
 " necessarily have to be a subclass of the "
@@ -1189,7 +1178,7 @@ msgstr ""
 "no necesariamente tienen que ser una subclase de la clase "
 ":class:`~werkzeug.exceptions.HTTPException`."
 
-#: flask.scaffold.Scaffold.errorhandler:26 of
+#: flask.scaffold.Scaffold.errorhandler:31 of
 msgid "the code as integer for the handler, or an arbitrary exception"
 msgstr "el código como entero para el manejador, o una excepción arbitraria"
 
@@ -1285,6 +1274,11 @@ msgstr ""
 "Este atributo se establece como ``True`` si la aplicación comenzó a "
 "manejar la primera solicitud."
 
+#: flask.Flask.got_first_request:4 of
+#, fuzzy
+msgid "Will be removed in Flask 2.4."
+msgstr "``encoding`` está obsoleto y será eliminado en Flask 2.1."
+
 #: flask.app.Flask.handle_exception:1 of
 msgid ""
 "Handle an exception that did not have an error handler associated with "
@@ -1300,8 +1294,9 @@ msgid "Always sends the :data:`got_request_exception` signal."
 msgstr "Siempre envía la señal :data:`got_request_exception`."
 
 #: flask.app.Flask.handle_exception:7 of
+#, fuzzy
 msgid ""
-"If :attr:`propagate_exceptions` is ``True``, such as in debug mode, the "
+"If :data:`PROPAGATE_EXCEPTIONS` is ``True``, such as in debug mode, the "
 "error will be re-raised so that the debugger can display it. Otherwise, "
 "the original exception is logged, and an "
 ":exc:`~werkzeug.exceptions.InternalServerError` is returned."
@@ -1492,6 +1487,27 @@ msgid ""
 msgstr ""
 "Es un ``dict`` en lugar de un ``ImmutableDict`` para permitir una "
 "configuración más fácil."
+
+#: ../../docstring flask.Flask.json:1 of
+msgid ""
+"Provides access to JSON methods. Functions in ``flask.json`` will call "
+"methods on this provider when the application context is active. Used for"
+" handling JSON requests and responses."
+msgstr ""
+
+#: ../../docstring flask.Flask.json:5 of
+msgid ""
+"An instance of :attr:`json_provider_class`. Can be customized by changing"
+" that attribute on a subclass, or by assigning to this attribute "
+"afterwards."
+msgstr ""
+
+#: ../../docstring flask.Flask.json:9 of
+msgid ""
+"The default, :class:`~flask.json.provider.DefaultJSONProvider`, uses "
+"Python's built-in :mod:`json` library. A different provider can use a "
+"different JSON library."
+msgstr ""
 
 #: flask.app.Flask.log_exception:1 of
 msgid ""
@@ -1910,7 +1926,8 @@ msgstr "un objeto :attr:`response_class`."
 
 #: flask.app.Flask.process_response flask.cli.load_dotenv
 #: flask.config.Config.from_envvar flask.config.Config.from_file
-#: flask.config.Config.from_pyfile flask.testing.FlaskCliRunner.invoke of
+#: flask.config.Config.from_mapping flask.config.Config.from_pyfile
+#: flask.testing.FlaskCliRunner.invoke of
 #: werkzeug.wrappers.request.Request.application
 #: werkzeug.wrappers.request.Request.from_values
 #: werkzeug.wrappers.response.Response.force_type
@@ -1928,15 +1945,6 @@ msgid ""
 msgstr ""
 "un nuevo objeto de respuesta o el mismo, tiene que ser una instancia de "
 ":attr:`response_class`."
-
-#: flask.Flask.propagate_exceptions:1 of
-msgid ""
-"Returns the value of the ``PROPAGATE_EXCEPTIONS`` configuration value in "
-"case it's set, otherwise a sensible default is returned."
-msgstr ""
-"Devuelve el valor de la configuración ``PROPAGATE_EXCEPTIONS`` en caso de"
-" que esté establecido, de lo contrario se devuelve un valor por defecto "
-"sensible."
 
 #: flask.scaffold.Scaffold.put:1 of
 msgid "Shortcut for :meth:`route` with ``methods=[\"PUT\"]``."
@@ -2012,7 +2020,7 @@ msgstr ""
 ":class:`~flask.blueprints.BlueprintSetupState`. Se puede acceder a ellos "
 "en las llamadas de retorno de :meth:`~flask.Blueprint.record`."
 
-#: flask.app.Flask.register_blueprint:17 flask.blueprints.Blueprint.register:16
+#: flask.app.Flask.register_blueprint:17 flask.blueprints.Blueprint.register:23
 #: flask.blueprints.Blueprint.register_blueprint:5 of
 msgid ""
 "The ``name`` option can be used to change the (pre-dotted) name the "
@@ -2204,7 +2212,7 @@ msgstr ""
 "las opciones que deben ser reenviadas al servidor Werkzeug subyacente. "
 "Ver :func:`werkzeug.serving.run_simple` para más información."
 
-#: flask.app.Flask.run:44 flask.cli.FlaskGroup:26 of
+#: flask.app.Flask.run:44 flask.cli.FlaskGroup:24 of
 msgid ""
 "If installed, python-dotenv will be used to load environment variables "
 "from :file:`.env` and :file:`.flaskenv` files."
@@ -2213,18 +2221,19 @@ msgstr ""
 "entorno de los archivos :file:`.env` y :file:`.flaskenv`."
 
 #: flask.app.Flask.run:48 of
+#, fuzzy
 msgid ""
-"If set, the :envvar:`FLASK_ENV` and :envvar:`FLASK_DEBUG` environment "
-"variables will override :attr:`env` and :attr:`debug`."
+"The :envvar:`FLASK_DEBUG` environment variable will override "
+":attr:`debug`."
 msgstr ""
 "Si se establece, las variables de entorno :envvar:`FLASK_ENV` y "
 ":envvar:`FLASK_DEBUG` anularán a :attr:`env` y :attr:`debug`."
 
-#: flask.app.Flask.run:52 of
+#: flask.app.Flask.run:50 of
 msgid "Threaded mode is enabled by default."
 msgstr "El modo de hilos está activado por defecto."
 
-#: flask.app.Flask.run:54 of
+#: flask.app.Flask.run:52 of
 msgid "The default port is now picked from the ``SERVER_NAME`` variable."
 msgstr ""
 "El puerto por defecto se elige ahora a partir de la variable "
@@ -2258,26 +2267,9 @@ msgstr ""
 "la plantilla dada. Si no se da ningún nombre de plantilla, devuelve "
 "``True``."
 
-#: ../../docstring flask.Flask.send_file_max_age_default:1 of
-msgid ""
-"A :class:`~datetime.timedelta` or number of seconds which is used as the "
-"default ``max_age`` for :func:`send_file`. The default is ``None``, which"
-" tells the browser to use conditional requests instead of a timed cache."
+#: flask.app.Flask.select_jinja_autoescape:4 of
+msgid "Autoescaping is now enabled by default for ``.svg`` files."
 msgstr ""
-"Un :class:`~datetime.timedelta` o número de segundos que se utiliza como "
-"``max_age`` por defecto para :func:`send_file`. El valor por defecto es "
-"``None``, lo que indica al navegador que utilice peticiones condicionales"
-" en lugar de una caché temporizada."
-
-#: ../../docstring flask.Flask.send_file_max_age_default:6 of
-msgid "Configured with the :data:`SEND_FILE_MAX_AGE_DEFAULT` configuration key."
-msgstr ""
-"Configurado con la clave de configuración "
-":data:`SEND_FILE_MAX_AGE_DEFAULT`."
-
-#: ../../docstring flask.Flask.send_file_max_age_default:9 of
-msgid "Defaults to ``None`` instead of 12 hours."
-msgstr "Por defecto es ``None`` en lugar de 12 horas."
 
 #: flask.scaffold.Scaffold.send_static_file:1 of
 msgid ""
@@ -2288,19 +2280,6 @@ msgstr ""
 "La función de la vista utilizada para servir archivos desde "
 ":attr:`carpeta_estática`. Se registra automáticamente una ruta para esta "
 "vista en :attr:`static_url_path` si se establece :attr:`static_folder`."
-
-#: ../../docstring flask.Flask.session_cookie_name:1 of
-msgid "The secure cookie uses this for the name of the session cookie."
-msgstr "La cookie segura utiliza esto para el nombre de la cookie de sesión."
-
-#: ../../docstring flask.Flask.session_cookie_name:3 of
-msgid ""
-"This attribute can also be configured from the config with the "
-"``SESSION_COOKIE_NAME`` configuration key.  Defaults to ``'session'``"
-msgstr ""
-"Este atributo también se puede configurar desde la configuración con la "
-"clave de configuración ``SESSION_COOKIE_NAME``. Por defecto es "
-"``session``"
 
 #: ../../docstring flask.Flask.session_interface:1 of
 msgid ""
@@ -2437,6 +2416,15 @@ msgstr ""
 "funciones de desmontaje son llamadas justo antes de que el contexto de la"
 " petición se vuelva inactivo."
 
+#: flask.scaffold.Scaffold.teardown_request:25 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this executes after every request. When used on a blueprint, this "
+"executes after every request that the blueprint handles. To register with"
+" a blueprint and execute after every request, use "
+":meth:`.Blueprint.teardown_app_request`."
+msgstr ""
+
 #: ../../docstring flask.Blueprint.teardown_request_funcs:1
 #: flask.Flask.teardown_request_funcs:1 of
 msgid ""
@@ -2515,30 +2503,6 @@ msgstr ""
 "Un decorador que se utiliza para registrar la prueba de plantilla "
 "personalizada. Puede especificar un nombre para la prueba, de lo "
 "contrario se utilizará el nombre de la función. Ejemplo::"
-
-#: flask.Flask.templates_auto_reload:1 of
-msgid ""
-"Reload templates when they are changed. Used by "
-":meth:`create_jinja_environment`."
-msgstr ""
-"Recarga las plantillas cuando se modifican. Utilizado por "
-":meth:`create_jinja_environment`."
-
-#: flask.Flask.templates_auto_reload:4 of
-msgid ""
-"This attribute can be configured with :data:`TEMPLATES_AUTO_RELOAD`. If "
-"not set, it will be enabled in debug mode."
-msgstr ""
-"Este atributo puede ser configurado con :data:`TEMPLATES_AUTO_RELOAD`. Si"
-" no se configura, se habilitará en modo de depuración."
-
-#: flask.Flask.templates_auto_reload:7 of
-msgid ""
-"This property was added but the underlying config and behavior already "
-"existed."
-msgstr ""
-"Esta propiedad se añadió pero la configuración y el comportamiento "
-"subyacentes ya existían."
 
 #: flask.app.Flask.test_cli_runner:1 of
 msgid "Create a CLI runner for testing CLI commands. See :ref:`testing-cli`."
@@ -2864,6 +2828,15 @@ msgstr ""
 "URL para todas las funciones de vista de la aplicación. Se llama con el "
 "endpoint y los valores y debe actualizar los valores pasados en su lugar."
 
+#: flask.scaffold.Scaffold.url_defaults:5 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this is called for every request. When used on a blueprint, this is "
+"called for requests that the blueprint handles. To register with a "
+"blueprint and affect every request, use "
+":meth:`.Blueprint.app_url_defaults`."
+msgstr ""
+
 #: flask.app.Flask.url_for:1 flask.helpers.url_for:1 of
 msgid "Generate a URL to the given endpoint with the given values."
 msgstr "Genera una URL al endpoint dado con los valores indicados."
@@ -3012,6 +2985,15 @@ msgstr ""
 "A la función se le pasa el nombre del endpoint y el dictado de valores. "
 "El valor de retorno se ignora."
 
+#: flask.scaffold.Scaffold.url_value_preprocessor:13 of
+msgid ""
+"This is available on both app and blueprint objects. When used on an app,"
+" this is called for every request. When used on a blueprint, this is "
+"called for requests that the blueprint handles. To register with a "
+"blueprint and affect every request, use "
+":meth:`.Blueprint.app_url_value_preprocessor`."
+msgstr ""
+
 #: ../../docstring flask.Blueprint.url_value_preprocessors:1
 #: flask.Flask.url_value_preprocessors:1 of
 msgid ""
@@ -3032,24 +3014,6 @@ msgid "To register a function, use the :meth:`url_value_preprocessor` decorator.
 msgstr ""
 "Para registrar una función, utilice el decorador "
 ":meth:`url_value_preprocessor`."
-
-#: ../../docstring flask.Flask.use_x_sendfile:1 of
-msgid ""
-"Enable this if you want to use the X-Sendfile feature.  Keep in mind that"
-" the server has to support this.  This only affects files sent with the "
-":func:`send_file` method."
-msgstr ""
-"Active esta opción si desea utilizar la función X-Sendfile. Tenga en "
-"cuenta que el servidor tiene que soportar esto. Esto sólo afecta a los "
-"archivos enviados con el método :func:`send_file`."
-
-#: ../../docstring flask.Flask.use_x_sendfile:7 of
-msgid ""
-"This attribute can also be configured from the config with the "
-"``USE_X_SENDFILE`` configuration key.  Defaults to ``False``."
-msgstr ""
-"Este atributo también se puede configurar desde la configuración con la "
-"clave de configuración ``USE_X_SENDFILE``. Por defecto es ``False``."
 
 #: ../../docstring flask.Blueprint.view_functions:1
 #: flask.Flask.view_functions:1 of
@@ -3222,15 +3186,7 @@ msgstr ""
 "fallar, por lo que la ruta puede ser especificada manualmente en su "
 "lugar."
 
-#: flask.blueprints.Blueprint:44 of
-msgid ""
-"The name of the blueprint's CLI group. If not set, the blueprint name "
-"will be used."
-msgstr ""
-"El nombre del grupo CLI del blueprint. Si no se establece, se utilizará "
-"el nombre del plano."
-
-#: flask.blueprints.Blueprint:47 of
+#: flask.blueprints.Blueprint:45 of
 msgid ""
 "Blueprints have a ``cli`` group to register nested CLI commands. The "
 "``cli_group`` parameter controls the name of the group under the "
@@ -3242,25 +3198,17 @@ msgstr ""
 
 #: flask.blueprints.Blueprint.add_app_template_filter:1 of
 msgid ""
-"Register a custom template filter, available application wide.  Like "
-":meth:`Flask.add_template_filter` but for a blueprint.  Works exactly "
-"like the :meth:`app_template_filter` decorator."
+"Register a template filter, available in any template rendered by the "
+"application. Works like the :meth:`app_template_filter` decorator. "
+"Equivalent to :meth:`.Flask.add_template_filter`."
 msgstr ""
-"Registra un filtro de plantilla personalizado, disponible en toda la "
-"aplicación. Como :meth:`Flask.add_template_filter` pero para un "
-"blueprint. Funciona exactamente igual que el decorador "
-":meth:`app_template_filter`."
 
 #: flask.blueprints.Blueprint.add_app_template_global:1 of
 msgid ""
-"Register a custom template global, available application wide.  Like "
-":meth:`Flask.add_template_global` but for a blueprint.  Works exactly "
-"like the :meth:`app_template_global` decorator."
+"Register a template global, available in any template rendered by the "
+"application. Works like the :meth:`app_template_global` decorator. "
+"Equivalent to :meth:`.Flask.add_template_global`."
 msgstr ""
-"Registrar una plantilla personalizada global, disponible en toda la "
-"aplicación. Como :meth:`Flask.add_template_global` pero para un "
-"blueprint. Funciona exactamente igual que el decorador "
-":meth:`app_template_global`."
 
 #: flask.blueprints.Blueprint.add_app_template_global:7
 #: flask.blueprints.Blueprint.app_template_global:6 of
@@ -3271,112 +3219,88 @@ msgstr ""
 
 #: flask.blueprints.Blueprint.add_app_template_test:1 of
 msgid ""
-"Register a custom template test, available application wide.  Like "
-":meth:`Flask.add_template_test` but for a blueprint.  Works exactly like "
-"the :meth:`app_template_test` decorator."
+"Register a template test, available in any template rendered by the "
+"application. Works like the :meth:`app_template_test` decorator. "
+"Equivalent to :meth:`.Flask.add_template_test`."
 msgstr ""
-"Registra una prueba de plantilla personalizada, disponible en toda la "
-"aplicación. Como :meth:`Flask.add_template_test` pero para un blueprint. "
-"Funciona exactamente igual que el decorador :meth:`app_template_test`."
 
 #: flask.blueprints.Blueprint.add_url_rule:1 of
+#, fuzzy
 msgid ""
-"Like :meth:`Flask.add_url_rule` but for a blueprint.  The endpoint for "
-"the :func:`url_for` function is prefixed with the name of the blueprint."
+"Register a URL rule with the blueprint. See :meth:`.Flask.add_url_rule` "
+"for full documentation."
+msgstr "Puedes utilizar la función :meth:`flask.Flask.add_url_rule`."
+
+#: flask.blueprints.Blueprint.add_url_rule:4 of
+msgid ""
+"The URL rule is prefixed with the blueprint's URL prefix. The endpoint "
+"name, used with :func:`url_for`, is prefixed with the blueprint's name."
 msgstr ""
-"Como :meth:`Flask.add_url_rule` pero para un blueprint. El endpoint de la"
-" función :func:`url_for` lleva como prefijo el nombre del blueprint."
 
 #: flask.blueprints.Blueprint.after_app_request:1 of
 msgid ""
-"Like :meth:`Flask.after_request` but for a blueprint.  Such a function is"
-" executed after each request, even if outside of the blueprint."
+"Like :meth:`after_request`, but after every request, not only those "
+"handled by the blueprint. Equivalent to :meth:`.Flask.after_request`."
 msgstr ""
-"Como :meth:`Flask.after_request` pero para un blueprint. Dicha función se"
-" ejecuta después de cada petición, incluso si está fuera del blueprint."
 
 #: flask.blueprints.Blueprint.app_context_processor:1 of
 msgid ""
-"Like :meth:`Flask.context_processor` but for a blueprint.  Such a "
-"function is executed each request, even if outside of the blueprint."
+"Like :meth:`context_processor`, but for templates rendered by every view,"
+" not only by the blueprint. Equivalent to "
+":meth:`.Flask.context_processor`."
 msgstr ""
-"Como :meth:`Flask.context_processor` pero para un blueprint. Dicha "
-"función se ejecuta en cada petición, incluso si está fuera del blueprint."
 
 #: flask.blueprints.Blueprint.app_errorhandler:1 of
 msgid ""
-"Like :meth:`Flask.errorhandler` but for a blueprint.  This handler is "
-"used for all requests, even if outside of the blueprint."
+"Like :meth:`errorhandler`, but for every request, not only those handled "
+"by the blueprint. Equivalent to :meth:`.Flask.errorhandler`."
 msgstr ""
-"Como :meth:`Flask.errorhandler` pero para un blueprint. Este manejador se"
-" utiliza para todas las solicitudes, incluso si están fuera del "
-"blueprint."
 
 #: flask.blueprints.Blueprint.app_template_filter:1 of
+#, fuzzy
 msgid ""
-"Register a custom template filter, available application wide.  Like "
-":meth:`Flask.template_filter` but for a blueprint."
+"Register a template filter, available in any template rendered by the "
+"application. Equivalent to :meth:`.Flask.template_filter`."
 msgstr ""
 "Registra un filtro de plantilla personalizado, disponible en toda la "
 "aplicación. Como :meth:`Flask.template_filter` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_template_global:1 of
+#, fuzzy
 msgid ""
-"Register a custom template global, available application wide.  Like "
-":meth:`Flask.template_global` but for a blueprint."
+"Register a template global, available in any template rendered by the "
+"application. Equivalent to :meth:`.Flask.template_global`."
 msgstr ""
 "Registrar una plantilla personalizada global, disponible en toda la "
 "aplicación. Como :meth:`Flask.template_global` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_template_test:1 of
+#, fuzzy
 msgid ""
-"Register a custom template test, available application wide.  Like "
-":meth:`Flask.template_test` but for a blueprint."
+"Register a template test, available in any template rendered by the "
+"application. Equivalent to :meth:`.Flask.template_test`."
 msgstr ""
 "Registra una prueba de plantilla personalizada, disponible en toda la "
 "aplicación. Como :meth:`Flask.template_test` pero para un blueprint."
 
 #: flask.blueprints.Blueprint.app_url_defaults:1 of
-msgid "Same as :meth:`url_defaults` but application wide."
-msgstr "Igual que :meth:`url_defaults` pero en toda la aplicación."
+msgid ""
+"Like :meth:`url_defaults`, but for every request, not only those handled "
+"by the blueprint. Equivalent to :meth:`.Flask.url_defaults`."
+msgstr ""
 
 #: flask.blueprints.Blueprint.app_url_value_preprocessor:1 of
-msgid "Same as :meth:`url_value_preprocessor` but application wide."
-msgstr "Igual que :meth:`url_value_preprocessor` pero en toda la aplicación."
-
-#: flask.blueprints.Blueprint.before_app_first_request:1 of
 msgid ""
-"Like :meth:`Flask.before_first_request`.  Such a function is executed "
-"before the first request to the application."
+"Like :meth:`url_value_preprocessor`, but for every request, not only "
+"those handled by the blueprint. Equivalent to "
+":meth:`.Flask.url_value_preprocessor`."
 msgstr ""
-"Como :meth:`Flask.before_first_request`. Dicha función se ejecuta antes "
-"de la primera petición a la aplicación."
 
 #: flask.blueprints.Blueprint.before_app_request:1 of
 msgid ""
-"Like :meth:`Flask.before_request`.  Such a function is executed before "
-"each request, even if outside of a blueprint."
+"Like :meth:`before_request`, but before every request, not only those "
+"handled by the blueprint. Equivalent to :meth:`.Flask.before_request`."
 msgstr ""
-"Como :meth:`Flask.before_request`. Esta función se ejecuta antes de cada "
-"solicitud, incluso si está fuera de un blueprint."
-
-#: ../../docstring flask.Blueprint.json_decoder:1 of
-msgid ""
-"Blueprint local JSON decoder class to use. Set to ``None`` to use the "
-"app's :class:`~flask.Flask.json_decoder`."
-msgstr ""
-"Clase de decodificador JSON local del blueprint a utilizar. Establezca "
-"``None`` para utilizar la :class:`~flask.Flask.json_decoder` de la "
-"aplicación."
-
-#: ../../docstring flask.Blueprint.json_encoder:1 of
-msgid ""
-"Blueprint local JSON encoder class to use. Set to ``None`` to use the "
-"app's :class:`~flask.Flask.json_encoder`."
-msgstr ""
-"Clase de codificador JSON local del blueprint a utilizar. Establezca "
-"``None`` para utilizar la :class:`~flask.Flask.json_encoder` de la "
-"aplicación."
 
 #: flask.blueprints.Blueprint.make_setup_state:1 of
 msgid ""
@@ -3433,6 +3357,19 @@ msgstr ""
 ":meth:`~Flask.register_blueprint`."
 
 #: flask.blueprints.Blueprint.register:11 of
+msgid "Nested blueprints now correctly apply subdomains."
+msgstr ""
+
+#: flask.blueprints.Blueprint.register:14 of
+#, fuzzy
+msgid ""
+"Registering the same blueprint with the same name multiple times is an "
+"error."
+msgstr ""
+"Registrar el mismo blueprint con el mismo nombre varias veces está "
+"obsoleto y será un error en Flask 2.1."
+
+#: flask.blueprints.Blueprint.register:18 of
 msgid ""
 "Nested blueprints are registered with their dotted name. This allows "
 "different blueprints with the same name to be nested at different "
@@ -3440,14 +3377,6 @@ msgid ""
 msgstr ""
 "Los blueprints anidados se registran con su nombre punteado. Esto permite"
 " anidar diferentes blueprints con el mismo nombre en diferentes lugares."
-
-#: flask.blueprints.Blueprint.register:22 of
-msgid ""
-"Registering the same blueprint with the same name multiple times is "
-"deprecated and will become an error in Flask 2.1."
-msgstr ""
-"Registrar el mismo blueprint con el mismo nombre varias veces está "
-"obsoleto y será un error en Flask 2.1."
 
 #: flask.blueprints.Blueprint.register_blueprint:1 of
 msgid ""
@@ -3460,13 +3389,9 @@ msgstr ""
 
 #: flask.blueprints.Blueprint.teardown_app_request:1 of
 msgid ""
-"Like :meth:`Flask.teardown_request` but for a blueprint.  Such a function"
-" is executed when tearing down each request, even if outside of the "
-"blueprint."
+"Like :meth:`teardown_request`, but after every request, not only those "
+"handled by the blueprint. Equivalent to :meth:`.Flask.teardown_request`."
 msgstr ""
-"Como :meth:`Flask.teardown_request` pero para un blueprint. Dicha función"
-" se ejecuta al derribar cada solicitud, incluso si está fuera del "
-"blueprint."
 
 #: ../../api.rst:27
 msgid "Incoming Request Data"
@@ -5340,6 +5265,19 @@ msgstr ""
 "contenido es ``text/html; charset=utf-8`` los parámetros serían "
 "``{'charset': 'utf-8'}``."
 
+#: ../../docstring flask.Response.response:1 of
+msgid ""
+"The response body to send as the WSGI iterable. A list of strings or "
+"bytes represents a fixed-length response, any other iterable is a "
+"streaming response. Strings are encoded to bytes as UTF-8."
+msgstr ""
+
+#: ../../docstring flask.Response.response:5 of
+msgid ""
+"Do not set to a plain string or bytes, that will cause sending the "
+"response to be very inefficient as it will iterate one byte at a time."
+msgstr ""
+
 #: flask.Response.retry_after:1 of
 msgid ""
 "The Retry-After response-header field can be used with a 503 (Service "
@@ -5626,25 +5564,25 @@ msgstr ""
 "solicitudes comienzan y terminan de procesarse."
 
 #: flask.sessions.SessionInterface.get_cookie_domain:1 of
-msgid "Returns the domain that should be set for the session cookie."
-msgstr "Devuelve el dominio que debe establecerse para la cookie de sesión."
-
-#: flask.sessions.SessionInterface.get_cookie_domain:3 of
 msgid ""
-"Uses ``SESSION_COOKIE_DOMAIN`` if it is configured, otherwise falls back "
-"to detecting the domain based on ``SERVER_NAME``."
+"The value of the ``Domain`` parameter on the session cookie. If not set, "
+"browsers will only send the cookie to the exact domain it was set from. "
+"Otherwise, they will send it to any subdomain of the given value as well."
 msgstr ""
-"Utiliza ``SESSION_COOKIE_DOMAIN`` si está configurado, de lo contrario "
-"vuelve a detectar el dominio basado en ``SERVER_NAME``."
 
-#: flask.sessions.SessionInterface.get_cookie_domain:6 of
-msgid ""
-"Once detected (or if not set at all), ``SESSION_COOKIE_DOMAIN`` is "
-"updated to avoid re-running the logic."
+#: flask.sessions.SessionInterface.get_cookie_domain:5 of
+#, fuzzy
+msgid "Uses the :data:`SESSION_COOKIE_DOMAIN` config."
 msgstr ""
-"Una vez detectado (o si no se establece en absoluto), "
-"``SESSION_COOKIE_DOMAIN`` se actualiza para evitar volver a ejecutar la "
-"lógica."
+"Vista de sólo lectura de la clave de configuración "
+":data:`MAX_COOKIE_SIZE`."
+
+#: flask.sessions.SessionInterface.get_cookie_domain:7 of
+#, fuzzy
+msgid "Not set by default, does not fall back to ``SERVER_NAME``."
+msgstr ""
+"El puerto por defecto se elige ahora a partir de la variable "
+"``SERVER_NAME``."
 
 #: flask.sessions.SessionInterface.get_cookie_httponly:1 of
 msgid ""
@@ -5656,14 +5594,10 @@ msgstr ""
 "``SESSION_COOKIE_HTTPONLY``."
 
 #: flask.sessions.SessionInterface.get_cookie_name:1 of
-msgid "Returns the name of the session cookie."
-msgstr "Devuelve el nombre de la cookie de sesión."
-
-#: flask.sessions.SessionInterface.get_cookie_name:3 of
-msgid "Uses ``app.session_cookie_name`` which is set to ``SESSION_COOKIE_NAME``"
+msgid ""
+"The name of the session cookie. "
+"Uses``app.config[\"SESSION_COOKIE_NAME\"]``."
 msgstr ""
-"Utiliza ``app.session_cookie_name`` que se establece como "
-"``SESSION_COOKIE_NAME``"
 
 #: flask.sessions.SessionInterface.get_cookie_path:1 of
 msgid ""
@@ -6922,110 +6856,120 @@ msgstr ""
 
 #: flask.json.jsonify:1 of
 msgid ""
-"Serialize data to JSON and wrap it in a :class:`~flask.Response` with the"
-" :mimetype:`application/json` mimetype."
+"Serialize the given arguments as JSON, and return a "
+":class:`~flask.Response` object with the ``application/json`` mimetype. A"
+" dict or list returned from a view will be converted to a JSON response "
+"automatically without needing to call this."
 msgstr ""
-"Serializa los datos a JSON y los envuelve en un :class:`~flask.Response` "
-"con el mimetype:`application/json`."
 
-#: flask.json.jsonify:4 of
+#: flask.json.jsonify:6 of
+#, fuzzy
 msgid ""
-"Uses :func:`dumps` to serialize the data, but ``args`` and ``kwargs`` are"
-" treated as data rather than arguments to :func:`json.dumps`."
+"This requires an active request or application context, and calls "
+":meth:`app.json.response() <flask.json.provider.JSONProvider.response>`."
 msgstr ""
-"Utiliza :func:`dumps` para serializar los datos, pero los ``args`` y los "
-"``kwargs`` son tratados como datos en lugar de argumentos para "
-":func:`json.dumps`."
-
-#: flask.json.jsonify:8 of
-msgid "Single argument: Treated as a single value."
-msgstr "Argumento único: Se trata como un solo valor."
+"Esto requiere una solicitud activa o un contexto de aplicación, y llama a"
+" :meth:`current_app.url_for() <flask.Flask.url_for>`. Consulte ese método"
+" para ver la documentación completa."
 
 #: flask.json.jsonify:9 of
 msgid ""
-"Multiple arguments: Treated as a list of values. ``jsonify(1, 2, 3)`` is "
-"the same as ``jsonify([1, 2, 3])``."
+"In debug mode, the output is formatted with indentation to make it easier"
+" to read. This may also be controlled by the provider."
 msgstr ""
-"Argumentos múltiples: Tratados como una lista de valores. ``jsonify(1, 2,"
-" 3)`` es lo mismo que ``jsonify([1, 2, 3])``."
 
-#: flask.json.jsonify:11 of
+#: flask.json.jsonify:12 flask.json.provider.DefaultJSONProvider.response:9
+#: flask.json.provider.JSONProvider.response:8 of
 msgid ""
-"Keyword arguments: Treated as a dict of values. ``jsonify(data=data, "
-"errors=errors)`` is the same as ``jsonify({\"data\": data, \"errors\": "
-"errors})``."
+"Either positional or keyword arguments can be given, not both. If no "
+"arguments are given, ``None`` is serialized."
 msgstr ""
-"Argumentos de palabras clave: Tratados como un dict de valores. "
-"``jsonify(data=data, errors=errors)`` es lo mismo que "
-"``jsonify({\"data\": data, \"errors\": errors})``."
 
-#: flask.json.jsonify:14 of
+#: flask.json.jsonify:15 flask.json.provider.DefaultJSONProvider.response:12
+#: flask.json.provider.JSONProvider.response:11 of
 msgid ""
-"Passing both arguments and keyword arguments is not allowed as it's not "
-"clear what should happen."
+"A single value to serialize, or multiple values to treat as a list to "
+"serialize."
 msgstr ""
-"No se permite pasar tanto los argumentos como las palabras clave, ya que "
-"no está claro qué debe ocurrir."
 
-#: flask.json.jsonify:29 of
-msgid "Will return a JSON response like this:"
-msgstr "Devolverá una respuesta JSON como esta:"
+#: flask.json.jsonify:17 flask.json.provider.DefaultJSONProvider.response:14
+#: flask.json.provider.JSONProvider.response:13 of
+#, fuzzy
+msgid "Treat as a dict to serialize."
+msgstr "Cadena JSON a deserializar."
 
-#: flask.json.jsonify:39 of
+#: flask.json.jsonify:19 of
+#, fuzzy
 msgid ""
-"The default output omits indents and spaces after separators. In debug "
-"mode or if :data:`JSONIFY_PRETTYPRINT_REGULAR` is ``True``, the output "
-"will be formatted to be easier to read."
+"Calls ``current_app.json.response``, allowing an app to override the "
+"behavior."
 msgstr ""
-"La salida por defecto omite las sangrías y los espacios después de los "
-"separadores. En modo de depuración o si "
-":data:`JSONIFY_PRETTYPRINT_REGULAR` es ``True``, la salida tendrá un "
-"formato más fácil de leer."
+"Llama a ``current_app.url_for``, permitiendo que una aplicación anule el "
+"comportamiento."
 
-#: flask.json.dumps:11 flask.json.jsonify:43 of
+#: flask.json.dumps:17 flask.json.jsonify:23 of
 msgid ":class:`decimal.Decimal` is supported by converting to a string."
 msgstr ":class:`decimal.Decimal` es compatible con la conversión a una cadena."
 
-#: flask.json.jsonify:46 of
+#: flask.json.jsonify:26 of
+#, fuzzy
 msgid ""
-"Added support for serializing top-level arrays. This introduces a "
-"security risk in ancient browsers. See :ref:`security-json`."
+"Added support for serializing top-level arrays. This was a security risk "
+"in ancient browsers. See :ref:`security-json`."
 msgstr ""
 "Se ha añadido soporte para serializar arrays de nivel superior. Esto "
 "introduce un riesgo de seguridad en los navegadores antiguos. Ver :ref"
 ":`security-json`."
 
-#: flask.json.dumps:1 of
-msgid "Serialize an object to a string of JSON."
+#: flask.json.dumps:1 flask.json.provider.JSONProvider.dumps:1 of
+#, fuzzy
+msgid "Serialize data as JSON."
 msgstr "Serializa un objeto a una cadena de JSON."
 
 #: flask.json.dumps:3 of
+#, fuzzy
 msgid ""
-"Takes the same arguments as the built-in :func:`json.dumps`, with some "
-"defaults from application configuration."
+"If :data:`~flask.current_app` is available, it will use its "
+":meth:`app.json.dumps() <flask.json.provider.JSONProvider.dumps>` method,"
+" otherwise it will use :func:`json.dumps`."
 msgstr ""
-"Toma los mismos argumentos que el built-in :func:`json.dumps`, con "
-"algunos valores por defecto de la configuración de la aplicación."
+"Si :data:`~flask.current_app` está disponible, utilizará su método "
+":meth:`~flask.Flask.redirect`, en caso contrario utilizará "
+":func:`werkzeug.utils.redirect`."
 
-#: flask.json.dump:6 flask.json.dumps:6 of
-msgid "Object to serialize to JSON."
-msgstr "Objeto para serializar a JSON."
+#: flask.json.dump:7 flask.json.dumps:7
+#: flask.json.provider.DefaultJSONProvider.dumps:7
+#: flask.json.provider.JSONProvider.dump:3
+#: flask.json.provider.JSONProvider.dumps:3 of
+#, fuzzy
+msgid "The data to serialize."
+msgstr "Cadena JSON a deserializar."
 
-#: flask.json.dump:8 flask.json.dumps:7 flask.json.load:7 flask.json.loads:7 of
-msgid "Use this app's config instead of the active app context or defaults."
+#: flask.json.dumps:8 of
+msgid "Arguments passed to the ``dumps`` implementation."
 msgstr ""
-"Utiliza la configuración de esta aplicación en lugar del contexto de la "
-"aplicación activa o los valores predeterminados."
 
-#: flask.json.dumps:9 of
-msgid "Extra arguments passed to :func:`json.dumps`."
-msgstr "Argumentos extra pasados a :func:`json.dumps`."
+#: flask.json.dump:12 flask.json.dumps:10 flask.json.load:10
+#: flask.json.loads:10 of
+#, fuzzy
+msgid "The ``app`` parameter was removed."
+msgstr "Se ha añadido el parámetro ``scheme``."
 
-#: flask.json.dumps:14 of
-msgid "``encoding`` is deprecated and will be removed in Flask 2.1."
+#: flask.json.dumps:13 of
+#, fuzzy
+msgid ""
+"Calls ``current_app.json.dumps``, allowing an app to override the "
+"behavior."
+msgstr ""
+"Llama a ``current_app.url_for``, permitiendo que una aplicación anule el "
+"comportamiento."
+
+#: flask.json.dumps:20 of
+#, fuzzy
+msgid "``encoding`` will be removed in Flask 2.1."
 msgstr "``encoding`` está obsoleto y será eliminado en Flask 2.1."
 
-#: flask.json.dumps:17 flask.json.loads:15 of
+#: flask.json.dumps:23 flask.json.loads:21 of
 msgid ""
 "``app`` can be passed directly, rather than requiring an app context for "
 "configuration."
@@ -7033,89 +6977,285 @@ msgstr ""
 "``app`` se puede pasar directamente, en lugar de requerir un contexto de "
 "aplicación para la configuración."
 
-#: flask.json.dump:1 of
-msgid "Serialize an object to JSON written to a file object."
+#: flask.json.dump:1 flask.json.provider.JSONProvider.dump:1 of
+#, fuzzy
+msgid "Serialize data as JSON and write to a file."
 msgstr "Serializar un objeto a JSON escrito en un objeto de archivo."
 
 #: flask.json.dump:3 of
+#, fuzzy
 msgid ""
-"Takes the same arguments as the built-in :func:`json.dump`, with some "
-"defaults from application configuration."
+"If :data:`~flask.current_app` is available, it will use its "
+":meth:`app.json.dump() <flask.json.provider.JSONProvider.dump>` method, "
+"otherwise it will use :func:`json.dump`."
 msgstr ""
-"Toma los mismos argumentos que el built-in :func:`json.dump`, con algunos"
-" valores por defecto de la configuración de la aplicación."
+"Si :data:`~flask.current_app` está disponible, utilizará su método "
+":meth:`~flask.Flask.redirect`, en caso contrario utilizará "
+":func:`werkzeug.utils.redirect`."
 
-#: flask.json.dump:7 of
-msgid "File object to write JSON to."
-msgstr "Objeto de archivo para escribir JSON."
+#: flask.json.dump:8 flask.json.provider.JSONProvider.dump:4 of
+msgid ""
+"A file opened for writing text. Should use the UTF-8 encoding to be valid"
+" JSON."
+msgstr ""
 
 #: flask.json.dump:10 of
-msgid "Extra arguments passed to :func:`json.dump`."
-msgstr "Argumentos extra pasados a :func:`json.dump`."
+msgid "Arguments passed to the ``dump`` implementation."
+msgstr ""
 
-#: flask.json.dump:12 of
+#: flask.json.dump:15 of
+#, fuzzy
+msgid "Calls ``current_app.json.dump``, allowing an app to override the behavior."
+msgstr ""
+"Llama a ``current_app.url_for``, permitiendo que una aplicación anule el "
+"comportamiento."
+
+#: flask.json.dump:19 of
+#, fuzzy
 msgid ""
-"Writing to a binary file, and the ``encoding`` argument, is deprecated "
-"and will be removed in Flask 2.1."
+"Writing to a binary file, and the ``encoding`` argument, will be removed "
+"in Flask 2.1."
 msgstr ""
 "La escritura en un archivo binario, y el argumento ``encoding``, están "
 "obsoletos y se eliminarán en Flask 2.1."
 
-#: flask.json.loads:1 of
-msgid "Deserialize an object from a string of JSON."
-msgstr "Deserializar un objeto a partir de una cadena de JSON."
+#: flask.json.loads:1 flask.json.provider.JSONProvider.loads:1 of
+#, fuzzy
+msgid "Deserialize data as JSON."
+msgstr "Objeto para serializar a JSON."
 
 #: flask.json.loads:3 of
+#, fuzzy
 msgid ""
-"Takes the same arguments as the built-in :func:`json.loads`, with some "
-"defaults from application configuration."
+"If :data:`~flask.current_app` is available, it will use its "
+":meth:`app.json.loads() <flask.json.provider.JSONProvider.loads>` method,"
+" otherwise it will use :func:`json.loads`."
 msgstr ""
-"Toma los mismos argumentos que el built-in :func:`json.loads`, con "
-"algunos valores por defecto de la configuración de la aplicación."
+"Si :data:`~flask.current_app` está disponible, utilizará su método "
+":meth:`~flask.Flask.redirect`, en caso contrario utilizará "
+":func:`werkzeug.utils.redirect`."
 
-#: flask.json.loads:6 of
-msgid "JSON string to deserialize."
-msgstr "Cadena JSON a deserializar."
+#: flask.json.loads:7 flask.json.provider.DefaultJSONProvider.loads:3
+#: flask.json.provider.JSONProvider.loads:3 of
+msgid "Text or UTF-8 bytes."
+msgstr ""
 
-#: flask.json.loads:9 of
-msgid "Extra arguments passed to :func:`json.loads`."
-msgstr "Argumentos extra pasados a :func:`json.loads`."
+#: flask.json.loads:8 of
+msgid "Arguments passed to the ``loads`` implementation."
+msgstr ""
 
-#: flask.json.loads:11 of
+#: flask.json.loads:13 of
+#, fuzzy
 msgid ""
-"``encoding`` is deprecated and will be removed in Flask 2.1. The data "
-"must be a string or UTF-8 bytes."
+"Calls ``current_app.json.loads``, allowing an app to override the "
+"behavior."
+msgstr ""
+"Llama a ``current_app.url_for``, permitiendo que una aplicación anule el "
+"comportamiento."
+
+#: flask.json.loads:17 of
+#, fuzzy
+msgid ""
+"``encoding`` will be removed in Flask 2.1. The data must be a string or "
+"UTF-8 bytes."
 msgstr ""
 "``encoding`` está obsoleto y se eliminará en Flask 2.1. Los datos deben "
 "ser una cadena o bytes UTF-8."
 
-#: flask.json.load:1 of
-msgid "Deserialize an object from JSON read from a file object."
+#: flask.json.load:1 flask.json.provider.JSONProvider.load:1 of
+#, fuzzy
+msgid "Deserialize data as JSON read from a file."
 msgstr "Deserializar un objeto a partir de JSON leído desde un objeto de archivo."
 
 #: flask.json.load:3 of
+#, fuzzy
 msgid ""
-"Takes the same arguments as the built-in :func:`json.load`, with some "
-"defaults from application configuration."
+"If :data:`~flask.current_app` is available, it will use its "
+":meth:`app.json.load() <flask.json.provider.JSONProvider.load>` method, "
+"otherwise it will use :func:`json.load`."
 msgstr ""
-"Toma los mismos argumentos que el built-in :func:`json.load`, con algunos"
-" valores por defecto de la configuración de la aplicación."
+"Si :data:`~flask.current_app` está disponible, utilizará su método "
+":meth:`~flask.Flask.redirect`, en caso contrario utilizará "
+":func:`werkzeug.utils.redirect`."
 
-#: flask.json.load:6 of
-msgid "File object to read JSON from."
-msgstr "Objeto de archivo para leer JSON."
+#: flask.json.load:7 flask.json.provider.JSONProvider.load:3 of
+msgid "A file opened for reading text or UTF-8 bytes."
+msgstr ""
 
-#: flask.json.load:9 of
-msgid "Extra arguments passed to :func:`json.load`."
-msgstr "Argumentos extra pasados a :func:`json.load`."
+#: flask.json.load:8 of
+msgid "Arguments passed to the ``load`` implementation."
+msgstr ""
 
-#: flask.json.load:11 of
+#: flask.json.load:13 of
+#, fuzzy
+msgid "Calls ``current_app.json.load``, allowing an app to override the behavior."
+msgstr ""
+"Llama a ``current_app.url_for``, permitiendo que una aplicación anule el "
+"comportamiento."
+
+#: flask.json.load:17 of
+#, fuzzy
+msgid "The ``app`` parameter will be removed in Flask 2.3."
+msgstr "``encoding`` está obsoleto y será eliminado en Flask 2.1."
+
+#: flask.json.load:20 of
+#, fuzzy
 msgid ""
-"``encoding`` is deprecated and will be removed in Flask 2.1. The file "
-"must be text mode, or binary mode with UTF-8 bytes."
+"``encoding`` will be removed in Flask 2.1. The file must be text mode, or"
+" binary mode with UTF-8 bytes."
 msgstr ""
 "``encoding`` está obsoleto y será eliminado en Flask 2.1. El archivo debe"
 " estar en modo texto, o en modo binario con bytes UTF-8."
+
+#: flask.json.provider.JSONProvider:1 of
+msgid ""
+"A standard set of JSON operations for an application. Subclasses of this "
+"can be used to customize JSON behavior or use different JSON libraries."
+msgstr ""
+
+#: flask.json.provider.JSONProvider:5 of
+msgid ""
+"To implement a provider for a specific library, subclass this base class "
+"and implement at least :meth:`dumps` and :meth:`loads`. All other methods"
+" have default implementations."
+msgstr ""
+
+#: flask.json.provider.JSONProvider:9 of
+msgid ""
+"To use a different provider, either subclass ``Flask`` and set "
+":attr:`~flask.Flask.json_provider_class` to a provider class, or set "
+":attr:`app.json <flask.Flask.json>` to an instance of the class."
+msgstr ""
+
+#: flask.json.provider.JSONProvider:13 of
+msgid ""
+"An application instance. This will be stored as a :class:`weakref.proxy` "
+"on the :attr:`_app` attribute."
+msgstr ""
+
+#: flask.json.provider.JSONProvider.dump:6
+#: flask.json.provider.JSONProvider.dumps:4
+#: flask.json.provider.JSONProvider.load:4
+#: flask.json.provider.JSONProvider.loads:4 of
+msgid "May be passed to the underlying JSON library."
+msgstr ""
+
+#: flask.json.provider.JSONProvider.response:1 of
+#, fuzzy
+msgid ""
+"Serialize the given arguments as JSON, and return a "
+":class:`~flask.Response` object with the ``application/json`` mimetype."
+msgstr ""
+"Serializa los datos a JSON y los envuelve en un :class:`~flask.Response` "
+"con el mimetype:`application/json`."
+
+#: flask.json.provider.JSONProvider.response:5 of
+msgid ""
+"The :func:`~flask.json.jsonify` function calls this method for the "
+"current application."
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider:1 of
+msgid ""
+"Provide JSON operations using Python's built-in :mod:`json` library. "
+"Serializes the following additional data types:"
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider:4 of
+msgid ""
+":class:`datetime.datetime` and :class:`datetime.date` are serialized to "
+":rfc:`822` strings. This is the same as the HTTP date format."
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider:7 of
+#, fuzzy
+msgid ":class:`uuid.UUID` is serialized to a string."
+msgstr ":class:`decimal.Decimal` es compatible con la conversión a una cadena."
+
+#: flask.json.provider.DefaultJSONProvider:8 of
+msgid ":class:`dataclasses.dataclass` is passed to :func:`dataclasses.asdict`."
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider:10 of
+msgid ""
+":class:`~markupsafe.Markup` (or any object with a ``__html__`` method) "
+"will call the ``__html__`` method to get a string."
+msgstr ""
+
+#: flask.json.provider._default:1 of
+msgid ""
+"Apply this function to any object that :meth:`json.dumps` does not know "
+"how to serialize. It should return a valid JSON type or raise a "
+"``TypeError``."
+msgstr ""
+
+#: ../../docstring flask.json.provider.DefaultJSONProvider.ensure_ascii:1 of
+msgid ""
+"Replace non-ASCII characters with escape sequences. This may be more "
+"compatible with some clients, but can be disabled for better performance "
+"and size."
+msgstr ""
+
+#: ../../docstring flask.json.provider.DefaultJSONProvider.sort_keys:1 of
+msgid ""
+"Sort the keys in any serialized dicts. This may be useful for some "
+"caching situations, but can be disabled for better performance. When "
+"enabled, keys must all be strings, they are not converted before sorting."
+msgstr ""
+
+#: ../../docstring flask.json.provider.DefaultJSONProvider.compact:1 of
+msgid ""
+"If ``True``, or ``None`` out of debug mode, the :meth:`response` output "
+"will not add indentation, newlines, or spaces. If ``False``, or ``None`` "
+"in debug mode, it will use a non-compact representation."
+msgstr ""
+
+#: ../../docstring flask.json.provider.DefaultJSONProvider.mimetype:1 of
+msgid "The mimetype set in :meth:`response`."
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider.dumps:1 of
+#, fuzzy
+msgid "Serialize data as JSON to a string."
+msgstr "Serializa un objeto a una cadena de JSON."
+
+#: flask.json.provider.DefaultJSONProvider.dumps:3 of
+msgid ""
+"Keyword arguments are passed to :func:`json.dumps`. Sets some parameter "
+"defaults from the :attr:`default`, :attr:`ensure_ascii`, and "
+":attr:`sort_keys` attributes."
+msgstr ""
+
+#: flask.json.provider.DefaultJSONProvider.dumps:8 of
+#, fuzzy
+msgid "Passed to :func:`json.dumps`."
+msgstr "Argumentos extra pasados a :func:`json.dumps`."
+
+#: flask.json.provider.DefaultJSONProvider.loads:1 of
+#, fuzzy
+msgid "Deserialize data as JSON from a string or bytes."
+msgstr "Deserializar un objeto a partir de una cadena de JSON."
+
+#: flask.json.provider.DefaultJSONProvider.loads:4 of
+#, fuzzy
+msgid "Passed to :func:`json.loads`."
+msgstr "Argumentos extra pasados a :func:`json.loads`."
+
+#: flask.json.provider.DefaultJSONProvider.response:1 of
+#, fuzzy
+msgid ""
+"Serialize the given arguments as JSON, and return a "
+":class:`~flask.Response` object with it. The response mimetype will be "
+"\"application/json\" and can be changed with :attr:`mimetype`."
+msgstr ""
+"Serializa los datos a JSON y los envuelve en un :class:`~flask.Response` "
+"con el mimetype:`application/json`."
+
+#: flask.json.provider.DefaultJSONProvider.response:6 of
+msgid ""
+"If :attr:`compact` is ``False`` or debug mode is enabled, the output will"
+" be formatted to be easier to read."
+msgstr ""
 
 #: flask.json.tag:2 of
 msgid "Tagged JSON"
@@ -7470,7 +7610,7 @@ msgstr ""
 "se establece en ``True`` si se desea un fallo silencioso para los "
 "archivos que faltan."
 
-#: flask.config.Config.from_envvar:10 flask.config.Config.from_file:20
+#: flask.config.Config.from_envvar:10 flask.config.Config.from_file:21
 #: flask.config.Config.from_pyfile:10 of
 msgid "``True`` if the file was loaded successfully."
 msgstr "``True`` si el archivo se ha cargado con éxito."
@@ -7505,13 +7645,25 @@ msgstr ""
 msgid "Ignore the file if it doesn't exist."
 msgstr "Ignora el archivo si no existe."
 
+#: flask.config.Config.from_file:20 of
+msgid "Open the file in text or binary mode."
+msgstr ""
+
+#: flask.config.Config.from_file:23 of
+#, fuzzy
+msgid "The ``text`` parameter was added."
+msgstr "Se ha añadido el parámetro ``scheme``."
+
 #: flask.config.Config.from_mapping:1 of
-msgid ""
-"Updates the config like :meth:`update` ignoring items with non-upper "
-"keys. :return: Always returns ``True``."
+#, fuzzy
+msgid "Updates the config like :meth:`update` ignoring items with non-upper keys."
 msgstr ""
 "Actualiza la configuración como :meth:`update` ignorando los elementos "
 "con claves no superiores. :return: Siempre devuelve ``True``."
+
+#: flask.config.Config.from_mapping:4 of
+msgid "Always returns ``True``."
+msgstr ""
 
 #: flask.config.Config.from_object:1 of
 msgid ""
@@ -8190,9 +8342,10 @@ msgstr ""
 " utilizará la misma instancia para cada solicitud."
 
 #: flask.views.View.as_view:10 of
+#, fuzzy
 msgid ""
-"The arguments passed to this method are forwarded to the view class "
-"``__init__`` method."
+"Except for ``name``, all other arguments passed to this method are "
+"forwarded to the view class ``__init__`` method."
 msgstr ""
 "Los argumentos pasados a este método son enviados al método ``__init__`` "
 "de la clase view."
@@ -8680,20 +8833,17 @@ msgstr ""
 "devuelve la aplicación cargada."
 
 #: flask.cli.FlaskGroup:15 of
-msgid "Set the app's debug flag based on the active environment"
+msgid "Set the app's debug flag."
 msgstr ""
-"Establecer la bandera de depuración de la aplicación en función del "
-"entorno activo"
 
-#: flask.cli.FlaskGroup:18 of
-msgid ""
-"Added the ``-A/--app``, ``-E/--env``, ``--debug/--no-debug``, and ``-e"
-"/--env-file`` options."
+#: flask.cli.FlaskGroup:17 of
+#, fuzzy
+msgid "Added the ``-A/--app``, ``--debug/--no-debug``, ``-e/--env-file`` options."
 msgstr ""
 "Se han añadido las opciones ``-A/--app``, ``-E/--env``, ``--debug/--no-"
 "debug``, y ``-e/--env-file``."
 
-#: flask.cli.FlaskGroup:22 of
+#: flask.cli.FlaskGroup:20 of
 msgid ""
 "An app context is pushed when running ``app.cli`` commands, so "
 "``@with_appcontext`` is no longer required for those commands."
@@ -8945,9 +9095,10 @@ msgstr ""
 "producción."
 
 #: ../../docstring flask.cli.run_command:6 of
+#, fuzzy
 msgid ""
-"The reloader and debugger are enabled by default with the '--env "
-"development' or '--debug' options."
+"The reloader and debugger are enabled by default with the '--debug' "
+"option."
 msgstr ""
 "El recargador y el depurador se activan por defecto con las opciones '--"
 "env development' o '--debug'."
@@ -9368,4 +9519,500 @@ msgstr ""
 #~ "fallará con un :exc:`RuntimeError` para "
 #~ "todas las demás operaciones, incluyendo "
 #~ "la conexión."
+
+#~ msgid ""
+#~ "Registers a function to be run "
+#~ "before the first request to this "
+#~ "instance of the application."
+#~ msgstr ""
+#~ "Registra una función que se ejecutará"
+#~ " antes de la primera petición a "
+#~ "esta instancia de la aplicación."
+
+#~ msgid ""
+#~ "The function will be called without "
+#~ "any arguments and its return value "
+#~ "is ignored."
+#~ msgstr ""
+#~ "La función será llamada sin argumentos"
+#~ " y su valor de retorno será "
+#~ "ignorado."
+
+#~ msgid ""
+#~ "Will be removed in Flask 2.3. Run"
+#~ " setup code when creating the "
+#~ "application instead."
+#~ msgstr ""
+#~ "Se eliminará en Flask 2.3. Ejecute "
+#~ "el código de configuración al crear "
+#~ "la aplicación en su lugar."
+
+#~ msgid ""
+#~ "A list of functions that will be"
+#~ " called at the beginning of the "
+#~ "first request to this instance. To "
+#~ "register a function, use the "
+#~ ":meth:`before_first_request` decorator."
+#~ msgstr ""
+#~ "Una lista de funciones que serán "
+#~ "llamadas al principio de la primera "
+#~ "petición a esta instancia. Para "
+#~ "registrar una función, utilice el "
+#~ "decorador :meth:`before_first_request`."
+
+#~ msgid "Registers a template context processor function."
+#~ msgstr "Registra una función de procesador de contexto de plantilla."
+
+#~ msgid ""
+#~ "Default: ``True`` if :attr:`env` is "
+#~ "``'development'``, or ``False`` otherwise."
+#~ msgstr ""
+#~ "Por defecto: ``True`` si :attr:`env` es"
+#~ " ``'development``, o ``False`` en caso "
+#~ "contrario."
+
+#~ msgid ""
+#~ "What environment the app is running "
+#~ "in. Flask and extensions may enable "
+#~ "behaviors based on the environment, such"
+#~ " as enabling debug mode. This maps"
+#~ " to the :data:`ENV` config key. This"
+#~ " is set by the :envvar:`FLASK_ENV` "
+#~ "environment variable and may not behave"
+#~ " as expected if set in code."
+#~ msgstr ""
+#~ "En qué entorno se está ejecutando "
+#~ "la aplicación. Flask y las extensiones"
+#~ " pueden habilitar comportamientos basados "
+#~ "en el entorno, como habilitar el "
+#~ "modo de depuración. Esto se asigna "
+#~ "a la clave de configuración :data:`ENV`."
+#~ " Esto es establecido por la variable"
+#~ " de entorno :envvar:`FLASK_ENV` y puede "
+#~ "no comportarse como se espera si "
+#~ "se establece en el código."
+
+#~ msgid "**Do not enable development when deploying in production.**"
+#~ msgstr "**No activar el desarrollo cuando se despliega en producción.**"
+
+#~ msgid "Default: ``'production'``"
+#~ msgstr "Por defecto: ``'producción'``"
+
+#~ msgid ""
+#~ "Returns the value of the "
+#~ "``PROPAGATE_EXCEPTIONS`` configuration value in "
+#~ "case it's set, otherwise a sensible "
+#~ "default is returned."
+#~ msgstr ""
+#~ "Devuelve el valor de la configuración"
+#~ " ``PROPAGATE_EXCEPTIONS`` en caso de que"
+#~ " esté establecido, de lo contrario se"
+#~ " devuelve un valor por defecto "
+#~ "sensible."
+
+#~ msgid ""
+#~ "A :class:`~datetime.timedelta` or number of"
+#~ " seconds which is used as the "
+#~ "default ``max_age`` for :func:`send_file`. The"
+#~ " default is ``None``, which tells the"
+#~ " browser to use conditional requests "
+#~ "instead of a timed cache."
+#~ msgstr ""
+#~ "Un :class:`~datetime.timedelta` o número de"
+#~ " segundos que se utiliza como "
+#~ "``max_age`` por defecto para "
+#~ ":func:`send_file`. El valor por defecto "
+#~ "es ``None``, lo que indica al "
+#~ "navegador que utilice peticiones condicionales"
+#~ " en lugar de una caché temporizada."
+
+#~ msgid ""
+#~ "Configured with the "
+#~ ":data:`SEND_FILE_MAX_AGE_DEFAULT` configuration key."
+#~ msgstr ""
+#~ "Configurado con la clave de "
+#~ "configuración :data:`SEND_FILE_MAX_AGE_DEFAULT`."
+
+#~ msgid "Defaults to ``None`` instead of 12 hours."
+#~ msgstr "Por defecto es ``None`` en lugar de 12 horas."
+
+#~ msgid "The secure cookie uses this for the name of the session cookie."
+#~ msgstr "La cookie segura utiliza esto para el nombre de la cookie de sesión."
+
+#~ msgid ""
+#~ "This attribute can also be configured"
+#~ " from the config with the "
+#~ "``SESSION_COOKIE_NAME`` configuration key.  Defaults"
+#~ " to ``'session'``"
+#~ msgstr ""
+#~ "Este atributo también se puede "
+#~ "configurar desde la configuración con la"
+#~ " clave de configuración ``SESSION_COOKIE_NAME``."
+#~ " Por defecto es ``session``"
+
+#~ msgid ""
+#~ "Reload templates when they are changed."
+#~ " Used by :meth:`create_jinja_environment`."
+#~ msgstr ""
+#~ "Recarga las plantillas cuando se "
+#~ "modifican. Utilizado por "
+#~ ":meth:`create_jinja_environment`."
+
+#~ msgid ""
+#~ "This attribute can be configured with"
+#~ " :data:`TEMPLATES_AUTO_RELOAD`. If not set, "
+#~ "it will be enabled in debug mode."
+#~ msgstr ""
+#~ "Este atributo puede ser configurado con"
+#~ " :data:`TEMPLATES_AUTO_RELOAD`. Si no se "
+#~ "configura, se habilitará en modo de "
+#~ "depuración."
+
+#~ msgid ""
+#~ "This property was added but the "
+#~ "underlying config and behavior already "
+#~ "existed."
+#~ msgstr ""
+#~ "Esta propiedad se añadió pero la "
+#~ "configuración y el comportamiento subyacentes"
+#~ " ya existían."
+
+#~ msgid ""
+#~ "Enable this if you want to use "
+#~ "the X-Sendfile feature.  Keep in mind"
+#~ " that the server has to support "
+#~ "this.  This only affects files sent "
+#~ "with the :func:`send_file` method."
+#~ msgstr ""
+#~ "Active esta opción si desea utilizar "
+#~ "la función X-Sendfile. Tenga en cuenta"
+#~ " que el servidor tiene que soportar"
+#~ " esto. Esto sólo afecta a los "
+#~ "archivos enviados con el método "
+#~ ":func:`send_file`."
+
+#~ msgid ""
+#~ "This attribute can also be configured"
+#~ " from the config with the "
+#~ "``USE_X_SENDFILE`` configuration key.  Defaults "
+#~ "to ``False``."
+#~ msgstr ""
+#~ "Este atributo también se puede "
+#~ "configurar desde la configuración con la"
+#~ " clave de configuración ``USE_X_SENDFILE``. "
+#~ "Por defecto es ``False``."
+
+#~ msgid ""
+#~ "The name of the blueprint's CLI "
+#~ "group. If not set, the blueprint "
+#~ "name will be used."
+#~ msgstr ""
+#~ "El nombre del grupo CLI del "
+#~ "blueprint. Si no se establece, se "
+#~ "utilizará el nombre del plano."
+
+#~ msgid ""
+#~ "Register a custom template filter, "
+#~ "available application wide.  Like "
+#~ ":meth:`Flask.add_template_filter` but for a "
+#~ "blueprint.  Works exactly like the "
+#~ ":meth:`app_template_filter` decorator."
+#~ msgstr ""
+#~ "Registra un filtro de plantilla "
+#~ "personalizado, disponible en toda la "
+#~ "aplicación. Como :meth:`Flask.add_template_filter` "
+#~ "pero para un blueprint. Funciona "
+#~ "exactamente igual que el decorador "
+#~ ":meth:`app_template_filter`."
+
+#~ msgid ""
+#~ "Register a custom template global, "
+#~ "available application wide.  Like "
+#~ ":meth:`Flask.add_template_global` but for a "
+#~ "blueprint.  Works exactly like the "
+#~ ":meth:`app_template_global` decorator."
+#~ msgstr ""
+#~ "Registrar una plantilla personalizada global,"
+#~ " disponible en toda la aplicación. "
+#~ "Como :meth:`Flask.add_template_global` pero para "
+#~ "un blueprint. Funciona exactamente igual "
+#~ "que el decorador :meth:`app_template_global`."
+
+#~ msgid ""
+#~ "Register a custom template test, "
+#~ "available application wide.  Like "
+#~ ":meth:`Flask.add_template_test` but for a "
+#~ "blueprint.  Works exactly like the "
+#~ ":meth:`app_template_test` decorator."
+#~ msgstr ""
+#~ "Registra una prueba de plantilla "
+#~ "personalizada, disponible en toda la "
+#~ "aplicación. Como :meth:`Flask.add_template_test` "
+#~ "pero para un blueprint. Funciona "
+#~ "exactamente igual que el decorador "
+#~ ":meth:`app_template_test`."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.add_url_rule` but for a "
+#~ "blueprint.  The endpoint for the "
+#~ ":func:`url_for` function is prefixed with "
+#~ "the name of the blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.add_url_rule` pero para un"
+#~ " blueprint. El endpoint de la función"
+#~ " :func:`url_for` lleva como prefijo el "
+#~ "nombre del blueprint."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.after_request` but for a "
+#~ "blueprint.  Such a function is executed"
+#~ " after each request, even if outside"
+#~ " of the blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.after_request` pero para un"
+#~ " blueprint. Dicha función se ejecuta "
+#~ "después de cada petición, incluso si "
+#~ "está fuera del blueprint."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.context_processor` but for a"
+#~ " blueprint.  Such a function is "
+#~ "executed each request, even if outside"
+#~ " of the blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.context_processor` pero para "
+#~ "un blueprint. Dicha función se ejecuta"
+#~ " en cada petición, incluso si está"
+#~ " fuera del blueprint."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.errorhandler` but for a "
+#~ "blueprint.  This handler is used for "
+#~ "all requests, even if outside of "
+#~ "the blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.errorhandler` pero para un"
+#~ " blueprint. Este manejador se utiliza "
+#~ "para todas las solicitudes, incluso si"
+#~ " están fuera del blueprint."
+
+#~ msgid "Same as :meth:`url_defaults` but application wide."
+#~ msgstr "Igual que :meth:`url_defaults` pero en toda la aplicación."
+
+#~ msgid "Same as :meth:`url_value_preprocessor` but application wide."
+#~ msgstr "Igual que :meth:`url_value_preprocessor` pero en toda la aplicación."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.before_first_request`.  Such a "
+#~ "function is executed before the first"
+#~ " request to the application."
+#~ msgstr ""
+#~ "Como :meth:`Flask.before_first_request`. Dicha "
+#~ "función se ejecuta antes de la "
+#~ "primera petición a la aplicación."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.before_request`.  Such a "
+#~ "function is executed before each "
+#~ "request, even if outside of a "
+#~ "blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.before_request`. Esta función "
+#~ "se ejecuta antes de cada solicitud, "
+#~ "incluso si está fuera de un "
+#~ "blueprint."
+
+#~ msgid ""
+#~ "Blueprint local JSON decoder class to"
+#~ " use. Set to ``None`` to use "
+#~ "the app's :class:`~flask.Flask.json_decoder`."
+#~ msgstr ""
+#~ "Clase de decodificador JSON local del"
+#~ " blueprint a utilizar. Establezca ``None``"
+#~ " para utilizar la "
+#~ ":class:`~flask.Flask.json_decoder` de la aplicación."
+
+#~ msgid ""
+#~ "Blueprint local JSON encoder class to"
+#~ " use. Set to ``None`` to use "
+#~ "the app's :class:`~flask.Flask.json_encoder`."
+#~ msgstr ""
+#~ "Clase de codificador JSON local del "
+#~ "blueprint a utilizar. Establezca ``None`` "
+#~ "para utilizar la :class:`~flask.Flask.json_encoder`"
+#~ " de la aplicación."
+
+#~ msgid ""
+#~ "Like :meth:`Flask.teardown_request` but for a"
+#~ " blueprint.  Such a function is "
+#~ "executed when tearing down each request,"
+#~ " even if outside of the blueprint."
+#~ msgstr ""
+#~ "Como :meth:`Flask.teardown_request` pero para "
+#~ "un blueprint. Dicha función se ejecuta"
+#~ " al derribar cada solicitud, incluso "
+#~ "si está fuera del blueprint."
+
+#~ msgid "Returns the domain that should be set for the session cookie."
+#~ msgstr "Devuelve el dominio que debe establecerse para la cookie de sesión."
+
+#~ msgid ""
+#~ "Uses ``SESSION_COOKIE_DOMAIN`` if it is "
+#~ "configured, otherwise falls back to "
+#~ "detecting the domain based on "
+#~ "``SERVER_NAME``."
+#~ msgstr ""
+#~ "Utiliza ``SESSION_COOKIE_DOMAIN`` si está "
+#~ "configurado, de lo contrario vuelve a"
+#~ " detectar el dominio basado en "
+#~ "``SERVER_NAME``."
+
+#~ msgid ""
+#~ "Once detected (or if not set at"
+#~ " all), ``SESSION_COOKIE_DOMAIN`` is updated "
+#~ "to avoid re-running the logic."
+#~ msgstr ""
+#~ "Una vez detectado (o si no se "
+#~ "establece en absoluto), ``SESSION_COOKIE_DOMAIN``"
+#~ " se actualiza para evitar volver a"
+#~ " ejecutar la lógica."
+
+#~ msgid "Returns the name of the session cookie."
+#~ msgstr "Devuelve el nombre de la cookie de sesión."
+
+#~ msgid ""
+#~ "Uses ``app.session_cookie_name`` which is set"
+#~ " to ``SESSION_COOKIE_NAME``"
+#~ msgstr ""
+#~ "Utiliza ``app.session_cookie_name`` que se "
+#~ "establece como ``SESSION_COOKIE_NAME``"
+
+#~ msgid ""
+#~ "Uses :func:`dumps` to serialize the "
+#~ "data, but ``args`` and ``kwargs`` are"
+#~ " treated as data rather than "
+#~ "arguments to :func:`json.dumps`."
+#~ msgstr ""
+#~ "Utiliza :func:`dumps` para serializar los "
+#~ "datos, pero los ``args`` y los "
+#~ "``kwargs`` son tratados como datos en"
+#~ " lugar de argumentos para "
+#~ ":func:`json.dumps`."
+
+#~ msgid "Single argument: Treated as a single value."
+#~ msgstr "Argumento único: Se trata como un solo valor."
+
+#~ msgid ""
+#~ "Multiple arguments: Treated as a list"
+#~ " of values. ``jsonify(1, 2, 3)`` is"
+#~ " the same as ``jsonify([1, 2, 3])``."
+#~ msgstr ""
+#~ "Argumentos múltiples: Tratados como una "
+#~ "lista de valores. ``jsonify(1, 2, 3)``"
+#~ " es lo mismo que ``jsonify([1, 2, "
+#~ "3])``."
+
+#~ msgid ""
+#~ "Keyword arguments: Treated as a dict "
+#~ "of values. ``jsonify(data=data, errors=errors)`` "
+#~ "is the same as ``jsonify({\"data\": "
+#~ "data, \"errors\": errors})``."
+#~ msgstr ""
+#~ "Argumentos de palabras clave: Tratados "
+#~ "como un dict de valores. "
+#~ "``jsonify(data=data, errors=errors)`` es lo "
+#~ "mismo que ``jsonify({\"data\": data, "
+#~ "\"errors\": errors})``."
+
+#~ msgid ""
+#~ "Passing both arguments and keyword "
+#~ "arguments is not allowed as it's "
+#~ "not clear what should happen."
+#~ msgstr ""
+#~ "No se permite pasar tanto los "
+#~ "argumentos como las palabras clave, ya"
+#~ " que no está claro qué debe "
+#~ "ocurrir."
+
+#~ msgid "Will return a JSON response like this:"
+#~ msgstr "Devolverá una respuesta JSON como esta:"
+
+#~ msgid ""
+#~ "The default output omits indents and "
+#~ "spaces after separators. In debug mode"
+#~ " or if :data:`JSONIFY_PRETTYPRINT_REGULAR` is "
+#~ "``True``, the output will be formatted"
+#~ " to be easier to read."
+#~ msgstr ""
+#~ "La salida por defecto omite las "
+#~ "sangrías y los espacios después de "
+#~ "los separadores. En modo de depuración"
+#~ " o si :data:`JSONIFY_PRETTYPRINT_REGULAR` es "
+#~ "``True``, la salida tendrá un formato"
+#~ " más fácil de leer."
+
+#~ msgid ""
+#~ "Takes the same arguments as the "
+#~ "built-in :func:`json.dumps`, with some "
+#~ "defaults from application configuration."
+#~ msgstr ""
+#~ "Toma los mismos argumentos que el "
+#~ "built-in :func:`json.dumps`, con algunos "
+#~ "valores por defecto de la configuración"
+#~ " de la aplicación."
+
+#~ msgid "Use this app's config instead of the active app context or defaults."
+#~ msgstr ""
+#~ "Utiliza la configuración de esta "
+#~ "aplicación en lugar del contexto de "
+#~ "la aplicación activa o los valores "
+#~ "predeterminados."
+
+#~ msgid ""
+#~ "Takes the same arguments as the "
+#~ "built-in :func:`json.dump`, with some "
+#~ "defaults from application configuration."
+#~ msgstr ""
+#~ "Toma los mismos argumentos que el "
+#~ "built-in :func:`json.dump`, con algunos "
+#~ "valores por defecto de la configuración"
+#~ " de la aplicación."
+
+#~ msgid "File object to write JSON to."
+#~ msgstr "Objeto de archivo para escribir JSON."
+
+#~ msgid "Extra arguments passed to :func:`json.dump`."
+#~ msgstr "Argumentos extra pasados a :func:`json.dump`."
+
+#~ msgid ""
+#~ "Takes the same arguments as the "
+#~ "built-in :func:`json.loads`, with some "
+#~ "defaults from application configuration."
+#~ msgstr ""
+#~ "Toma los mismos argumentos que el "
+#~ "built-in :func:`json.loads`, con algunos "
+#~ "valores por defecto de la configuración"
+#~ " de la aplicación."
+
+#~ msgid ""
+#~ "Takes the same arguments as the "
+#~ "built-in :func:`json.load`, with some "
+#~ "defaults from application configuration."
+#~ msgstr ""
+#~ "Toma los mismos argumentos que el "
+#~ "built-in :func:`json.load`, con algunos "
+#~ "valores por defecto de la configuración"
+#~ " de la aplicación."
+
+#~ msgid "File object to read JSON from."
+#~ msgstr "Objeto de archivo para leer JSON."
+
+#~ msgid "Extra arguments passed to :func:`json.load`."
+#~ msgstr "Argumentos extra pasados a :func:`json.load`."
+
+#~ msgid "Set the app's debug flag based on the active environment"
+#~ msgstr ""
+#~ "Establecer la bandera de depuración de"
+#~ " la aplicación en función del entorno"
+#~ " activo"
 
